@@ -1,0 +1,1072 @@
+schema_version: 2
+entity_type: expression_library
+entity_ref: character.expressions
+revision: 1
+last_calibration_id: cal-20260910T145805Z-61c3e9
+scope: arco
+direction_convention: left/right means the direction the character face points on the image plane, never the side perceived
+  by the observer
+semantic_review_status_values:
+- UNREVIEWED
+- REVIEW_REQUIRED
+- APPROVED
+- DISPUTED
+prompt_compiler_gate:
+  default_semantic_review_status: APPROVED
+  nonapproved_visual_features_allowed: true
+source_families:
+- source_family_id: arco-official-standing-art-system-01
+  source_kind: official
+source_groups:
+- source_group_id: arco-expression-oblique-01
+  source_family_id: arco-official-standing-art-system-01
+  face_slot_id: face-slot-oblique-right-01
+  member_asset_ids: &id001
+  - arco-expr-oblique-001
+  - arco-expr-oblique-002
+  - arco-expr-oblique-003
+  - arco-expr-oblique-004
+  - arco-expr-oblique-005
+  - arco-expr-oblique-006
+  - arco-expr-oblique-007
+  - arco-expr-oblique-008
+  - arco-expr-oblique-009
+  - arco-expr-oblique-010
+  - arco-expr-oblique-011
+  - arco-expr-oblique-012
+  - arco-expr-oblique-013
+  - arco-expr-oblique-014
+  - arco-expr-oblique-015
+  - arco-expr-oblique-016
+  - arco-expr-oblique-017
+  - arco-expr-oblique-018
+  - arco-expr-oblique-019
+  - arco-expr-oblique-020
+  - arco-expr-oblique-021
+- source_group_id: arco-expression-frontal-01
+  source_family_id: arco-official-standing-art-system-01
+  face_slot_id: face-slot-frontal-01
+  member_asset_ids: &id002
+  - arco-expr-frontal-001
+  - arco-expr-frontal-002
+  - arco-expr-frontal-003
+  - arco-expr-frontal-004
+  - arco-expr-frontal-005
+  - arco-expr-frontal-006
+  - arco-expr-frontal-007
+  - arco-expr-frontal-008
+  - arco-expr-frontal-009
+  - arco-expr-frontal-010
+  - arco-expr-frontal-011
+  - arco-expr-frontal-012
+  - arco-expr-frontal-013
+  - arco-expr-frontal-014
+  - arco-expr-frontal-015
+  - arco-expr-frontal-016
+  - arco-expr-frontal-017
+  - arco-expr-frontal-018
+  - arco-expr-frontal-019
+  - arco-expr-frontal-020
+  - arco-expr-frontal-021
+  - arco-expr-frontal-022
+face_slots:
+- face_slot_id: face-slot-oblique-right-01
+  view_class: three_quarter_right
+  membership_status: CONFIRMED
+- face_slot_id: face-slot-frontal-01
+  view_class: frontal
+  membership_status: CONFIRMED
+pose_families:
+- pose_family_id: open-arms-oblique
+  view_class: three_quarter_right
+- pose_family_id: raised-fists-frontal
+  view_class: frontal
+- pose_family_id: crossed-arms-frontal
+  view_class: frontal
+expression_sets:
+- expression_set_id: expression-set-oblique-right-01
+  face_slot_id: face-slot-oblique-right-01
+  member_asset_ids: *id001
+  pose_compatibility:
+  - target_type: pose_family
+    target_id: open-arms-oblique
+    status: PROVISIONAL
+- expression_set_id: expression-set-frontal-01
+  face_slot_id: face-slot-frontal-01
+  member_asset_ids: *id002
+  pose_compatibility:
+  - target_type: pose_family
+    target_id: raised-fists-frontal
+    status: PROVISIONAL
+  - target_type: pose_family
+    target_id: crossed-arms-frontal
+    status: PROVISIONAL
+similarity_groups:
+- similarity_group_id: closed-eyes-closed-mouth-01
+  basis: visual_structure_similarity_only
+- similarity_group_id: closed-eyes-downturned-mouth-01
+  basis: visual_structure_similarity_only
+- similarity_group_id: closed-eyes-flat-mouth-01
+  basis: visual_structure_similarity_only
+- similarity_group_id: closed-eyes-open-mouth-low-tension-01
+  basis: visual_structure_similarity_only
+- similarity_group_id: closed-eyes-smile-01
+  basis: visual_structure_similarity_only
+- similarity_group_id: closed-eyes-wide-open-mouth-01
+  basis: visual_structure_similarity_only
+- similarity_group_id: closed-eyes-wide-open-mouth-high-tension-01
+  basis: visual_structure_similarity_only
+- similarity_group_id: excited-toothy-grin-01
+  basis: visual_structure_similarity_only
+- similarity_group_id: gentle-open-eyes-smile-01
+  basis: visual_structure_similarity_only
+- similarity_group_id: half-lidded-closed-mouth-01
+  basis: visual_structure_similarity_only
+- similarity_group_id: half-lidded-small-open-mouth-01
+  basis: visual_structure_similarity_only
+- similarity_group_id: low-gaze-closed-mouth-01
+  basis: visual_structure_similarity_only
+- similarity_group_id: low-gaze-open-mouth-01
+  basis: visual_structure_similarity_only
+- similarity_group_id: lowered-eyelids-open-mouth-01
+  basis: visual_structure_similarity_only
+- similarity_group_id: neutral-open-eyes-closed-mouth-01
+  basis: visual_structure_similarity_only
+- similarity_group_id: open-eyes-small-open-mouth-01
+  basis: visual_structure_similarity_only
+- similarity_group_id: open-eyes-smile-01
+  basis: visual_structure_similarity_only
+- similarity_group_id: open-eyes-wide-open-mouth-01
+  basis: visual_structure_similarity_only
+- similarity_group_id: raised-inner-brows-closed-mouth-01
+  basis: visual_structure_similarity_only
+- similarity_group_id: raised-inner-brows-open-mouth-01
+  basis: visual_structure_similarity_only
+- similarity_group_id: wide-eyes-open-mouth-01
+  basis: visual_structure_similarity_only
+expression_clusters:
+- expression_cluster_id: neutral-serious-01
+  cluster_status: CONFIRMED
+  member_expression_ids:
+  - expr-oblique-neutral-serious-01
+  - expr-frontal-neutral-serious-01
+- expression_cluster_id: closed-neutral-01
+  cluster_status: CONFIRMED
+  member_expression_ids:
+  - expr-oblique-closed-neutral-01
+  - expr-frontal-closed-neutral-01
+- expression_cluster_id: cheerful-smile-01
+  cluster_status: CONFIRMED
+  member_expression_ids:
+  - expr-oblique-cheerful-smile-01
+  - expr-frontal-cheerful-smile-01
+- expression_cluster_id: closed-eye-smile-01
+  cluster_status: CONFIRMED
+  member_expression_ids:
+  - expr-oblique-closed-eye-smile-01
+  - expr-frontal-closed-eye-smile-01
+- expression_cluster_id: closed-eye-laugh-01
+  cluster_status: CONFIRMED
+  member_expression_ids:
+  - expr-oblique-closed-eye-laugh-01
+  - expr-frontal-closed-eye-laugh-01
+- expression_cluster_id: concerned-01
+  cluster_status: CONFIRMED
+  member_expression_ids:
+  - expr-oblique-concerned-01
+  - expr-frontal-concerned-01
+- expression_cluster_id: displeased-01
+  cluster_status: CONFIRMED
+  member_expression_ids:
+  - expr-oblique-cold-displeased-01
+  - expr-frontal-displeased-01
+- expression_cluster_id: obvious-surprise-01
+  cluster_status: CONFIRMED
+  member_expression_ids:
+  - expr-oblique-obvious-surprise-01
+  - expr-frontal-obvious-surprise-01
+composite_compatibility: []
+semantics:
+- expression_id: expr-oblique-proud-confident-01
+  display_name_zh: 高傲且自信
+  display_name_en: Proud and confident
+  official_label: null
+  official_label_source: null
+  visual_features:
+    eyes: open
+    eyebrows: expression-dependent
+    mouth: closed
+    gaze: forward_or_slot_aligned
+    face_tension: moderate
+  semantic_tags:
+  - proud
+  - confident
+  - composed
+  intensity: moderate
+  semantic_confidence: medium
+  semantic_review_status: APPROVED
+  similarity_group_ids:
+  - open-eyes-small-open-mouth-01
+  expression_cluster_id: null
+- expression_id: expr-oblique-neutral-serious-01
+  display_name_zh: 中性严肃
+  display_name_en: Neutral and serious
+  official_label: null
+  official_label_source: null
+  visual_features:
+    eyes: open
+    eyebrows: expression-dependent
+    mouth: closed
+    gaze: forward_or_slot_aligned
+    face_tension: moderate
+  semantic_tags:
+  - neutral
+  - serious
+  - composed
+  intensity: subtle
+  semantic_confidence: high
+  semantic_review_status: APPROVED
+  similarity_group_ids:
+  - neutral-open-eyes-closed-mouth-01
+  expression_cluster_id: neutral-serious-01
+- expression_id: expr-oblique-closed-neutral-01
+  display_name_zh: 闭眼平静
+  display_name_en: Eyes-closed neutral
+  official_label: null
+  official_label_source: null
+  visual_features:
+    eyes: closed
+    eyebrows: expression-dependent
+    mouth: closed
+    gaze: forward_or_slot_aligned
+    face_tension: moderate
+  semantic_tags:
+  - eyes_closed
+  - neutral
+  - calm
+  intensity: subtle
+  semantic_confidence: high
+  semantic_review_status: APPROVED
+  similarity_group_ids:
+  - closed-eyes-closed-mouth-01
+  expression_cluster_id: closed-neutral-01
+- expression_id: expr-oblique-cheerful-smile-01
+  display_name_zh: 开心微笑
+  display_name_en: Cheerful smile
+  official_label: null
+  official_label_source: null
+  visual_features:
+    eyes: open
+    eyebrows: expression-dependent
+    mouth: closed
+    gaze: forward_or_slot_aligned
+    face_tension: moderate
+  semantic_tags:
+  - happy
+  - smiling
+  - eyes_open
+  intensity: moderate
+  semantic_confidence: high
+  semantic_review_status: APPROVED
+  similarity_group_ids:
+  - open-eyes-smile-01
+  expression_cluster_id: cheerful-smile-01
+- expression_id: expr-oblique-cheerful-laugh-01
+  display_name_zh: 睁眼大笑
+  display_name_en: Open-eye cheerful laugh
+  official_label: null
+  official_label_source: null
+  visual_features:
+    eyes: open
+    eyebrows: expression-dependent
+    mouth: wide_open
+    gaze: forward_or_slot_aligned
+    face_tension: moderate
+  semantic_tags:
+  - happy
+  - laughing
+  - mouth_wide_open
+  intensity: strong
+  semantic_confidence: high
+  semantic_review_status: APPROVED
+  similarity_group_ids:
+  - open-eyes-wide-open-mouth-01
+  expression_cluster_id: null
+- expression_id: expr-oblique-closed-eye-smile-01
+  display_name_zh: 闭眼微笑
+  display_name_en: Eyes-closed smile
+  official_label: null
+  official_label_source: null
+  visual_features:
+    eyes: closed
+    eyebrows: expression-dependent
+    mouth: closed
+    gaze: forward_or_slot_aligned
+    face_tension: moderate
+  semantic_tags:
+  - happy
+  - smiling
+  - eyes_closed
+  intensity: moderate
+  semantic_confidence: high
+  semantic_review_status: APPROVED
+  similarity_group_ids:
+  - closed-eyes-smile-01
+  expression_cluster_id: closed-eye-smile-01
+- expression_id: expr-oblique-closed-eye-laugh-01
+  display_name_zh: 闭眼大笑
+  display_name_en: Eyes-closed laugh
+  official_label: null
+  official_label_source: null
+  visual_features:
+    eyes: closed
+    eyebrows: expression-dependent
+    mouth: wide_open
+    gaze: forward_or_slot_aligned
+    face_tension: moderate
+  semantic_tags:
+  - happy
+  - laughing
+  - eyes_closed
+  intensity: strong
+  semantic_confidence: high
+  semantic_review_status: APPROVED
+  similarity_group_ids:
+  - closed-eyes-wide-open-mouth-01
+  expression_cluster_id: closed-eye-laugh-01
+- expression_id: expr-oblique-concerned-01
+  display_name_zh: 担忧
+  display_name_en: Concerned
+  official_label: null
+  official_label_source: null
+  visual_features:
+    eyes: open
+    eyebrows: expression-dependent
+    mouth: closed
+    gaze: forward_or_slot_aligned
+    face_tension: moderate
+  semantic_tags:
+  - concerned
+  - uneasy
+  intensity: moderate
+  semantic_confidence: high
+  semantic_review_status: APPROVED
+  similarity_group_ids:
+  - raised-inner-brows-closed-mouth-01
+  expression_cluster_id: concerned-01
+- expression_id: expr-oblique-angry-complaint-01
+  display_name_zh: 生气抱怨
+  display_name_en: Angry complaint
+  official_label: null
+  official_label_source: null
+  visual_features:
+    eyes: open
+    eyebrows: expression-dependent
+    mouth: slightly_open
+    gaze: forward_or_slot_aligned
+    face_tension: moderate
+  semantic_tags:
+  - angry
+  - complaining
+  - speaking
+  intensity: strong
+  semantic_confidence: medium
+  semantic_review_status: APPROVED
+  similarity_group_ids:
+  - lowered-eyelids-open-mouth-01
+  expression_cluster_id: null
+- expression_id: expr-oblique-closed-eye-displeased-01
+  display_name_zh: 闭眼不满
+  display_name_en: Eyes-closed displeasure
+  official_label: null
+  official_label_source: null
+  visual_features:
+    eyes: closed
+    eyebrows: expression-dependent
+    mouth: closed
+    gaze: forward_or_slot_aligned
+    face_tension: moderate
+  semantic_tags:
+  - eyes_closed
+  - displeased
+  - restrained
+  intensity: moderate
+  semantic_confidence: high
+  semantic_review_status: APPROVED
+  similarity_group_ids:
+  - closed-eyes-downturned-mouth-01
+  expression_cluster_id: null
+- expression_id: expr-oblique-angry-eyes-closed-01
+  display_name_zh: 生气地闭眼
+  display_name_en: Angry with eyes closed
+  official_label: null
+  official_label_source: null
+  visual_features:
+    eyes: closed
+    eyebrows: expression-dependent
+    mouth: wide_open
+    gaze: forward_or_slot_aligned
+    face_tension: moderate
+  semantic_tags:
+  - angry
+  - eyes_closed
+  - mouth_open
+  intensity: strong
+  semantic_confidence: medium
+  semantic_review_status: APPROVED
+  similarity_group_ids:
+  - closed-eyes-wide-open-mouth-high-tension-01
+  expression_cluster_id: null
+- expression_id: expr-oblique-displeased-01
+  display_name_zh: 不满
+  display_name_en: Displeased
+  official_label: null
+  official_label_source: null
+  visual_features:
+    eyes: open
+    eyebrows: expression-dependent
+    mouth: closed
+    gaze: forward_or_slot_aligned
+    face_tension: moderate
+  semantic_tags:
+  - displeased
+  - stern
+  - eyes_open
+  intensity: moderate
+  semantic_confidence: high
+  semantic_review_status: APPROVED
+  similarity_group_ids:
+  - half-lidded-closed-mouth-01
+  expression_cluster_id: null
+- expression_id: expr-oblique-concerned-questioning-01
+  display_name_zh: 担忧询问
+  display_name_en: Concerned questioning
+  official_label: null
+  official_label_source: null
+  visual_features:
+    eyes: open
+    eyebrows: expression-dependent
+    mouth: slightly_open
+    gaze: forward_or_slot_aligned
+    face_tension: moderate
+  semantic_tags:
+  - concerned
+  - questioning
+  - speaking
+  intensity: moderate
+  semantic_confidence: medium
+  semantic_review_status: APPROVED
+  similarity_group_ids:
+  - raised-inner-brows-open-mouth-01
+  expression_cluster_id: null
+- expression_id: expr-oblique-closed-eye-weary-01
+  display_name_zh: 闭眼无奈
+  display_name_en: Eyes-closed weariness
+  official_label: null
+  official_label_source: null
+  visual_features:
+    eyes: closed
+    eyebrows: expression-dependent
+    mouth: closed
+    gaze: forward_or_slot_aligned
+    face_tension: moderate
+  semantic_tags:
+  - eyes_closed
+  - weary
+  - resigned
+  intensity: moderate
+  semantic_confidence: high
+  semantic_review_status: APPROVED
+  similarity_group_ids:
+  - closed-eyes-flat-mouth-01
+  expression_cluster_id: null
+- expression_id: expr-oblique-resigned-drained-01
+  display_name_zh: 无奈和心累
+  display_name_en: Resigned and emotionally drained
+  official_label: null
+  official_label_source: null
+  visual_features:
+    eyes: open
+    eyebrows: expression-dependent
+    mouth: closed
+    gaze: forward_or_slot_aligned
+    face_tension: moderate
+  semantic_tags:
+  - resigned
+  - weary
+  - emotionally_drained
+  intensity: moderate
+  semantic_confidence: medium
+  semantic_review_status: APPROVED
+  similarity_group_ids:
+  - closed-eyes-open-mouth-low-tension-01
+  expression_cluster_id: null
+- expression_id: expr-oblique-obvious-surprise-01
+  display_name_zh: 明显惊讶
+  display_name_en: Obvious surprise
+  official_label: null
+  official_label_source: null
+  visual_features:
+    eyes: wide_open
+    eyebrows: expression-dependent
+    mouth: wide_open
+    gaze: forward_or_slot_aligned
+    face_tension: moderate
+  semantic_tags:
+  - surprised
+  - wide_eyes
+  - mouth_open
+  intensity: strong
+  semantic_confidence: high
+  semantic_review_status: APPROVED
+  similarity_group_ids:
+  - wide-eyes-open-mouth-01
+  expression_cluster_id: obvious-surprise-01
+- expression_id: expr-oblique-gentle-smile-01
+  display_name_zh: 温和微笑
+  display_name_en: Gentle smile
+  official_label: null
+  official_label_source: null
+  visual_features:
+    eyes: open
+    eyebrows: expression-dependent
+    mouth: closed
+    gaze: forward_or_slot_aligned
+    face_tension: moderate
+  semantic_tags:
+  - gentle
+  - smiling
+  - eyes_open
+  intensity: subtle
+  semantic_confidence: high
+  semantic_review_status: APPROVED
+  similarity_group_ids:
+  - gentle-open-eyes-smile-01
+  expression_cluster_id: null
+- expression_id: expr-oblique-cold-displeased-01
+  display_name_zh: 冷淡不满
+  display_name_en: Cold displeasure
+  official_label: null
+  official_label_source: null
+  visual_features:
+    eyes: open
+    eyebrows: expression-dependent
+    mouth: closed
+    gaze: forward_or_slot_aligned
+    face_tension: moderate
+  semantic_tags:
+  - cold
+  - displeased
+  - half_lidded
+  intensity: moderate
+  semantic_confidence: high
+  semantic_review_status: APPROVED
+  similarity_group_ids:
+  - half-lidded-closed-mouth-01
+  expression_cluster_id: displeased-01
+- expression_id: expr-oblique-reproachful-resigned-01
+  display_name_zh: 责怪和无奈
+  display_name_en: Reproachful and resigned
+  official_label: null
+  official_label_source: null
+  visual_features:
+    eyes: open
+    eyebrows: expression-dependent
+    mouth: closed
+    gaze: forward_or_slot_aligned
+    face_tension: moderate
+  semantic_tags:
+  - reproachful
+  - resigned
+  - weary
+  intensity: moderate
+  semantic_confidence: medium
+  semantic_review_status: APPROVED
+  similarity_group_ids:
+  - half-lidded-small-open-mouth-01
+  expression_cluster_id: null
+- expression_id: expr-oblique-low-gaze-contemplation-01
+  display_name_zh: 低视线沉思
+  display_name_en: Low-gaze contemplation
+  official_label: null
+  official_label_source: null
+  visual_features:
+    eyes: open
+    eyebrows: expression-dependent
+    mouth: closed
+    gaze: forward_or_slot_aligned
+    face_tension: moderate
+  semantic_tags:
+  - contemplative
+  - low_gaze
+  - composed
+  intensity: subtle
+  semantic_confidence: high
+  semantic_review_status: APPROVED
+  similarity_group_ids:
+  - low-gaze-closed-mouth-01
+  expression_cluster_id: null
+- expression_id: expr-oblique-dejected-complaint-01
+  display_name_zh: 低落抱怨
+  display_name_en: Dejected complaint
+  official_label: null
+  official_label_source: null
+  visual_features:
+    eyes: open
+    eyebrows: expression-dependent
+    mouth: slightly_open
+    gaze: forward_or_slot_aligned
+    face_tension: moderate
+  semantic_tags:
+  - dejected
+  - complaining
+  - speaking
+  intensity: strong
+  semantic_confidence: medium
+  semantic_review_status: APPROVED
+  similarity_group_ids:
+  - low-gaze-open-mouth-01
+  expression_cluster_id: null
+- expression_id: expr-frontal-attentive-neutral-01
+  display_name_zh: 专注中性
+  display_name_en: Attentive neutral
+  official_label: null
+  official_label_source: null
+  visual_features:
+    eyes: open
+    eyebrows: expression-dependent
+    mouth: closed
+    gaze: forward_or_slot_aligned
+    face_tension: moderate
+  semantic_tags:
+  - attentive
+  - neutral
+  - eyes_open
+  intensity: subtle
+  semantic_confidence: high
+  semantic_review_status: APPROVED
+  similarity_group_ids:
+  - neutral-open-eyes-closed-mouth-01
+  expression_cluster_id: null
+- expression_id: expr-frontal-closed-neutral-01
+  display_name_zh: 闭眼平静
+  display_name_en: Eyes-closed neutral
+  official_label: null
+  official_label_source: null
+  visual_features:
+    eyes: closed
+    eyebrows: expression-dependent
+    mouth: closed
+    gaze: forward_or_slot_aligned
+    face_tension: moderate
+  semantic_tags:
+  - eyes_closed
+  - neutral
+  - calm
+  intensity: subtle
+  semantic_confidence: high
+  semantic_review_status: APPROVED
+  similarity_group_ids:
+  - closed-eyes-closed-mouth-01
+  expression_cluster_id: closed-neutral-01
+- expression_id: expr-frontal-cheerful-smile-01
+  display_name_zh: 开心微笑
+  display_name_en: Cheerful smile
+  official_label: null
+  official_label_source: null
+  visual_features:
+    eyes: open
+    eyebrows: expression-dependent
+    mouth: closed
+    gaze: forward_or_slot_aligned
+    face_tension: moderate
+  semantic_tags:
+  - happy
+  - smiling
+  - eyes_open
+  intensity: moderate
+  semantic_confidence: high
+  semantic_review_status: APPROVED
+  similarity_group_ids:
+  - open-eyes-smile-01
+  expression_cluster_id: cheerful-smile-01
+- expression_id: expr-frontal-excited-shout-01
+  display_name_zh: 兴奋呼喊
+  display_name_en: Excited shout
+  official_label: null
+  official_label_source: null
+  visual_features:
+    eyes: wide_open
+    eyebrows: expression-dependent
+    mouth: wide_open
+    gaze: forward_or_slot_aligned
+    face_tension: moderate
+  semantic_tags:
+  - excited
+  - shouting
+  - wide_eyes
+  intensity: strong
+  semantic_confidence: high
+  semantic_review_status: APPROVED
+  similarity_group_ids:
+  - wide-eyes-open-mouth-01
+  expression_cluster_id: null
+- expression_id: expr-frontal-closed-eye-smile-01
+  display_name_zh: 闭眼微笑
+  display_name_en: Eyes-closed smile
+  official_label: null
+  official_label_source: null
+  visual_features:
+    eyes: closed
+    eyebrows: expression-dependent
+    mouth: closed
+    gaze: forward_or_slot_aligned
+    face_tension: moderate
+  semantic_tags:
+  - happy
+  - smiling
+  - eyes_closed
+  intensity: moderate
+  semantic_confidence: high
+  semantic_review_status: APPROVED
+  similarity_group_ids:
+  - closed-eyes-smile-01
+  expression_cluster_id: closed-eye-smile-01
+- expression_id: expr-frontal-closed-eye-laugh-01
+  display_name_zh: 闭眼大笑
+  display_name_en: Eyes-closed laugh
+  official_label: null
+  official_label_source: null
+  visual_features:
+    eyes: closed
+    eyebrows: expression-dependent
+    mouth: wide_open
+    gaze: forward_or_slot_aligned
+    face_tension: moderate
+  semantic_tags:
+  - happy
+  - laughing
+  - eyes_closed
+  intensity: strong
+  semantic_confidence: high
+  semantic_review_status: APPROVED
+  similarity_group_ids:
+  - closed-eyes-wide-open-mouth-01
+  expression_cluster_id: closed-eye-laugh-01
+- expression_id: expr-frontal-concerned-01
+  display_name_zh: 担忧
+  display_name_en: Concerned
+  official_label: null
+  official_label_source: null
+  visual_features:
+    eyes: open
+    eyebrows: expression-dependent
+    mouth: closed
+    gaze: forward_or_slot_aligned
+    face_tension: moderate
+  semantic_tags:
+  - concerned
+  - uneasy
+  intensity: moderate
+  semantic_confidence: high
+  semantic_review_status: APPROVED
+  similarity_group_ids:
+  - raised-inner-brows-closed-mouth-01
+  expression_cluster_id: concerned-01
+- expression_id: expr-frontal-frightened-exclamation-01
+  display_name_zh: 害怕惊呼
+  display_name_en: Frightened exclamation
+  official_label: null
+  official_label_source: null
+  visual_features:
+    eyes: open
+    eyebrows: expression-dependent
+    mouth: wide_open
+    gaze: forward_or_slot_aligned
+    face_tension: moderate
+  semantic_tags:
+  - frightened
+  - startled
+  - exclaiming
+  intensity: strong
+  semantic_confidence: medium
+  semantic_review_status: APPROVED
+  similarity_group_ids:
+  - raised-inner-brows-open-mouth-01
+  expression_cluster_id: null
+- expression_id: expr-frontal-difficult-deliberation-01
+  display_name_zh: 艰难思索
+  display_name_en: Difficult deliberation
+  official_label: null
+  official_label_source: null
+  visual_features:
+    eyes: closed
+    eyebrows: expression-dependent
+    mouth: closed
+    gaze: forward_or_slot_aligned
+    face_tension: high
+  semantic_tags:
+  - deliberating
+  - strained
+  - eyes_closed
+  intensity: moderate
+  semantic_confidence: medium
+  semantic_review_status: APPROVED
+  similarity_group_ids:
+  - closed-eyes-downturned-mouth-01
+  expression_cluster_id: null
+- expression_id: expr-frontal-resigned-deliberative-speech-01
+  display_name_zh: 艰难思索后的无奈发言
+  display_name_en: Resigned speech after difficult deliberation
+  official_label: null
+  official_label_source: null
+  visual_features:
+    eyes: closed
+    eyebrows: expression-dependent
+    mouth: slightly_open
+    gaze: forward_or_slot_aligned
+    face_tension: moderate
+  semantic_tags:
+  - deliberating
+  - resigned
+  - speaking
+  - eyes_closed
+  intensity: strong
+  semantic_confidence: medium
+  semantic_review_status: APPROVED
+  similarity_group_ids:
+  - closed-eyes-wide-open-mouth-high-tension-01
+  expression_cluster_id: null
+- expression_id: expr-frontal-neutral-serious-01
+  display_name_zh: 中性严肃
+  display_name_en: Neutral and serious
+  official_label: null
+  official_label_source: null
+  visual_features:
+    eyes: open
+    eyebrows: expression-dependent
+    mouth: closed
+    gaze: forward_or_slot_aligned
+    face_tension: moderate
+  semantic_tags:
+  - neutral
+  - serious
+  - composed
+  intensity: subtle
+  semantic_confidence: high
+  semantic_review_status: APPROVED
+  similarity_group_ids:
+  - neutral-open-eyes-closed-mouth-01
+  expression_cluster_id: neutral-serious-01
+- expression_id: expr-frontal-surprised-saddened-01
+  display_name_zh: 惊讶和难过
+  display_name_en: Surprised and saddened
+  official_label: null
+  official_label_source: null
+  visual_features:
+    eyes: open
+    eyebrows: expression-dependent
+    mouth: closed
+    gaze: forward_or_slot_aligned
+    face_tension: moderate
+  semantic_tags:
+  - surprised
+  - sad
+  - vulnerable
+  intensity: moderate
+  semantic_confidence: medium
+  semantic_review_status: APPROVED
+  similarity_group_ids:
+  - open-eyes-small-open-mouth-01
+  expression_cluster_id: null
+- expression_id: expr-frontal-eyes-closed-composed-01
+  display_name_zh: 闭眼克制
+  display_name_en: Eyes-closed composure
+  official_label: null
+  official_label_source: null
+  visual_features:
+    eyes: closed
+    eyebrows: expression-dependent
+    mouth: closed
+    gaze: forward_or_slot_aligned
+    face_tension: moderate
+  semantic_tags:
+  - eyes_closed
+  - composed
+  - restrained
+  intensity: subtle
+  semantic_confidence: high
+  semantic_review_status: APPROVED
+  similarity_group_ids:
+  - closed-eyes-flat-mouth-01
+  expression_cluster_id: null
+- expression_id: expr-frontal-eyes-closed-sigh-01
+  display_name_zh: 闭眼叹气
+  display_name_en: Eyes-closed sigh
+  official_label: null
+  official_label_source: null
+  visual_features:
+    eyes: closed
+    eyebrows: expression-dependent
+    mouth: slightly_open
+    gaze: forward_or_slot_aligned
+    face_tension: moderate
+  semantic_tags:
+  - eyes_closed
+  - sighing
+  - weary
+  intensity: subtle
+  semantic_confidence: medium
+  semantic_review_status: APPROVED
+  similarity_group_ids:
+  - closed-eyes-open-mouth-low-tension-01
+  expression_cluster_id: null
+- expression_id: expr-frontal-obvious-surprise-01
+  display_name_zh: 明显惊讶
+  display_name_en: Obvious surprise
+  official_label: null
+  official_label_source: null
+  visual_features:
+    eyes: wide_open
+    eyebrows: expression-dependent
+    mouth: wide_open
+    gaze: forward_or_slot_aligned
+    face_tension: moderate
+  semantic_tags:
+  - surprised
+  - wide_eyes
+  - mouth_open
+  intensity: strong
+  semantic_confidence: high
+  semantic_review_status: APPROVED
+  similarity_group_ids:
+  - wide-eyes-open-mouth-01
+  expression_cluster_id: obvious-surprise-01
+- expression_id: expr-frontal-excited-toothy-grin-01
+  display_name_zh: 兴奋地呲牙
+  display_name_en: Excited toothy grin
+  official_label: null
+  official_label_source: null
+  visual_features:
+    eyes: open
+    eyebrows: expression-dependent
+    mouth: clenched_teeth
+    gaze: forward_or_slot_aligned
+    face_tension: high
+  semantic_tags:
+  - excited
+  - toothy_grin
+  - eyes_open
+  - high_tension
+  intensity: strong
+  semantic_confidence: medium
+  semantic_review_status: APPROVED
+  similarity_group_ids:
+  - excited-toothy-grin-01
+  expression_cluster_id: null
+- expression_id: expr-frontal-extreme-excited-toothy-grin-01
+  display_name_zh: 特别兴奋地呲牙
+  display_name_en: Extremely excited toothy grin
+  official_label: null
+  official_label_source: null
+  visual_features:
+    eyes: closed
+    eyebrows: expression-dependent
+    mouth: clenched_teeth
+    gaze: forward_or_slot_aligned
+    face_tension: high
+  semantic_tags:
+  - highly_excited
+  - toothy_grin
+  - eyes_closed
+  - high_tension
+  intensity: strong
+  semantic_confidence: medium
+  semantic_review_status: APPROVED
+  similarity_group_ids:
+  - excited-toothy-grin-01
+  expression_cluster_id: null
+- expression_id: expr-frontal-displeased-01
+  display_name_zh: 不满
+  display_name_en: Displeased
+  official_label: null
+  official_label_source: null
+  visual_features:
+    eyes: open
+    eyebrows: expression-dependent
+    mouth: closed
+    gaze: forward_or_slot_aligned
+    face_tension: moderate
+  semantic_tags:
+  - displeased
+  - stern
+  - half_lidded
+  intensity: moderate
+  semantic_confidence: high
+  semantic_review_status: APPROVED
+  similarity_group_ids:
+  - half-lidded-closed-mouth-01
+  expression_cluster_id: displeased-01
+- expression_id: expr-frontal-impatient-speaking-01
+  display_name_zh: 不耐烦说话
+  display_name_en: Impatient speaking
+  official_label: null
+  official_label_source: null
+  visual_features:
+    eyes: open
+    eyebrows: expression-dependent
+    mouth: slightly_open
+    gaze: forward_or_slot_aligned
+    face_tension: moderate
+  semantic_tags:
+  - impatient
+  - displeased
+  - speaking
+  intensity: moderate
+  semantic_confidence: medium
+  semantic_review_status: APPROVED
+  similarity_group_ids:
+  - half-lidded-small-open-mouth-01
+  expression_cluster_id: null
+- expression_id: expr-frontal-attentive-speaking-01
+  display_name_zh: 专注轻声说话
+  display_name_en: Attentive soft speech
+  official_label: null
+  official_label_source: null
+  visual_features:
+    eyes: open
+    eyebrows: expression-dependent
+    mouth: slightly_open
+    gaze: forward_or_slot_aligned
+    face_tension: moderate
+  semantic_tags:
+  - attentive
+  - speaking
+  - calm
+  intensity: subtle
+  semantic_confidence: high
+  semantic_review_status: APPROVED
+  similarity_group_ids:
+  - open-eyes-small-open-mouth-01
+  expression_cluster_id: null
+- expression_id: expr-frontal-casual-speaking-01
+  display_name_zh: 不经意地说话
+  display_name_en: Casual speaking
+  official_label: null
+  official_label_source: null
+  visual_features:
+    eyes: open
+    eyebrows: expression-dependent
+    mouth: slightly_open
+    gaze: forward_or_slot_aligned
+    face_tension: moderate
+  semantic_tags:
+  - casual
+  - speaking
+  - offhand
+  intensity: subtle
+  semantic_confidence: medium
+  semantic_review_status: APPROVED
+  similarity_group_ids:
+  - open-eyes-small-open-mouth-01
+  expression_cluster_id: null

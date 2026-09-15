@@ -1,0 +1,12 @@
+schema_version: 1
+calibration_id: cal-20260914T070842Z-68b810
+state: COMPLETE
+targets:
+- variants.index
+- variants.casual-outfit
+- character.assets
+blocks:
+- conflicting_calibration
+- formal_write
+- unauthorized_publication
+read_only_prompt_behavior: IGNORE_STAGING

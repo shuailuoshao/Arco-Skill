@@ -1,0 +1,34 @@
+schema_version: 1
+entity_type: variant
+entity_ref: variants.<variant-id>
+variant_id: <variant-id>
+display_name_zh: <具体服装中文名称>
+lifecycle_status: draft
+revision: 0
+last_calibration_id: null
+facts:
+  - field_id: outfit.silhouette
+    display_name_zh: 服装整体轮廓
+    value: null
+    status: TODO_CALIBRATION
+    evidence_ids: []
+    conflicts: []
+    note_zh: ""
+    required_global: true
+    required_for: [upper_body, full_body, back_view]
+reference_asset_ids:
+  primary: []
+  secondary: []
+  detail: []
+state_mutable_fields: []
+must_keep_fields: []
+state_groups: {}
+state_files: []
+known_generation_risks: []
+coverage:
+  upper_body: INCOMPLETE
+  lower_body: INCOMPLETE
+  full_body: INCOMPLETE
+  footwear: INCOMPLETE
+  back_view: INCOMPLETE
+  overall: INCOMPLETE

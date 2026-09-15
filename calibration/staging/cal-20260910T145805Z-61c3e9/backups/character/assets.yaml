@@ -1,0 +1,6 @@
+schema_version: 1
+entity_type: asset_registry
+entity_ref: character.assets
+revision: 0
+last_calibration_id: null
+assets: []

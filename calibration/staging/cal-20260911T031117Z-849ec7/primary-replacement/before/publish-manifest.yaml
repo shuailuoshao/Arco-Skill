@@ -1,0 +1,40 @@
+schema_version: 3
+calibration_id: cal-20260911T031117Z-849ec7
+transaction_id: tx-identity-cal-20260911T031117Z-849ec7
+publication_state: STAGED_VALIDATED_AWAITING_AUTHORIZATION
+publication_authorized: false
+base_state:
+  expression_library_revision: 1
+  asset_index_revision: 1
+  identity_revision: 0
+base_hashes:
+  character/identity.yaml: ebdd02a3c7c2629ff61e63dca6b917d2f5e8c8809794e1405bbad86901cf4f69
+  character/assets.yaml: 405cd66e64acbfe0b0ac2b57a398e0b241090f59719e7878610370a7b98c099a
+  character/expressions.yaml: 0bc3c7ae8e18797c472dc79022d0cd74fe71b04c90d5ec02e571c180b41e7030
+  variants/index.yaml: d1f54d8ed48c41316f8817f94750b4c13f1c313877861970af8ef892a233bb1c
+  calibration/history/cal-20260910T145805Z-61c3e9.yaml: f170ed3819cafc1e75cb20c174c52cd1a62e954b992a4cd9851b19869f0d112c
+files:
+- target_path: character/identity.yaml
+  staged_path: candidate-root/character/identity.yaml
+  before_hash: ebdd02a3c7c2629ff61e63dca6b917d2f5e8c8809794e1405bbad86901cf4f69
+  candidate_hash: 24eb74d62276c94ea5b9a6bbd04bdeeada3eeec4771393e312102376795de769
+  after_hash: null
+  backup_path: backups/character/identity.yaml
+  rollback_action: restore_backup
+  publication_status: pending
+  verification_class: protected_entity
+- target_path: character/assets.yaml
+  staged_path: candidate-root/character/assets.yaml
+  before_hash: 405cd66e64acbfe0b0ac2b57a398e0b241090f59719e7878610370a7b98c099a
+  candidate_hash: cca042937853e056dcf8096da47814112ec217eb41d83065dd9b999fd904e4e2
+  after_hash: null
+  backup_path: backups/character/assets.yaml
+  rollback_action: restore_backup
+  publication_status: pending
+  verification_class: protected_entity
+publication_status: pending
+verification_schema: v3
+verification_policy:
+  immutable_data: after_hash_exact
+  protected_entity: revision_lineage_and_history
+  evolvable_tooling: transaction_completion_only

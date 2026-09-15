@@ -1,0 +1,56 @@
+schema_version: 3
+calibration_id: cal-20260914T091518Z-0529a2
+transaction_id: tx-identity-contract-cal-20260914T091518Z-0529a2
+publication_state: COMPLETE
+publication_authorized: true
+calibration_targets:
+- character.assets
+revalidation_status: PASS
+base_state:
+  expression_library_revision: 1
+  asset_index_revision: 3
+  identity_revision: 1
+  variant_index_revision: 1
+  casual_variant_revision: 1
+base_hashes:
+  character/assets.yaml: 504d44881a61554c2e49439c9fca74d04e0e0c698598e150bf0d40ac0d35197e
+  character/identity.yaml: beffb1b0c1479891fa292e69dbd6682cba434996a7ab1030c8ef8d4dee6d3507
+  character/expressions.yaml: 0bc3c7ae8e18797c472dc79022d0cd74fe71b04c90d5ec02e571c180b41e7030
+  variants/index.yaml: e9534a08e2daf609780c0c847771ef04052a58c309e6a104480f412905bb10b0
+files:
+- target_path: character/assets.yaml
+  staged_path: candidate-root/character/assets.yaml
+  before_hash: 504d44881a61554c2e49439c9fca74d04e0e0c698598e150bf0d40ac0d35197e
+  candidate_hash: 4cda53ea9a0eca7929b5372b26e1c49d857a515fafebacd74dda3fae039193fd
+  after_hash: 4cda53ea9a0eca7929b5372b26e1c49d857a515fafebacd74dda3fae039193fd
+  publication_status: replaced
+  backup_path: publication/rollback/character/assets.yaml
+staged_history_path: history-draft.yaml
+history_candidate_hash: 56d25343cf6690980f56305f1332c3457eea24219ea69a3d67f0607da45f6aba
+history_path: calibration/history/cal-20260914T091518Z-0529a2.yaml
+completion_marker: calibration/history/cal-20260914T091518Z-0529a2.complete
+in_progress_marker: calibration/history/cal-20260914T091518Z-0529a2.publication_in_progress
+publication_status: complete
+publication_executed: false
+authorization:
+  user_confirmed: true
+  timestamp: '2026-09-14T17:20:00+08:00'
+  source: explicit user authorization
+  calibration_id: cal-20260914T091518Z-0529a2
+write_journal:
+- path: character/assets.yaml
+  before_hash: 504d44881a61554c2e49439c9fca74d04e0e0c698598e150bf0d40ac0d35197e
+  candidate_hash: 4cda53ea9a0eca7929b5372b26e1c49d857a515fafebacd74dda3fae039193fd
+  label: character/assets.yaml
+- path: calibration/history/cal-20260914T091518Z-0529a2.yaml
+  before_hash: null
+  candidate_hash: 56d25343cf6690980f56305f1332c3457eea24219ea69a3d67f0607da45f6aba
+  label: history
+- path: calibration/history/cal-20260914T091518Z-0529a2.complete
+  before_hash: null
+  candidate_hash: 231f351a3038b8728075c7e4c72f9c68abf1ec6a00d5237d094436e88770b97d
+  label: completion_marker
+final_validation:
+  errors: 0
+  warnings: 0
+recovery_occurred: false

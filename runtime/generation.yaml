@@ -1,0 +1,17 @@
+schema_version: 1
+generation:
+  provider: builtin_image_gen
+  required_capability: reference_conditioned_image_generation
+  default_mode: reference_conditioned
+  supported_modes:
+    - reference_conditioned
+    - prompt_only
+  fallback_to_prompt_only: true
+  max_local_arco_references: 3
+  max_external_references: 2
+  max_total_image_inputs: 4
+  require_published_assets: true
+  require_generation_reference_permission: true
+  expression_asset_auto_upload: false
+  body_base_auto_upload: false
+  faceless_composite_auto_upload: false

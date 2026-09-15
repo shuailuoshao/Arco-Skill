@@ -1,0 +1,406 @@
+schema_version: 2
+calibration_id: cal-20260910T145805Z-61c3e9
+draft: true
+publication_status: NOT_PUBLISHED
+completion_status: NOT_COMPLETED
+publication_unit: expression_library_v1
+semantic_adjudication:
+  reviewed_count: 19
+  decisions:
+  - asset_source_key: a_l_5793
+    original_candidate_name: proud-confident-01
+    user_raw_decision: 高傲且自信的表情
+    final_expression_id: expr-oblique-proud-confident-01
+    display_name_zh: 高傲且自信
+    display_name_en: Proud and confident
+    semantic_tags:
+    - proud
+    - confident
+    - composed
+    semantic_confidence: medium
+    intensity: moderate
+    semantic_review_status: APPROVED
+    expression_cluster_id: null
+    similarity_group_ids:
+    - open-eyes-small-open-mouth-01
+  - asset_source_key: a_l_5801
+    original_candidate_name: angry-complaint-01
+    user_raw_decision: 生气抱怨
+    final_expression_id: expr-oblique-angry-complaint-01
+    display_name_zh: 生气抱怨
+    display_name_en: Angry complaint
+    semantic_tags:
+    - angry
+    - complaining
+    - speaking
+    semantic_confidence: medium
+    intensity: strong
+    semantic_review_status: APPROVED
+    expression_cluster_id: null
+    similarity_group_ids:
+    - lowered-eyelids-open-mouth-01
+  - asset_source_key: a_l_5803
+    original_candidate_name: angry-eyes-closed-01
+    user_raw_decision: 生气地闭眼
+    final_expression_id: expr-oblique-angry-eyes-closed-01
+    display_name_zh: 生气地闭眼
+    display_name_en: Angry with eyes closed
+    semantic_tags:
+    - angry
+    - eyes_closed
+    - mouth_open
+    semantic_confidence: medium
+    intensity: strong
+    semantic_review_status: APPROVED
+    expression_cluster_id: null
+    similarity_group_ids:
+    - closed-eyes-wide-open-mouth-high-tension-01
+  - asset_source_key: a_l_5805
+    original_candidate_name: concerned-questioning-01
+    user_raw_decision: 担忧询问
+    final_expression_id: expr-oblique-concerned-questioning-01
+    display_name_zh: 担忧询问
+    display_name_en: Concerned questioning
+    semantic_tags:
+    - concerned
+    - questioning
+    - speaking
+    semantic_confidence: medium
+    intensity: moderate
+    semantic_review_status: APPROVED
+    expression_cluster_id: null
+    similarity_group_ids:
+    - raised-inner-brows-open-mouth-01
+  - asset_source_key: a_l_5807
+    original_candidate_name: resigned-drained-01
+    user_raw_decision: 无奈和心累
+    final_expression_id: expr-oblique-resigned-drained-01
+    display_name_zh: 无奈和心累
+    display_name_en: Resigned and emotionally drained
+    semantic_tags:
+    - resigned
+    - weary
+    - emotionally_drained
+    semantic_confidence: medium
+    intensity: moderate
+    semantic_review_status: APPROVED
+    expression_cluster_id: null
+    similarity_group_ids:
+    - closed-eyes-open-mouth-low-tension-01
+  - asset_source_key: a_l_5808
+    original_candidate_name: obvious-surprise-01
+    user_raw_decision: 明显惊讶
+    final_expression_id: expr-oblique-obvious-surprise-01
+    display_name_zh: 明显惊讶
+    display_name_en: Obvious surprise
+    semantic_tags:
+    - surprised
+    - wide_eyes
+    - mouth_open
+    semantic_confidence: high
+    intensity: strong
+    semantic_review_status: APPROVED
+    expression_cluster_id: obvious-surprise-01
+    similarity_group_ids:
+    - wide-eyes-open-mouth-01
+  - asset_source_key: a_l_5811
+    original_candidate_name: reproachful-resigned-01
+    user_raw_decision: 责怪和无奈
+    final_expression_id: expr-oblique-reproachful-resigned-01
+    display_name_zh: 责怪和无奈
+    display_name_en: Reproachful and resigned
+    semantic_tags:
+    - reproachful
+    - resigned
+    - weary
+    semantic_confidence: medium
+    intensity: moderate
+    semantic_review_status: APPROVED
+    expression_cluster_id: null
+    similarity_group_ids:
+    - half-lidded-small-open-mouth-01
+  - asset_source_key: a_l_5812
+    original_candidate_name: low-gaze-contemplation-01
+    user_raw_decision: 低视线沉思
+    final_expression_id: expr-oblique-low-gaze-contemplation-01
+    display_name_zh: 低视线沉思
+    display_name_en: Low-gaze contemplation
+    semantic_tags:
+    - contemplative
+    - low_gaze
+    - composed
+    semantic_confidence: high
+    intensity: subtle
+    semantic_review_status: APPROVED
+    expression_cluster_id: null
+    similarity_group_ids:
+    - low-gaze-closed-mouth-01
+  - asset_source_key: a_l_5813
+    original_candidate_name: dejected-complaint-01
+    user_raw_decision: 低落抱怨
+    final_expression_id: expr-oblique-dejected-complaint-01
+    display_name_zh: 低落抱怨
+    display_name_en: Dejected complaint
+    semantic_tags:
+    - dejected
+    - complaining
+    - speaking
+    semantic_confidence: medium
+    intensity: strong
+    semantic_review_status: APPROVED
+    expression_cluster_id: null
+    similarity_group_ids:
+    - low-gaze-open-mouth-01
+  - asset_source_key: b_l_7963
+    original_candidate_name: excited-shout-01
+    user_raw_decision: 兴奋呼喊
+    final_expression_id: expr-frontal-excited-shout-01
+    display_name_zh: 兴奋呼喊
+    display_name_en: Excited shout
+    semantic_tags:
+    - excited
+    - shouting
+    - wide_eyes
+    semantic_confidence: high
+    intensity: strong
+    semantic_review_status: APPROVED
+    expression_cluster_id: null
+    similarity_group_ids:
+    - wide-eyes-open-mouth-01
+  - asset_source_key: b_l_8131
+    original_candidate_name: frightened-exclamation-01
+    user_raw_decision: 害怕惊呼
+    final_expression_id: expr-frontal-frightened-exclamation-01
+    display_name_zh: 害怕惊呼
+    display_name_en: Frightened exclamation
+    semantic_tags:
+    - frightened
+    - startled
+    - exclaiming
+    semantic_confidence: medium
+    intensity: strong
+    semantic_review_status: APPROVED
+    expression_cluster_id: null
+    similarity_group_ids:
+    - raised-inner-brows-open-mouth-01
+  - asset_source_key: b_l_8166
+    original_candidate_name: difficult-deliberation-01
+    user_raw_decision: 艰难思索
+    final_expression_id: expr-frontal-difficult-deliberation-01
+    display_name_zh: 艰难思索
+    display_name_en: Difficult deliberation
+    semantic_tags:
+    - deliberating
+    - strained
+    - eyes_closed
+    semantic_confidence: medium
+    intensity: moderate
+    semantic_review_status: APPROVED
+    expression_cluster_id: null
+    similarity_group_ids:
+    - closed-eyes-downturned-mouth-01
+  - asset_source_key: b_l_8201
+    original_candidate_name: resigned-deliberative-speech-01
+    user_raw_decision: 艰难思索后的无奈发言
+    final_expression_id: expr-frontal-resigned-deliberative-speech-01
+    display_name_zh: 艰难思索后的无奈发言
+    display_name_en: Resigned speech after difficult deliberation
+    semantic_tags:
+    - deliberating
+    - resigned
+    - speaking
+    - eyes_closed
+    semantic_confidence: medium
+    intensity: strong
+    semantic_review_status: APPROVED
+    expression_cluster_id: null
+    similarity_group_ids:
+    - closed-eyes-wide-open-mouth-high-tension-01
+  - asset_source_key: b_l_8299
+    original_candidate_name: surprised-saddened-01
+    user_raw_decision: 惊讶和难过
+    final_expression_id: expr-frontal-surprised-saddened-01
+    display_name_zh: 惊讶和难过
+    display_name_en: Surprised and saddened
+    semantic_tags:
+    - surprised
+    - sad
+    - vulnerable
+    semantic_confidence: medium
+    intensity: moderate
+    semantic_review_status: APPROVED
+    expression_cluster_id: null
+    similarity_group_ids:
+    - open-eyes-small-open-mouth-01
+  - asset_source_key: b_l_8369
+    original_candidate_name: eyes-closed-sigh-01
+    user_raw_decision: 闭眼叹气
+    final_expression_id: expr-frontal-eyes-closed-sigh-01
+    display_name_zh: 闭眼叹气
+    display_name_en: Eyes-closed sigh
+    semantic_tags:
+    - eyes_closed
+    - sighing
+    - weary
+    semantic_confidence: medium
+    intensity: subtle
+    semantic_review_status: APPROVED
+    expression_cluster_id: null
+    similarity_group_ids:
+    - closed-eyes-open-mouth-low-tension-01
+  - asset_source_key: b_l_8516
+    original_candidate_name: excited-toothy-grin-01
+    user_raw_decision: 兴奋地呲牙
+    final_expression_id: expr-frontal-excited-toothy-grin-01
+    display_name_zh: 兴奋地呲牙
+    display_name_en: Excited toothy grin
+    semantic_tags:
+    - excited
+    - toothy_grin
+    - eyes_open
+    - high_tension
+    semantic_confidence: medium
+    intensity: strong
+    semantic_review_status: APPROVED
+    expression_cluster_id: null
+    similarity_group_ids:
+    - excited-toothy-grin-01
+  - asset_source_key: b_l_8551
+    original_candidate_name: extreme-excited-toothy-grin-01
+    user_raw_decision: 特别兴奋的呲牙😁
+    final_expression_id: expr-frontal-extreme-excited-toothy-grin-01
+    display_name_zh: 特别兴奋地呲牙
+    display_name_en: Extremely excited toothy grin
+    semantic_tags:
+    - highly_excited
+    - toothy_grin
+    - eyes_closed
+    - high_tension
+    semantic_confidence: medium
+    intensity: strong
+    semantic_review_status: APPROVED
+    expression_cluster_id: null
+    similarity_group_ids:
+    - excited-toothy-grin-01
+  - asset_source_key: b_l_8649
+    original_candidate_name: impatient-speaking-01
+    user_raw_decision: 不耐烦说话
+    final_expression_id: expr-frontal-impatient-speaking-01
+    display_name_zh: 不耐烦说话
+    display_name_en: Impatient speaking
+    semantic_tags:
+    - impatient
+    - displeased
+    - speaking
+    semantic_confidence: medium
+    intensity: moderate
+    semantic_review_status: APPROVED
+    expression_cluster_id: null
+    similarity_group_ids:
+    - half-lidded-small-open-mouth-01
+  - asset_source_key: b_l_8769
+    original_candidate_name: casual-speaking-01
+    user_raw_decision: 不经意地说话
+    final_expression_id: expr-frontal-casual-speaking-01
+    display_name_zh: 不经意地说话
+    display_name_en: Casual speaking
+    semantic_tags:
+    - casual
+    - speaking
+    - offhand
+    semantic_confidence: medium
+    intensity: subtle
+    semantic_review_status: APPROVED
+    expression_cluster_id: null
+    similarity_group_ids:
+    - open-eyes-small-open-mouth-01
+  cancelled_provisional_clusters:
+  - strong-exclamation-01
+  - concerned-speech-01
+  - strained-upset-01
+  - strained-speech-01
+  - cold-speech-01
+  - soft-speech-01
+  - closed-speech-01
+  - happy-laugh-01
+pending_compatibility_evidence:
+- expression_asset_source_key: a_l_5797
+  relationship_status: PENDING_TARGET_REGISTRATION
+  basis: official_full_composite_pixel_match
+  calibration_id: cal-20260910T145805Z-61c3e9
+  faceless_composite:
+    registration_status: UNREGISTERED
+    proposed_asset_id: arco-faceless-casual-candidate
+    original_filename: null
+    source_path: null
+  full_composite:
+    registration_status: UNREGISTERED
+    proposed_asset_id: arco-full-casual-candidate
+    original_filename: null
+    source_path: null
+  pixel_match:
+    method: alpha-aware exact pixel back-fit
+    difference_region: expression face-layer bounds
+    result: MATCH
+    confidence: high
+  source_locator_status: NOT_IN_CURRENT_PUBLICATION_UNIT
+- expression_asset_source_key: a_l_5799
+  relationship_status: PENDING_TARGET_REGISTRATION
+  basis: official_full_composite_pixel_match
+  calibration_id: cal-20260910T145805Z-61c3e9
+  faceless_composite:
+    registration_status: UNREGISTERED
+    proposed_asset_id: arco-faceless-swimsuit-candidate
+    original_filename: null
+    source_path: null
+  full_composite:
+    registration_status: UNREGISTERED
+    proposed_asset_id: arco-full-swimsuit-candidate
+    original_filename: null
+    source_path: null
+  pixel_match:
+    method: alpha-aware exact pixel back-fit
+    difference_region: expression face-layer bounds
+    result: MATCH
+    confidence: high
+  source_locator_status: NOT_IN_CURRENT_PUBLICATION_UNIT
+- expression_asset_source_key: a_l_5811
+  relationship_status: PENDING_TARGET_REGISTRATION
+  basis: official_full_composite_pixel_match
+  calibration_id: cal-20260910T145805Z-61c3e9
+  faceless_composite:
+    registration_status: UNREGISTERED
+    proposed_asset_id: arco-faceless-school-uniform-candidate
+    original_filename: null
+    source_path: null
+  full_composite:
+    registration_status: UNREGISTERED
+    proposed_asset_id: arco-full-school-uniform-candidate
+    original_filename: null
+    source_path: null
+  pixel_match:
+    method: alpha-aware exact pixel back-fit
+    difference_region: expression face-layer bounds
+    result: MATCH
+    confidence: high
+  source_locator_status: NOT_IN_CURRENT_PUBLICATION_UNIT
+- expression_asset_source_key: a_l_5802
+  relationship_status: PENDING_TARGET_REGISTRATION
+  basis: official_full_composite_pixel_match
+  calibration_id: cal-20260910T145805Z-61c3e9
+  faceless_composite:
+    registration_status: UNREGISTERED
+    proposed_asset_id: arco-faceless-robe-candidate
+    original_filename: null
+    source_path: null
+  full_composite:
+    registration_status: UNREGISTERED
+    proposed_asset_id: arco-full-robe-candidate
+    original_filename: null
+    source_path: null
+  pixel_match:
+    method: alpha-aware exact pixel back-fit
+    difference_region: expression face-layer bounds
+    result: MATCH
+    confidence: high
+  source_locator_status: NOT_IN_CURRENT_PUBLICATION_UNIT

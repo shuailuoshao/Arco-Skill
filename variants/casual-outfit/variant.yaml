@@ -1,0 +1,217 @@
+schema_version: 1
+entity_type: variant
+entity_ref: variants.casual-outfit
+variant_id: casual-outfit
+display_name_zh: 常服
+display_name_en: Casual Outfit
+lifecycle_status: published
+revision: 1
+last_calibration_id: cal-20260914T070842Z-68b810
+facts:
+- field_id: outfit.silhouette
+  display_name_zh: 服装整体轮廓
+  value: 白色长袖上身、黑色高腰宽腿短裤与深色长袜构成修长的高对比常服轮廓
+  status: UNCERTAIN
+  evidence_ids:
+  - casual-outfit-primary
+  - casual-outfit-open-arms-no-horns-evidence
+  - casual-outfit-open-arms-horns-evidence
+  - casual-outfit-crossed-arms-evidence
+  - casual-outfit-raised-fists-evidence
+  conflicts: []
+  note_zh: '同一 official standing-art source family 的跨姿势工作事实；visual confidence: high。用户批准不等于
+    CANON 或 VISUAL_CONSENSUS。'
+  required_global: true
+  required_for:
+  - upper_body
+  - full_body
+  - back_view
+- field_id: outfit.upper_garment.base_color
+  display_name_zh: 上衣基础颜色
+  value: 白色；阴影区域可呈灰蓝
+  status: UNCERTAIN
+  evidence_ids:
+  - casual-outfit-primary
+  - casual-outfit-open-arms-no-horns-evidence
+  - casual-outfit-open-arms-horns-evidence
+  - casual-outfit-crossed-arms-evidence
+  - casual-outfit-raised-fists-evidence
+  conflicts: []
+  note_zh: '同一 official standing-art source family 的跨姿势工作事实；visual confidence: high。用户批准不等于
+    CANON 或 VISUAL_CONSENSUS。'
+  required_global: true
+  required_for:
+  - upper_body
+  - full_body
+  - back_view
+- field_id: outfit.upper_garment.structure
+  display_name_zh: 上衣结构
+  value: 合身长袖衬衫，不是无袖内搭
+  status: UNCERTAIN
+  evidence_ids:
+  - casual-outfit-primary
+  - casual-outfit-open-arms-no-horns-evidence
+  - casual-outfit-open-arms-horns-evidence
+  - casual-outfit-crossed-arms-evidence
+  - casual-outfit-raised-fists-evidence
+  conflicts: []
+  note_zh: '同一 official standing-art source family 的跨姿势工作事实；visual confidence: high。用户批准不等于
+    CANON 或 VISUAL_CONSENSUS。'
+  required_global: true
+  required_for:
+  - upper_body
+  - full_body
+  - back_view
+- field_id: outfit.upper_garment.collar
+  display_name_zh: 衣领结构
+  value: 白色尖角翻领
+  status: UNCERTAIN
+  evidence_ids:
+  - casual-outfit-primary
+  - casual-outfit-open-arms-no-horns-evidence
+  - casual-outfit-open-arms-horns-evidence
+  - casual-outfit-raised-fists-evidence
+  conflicts: []
+  note_zh: '同一 official standing-art source family 的跨姿势工作事实；visual confidence: high。用户批准不等于
+    CANON 或 VISUAL_CONSENSUS。'
+  required_global: true
+  required_for:
+  - upper_body
+  - full_body
+  - back_view
+- field_id: outfit.upper_garment.sleeves
+  display_name_zh: 袖部结构
+  value: 长袖，袖口收窄至手腕
+  status: UNCERTAIN
+  evidence_ids:
+  - casual-outfit-primary
+  - casual-outfit-open-arms-no-horns-evidence
+  - casual-outfit-open-arms-horns-evidence
+  - casual-outfit-crossed-arms-evidence
+  - casual-outfit-raised-fists-evidence
+  conflicts: []
+  note_zh: '同一 official standing-art source family 的跨姿势工作事实；visual confidence: high。用户批准不等于
+    CANON 或 VISUAL_CONSENSUS。'
+  required_global: true
+  required_for:
+  - upper_body
+  - full_body
+  - back_view
+- field_id: outfit.chest_detail
+  display_name_zh: 胸前细节
+  value: 红色多层褶饰领巾（jabot-like cravat），不解释为蝴蝶结
+  status: UNCERTAIN
+  evidence_ids:
+  - casual-outfit-primary
+  - casual-outfit-open-arms-no-horns-evidence
+  - casual-outfit-open-arms-horns-evidence
+  - casual-outfit-raised-fists-evidence
+  conflicts: []
+  note_zh: '同一 official standing-art source family 的跨姿势工作事实；visual confidence: medium。用户批准不等于
+    CANON 或 VISUAL_CONSENSUS。'
+  required_global: true
+  required_for:
+  - upper_body
+  - full_body
+  - back_view
+- field_id: outfit.torso_structure
+  display_name_zh: 躯干与肩带结构
+  value: 两条黑色宽肩带连接黑色高腰短裤，中央保留白色褶饰前襟
+  status: UNCERTAIN
+  evidence_ids:
+  - casual-outfit-primary
+  - casual-outfit-open-arms-no-horns-evidence
+  - casual-outfit-open-arms-horns-evidence
+  - casual-outfit-raised-fists-evidence
+  conflicts: []
+  note_zh: '同一 official standing-art source family 的跨姿势工作事实；visual confidence: high。用户批准不等于
+    CANON 或 VISUAL_CONSENSUS。'
+  required_global: true
+  required_for:
+  - upper_body
+  - full_body
+  - back_view
+- field_id: outfit.lower_garment
+  display_name_zh: 下装
+  value: 黑色高腰宽腿短裤，具有裙裤式蓬展轮廓
+  status: UNCERTAIN
+  evidence_ids:
+  - casual-outfit-primary
+  - casual-outfit-open-arms-no-horns-evidence
+  - casual-outfit-open-arms-horns-evidence
+  - casual-outfit-crossed-arms-evidence
+  - casual-outfit-raised-fists-evidence
+  conflicts: []
+  note_zh: '同一 official standing-art source family 的跨姿势工作事实；visual confidence: high。用户批准不等于
+    CANON 或 VISUAL_CONSENSUS。'
+  required_global: true
+  required_for:
+  - full_body
+  - back_view
+- field_id: outfit.legwear
+  display_name_zh: 腿部服装
+  value: 深色大腿袜／过膝长袜，带独立窄吊带和金色连接扣
+  status: UNCERTAIN
+  evidence_ids:
+  - casual-outfit-primary
+  - casual-outfit-open-arms-no-horns-evidence
+  - casual-outfit-open-arms-horns-evidence
+  - casual-outfit-crossed-arms-evidence
+  - casual-outfit-raised-fists-evidence
+  conflicts: []
+  note_zh: '同一 official standing-art source family 的跨姿势工作事实；visual confidence: high。用户批准不等于
+    CANON 或 VISUAL_CONSENSUS。'
+  required_global: true
+  required_for:
+  - full_body
+  - back_view
+- field_id: outfit.footwear
+  display_name_zh: 鞋履
+  value: 深色圆头、闭口、低跟鞋；不强判 loafer、pump 或 Mary Jane
+  status: UNCERTAIN
+  evidence_ids:
+  - casual-outfit-primary
+  - casual-outfit-open-arms-no-horns-evidence
+  - casual-outfit-open-arms-horns-evidence
+  - casual-outfit-crossed-arms-evidence
+  - casual-outfit-raised-fists-evidence
+  conflicts: []
+  note_zh: '同一 official standing-art source family 的跨姿势工作事实；visual confidence: medium。用户批准不等于
+    CANON 或 VISUAL_CONSENSUS。'
+  required_global: true
+  required_for:
+  - full_body
+  - back_view
+reference_asset_ids:
+  primary:
+  - casual-outfit-primary
+  secondary: []
+  detail: []
+state_mutable_fields:
+- overlay.horns
+- overlay.cape
+- overlay.weapon
+- overlay.temporary_prop
+must_keep_fields:
+- outfit.upper_garment.base_color
+- outfit.upper_garment.structure
+- outfit.chest_detail
+- outfit.torso_structure
+- outfit.lower_garment
+- outfit.legwear
+- outfit.footwear
+state_groups: {}
+state_files: []
+known_generation_risks:
+- Primary includes Arco identity, pose and expression; Reference Contract must inherit
+  outfit only.
+- No rear outfit evidence; hidden back garment geometry must not be inferred.
+- Horns are a separable overlay observation, not a Casual Variant fact or Must Keep
+  field.
+coverage:
+  upper_body: READY
+  lower_body: READY
+  full_body: READY
+  footwear: READY
+  back_view: INCOMPLETE
+  overall: PARTIAL

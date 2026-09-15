@@ -1,0 +1,32 @@
+schema_version: 1
+calibration_id: cal-20260914T100205Z-77878a
+draft: true
+publication_status: NOT_PUBLISHED
+target_entity: character.identity
+revision_before: 1
+revision_after: 2
+patch_type: identity body proportion calibration
+patch_reason: First Live Smoke Test exposed an upper-torso visual mismatch.
+knowledge_change: true
+contract_explicitness_repair: false
+user_confirmed: true
+evidence_ids:
+- identity-body-c07
+- identity-body-c13
+- identity-body-c14
+- identity-p01
+- identity-p03
+source_family_independence:
+  count: 1
+observations:
+- C07/C13 show a narrow torso and restrained chest projection; C14 is chest-occluded.
+- P01/P03 support a slender dressed silhouette; clothing adds visual volume.
+candidate_fact:
+  field_id: body.chest_proportion
+  value: small-to-modest
+  status: UNCERTAIN
+  prompt_zh: 整体体型纤细轻盈，肩背与躯干较窄，胸部比例偏小至克制。
+  prompt_en: a slim, lightly built figure with a narrow upper torso and a small-to-modest,
+    understated bust
+  soft_constraint_en: no exaggerated chest volume
+publication_not_executed: true

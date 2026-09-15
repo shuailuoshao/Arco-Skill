@@ -1,0 +1,583 @@
+schema_version: 2
+calibration_id: cal-20260910T145805Z-61c3e9
+transaction_id: tx-expression-library-20260910T145805Z-61c3e9
+publication_state: COMPLETE
+publication_authorized: true
+base_state:
+  expression_library_revision: 0
+  asset_index_revision: 0
+  identity_revision: 0
+base_hashes:
+  SKILL.md: 9dbcd2537d8074f0d3b4a9644cbd82a8f37746445f2a414067ac18b1d51dc8d3
+  assets/templates/asset.yaml: ecbd8a191187891e21413d89db517626a979a68d3252aea5440393c680a79814
+  character/assets.yaml: 13edebe637e8b959cca22148f623790300abb16e0c178f6efaec8632cc992e73
+  character/expressions.yaml: 9655738496cb74ab8452c0cb405ab8cd26a7b0a56d8a52e7b0d207c0a706bcdd
+  character/identity.md: 1737afec4b2b7f46353d59bbb3dbbb5b820cb0c607df650a191914621cece66a
+  character/identity.yaml: ebdd02a3c7c2629ff61e63dca6b917d2f5e8c8809794e1405bbad86901cf4f69
+  references/calibration/schema.md: 6dfdc6256047f9d563c262776b2d76846ce7de1f0ae47b9853f1db035d0d4d7e
+  references/calibration/workflow.md: 6176221bb99f1651e053071e12caa4eca48537810a4421e647aaf600802868ac
+  references/core/prompt-compiler.md: 1fb856b730b7429a4c4f4c3cfbc8740c8086f3c0e6171a7a2d3bcedcee031d3b
+  references/core/reference-routing.md: 4f299dc2cd6ce2163105bd97c83ba471bce988fdb67e6bcf562751d569ab8a08
+  scripts/test_validate_library.py: 2e070d50d05e1c2ce48e509800ec6a42c1554601c1a5331fa2bfe122706a5f9a
+  scripts/validate_library.py: 8bf1b153e2ae3f4d6d288e858935c4922f7b065678aee936d7de92d17eb0f3e2
+  variants/index.yaml: d1f54d8ed48c41316f8817f94750b4c13f1c313877861970af8ef892a233bb1c
+staged_history_path: history-final.yaml
+history_path: calibration/history/cal-20260910T145805Z-61c3e9.yaml
+completion_marker: calibration/history/cal-20260910T145805Z-61c3e9.complete
+files:
+- target_path: SKILL.md
+  staged_path: candidate-root/SKILL.md
+  before_hash: 9dbcd2537d8074f0d3b4a9644cbd82a8f37746445f2a414067ac18b1d51dc8d3
+  candidate_hash: b6b8a142cdabd5f0b02631072e3656633e6bfeb71ae7b0c731234a710a646d53
+  after_hash: b6b8a142cdabd5f0b02631072e3656633e6bfeb71ae7b0c731234a710a646d53
+  backup_path: backups/SKILL.md
+  rollback_action: restore_backup
+  publication_status: replaced
+- target_path: assets/templates/asset.yaml
+  staged_path: candidate-root/assets/templates/asset.yaml
+  before_hash: ecbd8a191187891e21413d89db517626a979a68d3252aea5440393c680a79814
+  candidate_hash: 185f579d57ab766c6f8182e7413e062fe46e79c6efc7c20ab39364c5158ad591
+  after_hash: 185f579d57ab766c6f8182e7413e062fe46e79c6efc7c20ab39364c5158ad591
+  backup_path: backups/assets/templates/asset.yaml
+  rollback_action: restore_backup
+  publication_status: replaced
+- target_path: character/assets.yaml
+  staged_path: candidate-root/character/assets.yaml
+  before_hash: 13edebe637e8b959cca22148f623790300abb16e0c178f6efaec8632cc992e73
+  candidate_hash: 405cd66e64acbfe0b0ac2b57a398e0b241090f59719e7878610370a7b98c099a
+  after_hash: 405cd66e64acbfe0b0ac2b57a398e0b241090f59719e7878610370a7b98c099a
+  backup_path: backups/character/assets.yaml
+  rollback_action: restore_backup
+  publication_status: replaced
+- target_path: character/expressions.yaml
+  staged_path: candidate-root/character/expressions.yaml
+  before_hash: 9655738496cb74ab8452c0cb405ab8cd26a7b0a56d8a52e7b0d207c0a706bcdd
+  candidate_hash: 0bc3c7ae8e18797c472dc79022d0cd74fe71b04c90d5ec02e571c180b41e7030
+  after_hash: 0bc3c7ae8e18797c472dc79022d0cd74fe71b04c90d5ec02e571c180b41e7030
+  backup_path: backups/character/expressions.yaml
+  rollback_action: restore_backup
+  publication_status: replaced
+- target_path: references/calibration/schema.md
+  staged_path: candidate-root/references/calibration/schema.md
+  before_hash: 6dfdc6256047f9d563c262776b2d76846ce7de1f0ae47b9853f1db035d0d4d7e
+  candidate_hash: 3a3fb8c2bb849f226bf9a6baa8e200de69b668fc3c727e50f2d3291e6f0bedf1
+  after_hash: 3a3fb8c2bb849f226bf9a6baa8e200de69b668fc3c727e50f2d3291e6f0bedf1
+  backup_path: backups/references/calibration/schema.md
+  rollback_action: restore_backup
+  publication_status: replaced
+- target_path: references/calibration/workflow.md
+  staged_path: candidate-root/references/calibration/workflow.md
+  before_hash: 6176221bb99f1651e053071e12caa4eca48537810a4421e647aaf600802868ac
+  candidate_hash: ac0500faad8558744b572d995aac9ba115cd62b7782bd6938908ed3e092886c9
+  after_hash: ac0500faad8558744b572d995aac9ba115cd62b7782bd6938908ed3e092886c9
+  backup_path: backups/references/calibration/workflow.md
+  rollback_action: restore_backup
+  publication_status: replaced
+- target_path: references/calibration/expression-schema.md
+  staged_path: candidate-root/references/calibration/expression-schema.md
+  before_hash: null
+  candidate_hash: b4f05673ccb8c48157a19d7fc16b3982155e5e7d111f0f1151c09ce023a186ad
+  after_hash: b4f05673ccb8c48157a19d7fc16b3982155e5e7d111f0f1151c09ce023a186ad
+  backup_path: backups/references/calibration/expression-schema.md
+  rollback_action: delete_created_file
+  publication_status: replaced
+- target_path: references/core/prompt-compiler.md
+  staged_path: candidate-root/references/core/prompt-compiler.md
+  before_hash: 1fb856b730b7429a4c4f4c3cfbc8740c8086f3c0e6171a7a2d3bcedcee031d3b
+  candidate_hash: d04c31f785148f7f5874008850d7a6b4a4deb9a47b4c904acb2daadb5d826fa8
+  after_hash: d04c31f785148f7f5874008850d7a6b4a4deb9a47b4c904acb2daadb5d826fa8
+  backup_path: backups/references/core/prompt-compiler.md
+  rollback_action: restore_backup
+  publication_status: replaced
+- target_path: references/core/reference-routing.md
+  staged_path: candidate-root/references/core/reference-routing.md
+  before_hash: 4f299dc2cd6ce2163105bd97c83ba471bce988fdb67e6bcf562751d569ab8a08
+  candidate_hash: 08942654bd098980503f32db3d44e19aed706f77b05cee18b69a30df8573ffd1
+  after_hash: 08942654bd098980503f32db3d44e19aed706f77b05cee18b69a30df8573ffd1
+  backup_path: backups/references/core/reference-routing.md
+  rollback_action: restore_backup
+  publication_status: replaced
+- target_path: references/core/expression-compiler.md
+  staged_path: candidate-root/references/core/expression-compiler.md
+  before_hash: null
+  candidate_hash: 0649a5da923400471029e308d1e1cfb04cae1e59bf1ab83b1efc63a3cc54a5a4
+  after_hash: 0649a5da923400471029e308d1e1cfb04cae1e59bf1ab83b1efc63a3cc54a5a4
+  backup_path: backups/references/core/expression-compiler.md
+  rollback_action: delete_created_file
+  publication_status: replaced
+- target_path: scripts/validate_library.py
+  staged_path: candidate-root/scripts/validate_library.py
+  before_hash: 8bf1b153e2ae3f4d6d288e858935c4922f7b065678aee936d7de92d17eb0f3e2
+  candidate_hash: 8bbc8bf0046c5dedd976e8172dc6ba673b4f8b73124e0b116d6bba834c833708
+  after_hash: 8bbc8bf0046c5dedd976e8172dc6ba673b4f8b73124e0b116d6bba834c833708
+  backup_path: backups/scripts/validate_library.py
+  rollback_action: restore_backup
+  publication_status: replaced
+- target_path: scripts/test_validate_library.py
+  staged_path: candidate-root/scripts/test_validate_library.py
+  before_hash: 2e070d50d05e1c2ce48e509800ec6a42c1554601c1a5331fa2bfe122706a5f9a
+  candidate_hash: 04967349c24b9af9bd2b3b0bfb1d560be5a378ccf329ad4b6f6976e31f193142
+  after_hash: 04967349c24b9af9bd2b3b0bfb1d560be5a378ccf329ad4b6f6976e31f193142
+  backup_path: backups/scripts/test_validate_library.py
+  rollback_action: restore_backup
+  publication_status: replaced
+- target_path: scripts/validate_expression_staging.py
+  staged_path: candidate-root/scripts/validate_expression_staging.py
+  before_hash: null
+  candidate_hash: bb314e5fe1507bb4c26eb04bf59da59832a2837194b337226f012ae7f636561f
+  after_hash: bb314e5fe1507bb4c26eb04bf59da59832a2837194b337226f012ae7f636561f
+  backup_path: backups/scripts/validate_expression_staging.py
+  rollback_action: delete_created_file
+  publication_status: replaced
+- target_path: scripts/test_validate_expression_staging.py
+  staged_path: candidate-root/scripts/test_validate_expression_staging.py
+  before_hash: null
+  candidate_hash: 5538595bfc701310d4863cfaf1abbfbf2e253197361f086aa237252103b8819e
+  after_hash: 5538595bfc701310d4863cfaf1abbfbf2e253197361f086aa237252103b8819e
+  backup_path: backups/scripts/test_validate_expression_staging.py
+  rollback_action: delete_created_file
+  publication_status: replaced
+- target_path: scripts/check_calibration_lock.py
+  staged_path: candidate-root/scripts/check_calibration_lock.py
+  before_hash: null
+  candidate_hash: fd73d2e31f640775654e61ade24d95aed52c22b745bd0158710c7d5f891de656
+  after_hash: fd73d2e31f640775654e61ade24d95aed52c22b745bd0158710c7d5f891de656
+  backup_path: backups/scripts/check_calibration_lock.py
+  rollback_action: delete_created_file
+  publication_status: replaced
+- target_path: assets/arco/expressions/oblique/arco-expr-oblique-001.png
+  staged_path: candidate-root/assets/arco/expressions/oblique/arco-expr-oblique-001.png
+  before_hash: null
+  candidate_hash: d03ebd27ea08ba3dd22e4f1b6885a7437d50f9b802ac97523eb8e5720002532b
+  after_hash: d03ebd27ea08ba3dd22e4f1b6885a7437d50f9b802ac97523eb8e5720002532b
+  backup_path: backups/assets/arco/expressions/oblique/arco-expr-oblique-001.png
+  rollback_action: delete_created_file
+  publication_status: replaced
+- target_path: assets/arco/expressions/oblique/arco-expr-oblique-002.png
+  staged_path: candidate-root/assets/arco/expressions/oblique/arco-expr-oblique-002.png
+  before_hash: null
+  candidate_hash: d0c4a0bef6f260aca4ae9312a6ad9929d2e2c5447d0bdc4f6b75a8d4cac5a398
+  after_hash: d0c4a0bef6f260aca4ae9312a6ad9929d2e2c5447d0bdc4f6b75a8d4cac5a398
+  backup_path: backups/assets/arco/expressions/oblique/arco-expr-oblique-002.png
+  rollback_action: delete_created_file
+  publication_status: replaced
+- target_path: assets/arco/expressions/oblique/arco-expr-oblique-003.png
+  staged_path: candidate-root/assets/arco/expressions/oblique/arco-expr-oblique-003.png
+  before_hash: null
+  candidate_hash: 0425d957385cf790598b992ef085837a73c18ee438f0117d8ba87f51f5166fc1
+  after_hash: 0425d957385cf790598b992ef085837a73c18ee438f0117d8ba87f51f5166fc1
+  backup_path: backups/assets/arco/expressions/oblique/arco-expr-oblique-003.png
+  rollback_action: delete_created_file
+  publication_status: replaced
+- target_path: assets/arco/expressions/oblique/arco-expr-oblique-004.png
+  staged_path: candidate-root/assets/arco/expressions/oblique/arco-expr-oblique-004.png
+  before_hash: null
+  candidate_hash: 6cde93f0af3fb9aa82c3cec8273e18e69e6d735563ca6bf6029fe6fed48770db
+  after_hash: 6cde93f0af3fb9aa82c3cec8273e18e69e6d735563ca6bf6029fe6fed48770db
+  backup_path: backups/assets/arco/expressions/oblique/arco-expr-oblique-004.png
+  rollback_action: delete_created_file
+  publication_status: replaced
+- target_path: assets/arco/expressions/oblique/arco-expr-oblique-005.png
+  staged_path: candidate-root/assets/arco/expressions/oblique/arco-expr-oblique-005.png
+  before_hash: null
+  candidate_hash: 282ba8b4b97d2af28eef0fc8b68c114af8fa7fea73f392911019966fc28e5b58
+  after_hash: 282ba8b4b97d2af28eef0fc8b68c114af8fa7fea73f392911019966fc28e5b58
+  backup_path: backups/assets/arco/expressions/oblique/arco-expr-oblique-005.png
+  rollback_action: delete_created_file
+  publication_status: replaced
+- target_path: assets/arco/expressions/oblique/arco-expr-oblique-006.png
+  staged_path: candidate-root/assets/arco/expressions/oblique/arco-expr-oblique-006.png
+  before_hash: null
+  candidate_hash: 72357eb15a2f9736932eb5a4329fabafb5b14f52a48356977ecf8cf37c45cacf
+  after_hash: 72357eb15a2f9736932eb5a4329fabafb5b14f52a48356977ecf8cf37c45cacf
+  backup_path: backups/assets/arco/expressions/oblique/arco-expr-oblique-006.png
+  rollback_action: delete_created_file
+  publication_status: replaced
+- target_path: assets/arco/expressions/oblique/arco-expr-oblique-007.png
+  staged_path: candidate-root/assets/arco/expressions/oblique/arco-expr-oblique-007.png
+  before_hash: null
+  candidate_hash: cd5bc627f3a11b6e076c501b1a46690a80c4267b0f9955bcb31eb194990598cf
+  after_hash: cd5bc627f3a11b6e076c501b1a46690a80c4267b0f9955bcb31eb194990598cf
+  backup_path: backups/assets/arco/expressions/oblique/arco-expr-oblique-007.png
+  rollback_action: delete_created_file
+  publication_status: replaced
+- target_path: assets/arco/expressions/oblique/arco-expr-oblique-008.png
+  staged_path: candidate-root/assets/arco/expressions/oblique/arco-expr-oblique-008.png
+  before_hash: null
+  candidate_hash: dd7ad32900de00b18dc420752a654507285b1dd9592468f2613673470184f01a
+  after_hash: dd7ad32900de00b18dc420752a654507285b1dd9592468f2613673470184f01a
+  backup_path: backups/assets/arco/expressions/oblique/arco-expr-oblique-008.png
+  rollback_action: delete_created_file
+  publication_status: replaced
+- target_path: assets/arco/expressions/oblique/arco-expr-oblique-009.png
+  staged_path: candidate-root/assets/arco/expressions/oblique/arco-expr-oblique-009.png
+  before_hash: null
+  candidate_hash: 3dd10fc5e8e21ac4b01c3915efb448b5bee5cae27a9e13c5bba83e32ffca754a
+  after_hash: 3dd10fc5e8e21ac4b01c3915efb448b5bee5cae27a9e13c5bba83e32ffca754a
+  backup_path: backups/assets/arco/expressions/oblique/arco-expr-oblique-009.png
+  rollback_action: delete_created_file
+  publication_status: replaced
+- target_path: assets/arco/expressions/oblique/arco-expr-oblique-010.png
+  staged_path: candidate-root/assets/arco/expressions/oblique/arco-expr-oblique-010.png
+  before_hash: null
+  candidate_hash: e917a36cc6d0ec0370479877baa355eab3cd182bb55d2b84d625e7a7ca04d55c
+  after_hash: e917a36cc6d0ec0370479877baa355eab3cd182bb55d2b84d625e7a7ca04d55c
+  backup_path: backups/assets/arco/expressions/oblique/arco-expr-oblique-010.png
+  rollback_action: delete_created_file
+  publication_status: replaced
+- target_path: assets/arco/expressions/oblique/arco-expr-oblique-011.png
+  staged_path: candidate-root/assets/arco/expressions/oblique/arco-expr-oblique-011.png
+  before_hash: null
+  candidate_hash: f9fd789dd0695ef10f9d49d87c5f782f9bfea93123a0c29c470374db2edd5c94
+  after_hash: f9fd789dd0695ef10f9d49d87c5f782f9bfea93123a0c29c470374db2edd5c94
+  backup_path: backups/assets/arco/expressions/oblique/arco-expr-oblique-011.png
+  rollback_action: delete_created_file
+  publication_status: replaced
+- target_path: assets/arco/expressions/oblique/arco-expr-oblique-012.png
+  staged_path: candidate-root/assets/arco/expressions/oblique/arco-expr-oblique-012.png
+  before_hash: null
+  candidate_hash: 3b5bb564842fe81b38f7aa93f04b2df22e3e5fc017a9474f641773edde90bf30
+  after_hash: 3b5bb564842fe81b38f7aa93f04b2df22e3e5fc017a9474f641773edde90bf30
+  backup_path: backups/assets/arco/expressions/oblique/arco-expr-oblique-012.png
+  rollback_action: delete_created_file
+  publication_status: replaced
+- target_path: assets/arco/expressions/oblique/arco-expr-oblique-013.png
+  staged_path: candidate-root/assets/arco/expressions/oblique/arco-expr-oblique-013.png
+  before_hash: null
+  candidate_hash: a67145fc6a207df371e37e34e0de031ff897ec665f21fe4875a88b7a69bd3efe
+  after_hash: a67145fc6a207df371e37e34e0de031ff897ec665f21fe4875a88b7a69bd3efe
+  backup_path: backups/assets/arco/expressions/oblique/arco-expr-oblique-013.png
+  rollback_action: delete_created_file
+  publication_status: replaced
+- target_path: assets/arco/expressions/oblique/arco-expr-oblique-014.png
+  staged_path: candidate-root/assets/arco/expressions/oblique/arco-expr-oblique-014.png
+  before_hash: null
+  candidate_hash: e172ec7ad9ac2d3cd0363fd6565533944c83a8d9553e3e2c46dae90cf3a2fa06
+  after_hash: e172ec7ad9ac2d3cd0363fd6565533944c83a8d9553e3e2c46dae90cf3a2fa06
+  backup_path: backups/assets/arco/expressions/oblique/arco-expr-oblique-014.png
+  rollback_action: delete_created_file
+  publication_status: replaced
+- target_path: assets/arco/expressions/oblique/arco-expr-oblique-015.png
+  staged_path: candidate-root/assets/arco/expressions/oblique/arco-expr-oblique-015.png
+  before_hash: null
+  candidate_hash: fd70abae2e6a3d4ca8e600287913afefd7b52e013bd7ceaab3d57756212eced3
+  after_hash: fd70abae2e6a3d4ca8e600287913afefd7b52e013bd7ceaab3d57756212eced3
+  backup_path: backups/assets/arco/expressions/oblique/arco-expr-oblique-015.png
+  rollback_action: delete_created_file
+  publication_status: replaced
+- target_path: assets/arco/expressions/oblique/arco-expr-oblique-016.png
+  staged_path: candidate-root/assets/arco/expressions/oblique/arco-expr-oblique-016.png
+  before_hash: null
+  candidate_hash: dbad2a2a95ce9c8098c6e041612a6765a645ff59496a5c39bf489677a2f2b637
+  after_hash: dbad2a2a95ce9c8098c6e041612a6765a645ff59496a5c39bf489677a2f2b637
+  backup_path: backups/assets/arco/expressions/oblique/arco-expr-oblique-016.png
+  rollback_action: delete_created_file
+  publication_status: replaced
+- target_path: assets/arco/expressions/oblique/arco-expr-oblique-017.png
+  staged_path: candidate-root/assets/arco/expressions/oblique/arco-expr-oblique-017.png
+  before_hash: null
+  candidate_hash: 62f8c93d9a4a53940ab0d5c92b3bb130af78b95aeae6848ab0445cb28553e9cd
+  after_hash: 62f8c93d9a4a53940ab0d5c92b3bb130af78b95aeae6848ab0445cb28553e9cd
+  backup_path: backups/assets/arco/expressions/oblique/arco-expr-oblique-017.png
+  rollback_action: delete_created_file
+  publication_status: replaced
+- target_path: assets/arco/expressions/oblique/arco-expr-oblique-018.png
+  staged_path: candidate-root/assets/arco/expressions/oblique/arco-expr-oblique-018.png
+  before_hash: null
+  candidate_hash: da7fe1c1dd23514a839f1f21bfa76adc5082954d1625d52185123eeb2c2ffcbe
+  after_hash: da7fe1c1dd23514a839f1f21bfa76adc5082954d1625d52185123eeb2c2ffcbe
+  backup_path: backups/assets/arco/expressions/oblique/arco-expr-oblique-018.png
+  rollback_action: delete_created_file
+  publication_status: replaced
+- target_path: assets/arco/expressions/oblique/arco-expr-oblique-019.png
+  staged_path: candidate-root/assets/arco/expressions/oblique/arco-expr-oblique-019.png
+  before_hash: null
+  candidate_hash: 9cc2aa31d4498eaf8437c2f81594f190517b984f702d636719bfbb5d8fade16b
+  after_hash: 9cc2aa31d4498eaf8437c2f81594f190517b984f702d636719bfbb5d8fade16b
+  backup_path: backups/assets/arco/expressions/oblique/arco-expr-oblique-019.png
+  rollback_action: delete_created_file
+  publication_status: replaced
+- target_path: assets/arco/expressions/oblique/arco-expr-oblique-020.png
+  staged_path: candidate-root/assets/arco/expressions/oblique/arco-expr-oblique-020.png
+  before_hash: null
+  candidate_hash: 3923ec69c898ec60da4859cb1a34c16f473f3dcfde0132776db9cd1bee722fcf
+  after_hash: 3923ec69c898ec60da4859cb1a34c16f473f3dcfde0132776db9cd1bee722fcf
+  backup_path: backups/assets/arco/expressions/oblique/arco-expr-oblique-020.png
+  rollback_action: delete_created_file
+  publication_status: replaced
+- target_path: assets/arco/expressions/oblique/arco-expr-oblique-021.png
+  staged_path: candidate-root/assets/arco/expressions/oblique/arco-expr-oblique-021.png
+  before_hash: null
+  candidate_hash: c955932bf4c47a09a8cf22e3b0b4b4d5e1eee305e2862ad292c2ca4167c24bcf
+  after_hash: c955932bf4c47a09a8cf22e3b0b4b4d5e1eee305e2862ad292c2ca4167c24bcf
+  backup_path: backups/assets/arco/expressions/oblique/arco-expr-oblique-021.png
+  rollback_action: delete_created_file
+  publication_status: replaced
+- target_path: assets/arco/expressions/frontal/arco-expr-frontal-001.png
+  staged_path: candidate-root/assets/arco/expressions/frontal/arco-expr-frontal-001.png
+  before_hash: null
+  candidate_hash: 386cea17af789627dd06070002fd02261025ad5447e0c451f194bb401080d240
+  after_hash: 386cea17af789627dd06070002fd02261025ad5447e0c451f194bb401080d240
+  backup_path: backups/assets/arco/expressions/frontal/arco-expr-frontal-001.png
+  rollback_action: delete_created_file
+  publication_status: replaced
+- target_path: assets/arco/expressions/frontal/arco-expr-frontal-002.png
+  staged_path: candidate-root/assets/arco/expressions/frontal/arco-expr-frontal-002.png
+  before_hash: null
+  candidate_hash: c9ec738943c2a535e277d86569397f4207658dec1dd1a4b3476c87de1e345c1c
+  after_hash: c9ec738943c2a535e277d86569397f4207658dec1dd1a4b3476c87de1e345c1c
+  backup_path: backups/assets/arco/expressions/frontal/arco-expr-frontal-002.png
+  rollback_action: delete_created_file
+  publication_status: replaced
+- target_path: assets/arco/expressions/frontal/arco-expr-frontal-003.png
+  staged_path: candidate-root/assets/arco/expressions/frontal/arco-expr-frontal-003.png
+  before_hash: null
+  candidate_hash: 827a18fd067fe4844c0f7cf45dd51b3ccb18a8ebcbd3a6132b038858bb1f2e1c
+  after_hash: 827a18fd067fe4844c0f7cf45dd51b3ccb18a8ebcbd3a6132b038858bb1f2e1c
+  backup_path: backups/assets/arco/expressions/frontal/arco-expr-frontal-003.png
+  rollback_action: delete_created_file
+  publication_status: replaced
+- target_path: assets/arco/expressions/frontal/arco-expr-frontal-004.png
+  staged_path: candidate-root/assets/arco/expressions/frontal/arco-expr-frontal-004.png
+  before_hash: null
+  candidate_hash: 82b7eb2e3da5b6053676633c766057e56a587778170a503dd217bc3f4212c649
+  after_hash: 82b7eb2e3da5b6053676633c766057e56a587778170a503dd217bc3f4212c649
+  backup_path: backups/assets/arco/expressions/frontal/arco-expr-frontal-004.png
+  rollback_action: delete_created_file
+  publication_status: replaced
+- target_path: assets/arco/expressions/frontal/arco-expr-frontal-005.png
+  staged_path: candidate-root/assets/arco/expressions/frontal/arco-expr-frontal-005.png
+  before_hash: null
+  candidate_hash: b1dd2a686220170fa0b30971797f3a0f36dd5c108d2ab2c2c530b360937da3f3
+  after_hash: b1dd2a686220170fa0b30971797f3a0f36dd5c108d2ab2c2c530b360937da3f3
+  backup_path: backups/assets/arco/expressions/frontal/arco-expr-frontal-005.png
+  rollback_action: delete_created_file
+  publication_status: replaced
+- target_path: assets/arco/expressions/frontal/arco-expr-frontal-006.png
+  staged_path: candidate-root/assets/arco/expressions/frontal/arco-expr-frontal-006.png
+  before_hash: null
+  candidate_hash: 4abad161afc32fd2cf021f5425172165ac80f8e620064b3c6cd9aaaf7c59b40b
+  after_hash: 4abad161afc32fd2cf021f5425172165ac80f8e620064b3c6cd9aaaf7c59b40b
+  backup_path: backups/assets/arco/expressions/frontal/arco-expr-frontal-006.png
+  rollback_action: delete_created_file
+  publication_status: replaced
+- target_path: assets/arco/expressions/frontal/arco-expr-frontal-007.png
+  staged_path: candidate-root/assets/arco/expressions/frontal/arco-expr-frontal-007.png
+  before_hash: null
+  candidate_hash: 5d371637d020129bb1b606d6ae691a546874501b2c5047e74be4743a9b96963a
+  after_hash: 5d371637d020129bb1b606d6ae691a546874501b2c5047e74be4743a9b96963a
+  backup_path: backups/assets/arco/expressions/frontal/arco-expr-frontal-007.png
+  rollback_action: delete_created_file
+  publication_status: replaced
+- target_path: assets/arco/expressions/frontal/arco-expr-frontal-008.png
+  staged_path: candidate-root/assets/arco/expressions/frontal/arco-expr-frontal-008.png
+  before_hash: null
+  candidate_hash: 6921335c51c30d5dabf20f6e36612395af690e690841862bb17ea42e28186774
+  after_hash: 6921335c51c30d5dabf20f6e36612395af690e690841862bb17ea42e28186774
+  backup_path: backups/assets/arco/expressions/frontal/arco-expr-frontal-008.png
+  rollback_action: delete_created_file
+  publication_status: replaced
+- target_path: assets/arco/expressions/frontal/arco-expr-frontal-009.png
+  staged_path: candidate-root/assets/arco/expressions/frontal/arco-expr-frontal-009.png
+  before_hash: null
+  candidate_hash: b9a8d36116dd85207a275840eb3bc3c7a56c2987a2e7020dd401ab0004c514ce
+  after_hash: b9a8d36116dd85207a275840eb3bc3c7a56c2987a2e7020dd401ab0004c514ce
+  backup_path: backups/assets/arco/expressions/frontal/arco-expr-frontal-009.png
+  rollback_action: delete_created_file
+  publication_status: replaced
+- target_path: assets/arco/expressions/frontal/arco-expr-frontal-010.png
+  staged_path: candidate-root/assets/arco/expressions/frontal/arco-expr-frontal-010.png
+  before_hash: null
+  candidate_hash: 2664839ae5ddd668cc34b8a85ddd9557510c97aea169f3f5603fa5e4d70842f4
+  after_hash: 2664839ae5ddd668cc34b8a85ddd9557510c97aea169f3f5603fa5e4d70842f4
+  backup_path: backups/assets/arco/expressions/frontal/arco-expr-frontal-010.png
+  rollback_action: delete_created_file
+  publication_status: replaced
+- target_path: assets/arco/expressions/frontal/arco-expr-frontal-011.png
+  staged_path: candidate-root/assets/arco/expressions/frontal/arco-expr-frontal-011.png
+  before_hash: null
+  candidate_hash: 9fc37446350ddc2b9fa118bdb80c715134f6ebc1e343f5a33632e1f141bbf0bc
+  after_hash: 9fc37446350ddc2b9fa118bdb80c715134f6ebc1e343f5a33632e1f141bbf0bc
+  backup_path: backups/assets/arco/expressions/frontal/arco-expr-frontal-011.png
+  rollback_action: delete_created_file
+  publication_status: replaced
+- target_path: assets/arco/expressions/frontal/arco-expr-frontal-012.png
+  staged_path: candidate-root/assets/arco/expressions/frontal/arco-expr-frontal-012.png
+  before_hash: null
+  candidate_hash: 40851a46b362f8b3ef01ec1c18e4d428119409d36e7fdd484a5cd902babcc0b6
+  after_hash: 40851a46b362f8b3ef01ec1c18e4d428119409d36e7fdd484a5cd902babcc0b6
+  backup_path: backups/assets/arco/expressions/frontal/arco-expr-frontal-012.png
+  rollback_action: delete_created_file
+  publication_status: replaced
+- target_path: assets/arco/expressions/frontal/arco-expr-frontal-013.png
+  staged_path: candidate-root/assets/arco/expressions/frontal/arco-expr-frontal-013.png
+  before_hash: null
+  candidate_hash: 2c7f054e717dba98511742b20047ccda6d3460b3c82c5bf37111d5d103aab1a1
+  after_hash: 2c7f054e717dba98511742b20047ccda6d3460b3c82c5bf37111d5d103aab1a1
+  backup_path: backups/assets/arco/expressions/frontal/arco-expr-frontal-013.png
+  rollback_action: delete_created_file
+  publication_status: replaced
+- target_path: assets/arco/expressions/frontal/arco-expr-frontal-014.png
+  staged_path: candidate-root/assets/arco/expressions/frontal/arco-expr-frontal-014.png
+  before_hash: null
+  candidate_hash: 61b7504125b13a7fad6bbf1d43fcdab9472a9b08175798a20f0802bb21baa81c
+  after_hash: 61b7504125b13a7fad6bbf1d43fcdab9472a9b08175798a20f0802bb21baa81c
+  backup_path: backups/assets/arco/expressions/frontal/arco-expr-frontal-014.png
+  rollback_action: delete_created_file
+  publication_status: replaced
+- target_path: assets/arco/expressions/frontal/arco-expr-frontal-015.png
+  staged_path: candidate-root/assets/arco/expressions/frontal/arco-expr-frontal-015.png
+  before_hash: null
+  candidate_hash: 98d2f4e2979157e4f3fda372e8f7d21a59dd3c1ebaa60f25dd78275f352022d0
+  after_hash: 98d2f4e2979157e4f3fda372e8f7d21a59dd3c1ebaa60f25dd78275f352022d0
+  backup_path: backups/assets/arco/expressions/frontal/arco-expr-frontal-015.png
+  rollback_action: delete_created_file
+  publication_status: replaced
+- target_path: assets/arco/expressions/frontal/arco-expr-frontal-016.png
+  staged_path: candidate-root/assets/arco/expressions/frontal/arco-expr-frontal-016.png
+  before_hash: null
+  candidate_hash: 9fc37446350ddc2b9fa118bdb80c715134f6ebc1e343f5a33632e1f141bbf0bc
+  after_hash: 9fc37446350ddc2b9fa118bdb80c715134f6ebc1e343f5a33632e1f141bbf0bc
+  backup_path: backups/assets/arco/expressions/frontal/arco-expr-frontal-016.png
+  rollback_action: delete_created_file
+  publication_status: replaced
+- target_path: assets/arco/expressions/frontal/arco-expr-frontal-017.png
+  staged_path: candidate-root/assets/arco/expressions/frontal/arco-expr-frontal-017.png
+  before_hash: null
+  candidate_hash: 765d3944e47fddd8653d26be4f2078e90c0bf93be0d8139c4032fd46caa116e1
+  after_hash: 765d3944e47fddd8653d26be4f2078e90c0bf93be0d8139c4032fd46caa116e1
+  backup_path: backups/assets/arco/expressions/frontal/arco-expr-frontal-017.png
+  rollback_action: delete_created_file
+  publication_status: replaced
+- target_path: assets/arco/expressions/frontal/arco-expr-frontal-018.png
+  staged_path: candidate-root/assets/arco/expressions/frontal/arco-expr-frontal-018.png
+  before_hash: null
+  candidate_hash: a827d4bf789b1c22d08c8b853db909675f562ea6195744789cb85a12452dbbbc
+  after_hash: a827d4bf789b1c22d08c8b853db909675f562ea6195744789cb85a12452dbbbc
+  backup_path: backups/assets/arco/expressions/frontal/arco-expr-frontal-018.png
+  rollback_action: delete_created_file
+  publication_status: replaced
+- target_path: assets/arco/expressions/frontal/arco-expr-frontal-019.png
+  staged_path: candidate-root/assets/arco/expressions/frontal/arco-expr-frontal-019.png
+  before_hash: null
+  candidate_hash: f908928f438185fa99a202d9629164e78eea7ae6ac35f0d1ab8bb7ed8d584d38
+  after_hash: f908928f438185fa99a202d9629164e78eea7ae6ac35f0d1ab8bb7ed8d584d38
+  backup_path: backups/assets/arco/expressions/frontal/arco-expr-frontal-019.png
+  rollback_action: delete_created_file
+  publication_status: replaced
+- target_path: assets/arco/expressions/frontal/arco-expr-frontal-020.png
+  staged_path: candidate-root/assets/arco/expressions/frontal/arco-expr-frontal-020.png
+  before_hash: null
+  candidate_hash: 860e6405b0c628c9796202d4d1f2d0a922f21cf49657749801ccb6aef2286c47
+  after_hash: 860e6405b0c628c9796202d4d1f2d0a922f21cf49657749801ccb6aef2286c47
+  backup_path: backups/assets/arco/expressions/frontal/arco-expr-frontal-020.png
+  rollback_action: delete_created_file
+  publication_status: replaced
+- target_path: assets/arco/expressions/frontal/arco-expr-frontal-021.png
+  staged_path: candidate-root/assets/arco/expressions/frontal/arco-expr-frontal-021.png
+  before_hash: null
+  candidate_hash: 8a68a121e14eda387d0165772a9ef51404588e95d1ce7d5f647c4f328b2c8f83
+  after_hash: 8a68a121e14eda387d0165772a9ef51404588e95d1ce7d5f647c4f328b2c8f83
+  backup_path: backups/assets/arco/expressions/frontal/arco-expr-frontal-021.png
+  rollback_action: delete_created_file
+  publication_status: replaced
+- target_path: assets/arco/expressions/frontal/arco-expr-frontal-022.png
+  staged_path: candidate-root/assets/arco/expressions/frontal/arco-expr-frontal-022.png
+  before_hash: null
+  candidate_hash: 06abd18bcddd7ca2e0f88e094af949e80ce50d32d3f5c5c8818004f199ce8549
+  after_hash: 06abd18bcddd7ca2e0f88e094af949e80ce50d32d3f5c5c8818004f199ce8549
+  backup_path: backups/assets/arco/expressions/frontal/arco-expr-frontal-022.png
+  rollback_action: delete_created_file
+  publication_status: replaced
+transaction_sequence:
+- preflight
+- rollback_snapshot
+- PUBLICATION_IN_PROGRESS
+- file_writes
+- after_hash_validation
+- history_finalize
+- completion_marker
+- TRANSACTION_COMPLETE
+failure_state: RECOVERY_REQUIRED
+stale_state: STALE_STAGING
+transaction_log:
+- at: '2026-09-11T00:13:16.534411+00:00'
+  state: PREFLIGHT_PASSED
+  note: base revisions, protected hashes, candidate hashes and target before-hashes match
+- at: '2026-09-11T00:13:16.700199+00:00'
+  state: ROLLBACK_SNAPSHOT_READY
+  note: all existing publication targets have verified backups
+- at: '2026-09-11T00:13:16.716858+00:00'
+  state: PUBLICATION_IN_PROGRESS
+  note: publication_in_progress marker created
+- at: '2026-09-11T00:13:18.029674+00:00'
+  state: AFTER_HASH_VALIDATED
+  note: 58 files written and verified
+- at: '2026-09-11T00:13:18.781833+00:00'
+  state: HISTORY_FINALIZED
+  note: History and completion marker created
+- at: '2026-09-11T00:13:19.033274+00:00'
+  state: COMPLETE
+  note: transaction complete; final validators passed
+- at: '2026-09-11T00:15:05.391186+00:00'
+  state: RECOVERY_REQUIRED
+  note: post-publication regression fixture copied finalized History into revision-0 test fixture
+- at: '2026-09-11T00:15:52.394812+00:00'
+  state: AFTER_HASH_VALIDATED
+  note: manifest-scoped regression fixture repair written and hash-verified
+post_write_expression_validation:
+  exit_code: 0
+  output: "{\n  \"validator\": \"expression-staging-v1\",\n  \"calibration_id\": \"cal-20260910T145805Z-61c3e9\",\n  \"status\"\
+    : \"PASS\",\n  \"counts\": {\n    \"assets\": 43,\n    \"semantics\": 42,\n    \"approved\": 42,\n    \"face_slots\":\
+    \ 2,\n    \"expression_sets\": 2,\n    \"confirmed_clusters\": 8,\n    \"similarity_groups\": 21,\n    \"pending_compatibility_evidence\"\
+    : 4,\n    \"materialized_composite_compatibility\": 0\n  },\n  \"errors\": [],\n  \"warnings\": [\n    \"a_l_5797 faceless_composite:\
+    \ source locator outside current publication unit\",\n    \"a_l_5797 full_composite: source locator outside current publication\
+    \ unit\",\n    \"a_l_5799 faceless_composite: source locator outside current publication unit\",\n    \"a_l_5799 full_composite:\
+    \ source locator outside current publication unit\",\n    \"a_l_5802 faceless_composite: source locator outside current\
+    \ publication unit\",\n    \"a_l_5802 full_composite: source locator outside current publication unit\",\n    \"a_l_5811\
+    \ faceless_composite: source locator outside current publication unit\",\n    \"a_l_5811 full_composite: source locator\
+    \ outside current publication unit\"\n  ]\n}\n"
+final_validation:
+  structure: PASS
+  identity_readiness:
+    status: INCOMPLETE
+    missing_fields:
+    - body.chest_proportion
+    - body.head_to_body_ratio
+    - body.height
+    - body.leg_proportion
+    - body.overall_build
+    - body.shoulder_width
+    - body.waist_hip_ratio
+    - eyes.color
+    - face.feature_relationships
+    - face.shape
+    - hair.base_color
+    - hair.base_identity
+  variant_readiness: {}
+  request_readiness:
+    status: INCOMPLETE
+    exposure_profiles: []
+    missing_fields:
+    - request_profile
+    temporary_evidence_used: []
+  issues: []
+  summary:
+    errors: 0
+    warnings: 0
+skill_validation:
+  exit_code: 0
+  output: 'Skill is valid!
+
+    '
+completed_at: '2026-09-11T00:13:19.033259+00:00'
+publication_in_progress_marker_cleared: true
+recovery_repair:
+  target_path: scripts/test_validate_library.py
+  previous_candidate_hash: 9f41860e8ff2040a6e7a8d733a456db8d505ac06f8c4551aa181a188532c1894
+  repaired_candidate_hash: 04967349c24b9af9bd2b3b0bfb1d560be5a378ccf329ad4b6f6976e31f193142
+  reason: isolate published History from synthetic revision-0 regression fixtures
+recovery_occurred: true
+data_rollback_performed: false
+recovery_succeeded: true
+final_validator_status: PASS

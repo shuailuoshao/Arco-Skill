@@ -1,0 +1,27 @@
+{
+  "validator": "expression-staging-v1",
+  "calibration_id": "cal-20260910T145805Z-61c3e9",
+  "status": "PASS",
+  "counts": {
+    "assets": 43,
+    "semantics": 42,
+    "approved": 42,
+    "face_slots": 2,
+    "expression_sets": 2,
+    "confirmed_clusters": 8,
+    "similarity_groups": 21,
+    "pending_compatibility_evidence": 4,
+    "materialized_composite_compatibility": 0
+  },
+  "errors": [],
+  "warnings": [
+    "a_l_5797 faceless_composite: source locator outside current publication unit",
+    "a_l_5797 full_composite: source locator outside current publication unit",
+    "a_l_5799 faceless_composite: source locator outside current publication unit",
+    "a_l_5799 full_composite: source locator outside current publication unit",
+    "a_l_5802 faceless_composite: source locator outside current publication unit",
+    "a_l_5802 full_composite: source locator outside current publication unit",
+    "a_l_5811 faceless_composite: source locator outside current publication unit",
+    "a_l_5811 full_composite: source locator outside current publication unit"
+  ]
+}

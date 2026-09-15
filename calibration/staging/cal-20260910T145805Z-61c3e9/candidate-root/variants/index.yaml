@@ -1,0 +1,6 @@
+schema_version: 1
+entity_type: variant_index
+entity_ref: variants.index
+revision: 0
+last_calibration_id: null
+variants: []

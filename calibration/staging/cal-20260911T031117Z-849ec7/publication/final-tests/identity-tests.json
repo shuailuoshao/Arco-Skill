@@ -1,0 +1,17 @@
+{
+  "name": "identity-tests",
+  "command": [
+    "D:\\learn\\Arco\\.venv\\Scripts\\python.exe",
+    "-m",
+    "unittest",
+    "scripts.test_identity_staging",
+    "-v"
+  ],
+  "start": "2026-09-13T12:27:30.696031+00:00",
+  "end": "2026-09-13T12:27:31.095124+00:00",
+  "duration_seconds": 0.399,
+  "exit_code": 0,
+  "status": "PASS",
+  "stdout": "",
+  "stderr": "test_formal_identity_is_not_modified_by_staging (scripts.test_identity_staging.IdentityStagingTests.test_formal_identity_is_not_modified_by_staging) ... ok\r\ntest_historical_classes (scripts.test_identity_staging.IdentityStagingTests.test_historical_classes) ... ok\r\ntest_staging_validator_passes (scripts.test_identity_staging.IdentityStagingTests.test_staging_validator_passes) ... ok\r\n\r\n----------------------------------------------------------------------\r\nRan 3 tests in 0.206s\r\n\r\nOK\r\n"
+}

@@ -1,0 +1,19 @@
+{
+  "name": "runtime-unit-tests",
+  "command": [
+    "D:\\learn\\Arco\\.venv\\Scripts\\python.exe",
+    "-m",
+    "unittest",
+    "scripts.test_reference_runtime",
+    "-v"
+  ],
+  "cwd": "D:\\learn\\Arco",
+  "start_time": "2026-09-12T11:14:18.621279+00:00",
+  "end_time": "2026-09-12T11:14:18.805397+00:00",
+  "duration_seconds": 0.184,
+  "timeout_seconds": 600,
+  "status": "PASS",
+  "exit_code": 0,
+  "stdout": "",
+  "stderr": "test_adapter_boundary_contains_real_selected_paths_only (scripts.test_reference_runtime.RuntimeTests.test_adapter_boundary_contains_real_selected_paths_only) ... ok\r\ntest_conversation_transport_is_exact (scripts.test_reference_runtime.RuntimeTests.test_conversation_transport_is_exact) ... ok\r\ntest_current_global_readiness_is_incomplete (scripts.test_reference_runtime.RuntimeTests.test_current_global_readiness_is_incomplete) ... ok\r\ntest_incomplete_and_conflict (scripts.test_reference_runtime.RuntimeTests.test_incomplete_and_conflict) ... ok\r\ntest_managed_selector_checks_hash_and_role (scripts.test_reference_runtime.RuntimeTests.test_managed_selector_checks_hash_and_role) ... ok\r\ntest_mode_resolution (scripts.test_reference_runtime.RuntimeTests.test_mode_resolution) ... ok\r\ntest_permission_missing_is_false_and_layers_are_denied (scripts.test_reference_runtime.RuntimeTests.test_permission_missing_is_false_and_layers_are_denied) ... ok\r\ntest_prompt_only_args_have_prompt_only (scripts.test_reference_runtime.RuntimeTests.test_prompt_only_args_have_prompt_only) ... ok\r\ntest_reference_limits (scripts.test_reference_runtime.RuntimeTests.test_reference_limits) ... ok\r\ntest_request_coverage_profiles (scripts.test_reference_runtime.RuntimeTests.test_request_coverage_profiles) ... ok\r\ntest_request_scope_and_external_who_rules (scripts.test_reference_runtime.RuntimeTests.test_request_scope_and_external_who_rules) ... ok\r\ntest_request_scoped_never_changes_global (scripts.test_reference_runtime.RuntimeTests.test_request_scoped_never_changes_global) ... ok\r\ntest_runtime_planning_is_read_only_and_has_no_remote_client (scripts.test_reference_runtime.RuntimeTests.test_runtime_planning_is_read_only_and_has_no_remote_client) ... ok\r\ntest_selector_does_not_pick_unpermitted_or_random_files (scripts.test_reference_runtime.RuntimeTests.test_selector_does_not_pick_unpermitted_or_random_files) ... ok\r\ntest_variant_coverage_is_required (scripts.test_reference_runtime.RuntimeTests.test_variant_coverage_is_required) ... ok\r\n\r\n----------------------------------------------------------------------\r\nRan 15 tests in 0.013s\r\n\r\nOK\r\n"
+}

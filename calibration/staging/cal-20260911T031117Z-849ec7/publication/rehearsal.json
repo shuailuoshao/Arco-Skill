@@ -1,0 +1,243 @@
+[
+  {
+    "case": "identity-p01-crop",
+    "status": "PASS",
+    "rollback": "PASS",
+    "error": "INJECTED_FAILURE: identity-p01-crop"
+  },
+  {
+    "case": "character/assets.yaml",
+    "status": "PASS",
+    "rollback": "PASS",
+    "error": "INJECTED_FAILURE: character/assets.yaml"
+  },
+  {
+    "case": "character/identity.yaml",
+    "status": "PASS",
+    "rollback": "PASS",
+    "error": "INJECTED_FAILURE: character/identity.yaml"
+  },
+  {
+    "case": "history",
+    "status": "PASS",
+    "rollback": "PASS",
+    "error": "INJECTED_FAILURE: history"
+  },
+  {
+    "case": "completion_marker",
+    "status": "PASS",
+    "rollback": "PASS",
+    "error": "INJECTED_FAILURE: completion_marker"
+  },
+  {
+    "case": "complete",
+    "status": "PASS",
+    "validation": {
+      "structure": "PASS",
+      "identity_final": {
+        "validator": "identity-staging-v2",
+        "status": "PASS",
+        "calibration_id": "cal-20260911T031117Z-849ec7",
+        "counts": {
+          "identity_facts": 14,
+          "uncertain": 10,
+          "todo": 4,
+          "todo_calibration": 4,
+          "canon": 0,
+          "visual_consensus": 0,
+          "candidate_assets": 46,
+          "identity_generation_assets": 3
+        },
+        "errors": [],
+        "warnings": [],
+        "publication_executed": false
+      },
+      "runtime": {
+        "coverage": {
+          "portrait": "READY",
+          "upper_body": "READY",
+          "full_body": "READY",
+          "back_view": "INCOMPLETE"
+        },
+        "selections": {
+          "portrait": [
+            "identity-p01-crop"
+          ],
+          "upper_body": [
+            "identity-p01-crop",
+            "identity-p01"
+          ],
+          "full_body": [
+            "identity-p01-crop",
+            "identity-p01"
+          ],
+          "back_view": [
+            "identity-p01-crop"
+          ]
+        },
+        "adapter": "argument capture only; no remote call"
+      },
+      "tests": [
+        {
+          "name": "identity-final",
+          "command": [
+            "D:\\learn\\Arco\\.venv\\Scripts\\python.exe",
+            "C:\\Users\\shuai\\AppData\\Local\\Temp\\arco-publication-aol_ge3j\\published\\scripts\\validate_identity_staging.py",
+            "--root",
+            "C:\\Users\\shuai\\AppData\\Local\\Temp\\arco-publication-aol_ge3j\\published",
+            "--staging",
+            "C:\\Users\\shuai\\AppData\\Local\\Temp\\arco-publication-aol_ge3j\\published\\calibration\\staging\\cal-20260911T031117Z-849ec7",
+            "--json"
+          ],
+          "start": "2026-09-13T12:26:09.210152+00:00",
+          "end": "2026-09-13T12:26:09.584196+00:00",
+          "duration_seconds": 0.374,
+          "exit_code": 0,
+          "status": "PASS",
+          "stdout": "{\r\n  \"validator\": \"identity-staging-v2\",\r\n  \"status\": \"PASS\",\r\n  \"calibration_id\": \"cal-20260911T031117Z-849ec7\",\r\n  \"counts\": {\r\n    \"identity_facts\": 14,\r\n    \"uncertain\": 10,\r\n    \"todo\": 4,\r\n    \"todo_calibration\": 4,\r\n    \"canon\": 0,\r\n    \"visual_consensus\": 0,\r\n    \"candidate_assets\": 46,\r\n    \"identity_generation_assets\": 3\r\n  },\r\n  \"errors\": [],\r\n  \"warnings\": [],\r\n  \"publication_executed\": false\r\n}\r\n",
+          "stderr": ""
+        },
+        {
+          "name": "runtime",
+          "command": [
+            "D:\\learn\\Arco\\.venv\\Scripts\\python.exe",
+            "-m",
+            "unittest",
+            "scripts.test_reference_runtime",
+            "-v"
+          ],
+          "start": "2026-09-13T12:26:09.584778+00:00",
+          "end": "2026-09-13T12:26:09.832934+00:00",
+          "duration_seconds": 0.248,
+          "exit_code": 0,
+          "status": "PASS",
+          "stdout": "",
+          "stderr": "test_adapter_boundary_contains_real_selected_paths_only (scripts.test_reference_runtime.RuntimeTests.test_adapter_boundary_contains_real_selected_paths_only) ... ok\r\ntest_conversation_transport_is_exact (scripts.test_reference_runtime.RuntimeTests.test_conversation_transport_is_exact) ... ok\r\ntest_current_global_readiness_is_incomplete (scripts.test_reference_runtime.RuntimeTests.test_current_global_readiness_is_incomplete) ... ok\r\ntest_incomplete_and_conflict (scripts.test_reference_runtime.RuntimeTests.test_incomplete_and_conflict) ... ok\r\ntest_managed_selector_checks_hash_and_role (scripts.test_reference_runtime.RuntimeTests.test_managed_selector_checks_hash_and_role) ... ok\r\ntest_mode_resolution (scripts.test_reference_runtime.RuntimeTests.test_mode_resolution) ... ok\r\ntest_permission_missing_is_false_and_layers_are_denied (scripts.test_reference_runtime.RuntimeTests.test_permission_missing_is_false_and_layers_are_denied) ... ok\r\ntest_prompt_only_args_have_prompt_only (scripts.test_reference_runtime.RuntimeTests.test_prompt_only_args_have_prompt_only) ... ok\r\ntest_reference_limits (scripts.test_reference_runtime.RuntimeTests.test_reference_limits) ... ok\r\ntest_request_coverage_profiles (scripts.test_reference_runtime.RuntimeTests.test_request_coverage_profiles) ... ok\r\ntest_request_scope_and_external_who_rules (scripts.test_reference_runtime.RuntimeTests.test_request_scope_and_external_who_rules) ... ok\r\ntest_request_scoped_never_changes_global (scripts.test_reference_runtime.RuntimeTests.test_request_scoped_never_changes_global) ... ok\r\ntest_runtime_planning_is_read_only_and_has_no_remote_client (scripts.test_reference_runtime.RuntimeTests.test_runtime_planning_is_read_only_and_has_no_remote_client) ... ok\r\ntest_selector_does_not_pick_unpermitted_or_random_files (scripts.test_reference_runtime.RuntimeTests.test_selector_does_not_pick_unpermitted_or_random_files) ... ok\r\ntest_variant_coverage_is_required (scripts.test_reference_runtime.RuntimeTests.test_variant_coverage_is_required) ... ok\r\n\r\n----------------------------------------------------------------------\r\nRan 15 tests in 0.030s\r\n\r\nOK\r\n"
+        },
+        {
+          "name": "coverage-inheritance",
+          "command": [
+            "D:\\learn\\Arco\\.venv\\Scripts\\python.exe",
+            "-m",
+            "unittest",
+            "scripts.test_prepublication_tooling",
+            "-v"
+          ],
+          "start": "2026-09-13T12:26:09.833474+00:00",
+          "end": "2026-09-13T12:26:10.810870+00:00",
+          "duration_seconds": 0.977,
+          "exit_code": 0,
+          "status": "PASS",
+          "stdout": "",
+          "stderr": "test_back_is_incomplete_and_global_partial (scripts.test_prepublication_tooling.ToolingTests.test_back_is_incomplete_and_global_partial) ... ok\r\ntest_candidate_schema_and_manifest (scripts.test_prepublication_tooling.ToolingTests.test_candidate_schema_and_manifest) ... ok\r\ntest_failed_lock_blocks_writes_but_not_read_only (scripts.test_prepublication_tooling.ToolingTests.test_failed_lock_blocks_writes_but_not_read_only) ... ok\r\ntest_forbidden_layers_and_legacy_permission_default (scripts.test_prepublication_tooling.ToolingTests.test_forbidden_layers_and_legacy_permission_default) ... ok\r\ntest_inheritance_metadata_to_contract_to_prompt_quality_gate (scripts.test_prepublication_tooling.ToolingTests.test_inheritance_metadata_to_contract_to_prompt_quality_gate) ... ok\r\ntest_portrait_primary_alone (scripts.test_prepublication_tooling.ToolingTests.test_portrait_primary_alone) ... ok\r\ntest_prompt_only_exact_args (scripts.test_prepublication_tooling.ToolingTests.test_prompt_only_exact_args) ... ok\r\ntest_runtime_source_contains_no_staging_discovery_or_remote_adapter (scripts.test_prepublication_tooling.ToolingTests.test_runtime_source_contains_no_staging_discovery_or_remote_adapter) ... ok\r\ntest_upper_and_full_add_minimal_secondary_not_supplemental (scripts.test_prepublication_tooling.ToolingTests.test_upper_and_full_add_minimal_secondary_not_supplemental) ... ok\r\n\r\n----------------------------------------------------------------------\r\nRan 9 tests in 0.760s\r\n\r\nOK\r\n"
+        },
+        {
+          "name": "identity-tests",
+          "command": [
+            "D:\\learn\\Arco\\.venv\\Scripts\\python.exe",
+            "-m",
+            "unittest",
+            "scripts.test_identity_staging",
+            "-v"
+          ],
+          "start": "2026-09-13T12:26:10.811917+00:00",
+          "end": "2026-09-13T12:26:11.226788+00:00",
+          "duration_seconds": 0.415,
+          "exit_code": 0,
+          "status": "PASS",
+          "stdout": "",
+          "stderr": "test_formal_identity_is_not_modified_by_staging (scripts.test_identity_staging.IdentityStagingTests.test_formal_identity_is_not_modified_by_staging) ... ok\r\ntest_historical_classes (scripts.test_identity_staging.IdentityStagingTests.test_historical_classes) ... ok\r\ntest_staging_validator_passes (scripts.test_identity_staging.IdentityStagingTests.test_staging_validator_passes) ... ok\r\n\r\n----------------------------------------------------------------------\r\nRan 3 tests in 0.203s\r\n\r\nOK\r\n"
+        },
+        {
+          "name": "supplemental",
+          "command": [
+            "D:\\learn\\Arco\\.venv\\Scripts\\python.exe",
+            "-m",
+            "unittest",
+            "scripts.test_validate_expression_staging",
+            "-v"
+          ],
+          "start": "2026-09-13T12:26:11.227351+00:00",
+          "end": "2026-09-13T12:26:41.226382+00:00",
+          "duration_seconds": 29.999,
+          "exit_code": 0,
+          "status": "PASS",
+          "stdout": "",
+          "stderr": "test_compatibility_upgrade (scripts.test_validate_expression_staging.Tests.test_compatibility_upgrade) ... ok\r\ntest_duplicate_id (scripts.test_validate_expression_staging.Tests.test_duplicate_id) ... ok\r\ntest_formal_published_baseline (scripts.test_validate_expression_staging.Tests.test_formal_published_baseline) ... ok\r\ntest_immutable_formal_expression_drift (scripts.test_validate_expression_staging.Tests.test_immutable_formal_expression_drift) ... ok\r\ntest_missing_file (scripts.test_validate_expression_staging.Tests.test_missing_file) ... ok\r\ntest_proposed_id_is_not_asset (scripts.test_validate_expression_staging.Tests.test_proposed_id_is_not_asset) ... ok\r\ntest_publication_gate (scripts.test_validate_expression_staging.Tests.test_publication_gate) ... ok\r\ntest_reference_and_role (scripts.test_validate_expression_staging.Tests.test_reference_and_role) ... ok\r\ntest_review_and_cluster (scripts.test_validate_expression_staging.Tests.test_review_and_cluster) ... ok\r\n\r\n----------------------------------------------------------------------\r\nRan 9 tests in 29.394s\r\n\r\nOK\r\n"
+        },
+        {
+          "name": "regression",
+          "command": [
+            "D:\\learn\\Arco\\.venv\\Scripts\\python.exe",
+            "-m",
+            "unittest",
+            "scripts.test_validate_library",
+            "-v"
+          ],
+          "start": "2026-09-13T12:26:41.227001+00:00",
+          "end": "2026-09-13T12:26:49.583488+00:00",
+          "duration_seconds": 8.356,
+          "exit_code": 0,
+          "status": "PASS",
+          "stdout": "",
+          "stderr": "test_history_without_completion_marker_is_rejected (scripts.test_validate_library.PublisherTests.test_history_without_completion_marker_is_rejected) ... ok\r\ntest_one_calibration_advances_multiple_entities_independently (scripts.test_validate_library.PublisherTests.test_one_calibration_advances_multiple_entities_independently) ... ok\r\ntest_publish_creates_history_and_completion_marker (scripts.test_validate_library.PublisherTests.test_publish_creates_history_and_completion_marker) ... ok\r\ntest_resume_after_one_file_was_replaced (scripts.test_validate_library.PublisherTests.test_resume_after_one_file_was_replaced) ... ok\r\ntest_rollback_restores_original_hash (scripts.test_validate_library.PublisherTests.test_rollback_restores_original_hash) ... ok\r\ntest_asset_cannot_carry_evidence_status (scripts.test_validate_library.ValidatorTests.test_asset_cannot_carry_evidence_status) ... ok\r\ntest_asset_schema_v2_defaults_generation_permission_to_false (scripts.test_validate_library.ValidatorTests.test_asset_schema_v2_defaults_generation_permission_to_false) ... ok\r\ntest_back_view_needs_variant_back_fact_and_reference (scripts.test_validate_library.ValidatorTests.test_back_view_needs_variant_back_fact_and_reference) ... ok\r\ntest_full_body_variant_lists_lower_body_and_footwear_gaps (scripts.test_validate_library.ValidatorTests.test_full_body_variant_lists_lower_body_and_footwear_gaps) ... ok\r\ntest_future_v3_generation_metadata_is_validated (scripts.test_validate_library.ValidatorTests.test_future_v3_generation_metadata_is_validated) ... ok\r\ntest_initial_library_is_structurally_valid_but_not_ready (scripts.test_validate_library.ValidatorTests.test_initial_library_is_structurally_valid_but_not_ready) ... ok\r\ntest_markdown_revision_mismatch_is_detected (scripts.test_validate_library.ValidatorTests.test_markdown_revision_mismatch_is_detected) ... ok\r\ntest_observation_requires_intrinsic_and_rendering_layers (scripts.test_validate_library.ValidatorTests.test_observation_requires_intrinsic_and_rendering_layers) ... ok\r\ntest_official_image_alone_does_not_make_a_claim_canon (scripts.test_validate_library.ValidatorTests.test_official_image_alone_does_not_make_a_claim_canon) ... ok\r\ntest_one_calibration_can_record_multiple_fields_for_one_entity_revision (scripts.test_validate_library.ValidatorTests.test_one_calibration_can_record_multiple_fields_for_one_entity_revision) ... ok\r\ntest_portrait_can_be_ready_while_global_identity_is_incomplete (scripts.test_validate_library.ValidatorTests.test_portrait_can_be_ready_while_global_identity_is_incomplete) ... ok\r\ntest_revision_without_history_is_detected (scripts.test_validate_library.ValidatorTests.test_revision_without_history_is_detected) ... ok\r\ntest_runtime_config_is_validated (scripts.test_validate_library.ValidatorTests.test_runtime_config_is_validated) ... ok\r\ntest_state_cannot_override_must_keep (scripts.test_validate_library.ValidatorTests.test_state_cannot_override_must_keep) ... ok\r\ntest_state_group_compatibility_and_exclusivity (scripts.test_validate_library.ValidatorTests.test_state_group_compatibility_and_exclusivity) ... ok\r\ntest_state_requires_and_explicit_conflicts_block_selection (scripts.test_validate_library.ValidatorTests.test_state_requires_and_explicit_conflicts_block_selection) ... ok\r\ntest_temporary_evidence_only_changes_request_readiness (scripts.test_validate_library.ValidatorTests.test_temporary_evidence_only_changes_request_readiness) ... ok\r\ntest_unfinished_publish_blocks_structure (scripts.test_validate_library.ValidatorTests.test_unfinished_publish_blocks_structure) ... ok\r\ntest_unfinished_publish_does_not_block_read_only_validation (scripts.test_validate_library.ValidatorTests.test_unfinished_publish_does_not_block_read_only_validation) ... ok\r\ntest_validator_is_read_only (scripts.test_validate_library.ValidatorTests.test_validator_is_read_only) ... ok\r\ntest_visual_consensus_requires_independent_groups (scripts.test_validate_library.ValidatorTests.test_visual_consensus_requires_independent_groups) ... ok\r\n\r\n----------------------------------------------------------------------\r\nRan 26 tests in 8.121s\r\n\r\nOK\r\n"
+        },
+        {
+          "name": "expression-baseline",
+          "command": [
+            "D:\\learn\\Arco\\.venv\\Scripts\\python.exe",
+            "C:\\Users\\shuai\\AppData\\Local\\Temp\\arco-publication-aol_ge3j\\published\\scripts\\validate_expression_staging.py",
+            "--candidate",
+            "C:\\Users\\shuai\\AppData\\Local\\Temp\\arco-publication-aol_ge3j\\published\\calibration\\staging\\cal-20260910T145805Z-61c3e9\\candidate-root",
+            "--staging",
+            "C:\\Users\\shuai\\AppData\\Local\\Temp\\arco-publication-aol_ge3j\\published\\calibration\\staging\\cal-20260910T145805Z-61c3e9",
+            "--formal",
+            "C:\\Users\\shuai\\AppData\\Local\\Temp\\arco-publication-aol_ge3j\\published",
+            "--phase",
+            "published",
+            "--json"
+          ],
+          "start": "2026-09-13T12:26:49.584069+00:00",
+          "end": "2026-09-13T12:26:52.439386+00:00",
+          "duration_seconds": 2.855,
+          "exit_code": 0,
+          "status": "PASS",
+          "stdout": "{\r\n  \"validator\": \"expression-staging-v1\",\r\n  \"calibration_id\": \"cal-20260910T145805Z-61c3e9\",\r\n  \"status\": \"PASS\",\r\n  \"counts\": {\r\n    \"assets\": 43,\r\n    \"semantics\": 42,\r\n    \"approved\": 42,\r\n    \"face_slots\": 2,\r\n    \"expression_sets\": 2,\r\n    \"confirmed_clusters\": 8,\r\n    \"similarity_groups\": 21,\r\n    \"pending_compatibility_evidence\": 4,\r\n    \"materialized_composite_compatibility\": 0\r\n  },\r\n  \"errors\": [],\r\n  \"warnings\": [\r\n    \"a_l_5797 faceless_composite: source locator outside current publication unit\",\r\n    \"a_l_5797 full_composite: source locator outside current publication unit\",\r\n    \"a_l_5799 faceless_composite: source locator outside current publication unit\",\r\n    \"a_l_5799 full_composite: source locator outside current publication unit\",\r\n    \"a_l_5802 faceless_composite: source locator outside current publication unit\",\r\n    \"a_l_5802 full_composite: source locator outside current publication unit\",\r\n    \"a_l_5811 faceless_composite: source locator outside current publication unit\",\r\n    \"a_l_5811 full_composite: source locator outside current publication unit\"\r\n  ]\r\n}\r\n",
+          "stderr": ""
+        },
+        {
+          "name": "formal-library",
+          "command": [
+            "D:\\learn\\Arco\\.venv\\Scripts\\python.exe",
+            "C:\\Users\\shuai\\AppData\\Local\\Temp\\arco-publication-aol_ge3j\\published\\scripts\\validate_library.py",
+            "--root",
+            "C:\\Users\\shuai\\AppData\\Local\\Temp\\arco-publication-aol_ge3j\\published",
+            "--json"
+          ],
+          "start": "2026-09-13T12:26:52.440009+00:00",
+          "end": "2026-09-13T12:26:52.869483+00:00",
+          "duration_seconds": 0.429,
+          "exit_code": 0,
+          "status": "PASS",
+          "stdout": "{\r\n  \"structure\": \"PASS\",\r\n  \"identity_readiness\": {\r\n    \"status\": \"INCOMPLETE\",\r\n    \"missing_fields\": [\r\n      \"body.chest_proportion\",\r\n      \"body.head_to_body_ratio\",\r\n      \"body.height\",\r\n      \"body.leg_proportion\",\r\n      \"body.overall_build\",\r\n      \"body.shoulder_width\",\r\n      \"body.waist_hip_ratio\",\r\n      \"eyes.color\",\r\n      \"face.feature_relationships\",\r\n      \"face.shape\",\r\n      \"hair.base_color\",\r\n      \"hair.base_identity\"\r\n    ]\r\n  },\r\n  \"variant_readiness\": {},\r\n  \"request_readiness\": {\r\n    \"status\": \"INCOMPLETE\",\r\n    \"exposure_profiles\": [],\r\n    \"missing_fields\": [\r\n      \"request_profile\"\r\n    ],\r\n    \"temporary_evidence_used\": []\r\n  },\r\n  \"global_reference_readiness\": {\r\n    \"identity\": \"PARTIAL\",\r\n    \"identity_profiles\": {\r\n      \"portrait\": \"READY\",\r\n      \"upper_body\": \"READY\",\r\n      \"full_body\": \"READY\",\r\n      \"back_view\": \"INCOMPLETE\"\r\n    },\r\n    \"variants\": {},\r\n    \"overall\": \"PARTIAL\"\r\n  },\r\n  \"issues\": [],\r\n  \"summary\": {\r\n    \"errors\": 0,\r\n    \"warnings\": 0\r\n  }\r\n}\r\n",
+          "stderr": ""
+        },
+        {
+          "name": "skill",
+          "command": [
+            "D:\\learn\\Arco\\.venv\\Scripts\\python.exe",
+            "C:/Users/shuai/.codex/skills/.system/skill-creator/scripts/quick_validate.py",
+            "C:\\Users\\shuai\\AppData\\Local\\Temp\\arco-publication-aol_ge3j\\published"
+          ],
+          "start": "2026-09-13T12:26:52.870043+00:00",
+          "end": "2026-09-13T12:26:53.009642+00:00",
+          "duration_seconds": 0.14,
+          "exit_code": 0,
+          "status": "PASS",
+          "stdout": "Skill is valid!\r\n",
+          "stderr": ""
+        }
+      ]
+    }
+  }
+]

@@ -1,0 +1,21 @@
+{
+  "name": "expression-regression-tests",
+  "command": [
+    "D:\\learn\\Arco\\.venv\\Scripts\\python.exe",
+    "-m",
+    "unittest",
+    "test_validate_expression_staging",
+    "-v"
+  ],
+  "cwd": "D:\\learn\\Arco\\scripts",
+  "start_time": "2026-09-12T10:49:30.505222+00:00",
+  "end_time": "2026-09-12T10:50:02.465128+00:00",
+  "duration_seconds": 31.96,
+  "timeout_seconds": 600,
+  "exit_code": 4294967295,
+  "status": "INCOMPLETE",
+  "stdout": "",
+  "stderr": "test_baseline (test_validate_expression_staging.Tests.test_baseline) ... ERROR\r\ntest_compatibility_upgrade (test_validate_expression_staging.Tests.test_compatibility_upgrade) ... ",
+  "termination_reason": "Operator stopped the specific test processes: pre-existing fixture resolves STAGING to D:/learn and starts copying the unrelated parent directory. Baseline had already errored. Not a timeout; no test code repaired.",
+  "observed_baseline_status": "ERROR"
+}

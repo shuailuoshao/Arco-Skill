@@ -1,0 +1,11 @@
+schema_version: 1
+entity_type: variant_index
+entity_ref: variants.index
+revision: 1
+last_calibration_id: cal-20260914T070842Z-68b810
+variants:
+- variant_id: casual-outfit
+  path: variants/casual-outfit/variant.yaml
+  display_name_zh: 常服
+  display_name_en: Casual Outfit
+  lifecycle_status: published

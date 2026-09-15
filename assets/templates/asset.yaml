@@ -1,0 +1,30 @@
+asset_id: <asset-id>
+path: assets/arco/variants/<variant-id>/primary/<asset-id>.<ext>
+asset_status: VERIFIED
+expression_id: null
+variant_id: <variant-id>
+state_ids: []
+reference_level: primary
+view_angle: front
+roles:
+  - expression_evidence
+purpose_note_zh: <该图证明什么>
+source_kind: official
+source_authority: primary_official
+source_group_id: <independent-source-group-id>
+source_family_id: <source-family-id>
+face_slot_id: null
+face_slot_membership: null
+expression_set_id: null
+view_class: null
+derived_from_asset_id: null
+source_note: <来源说明>
+sha256: <sha256>
+# Asset schema v3 generation-reference fields. In schema v2 omission means false.
+can_be_generation_reference: false
+generation_reference: null
+# When enabled, generation_reference is a closed mapping:
+# priority, supported_roles, preferred_for, excluded_for, coverage, inheritance.
+# coverage accepts profiles, visible_fields, view_angles, occluded_fields.
+# inheritance values are only inherit / do_not_inherit.
+# Derived reference assets must also set evidence_independence: none.

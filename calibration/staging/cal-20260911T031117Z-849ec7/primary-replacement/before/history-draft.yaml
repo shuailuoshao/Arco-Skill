@@ -1,0 +1,118 @@
+schema_version: 1
+calibration_id: cal-20260911T031117Z-849ec7
+draft: true
+publication_status: NOT_PUBLISHED
+source_family_independence:
+  count: 1
+candidate_assets:
+- asset_id: identity-p01
+  source:
+    original_filename: 阿尔可立绘1.png
+    source_path: D:\阿尔可\阿尔可立绘1.png
+    source_note: 用户确认的官方 standing-art；未虚构 URL、资源包路径或发布日期。
+    ingest_calibration_id: cal-20260911T031117Z-849ec7
+- asset_id: identity-p03
+  source:
+    original_filename: 阿尔可立绘3.png
+    source_path: D:\阿尔可\阿尔可立绘3.png
+    source_note: 用户确认的官方 standing-art；未虚构 URL、资源包路径或发布日期。
+    ingest_calibration_id: cal-20260911T031117Z-849ec7
+- asset_id: identity-p01-crop
+  source:
+    original_filename: 阿尔可立绘1.png
+    source_path: D:\阿尔可\阿尔可立绘1.png
+    source_note: 用户确认的官方 standing-art；未虚构 URL、资源包路径或发布日期。
+    ingest_calibration_id: cal-20260911T031117Z-849ec7
+rejected_candidates:
+- id: P02
+  reason: closed eyes and swimsuit/horn/cape contamination
+- id: P04
+  reason: closed eyes and cape/armor/horn/headwear contamination
+user_adjudication:
+  P01_to_primary_parent: true
+  P03_to_alternate_secondary: true
+  provenance: user_attested_official
+observations:
+- silver-blue hair with pink tips
+- red irises in open-eye composites
+- slender long-limbed proportions
+- back-view evidence unavailable
+identity_claim_status_counts:
+  UNCERTAIN: 10
+  TODO_CALIBRATION: 4
+  VISUAL_CONSENSUS: 0
+  CANON: 0
+coverage:
+  portrait: READY
+  upper_body: READY
+  full_body: READY
+  back_view: INCOMPLETE
+global_reference_readiness: PARTIAL
+generation_permissions:
+  identity-p01:
+    priority: secondary
+    supported_roles:
+    - identity_reference
+    preferred_for:
+    - full_body
+    excluded_for:
+    - back_view
+    coverage:
+      visible_fields:
+      - identity
+      - hair
+      - eyes
+      - face
+      view_angles:
+      - three_quarter_right
+    inheritance:
+      identity: inherit
+      outfit: do_not_inherit
+      pose: do_not_inherit
+      expression: do_not_inherit
+  identity-p03:
+    priority: supplemental
+    supported_roles:
+    - identity_reference
+    preferred_for:
+    - portrait
+    - upper_body
+    - full_body
+    excluded_for:
+    - back_view
+    coverage:
+      visible_fields:
+      - identity
+      - hair
+      - eyes
+      - face
+      view_angles:
+      - three_quarter_right
+    inheritance:
+      identity: inherit
+      outfit: do_not_inherit
+      pose: do_not_inherit
+      expression: do_not_inherit
+  identity-p01-crop:
+    priority: primary
+    supported_roles:
+    - identity_reference
+    preferred_for:
+    - portrait
+    - upper_body
+    excluded_for:
+    - back_view
+    coverage:
+      visible_fields:
+      - identity
+      - hair
+      - eyes
+      - face
+      view_angles:
+      - three_quarter_right
+    inheritance:
+      identity: inherit
+      outfit: do_not_inherit
+      pose: do_not_inherit
+      expression: do_not_inherit
+publication_not_executed: true

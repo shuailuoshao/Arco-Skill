@@ -1,0 +1,12 @@
+schema_version: 1
+calibration_id: cal-20260910T145805Z-61c3e9
+state: COMPLETE
+targets:
+- character.assets
+- character.expressions
+blocks:
+- conflicting_calibration
+- formal_write
+- unauthorized_publication
+read_only_prompt_behavior: IGNORE_STAGING
+completed_at: '2026-09-11T00:13:19.033259+00:00'

@@ -1,0 +1,44 @@
+schema_version: 1
+calibration_id: cal-<UTC-YYYYMMDDTHHMMSSZ>-<6hex>
+timestamp: <ISO-8601-UTC>
+operation: update
+user_confirmed: true
+confirmed_at: <ISO-8601-UTC>
+reason: <变更原因>
+evidence_ids: []
+observations:
+  - observation_id: <observation-id>
+    field_ref: <field-id>
+    evidence_ids: []
+    observation: <图片中实际看到的现象>
+    intrinsic_interpretation: <排除渲染因素后的候选解释>
+    rendering_factors:
+      lighting_sensitive: false
+      pose_sensitive: false
+      perspective_sensitive: false
+      occlusion: none
+      other: []
+    confidence: medium
+    comparison:
+      corroborating_evidence_ids: []
+      conflicting_evidence_ids: []
+    proposed_status: UNCERTAIN
+    note: ""
+targets:
+  - entity_ref: character.identity
+    target_type: identity_field
+    target_id: <field-id>
+    revision_before: 0
+    revision_after: 1
+    changed_fields: []
+    before: {}
+    after: {}
+    status_before: TODO_CALIBRATION
+    status_after: UNCERTAIN
+validation_result:
+  validator_version: 1
+  structure: PASS
+  identity_readiness: INCOMPLETE
+  variant_readiness: {}
+  errors: 0
+  warnings: 0

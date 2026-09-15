@@ -1,0 +1,73 @@
+{
+  "report": "BODY PROPORTION TOOLING REPAIR AND STAGING REVALIDATION REPORT",
+  "calibration_id": "cal-20260914T100205Z-77878a",
+  "candidate_data_changed": false,
+  "candidate": {
+    "identity_revision": 2,
+    "asset_index_revision": 5,
+    "body_chest_proportion": {"value": "small-to-modest", "status": "UNCERTAIN"},
+    "evidence_ids": ["identity-body-c07", "identity-body-c13", "identity-body-c14", "identity-p01", "identity-p03"],
+    "identity_primary": "identity-p01-crop",
+    "fact_count": 14,
+    "status_counts": {"UNCERTAIN": 11, "TODO_CALIBRATION": 3, "CANON": 0, "VISUAL_CONSENSUS": 0},
+    "identity_sha256": "fe4aa2cf6e471703ea8b70a0310a29f283110d1adb12913652b5a1ba9558a90e",
+    "assets_sha256": "b65aec7c614b36e6b68217a37fa4a138a15d108c317cd24a9d5afd6e9483e535",
+    "hashes_unchanged_from_manifest": true
+  },
+  "prompt_compiler": {
+    "root_cause": "Reference Contract compilation had no Identity Fact resolution path.",
+    "changes": ["resolve_identity_fact_prompt_fragments", "compile_prompt", "explicit UNCERTAIN opt-in", "TODO exclusion", "semantic deduplication and banned phrase guard"],
+    "mapping": "a slim, lightly built figure with a narrow upper torso and a small-to-modest, understated bust",
+    "profiles": ["portrait", "upper_body", "full_body"],
+    "back_view": "existing routing",
+    "mild_constraint": "no exaggerated chest volume",
+    "mild_constraint_count": 1,
+    "banned_phrase_count": 0,
+    "repeated_body_semantics": false
+  },
+  "dry_run": {
+    "request": "Arco portrait/chest-up, Casual Outfit, gentle smile, simple indoor daylight",
+    "selected_reference_ids": ["identity-p01-crop", "casual-outfit-primary"],
+    "body_evidence_input_count": 0,
+    "expression_input_count": 0,
+    "evidence_only_input_count": 0,
+    "staging_path_count": 0,
+    "image_generation_called": false,
+    "remote_upload": false,
+    "prompt": "a slim, lightly built figure with a narrow upper torso and a small-to-modest, understated bust Reference identity-p01-crop: use to define Arco's identity, including her face, hair and eyes. Do not inherit: expression, outfit, pose. Reference casual-outfit-primary: use to define outfit. Do not inherit: body_proportions, expression, eyes, face, hair, identity, pose. Arco portrait chest-up, Casual Outfit, gentle smile, simple indoor daylight. no exaggerated chest volume"
+  },
+  "historical_fixtures": {
+    "root_cause": "Tests used current published state to reinterpret historical Identity and completed Casual transactions.",
+    "active_historical_separated": true,
+    "modified_fixture_helper": "scripts/historical_test_fixtures.py",
+    "real_staging_rewritten": false,
+    "old_history_rewritten": false,
+    "validator_rules_changed": false
+  },
+  "tests": {
+    "targeted_prompt": {"status": "PASS", "passed": 8, "total": 8},
+    "runtime": {"status": "PASS", "passed": 29, "total": 29},
+    "original_fixture_blockers": {"status": "PASS", "passed": 3, "total": 3},
+    "combined_fixture_suite": {"status": "PASS", "passed": 21, "total": 21},
+    "full_regression": {"status": "PASS", "passed": 88, "total": 88, "duration_seconds": 84.04, "timeout_seconds": 600},
+    "body_staging_validator": "PASS",
+    "selector": "PASS",
+    "contract": {"status": "PASS", "passed": 3, "total": 3},
+    "formal_library_validator": "PASS",
+    "history_draft_validation": "PASS",
+    "skill_validation": "PASS",
+    "protected_formal_hashes": "UNCHANGED",
+    "managed_asset_hashes": {"status": "PASS", "verified": 51, "total": 51}
+  },
+  "formal_revisions": {"identity": 1, "asset_index": 4, "expression": 1, "variant_index": 1, "casual_variant": 1},
+  "formal_hashes_unchanged": true,
+  "warnings": [
+    "Skill quick validation required PYTHONUTF8=1 after an environment-only GBK decode failure.",
+    "Formal readiness remains intentionally PARTIAL/INCOMPLETE with zero validator errors.",
+    "Eight pre-existing Expression source-locator warnings remain unchanged and non-blocking."
+  ],
+  "publication_executed": false,
+  "image_generation_called": false,
+  "remote_upload": false,
+  "final_recommendation": "READY_FOR_BODY_PROPORTION_PUBLICATION"
+}

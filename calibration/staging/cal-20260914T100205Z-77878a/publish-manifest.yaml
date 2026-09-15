@@ -1,0 +1,222 @@
+schema_version: 3
+calibration_id: cal-20260914T100205Z-77878a
+transaction_id: tx-identity-body-cal-20260914T100205Z-77878a
+publication_state: COMPLETE
+publication_authorized: true
+calibration_targets:
+- character.identity
+- character.assets
+revalidation_status: PASS
+base_state:
+  expression_library_revision: 1
+  asset_index_revision: 4
+  identity_revision: 1
+  variant_index_revision: 1
+  casual_variant_revision: 1
+base_hashes:
+  character/identity.yaml: beffb1b0c1479891fa292e69dbd6682cba434996a7ab1030c8ef8d4dee6d3507
+  character/assets.yaml: 4cda53ea9a0eca7929b5372b26e1c49d857a515fafebacd74dda3fae039193fd
+  character/expressions.yaml: 0bc3c7ae8e18797c472dc79022d0cd74fe71b04c90d5ec02e571c180b41e7030
+  variants/index.yaml: e9534a08e2daf609780c0c847771ef04052a58c309e6a104480f412905bb10b0
+  character/identity.md: 9fd5238102dbfab7ae608604f91b00210c52f0a9892522d883ab7f7e07136b25
+files:
+- target_path: character/identity.yaml
+  staged_path: candidate-root/character/identity.yaml
+  before_hash: beffb1b0c1479891fa292e69dbd6682cba434996a7ab1030c8ef8d4dee6d3507
+  candidate_hash: fe4aa2cf6e471703ea8b70a0310a29f283110d1adb12913652b5a1ba9558a90e
+  after_hash: fe4aa2cf6e471703ea8b70a0310a29f283110d1adb12913652b5a1ba9558a90e
+  publication_status: replaced
+- target_path: character/assets.yaml
+  staged_path: candidate-root/character/assets.yaml
+  before_hash: 4cda53ea9a0eca7929b5372b26e1c49d857a515fafebacd74dda3fae039193fd
+  candidate_hash: b65aec7c614b36e6b68217a37fa4a138a15d108c317cd24a9d5afd6e9483e535
+  after_hash: b65aec7c614b36e6b68217a37fa4a138a15d108c317cd24a9d5afd6e9483e535
+  publication_status: replaced
+- target_path: assets/arco/identity/body-evidence/identity-body-c07.png
+  staged_path: candidate-root/assets/arco/identity/body-evidence/identity-body-c07.png
+  before_hash: null
+  candidate_hash: a744236d80759906bc77f35c3a531a4a58b4829a6dd83a47fbb13af1894aa089
+  after_hash: a744236d80759906bc77f35c3a531a4a58b4829a6dd83a47fbb13af1894aa089
+  backup_path: publication/rollback/assets/arco/identity/body-evidence/identity-body-c07.png
+  rollback_action: remove_created_file_only_if_hash_matches_candidate
+  verification_class: immutable_data
+  publication_status: replaced
+- target_path: assets/arco/identity/body-evidence/identity-body-c13.png
+  staged_path: candidate-root/assets/arco/identity/body-evidence/identity-body-c13.png
+  before_hash: null
+  candidate_hash: 93a52a59f468bca0c4bc8e2908ee448ca922692f30d728b67f0a50c8297dc7df
+  after_hash: 93a52a59f468bca0c4bc8e2908ee448ca922692f30d728b67f0a50c8297dc7df
+  backup_path: publication/rollback/assets/arco/identity/body-evidence/identity-body-c13.png
+  rollback_action: remove_created_file_only_if_hash_matches_candidate
+  verification_class: immutable_data
+  publication_status: replaced
+- target_path: assets/arco/identity/body-evidence/identity-body-c14.png
+  staged_path: candidate-root/assets/arco/identity/body-evidence/identity-body-c14.png
+  before_hash: null
+  candidate_hash: e2ebb9ecf28ae0aed9a3cfd0b464cbe3a786a19dc9550719927b5e5dc7abd3db
+  after_hash: e2ebb9ecf28ae0aed9a3cfd0b464cbe3a786a19dc9550719927b5e5dc7abd3db
+  backup_path: publication/rollback/assets/arco/identity/body-evidence/identity-body-c14.png
+  rollback_action: remove_created_file_only_if_hash_matches_candidate
+  verification_class: immutable_data
+  publication_status: replaced
+- target_path: character/identity.md
+  staged_path: candidate-root/character/identity.md
+  before_hash: 9fd5238102dbfab7ae608604f91b00210c52f0a9892522d883ab7f7e07136b25
+  candidate_hash: e345ff6d7333bb217439e0e644f6610b65697fa68900590a742b92fa3884f877
+  after_hash: e345ff6d7333bb217439e0e644f6610b65697fa68900590a742b92fa3884f877
+  backup_path: publication/rollback/character/identity.md
+  rollback_action: restore_backup
+  verification_class: protected_entity
+  publication_status: replaced
+staged_history_path: history-final.yaml
+history_path: calibration/history/cal-20260914T100205Z-77878a.yaml
+completion_marker: calibration/history/cal-20260914T100205Z-77878a.complete
+publication_status: complete
+publication_executed: true
+image_generation_called: false
+remote_upload: false
+in_progress_marker: calibration/transactions/cal-20260914T100205Z-77878a.publication_in_progress.json
+authorization:
+  user_confirmed: true
+  text: 确认发布 Identity Body Proportion Calibration
+  source: explicit user confirmation
+  timestamp: '2026-09-15T03:00:41.621063+00:00'
+  calibration_id: cal-20260914T100205Z-77878a
+authorization_timestamp: '2026-09-15T03:00:41.621063+00:00'
+history_candidate_hash: 833d30a56f17a57f94efc536612f34d4332de17132196919b2445a90258993fc
+rollback_snapshot: publication\rollback
+write_journal:
+- target_path: character/identity.yaml
+  before_exists: true
+  before_hash: beffb1b0c1479891fa292e69dbd6682cba434996a7ab1030c8ef8d4dee6d3507
+  candidate_hash: fe4aa2cf6e471703ea8b70a0310a29f283110d1adb12913652b5a1ba9558a90e
+  after_hash: fe4aa2cf6e471703ea8b70a0310a29f283110d1adb12913652b5a1ba9558a90e
+  rollback_snapshot: publication\rollback\character\identity.yaml
+  write_status: written
+  validation_status: PASS
+- target_path: character/assets.yaml
+  before_exists: true
+  before_hash: 4cda53ea9a0eca7929b5372b26e1c49d857a515fafebacd74dda3fae039193fd
+  candidate_hash: b65aec7c614b36e6b68217a37fa4a138a15d108c317cd24a9d5afd6e9483e535
+  after_hash: b65aec7c614b36e6b68217a37fa4a138a15d108c317cd24a9d5afd6e9483e535
+  rollback_snapshot: publication\rollback\character\assets.yaml
+  write_status: written
+  validation_status: PASS
+- target_path: assets/arco/identity/body-evidence/identity-body-c07.png
+  before_exists: false
+  before_hash: null
+  candidate_hash: a744236d80759906bc77f35c3a531a4a58b4829a6dd83a47fbb13af1894aa089
+  after_hash: a744236d80759906bc77f35c3a531a4a58b4829a6dd83a47fbb13af1894aa089
+  rollback_snapshot: null
+  write_status: written
+  validation_status: PASS
+- target_path: assets/arco/identity/body-evidence/identity-body-c13.png
+  before_exists: false
+  before_hash: null
+  candidate_hash: 93a52a59f468bca0c4bc8e2908ee448ca922692f30d728b67f0a50c8297dc7df
+  after_hash: 93a52a59f468bca0c4bc8e2908ee448ca922692f30d728b67f0a50c8297dc7df
+  rollback_snapshot: null
+  write_status: written
+  validation_status: PASS
+- target_path: assets/arco/identity/body-evidence/identity-body-c14.png
+  before_exists: false
+  before_hash: null
+  candidate_hash: e2ebb9ecf28ae0aed9a3cfd0b464cbe3a786a19dc9550719927b5e5dc7abd3db
+  after_hash: e2ebb9ecf28ae0aed9a3cfd0b464cbe3a786a19dc9550719927b5e5dc7abd3db
+  rollback_snapshot: null
+  write_status: written
+  validation_status: PASS
+- target_path: character/identity.md
+  before_exists: true
+  before_hash: 9fd5238102dbfab7ae608604f91b00210c52f0a9892522d883ab7f7e07136b25
+  candidate_hash: e345ff6d7333bb217439e0e644f6610b65697fa68900590a742b92fa3884f877
+  after_hash: e345ff6d7333bb217439e0e644f6610b65697fa68900590a742b92fa3884f877
+  rollback_snapshot: publication\rollback\character\identity.md
+  write_status: written
+  validation_status: PASS
+rollback_status: NOT_REQUIRED
+recovery_occurred: false
+prior_recovery:
+  failure: None
+  rollback_status: PASS
+  timestamp: '2026-09-15T03:06:04.763518+00:00'
+final_validation:
+  structure: PASS
+  identity_readiness:
+    status: INCOMPLETE
+    missing_fields:
+    - body.chest_proportion
+    - body.head_to_body_ratio
+    - body.height
+    - body.leg_proportion
+    - body.overall_build
+    - body.shoulder_width
+    - body.waist_hip_ratio
+    - eyes.color
+    - face.feature_relationships
+    - face.shape
+    - hair.base_color
+    - hair.base_identity
+  variant_readiness:
+    casual-outfit:
+      status: INCOMPLETE
+      missing_fields:
+      - outfit.chest_detail
+      - outfit.footwear
+      - outfit.legwear
+      - outfit.lower_garment
+      - outfit.silhouette
+      - outfit.torso_structure
+      - outfit.upper_garment.base_color
+      - outfit.upper_garment.collar
+      - outfit.upper_garment.sleeves
+      - outfit.upper_garment.structure
+  request_readiness:
+    status: INCOMPLETE
+    exposure_profiles: []
+    missing_fields:
+    - request_profile
+    temporary_evidence_used: []
+  global_reference_readiness:
+    identity: PARTIAL
+    identity_profiles:
+      portrait: READY
+      upper_body: READY
+      full_body: READY
+      back_view: INCOMPLETE
+    variants:
+      casual-outfit: PARTIAL
+    variant_profiles:
+      casual-outfit:
+        portrait: READY
+        upper_body: READY
+        full_body: READY
+        back_view: INCOMPLETE
+    overall: PARTIAL
+  issues: []
+  summary:
+    errors: 0
+    warnings: 0
+production_dry_run:
+  status: PASS
+  selected_reference_ids:
+  - identity-p01-crop
+  - casual-outfit-primary
+  paths:
+  - D:\learn\Arco\assets\arco\identity\p01-face-hair-primary-a.png
+  - D:\learn\Arco\assets\arco\variants\casual-outfit\primary\casual-outfit-primary.png
+  args:
+    prompt: 'a slim, lightly built figure with a narrow upper torso and a small-to-modest,
+      understated bust Reference identity-p01-crop: use to define Arco''s identity,
+      including her face, hair and eyes. Do not inherit: expression, outfit, pose.
+      Reference casual-outfit-primary: use to define outfit. Do not inherit: body_proportions,
+      expression, eyes, face, hair, identity, pose. Arco portrait/chest-up, casual-outfit,
+      gentle smile, simple indoor daylight. no exaggerated chest volume'
+    referenced_image_paths:
+    - D:\learn\Arco\assets\arco\identity\p01-face-hair-primary-a.png
+    - D:\learn\Arco\assets\arco\variants\casual-outfit\primary\casual-outfit-primary.png
+  body_evidence_input_count: 0
+  expression_input_count: 0
+  staging_path_count: 0
+  image_generation_called: false
+  remote_upload: false

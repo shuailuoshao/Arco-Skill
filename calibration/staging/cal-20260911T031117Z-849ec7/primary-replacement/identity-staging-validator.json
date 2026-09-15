@@ -1,0 +1,21 @@
+{
+  "name": "identity-staging-validator",
+  "command": [
+    "D:\\learn\\Arco\\.venv\\Scripts\\python.exe",
+    "D:\\learn\\Arco\\scripts\\validate_identity_staging.py",
+    "--root",
+    "D:\\learn\\Arco",
+    "--staging",
+    "D:\\learn\\Arco\\calibration\\staging\\cal-20260911T031117Z-849ec7",
+    "--json"
+  ],
+  "cwd": "D:\\learn\\Arco\\scripts",
+  "start_time": "2026-09-12T10:48:32.572576+00:00",
+  "end_time": "2026-09-12T10:48:32.925012+00:00",
+  "duration_seconds": 0.352,
+  "timeout_seconds": 600,
+  "exit_code": 0,
+  "status": "PASS",
+  "stdout": "{\r\n  \"validator\": \"identity-staging-v1\",\r\n  \"status\": \"PASS\",\r\n  \"calibration_id\": \"cal-20260911T031117Z-849ec7\",\r\n  \"counts\": {\r\n    \"identity_facts\": 14,\r\n    \"uncertain\": 10,\r\n    \"todo\": 4,\r\n    \"canon\": 0,\r\n    \"visual_consensus\": 0,\r\n    \"candidate_identity_assets\": 3\r\n  },\r\n  \"errors\": [],\r\n  \"warnings\": [],\r\n  \"publication_executed\": false\r\n}\r\n",
+  "stderr": ""
+}

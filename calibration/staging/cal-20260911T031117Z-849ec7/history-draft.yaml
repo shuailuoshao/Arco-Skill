@@ -1,0 +1,411 @@
+schema_version: 1
+calibration_id: cal-20260911T031117Z-849ec7
+draft: true
+publication_status: NOT_PUBLISHED
+source_family_independence:
+  count: 1
+candidate_assets:
+- asset_id: identity-p01
+  source:
+    original_filename: 阿尔可立绘1.png
+    source_path: D:\阿尔可\阿尔可立绘1.png
+    source_note: 用户确认的官方 standing-art；未虚构 URL、资源包路径或发布日期。
+    ingest_calibration_id: cal-20260911T031117Z-849ec7
+- asset_id: identity-p03
+  source:
+    original_filename: 阿尔可立绘3.png
+    source_path: D:\阿尔可\阿尔可立绘3.png
+    source_note: 用户确认的官方 standing-art；未虚构 URL、资源包路径或发布日期。
+    ingest_calibration_id: cal-20260911T031117Z-849ec7
+- asset_id: identity-p01-crop
+  source:
+    original_filename: 阿尔可立绘1.png
+    source_path: D:\阿尔可\阿尔可立绘1.png
+    source_note: 用户确认的官方 standing-art；未虚构 URL、资源包路径或发布日期。
+    ingest_calibration_id: cal-20260911T031117Z-849ec7
+rejected_candidates:
+- id: P02
+  reason: closed eyes and swimsuit/horn/cape contamination
+- id: P04
+  reason: closed eyes and cape/armor/horn/headwear contamination
+user_adjudication:
+  P01_to_primary_parent: true
+  P03_to_alternate_secondary: true
+  provenance: user_attested_official
+observations:
+- silver-blue hair with pink tips
+- red irises in open-eye composites
+- slender long-limbed proportions
+- back-view evidence unavailable
+identity_claim_status_counts:
+  UNCERTAIN: 10
+  TODO_CALIBRATION: 4
+  VISUAL_CONSENSUS: 0
+  CANON: 0
+coverage:
+  portrait: READY
+  upper_body: READY
+  full_body: READY
+  back_view: INCOMPLETE
+global_reference_readiness: PARTIAL
+generation_permissions:
+  identity-p01:
+    priority: secondary
+    supported_roles:
+    - identity_reference
+    preferred_for:
+    - full_body
+    excluded_for:
+    - back_view
+    coverage:
+      visible_fields:
+      - identity
+      - hair
+      - eyes
+      - face
+      view_angles:
+      - three_quarter_right
+    inheritance:
+      identity: inherit
+      outfit: do_not_inherit
+      pose: do_not_inherit
+      expression: do_not_inherit
+  identity-p03:
+    priority: supplemental
+    supported_roles:
+    - identity_reference
+    preferred_for:
+    - portrait
+    - upper_body
+    - full_body
+    excluded_for:
+    - back_view
+    coverage:
+      visible_fields:
+      - identity
+      - hair
+      - eyes
+      - face
+      view_angles:
+      - three_quarter_right
+    inheritance:
+      identity: inherit
+      outfit: do_not_inherit
+      pose: do_not_inherit
+      expression: do_not_inherit
+  identity-p01-crop:
+    priority: primary
+    supported_roles:
+    - identity_reference
+    preferred_for:
+    - portrait
+    excluded_for:
+    - upper_body
+    - full_body
+    - back_view
+    coverage:
+      visible_fields:
+      - identity
+      - hair
+      - eyes
+      - face
+      view_angles:
+      - three_quarter_right
+      profiles:
+      - portrait
+    inheritance:
+      identity: inherit
+      outfit: do_not_inherit
+      pose: do_not_inherit
+      expression: do_not_inherit
+publication_not_executed: true
+tooling_repair_context:
+  operation: PRE_PUBLICATION_TOOLING_DEFECT_REPAIR
+  verification_class: evolvable_tooling
+  character_calibration_target: false
+  identity_candidate_frozen: true
+  expression_library_modified: false
+  roots:
+    expression_baseline: historical validator treated evolvable tooling as permanently immutable
+    supplemental_fixture: fixture resolved project and staging parents incorrectly and mixed contexts
+    runtime_coverage: selector chose one asset per role and global readiness only tested Primary existence
+    inheritance: managed Reference Contract discarded Asset inheritance metadata
+    candidate_schema: generation permissions were stored under schema v2 with invalid enum/role/view fields
+    lock_state: failed state and lowercase state were absent from the active-state contract
+  repairs:
+  - historical manifest verification classes
+  - explicit formal Expression and Identity candidate fixtures
+  - profile-aware minimal Primary plus Secondary selection
+  - inheritance propagation and Prompt/Quality Gate validation
+  - closed Asset schema v3 contract and candidate structural normalization
+  - failed-state lock normalization with read-only operation exemptions
+  remote_image_generation_called: false
+  image_upload_performed: false
+primary_replacement:
+  timestamp: '2026-09-12T10:48:32.210597+00:00'
+  user_decision_record: primary-replacement/user-decision.md
+  selected_candidate: A
+  before:
+    asset_id: identity-p01-crop
+    path: assets/arco/identity/p01-face-hair-crop.png
+    asset_status: VERIFIED
+    expression_id: null
+    variant_id: null
+    state_ids: []
+    reference_level: primary
+    roles:
+    - identity_reference
+    purpose_note_zh: Identity Calibration candidate
+    source_kind: official
+    source_authority: user_attested_official
+    source_group_id: arco-standing-open-arms-oblique-01
+    source_family_id: arco-official-standing-art-system-01
+    face_slot_id: null
+    face_slot_membership: null
+    expression_set_id: null
+    view_class: three_quarter_right
+    derived_from_asset_id: identity-p01
+    provenance:
+      original_filename: 阿尔可立绘1.png
+      source_path: D:\阿尔可\阿尔可立绘1.png
+      source_note: 用户确认的官方 standing-art；未虚构 URL、资源包路径或发布日期。
+      ingest_calibration_id: cal-20260911T031117Z-849ec7
+    sha256: f2787e9549dd05e65e1a816733f3fb3683a755b83cb449c7edbaa0741e9cbed4
+    can_be_generation_reference: true
+    generation_reference:
+      priority: primary
+      supported_roles:
+      - identity_reference
+      preferred_for:
+      - portrait
+      - upper_body
+      excluded_for:
+      - back_view
+      coverage:
+        visible_fields:
+        - identity
+        - hair
+        - eyes
+        - face
+        view_angles:
+        - three_quarter_right
+      inheritance:
+        identity: inherit
+        outfit: do_not_inherit
+        pose: do_not_inherit
+        expression: do_not_inherit
+    operation:
+      kind: deterministic_lossless_crop
+      crop_box_px:
+      - 250
+      - 0
+      - 1700
+      - 1500
+      source_sha256: bddba1d7b1bed2c21572892003ac50dc6c2340d53e8262a56b6db69b16cf1f86
+      evidence_independence: none
+  after:
+    asset_id: identity-p01-crop
+    path: assets/arco/identity/p01-face-hair-primary-a.png
+    asset_status: VERIFIED
+    expression_id: null
+    variant_id: null
+    state_ids: []
+    reference_level: primary
+    roles:
+    - identity_reference
+    purpose_note_zh: Identity Calibration candidate
+    source_kind: official
+    source_authority: user_attested_official
+    source_group_id: arco-standing-open-arms-oblique-01
+    source_family_id: arco-official-standing-art-system-01
+    face_slot_id: null
+    face_slot_membership: null
+    expression_set_id: null
+    view_class: three_quarter_right
+    derived_from_asset_id: identity-p01
+    provenance:
+      original_filename: 阿尔可立绘1.png
+      source_path: D:\阿尔可\阿尔可立绘1.png
+      source_note: 用户确认的官方 standing-art；未虚构 URL、资源包路径或发布日期。
+      ingest_calibration_id: cal-20260911T031117Z-849ec7
+    sha256: 386f95c28441a1adf4900cfc3ce52e1c52f0ce7435376bd4576dd9cc32976414
+    can_be_generation_reference: true
+    generation_reference:
+      priority: primary
+      supported_roles:
+      - identity_reference
+      preferred_for:
+      - portrait
+      excluded_for:
+      - upper_body
+      - full_body
+      - back_view
+      coverage:
+        visible_fields:
+        - identity
+        - hair
+        - eyes
+        - face
+        view_angles:
+        - three_quarter_right
+        profiles:
+        - portrait
+      inheritance:
+        identity: inherit
+        outfit: do_not_inherit
+        pose: do_not_inherit
+        expression: do_not_inherit
+    operation:
+      kind: deterministic_lossless_crop
+      crop_box_px:
+      - 680
+      - 0
+      - 760
+      - 640
+      source_sha256: bddba1d7b1bed2c21572892003ac50dc6c2340d53e8262a56b6db69b16cf1f86
+      evidence_independence: none
+    parent_asset_id: identity-p01
+    evidence_independence: none
+    dimensions_px:
+    - 760
+    - 640
+    generation_risk_note:
+      outfit_leakage: LOW
+      expression_leakage: HIGH
+      remaining_risk_accepted_by_user: true
+      expression_should_not_be_inherited_by_default: true
+      intended_use: WHO anchoring, not default expression transfer
+      future_compiler_rule: Prompt compiler / Expression Resolver should override
+        expression through text and approved semantic selection.
+      current_runtime_enforcement: MUST_BE_VERIFIED; metadata is not proof of enforcement
+  comparison_records_retained:
+  - candidate-root/assets/arco/identity/p01-face-hair-crop.png
+  - crop-refinement/p01-candidate-b.png
+  - crop-refinement/p01-candidate-c.png
+  - crop-refinement/verification.json
+  - crop-refinement/CROP COMPARISON REPORT.md
+  visual_coverage:
+    portrait:
+      status: READY
+      asset_ids:
+      - identity-p01-crop
+      missing_fields: []
+      basis: Accepted face, eyes, bangs, hair origin / WHO crop; full hair length
+        is Secondary-only.
+    upper_body:
+      status: READY
+      asset_ids:
+      - identity-p01
+      missing_fields: []
+      basis: Full P01 visibly supplies upper torso and overall hair; Identity-only
+        visual inventory, not outfit inheritance or Runtime certification.
+    full_body:
+      status: READY
+      asset_ids:
+      - identity-p01
+      missing_fields: []
+      basis: Full P01 supplies overall body and hair length; body proportions auxiliary;
+        no clothing inheritance.
+    back_view:
+      status: INCOMPLETE
+      asset_ids: []
+      missing_fields:
+      - hair.back
+      - body.back
+      - view.back
+      basis: No rear reference. No mirroring or inference.
+  runtime_not_repaired: true
+  publication_executed: false
+  runtime_coverage:
+    portrait:
+      status: READY
+      covered_fields:
+      - eyes
+      - face
+      - hair
+      - identity
+      missing_fields: []
+      basis:
+      - identity-p01-crop
+    upper_body:
+      status: PARTIAL
+      covered_fields:
+      - eyes
+      - face
+      - hair
+      - identity
+      missing_fields:
+      - body.upper
+      - outfit.upper
+      basis:
+      - identity-p01-crop
+    full_body:
+      status: PARTIAL
+      covered_fields:
+      - eyes
+      - face
+      - hair
+      - identity
+      missing_fields:
+      - body.full
+      - body.upper
+      - footwear
+      - outfit.lower
+      - outfit.upper
+      basis:
+      - identity-p01-crop
+    back_view:
+      status: PARTIAL
+      covered_fields:
+      - eyes
+      - face
+      - hair
+      - identity
+      missing_fields:
+      - body.back
+      - hair.back
+      - outfit.back
+      - view.back
+      basis:
+      - identity-p01-crop
+  runtime_global_observed:
+    identity: READY
+    variants: {}
+    overall: READY
+  validation_status: FAIL
+  blocking_checks:
+  - schema_compatibility_identity-p01
+  - schema_compatibility_identity-p01-crop
+  - schema_compatibility_identity-p03
+  - runtime_secondary_support_upper_full
+  - runtime_global_not_above_partial
+  - runtime_expression_outfit_pose_do_not_inherit
+  final_audit:
+    status: FAIL
+    report: primary-replacement/IDENTITY STAGING REVALIDATION REPORT.json
+    regression_summary:
+      core: PASS 26/26
+      identity: PASS 3/3
+      runtime_existing: PASS 15/15
+      expression_suite: INCOMPLETE / fixture error
+      expression_baseline: FAIL
+      all_related_regressions: 'FAIL: supplemental Expression baseline error and incomplete
+        suite'
+    visual_inspection:
+      face: complete including chin
+      both_eyes: complete
+      bangs: retained
+      top_of_head_and_hair_origin: retained
+      side_locks: face-framing upper locks retained; lower ends intentionally cropped
+      hair_silhouette: adequate for portrait WHO; insufficient full length/pink tips
+      outfit_leakage: 'LOW: small collar and suspender/shoulder edge'
+      expression_leakage: 'HIGH: wide open mouth; accepted by user'
+      alpha: RGBA matches source region; 25.98% fully transparent pixels, not dominant
+      primary_suitability: Accepted portrait WHO anchor only; Runtime safety not certified
+    publication_executed: false
+    lock_guard_limitation:
+      original_lock_preserved: true
+      state: staged_validated_awaiting_authorization
+      issue: Pre-existing check_calibration_lock.ACTIVE uses uppercase states; original
+        lock is lowercase. New failed manifest state is also absent from ACTIVE. Guard
+        enforcement is not certified; no formal guard repair authorized.

@@ -1,0 +1,1191 @@
+schema_version: 2
+entity_type: asset_registry
+entity_ref: character.assets
+revision: 2
+last_calibration_id: cal-20260911T031117Z-849ec7
+assets:
+- asset_id: arco-expr-oblique-001
+  expression_id: expr-oblique-proud-confident-01
+  path: assets/arco/expressions/oblique/arco-expr-oblique-001.png
+  asset_status: VERIFIED
+  roles:
+  - expression_evidence
+  reference_level: detail
+  view_angle: front_three_quarter
+  view_class: three_quarter_right
+  face_slot_id: face-slot-oblique-right-01
+  face_slot_membership: CONFIRMED
+  expression_set_id: expression-set-oblique-right-01
+  source_family_id: arco-official-standing-art-system-01
+  source_group_id: arco-expression-oblique-01
+  source_kind: official
+  source_authority: primary_official
+  derived_from_asset_id: null
+  provenance:
+    original_filename: アルコ_a_l_5793.png
+    source_path: D:\阿尔可\阿尔可立绘\アルコ\アルコ_a_l_5793.png
+    ingest_calibration_id: cal-20260910T145805Z-61c3e9
+  sha256: d03ebd27ea08ba3dd22e4f1b6885a7437d50f9b802ac97523eb8e5720002532b
+  variant_id: null
+  state_ids: []
+- asset_id: arco-expr-oblique-002
+  expression_id: expr-oblique-neutral-serious-01
+  path: assets/arco/expressions/oblique/arco-expr-oblique-002.png
+  asset_status: VERIFIED
+  roles:
+  - expression_evidence
+  reference_level: detail
+  view_angle: front_three_quarter
+  view_class: three_quarter_right
+  face_slot_id: face-slot-oblique-right-01
+  face_slot_membership: CONFIRMED
+  expression_set_id: expression-set-oblique-right-01
+  source_family_id: arco-official-standing-art-system-01
+  source_group_id: arco-expression-oblique-01
+  source_kind: official
+  source_authority: primary_official
+  derived_from_asset_id: null
+  provenance:
+    original_filename: アルコ_a_l_5794.png
+    source_path: D:\阿尔可\阿尔可立绘\アルコ\アルコ_a_l_5794.png
+    ingest_calibration_id: cal-20260910T145805Z-61c3e9
+  sha256: d0c4a0bef6f260aca4ae9312a6ad9929d2e2c5447d0bdc4f6b75a8d4cac5a398
+  variant_id: null
+  state_ids: []
+- asset_id: arco-expr-oblique-003
+  expression_id: expr-oblique-closed-neutral-01
+  path: assets/arco/expressions/oblique/arco-expr-oblique-003.png
+  asset_status: VERIFIED
+  roles:
+  - expression_evidence
+  reference_level: detail
+  view_angle: front_three_quarter
+  view_class: three_quarter_right
+  face_slot_id: face-slot-oblique-right-01
+  face_slot_membership: CONFIRMED
+  expression_set_id: expression-set-oblique-right-01
+  source_family_id: arco-official-standing-art-system-01
+  source_group_id: arco-expression-oblique-01
+  source_kind: official
+  source_authority: primary_official
+  derived_from_asset_id: null
+  provenance:
+    original_filename: アルコ_a_l_5795.png
+    source_path: D:\阿尔可\阿尔可立绘\アルコ\アルコ_a_l_5795.png
+    ingest_calibration_id: cal-20260910T145805Z-61c3e9
+  sha256: 0425d957385cf790598b992ef085837a73c18ee438f0117d8ba87f51f5166fc1
+  variant_id: null
+  state_ids: []
+- asset_id: arco-expr-oblique-004
+  expression_id: expr-oblique-cheerful-smile-01
+  path: assets/arco/expressions/oblique/arco-expr-oblique-004.png
+  asset_status: VERIFIED
+  roles:
+  - expression_evidence
+  reference_level: detail
+  view_angle: front_three_quarter
+  view_class: three_quarter_right
+  face_slot_id: face-slot-oblique-right-01
+  face_slot_membership: CONFIRMED
+  expression_set_id: expression-set-oblique-right-01
+  source_family_id: arco-official-standing-art-system-01
+  source_group_id: arco-expression-oblique-01
+  source_kind: official
+  source_authority: primary_official
+  derived_from_asset_id: null
+  provenance:
+    original_filename: アルコ_a_l_5796.png
+    source_path: D:\阿尔可\阿尔可立绘\アルコ\アルコ_a_l_5796.png
+    ingest_calibration_id: cal-20260910T145805Z-61c3e9
+  sha256: 6cde93f0af3fb9aa82c3cec8273e18e69e6d735563ca6bf6029fe6fed48770db
+  variant_id: null
+  state_ids: []
+- asset_id: arco-expr-oblique-005
+  expression_id: expr-oblique-cheerful-laugh-01
+  path: assets/arco/expressions/oblique/arco-expr-oblique-005.png
+  asset_status: VERIFIED
+  roles:
+  - expression_evidence
+  reference_level: detail
+  view_angle: front_three_quarter
+  view_class: three_quarter_right
+  face_slot_id: face-slot-oblique-right-01
+  face_slot_membership: CONFIRMED
+  expression_set_id: expression-set-oblique-right-01
+  source_family_id: arco-official-standing-art-system-01
+  source_group_id: arco-expression-oblique-01
+  source_kind: official
+  source_authority: primary_official
+  derived_from_asset_id: null
+  provenance:
+    original_filename: アルコ_a_l_5797.png
+    source_path: D:\阿尔可\阿尔可立绘\アルコ\アルコ_a_l_5797.png
+    ingest_calibration_id: cal-20260910T145805Z-61c3e9
+  sha256: 282ba8b4b97d2af28eef0fc8b68c114af8fa7fea73f392911019966fc28e5b58
+  variant_id: null
+  state_ids: []
+- asset_id: arco-expr-oblique-006
+  expression_id: expr-oblique-closed-eye-smile-01
+  path: assets/arco/expressions/oblique/arco-expr-oblique-006.png
+  asset_status: VERIFIED
+  roles:
+  - expression_evidence
+  reference_level: detail
+  view_angle: front_three_quarter
+  view_class: three_quarter_right
+  face_slot_id: face-slot-oblique-right-01
+  face_slot_membership: CONFIRMED
+  expression_set_id: expression-set-oblique-right-01
+  source_family_id: arco-official-standing-art-system-01
+  source_group_id: arco-expression-oblique-01
+  source_kind: official
+  source_authority: primary_official
+  derived_from_asset_id: null
+  provenance:
+    original_filename: アルコ_a_l_5798.png
+    source_path: D:\阿尔可\阿尔可立绘\アルコ\アルコ_a_l_5798.png
+    ingest_calibration_id: cal-20260910T145805Z-61c3e9
+  sha256: 72357eb15a2f9736932eb5a4329fabafb5b14f52a48356977ecf8cf37c45cacf
+  variant_id: null
+  state_ids: []
+- asset_id: arco-expr-oblique-007
+  expression_id: expr-oblique-closed-eye-laugh-01
+  path: assets/arco/expressions/oblique/arco-expr-oblique-007.png
+  asset_status: VERIFIED
+  roles:
+  - expression_evidence
+  reference_level: detail
+  view_angle: front_three_quarter
+  view_class: three_quarter_right
+  face_slot_id: face-slot-oblique-right-01
+  face_slot_membership: CONFIRMED
+  expression_set_id: expression-set-oblique-right-01
+  source_family_id: arco-official-standing-art-system-01
+  source_group_id: arco-expression-oblique-01
+  source_kind: official
+  source_authority: primary_official
+  derived_from_asset_id: null
+  provenance:
+    original_filename: アルコ_a_l_5799.png
+    source_path: D:\阿尔可\阿尔可立绘\アルコ\アルコ_a_l_5799.png
+    ingest_calibration_id: cal-20260910T145805Z-61c3e9
+  sha256: cd5bc627f3a11b6e076c501b1a46690a80c4267b0f9955bcb31eb194990598cf
+  variant_id: null
+  state_ids: []
+- asset_id: arco-expr-oblique-008
+  expression_id: expr-oblique-concerned-01
+  path: assets/arco/expressions/oblique/arco-expr-oblique-008.png
+  asset_status: VERIFIED
+  roles:
+  - expression_evidence
+  reference_level: detail
+  view_angle: front_three_quarter
+  view_class: three_quarter_right
+  face_slot_id: face-slot-oblique-right-01
+  face_slot_membership: CONFIRMED
+  expression_set_id: expression-set-oblique-right-01
+  source_family_id: arco-official-standing-art-system-01
+  source_group_id: arco-expression-oblique-01
+  source_kind: official
+  source_authority: primary_official
+  derived_from_asset_id: null
+  provenance:
+    original_filename: アルコ_a_l_5800.png
+    source_path: D:\阿尔可\阿尔可立绘\アルコ\アルコ_a_l_5800.png
+    ingest_calibration_id: cal-20260910T145805Z-61c3e9
+  sha256: dd7ad32900de00b18dc420752a654507285b1dd9592468f2613673470184f01a
+  variant_id: null
+  state_ids: []
+- asset_id: arco-expr-oblique-009
+  expression_id: expr-oblique-angry-complaint-01
+  path: assets/arco/expressions/oblique/arco-expr-oblique-009.png
+  asset_status: VERIFIED
+  roles:
+  - expression_evidence
+  reference_level: detail
+  view_angle: front_three_quarter
+  view_class: three_quarter_right
+  face_slot_id: face-slot-oblique-right-01
+  face_slot_membership: CONFIRMED
+  expression_set_id: expression-set-oblique-right-01
+  source_family_id: arco-official-standing-art-system-01
+  source_group_id: arco-expression-oblique-01
+  source_kind: official
+  source_authority: primary_official
+  derived_from_asset_id: null
+  provenance:
+    original_filename: アルコ_a_l_5801.png
+    source_path: D:\阿尔可\阿尔可立绘\アルコ\アルコ_a_l_5801.png
+    ingest_calibration_id: cal-20260910T145805Z-61c3e9
+  sha256: 3dd10fc5e8e21ac4b01c3915efb448b5bee5cae27a9e13c5bba83e32ffca754a
+  variant_id: null
+  state_ids: []
+- asset_id: arco-expr-oblique-010
+  expression_id: expr-oblique-closed-eye-displeased-01
+  path: assets/arco/expressions/oblique/arco-expr-oblique-010.png
+  asset_status: VERIFIED
+  roles:
+  - expression_evidence
+  reference_level: detail
+  view_angle: front_three_quarter
+  view_class: three_quarter_right
+  face_slot_id: face-slot-oblique-right-01
+  face_slot_membership: CONFIRMED
+  expression_set_id: expression-set-oblique-right-01
+  source_family_id: arco-official-standing-art-system-01
+  source_group_id: arco-expression-oblique-01
+  source_kind: official
+  source_authority: primary_official
+  derived_from_asset_id: null
+  provenance:
+    original_filename: アルコ_a_l_5802.png
+    source_path: D:\阿尔可\阿尔可立绘\アルコ\アルコ_a_l_5802.png
+    ingest_calibration_id: cal-20260910T145805Z-61c3e9
+  sha256: e917a36cc6d0ec0370479877baa355eab3cd182bb55d2b84d625e7a7ca04d55c
+  variant_id: null
+  state_ids: []
+- asset_id: arco-expr-oblique-011
+  expression_id: expr-oblique-angry-eyes-closed-01
+  path: assets/arco/expressions/oblique/arco-expr-oblique-011.png
+  asset_status: VERIFIED
+  roles:
+  - expression_evidence
+  reference_level: detail
+  view_angle: front_three_quarter
+  view_class: three_quarter_right
+  face_slot_id: face-slot-oblique-right-01
+  face_slot_membership: CONFIRMED
+  expression_set_id: expression-set-oblique-right-01
+  source_family_id: arco-official-standing-art-system-01
+  source_group_id: arco-expression-oblique-01
+  source_kind: official
+  source_authority: primary_official
+  derived_from_asset_id: null
+  provenance:
+    original_filename: アルコ_a_l_5803.png
+    source_path: D:\阿尔可\阿尔可立绘\アルコ\アルコ_a_l_5803.png
+    ingest_calibration_id: cal-20260910T145805Z-61c3e9
+  sha256: f9fd789dd0695ef10f9d49d87c5f782f9bfea93123a0c29c470374db2edd5c94
+  variant_id: null
+  state_ids: []
+- asset_id: arco-expr-oblique-012
+  expression_id: expr-oblique-displeased-01
+  path: assets/arco/expressions/oblique/arco-expr-oblique-012.png
+  asset_status: VERIFIED
+  roles:
+  - expression_evidence
+  reference_level: detail
+  view_angle: front_three_quarter
+  view_class: three_quarter_right
+  face_slot_id: face-slot-oblique-right-01
+  face_slot_membership: CONFIRMED
+  expression_set_id: expression-set-oblique-right-01
+  source_family_id: arco-official-standing-art-system-01
+  source_group_id: arco-expression-oblique-01
+  source_kind: official
+  source_authority: primary_official
+  derived_from_asset_id: null
+  provenance:
+    original_filename: アルコ_a_l_5804.png
+    source_path: D:\阿尔可\阿尔可立绘\アルコ\アルコ_a_l_5804.png
+    ingest_calibration_id: cal-20260910T145805Z-61c3e9
+  sha256: 3b5bb564842fe81b38f7aa93f04b2df22e3e5fc017a9474f641773edde90bf30
+  variant_id: null
+  state_ids: []
+- asset_id: arco-expr-oblique-013
+  expression_id: expr-oblique-concerned-questioning-01
+  path: assets/arco/expressions/oblique/arco-expr-oblique-013.png
+  asset_status: VERIFIED
+  roles:
+  - expression_evidence
+  reference_level: detail
+  view_angle: front_three_quarter
+  view_class: three_quarter_right
+  face_slot_id: face-slot-oblique-right-01
+  face_slot_membership: CONFIRMED
+  expression_set_id: expression-set-oblique-right-01
+  source_family_id: arco-official-standing-art-system-01
+  source_group_id: arco-expression-oblique-01
+  source_kind: official
+  source_authority: primary_official
+  derived_from_asset_id: null
+  provenance:
+    original_filename: アルコ_a_l_5805.png
+    source_path: D:\阿尔可\阿尔可立绘\アルコ\アルコ_a_l_5805.png
+    ingest_calibration_id: cal-20260910T145805Z-61c3e9
+  sha256: a67145fc6a207df371e37e34e0de031ff897ec665f21fe4875a88b7a69bd3efe
+  variant_id: null
+  state_ids: []
+- asset_id: arco-expr-oblique-014
+  expression_id: expr-oblique-closed-eye-weary-01
+  path: assets/arco/expressions/oblique/arco-expr-oblique-014.png
+  asset_status: VERIFIED
+  roles:
+  - expression_evidence
+  reference_level: detail
+  view_angle: front_three_quarter
+  view_class: three_quarter_right
+  face_slot_id: face-slot-oblique-right-01
+  face_slot_membership: CONFIRMED
+  expression_set_id: expression-set-oblique-right-01
+  source_family_id: arco-official-standing-art-system-01
+  source_group_id: arco-expression-oblique-01
+  source_kind: official
+  source_authority: primary_official
+  derived_from_asset_id: null
+  provenance:
+    original_filename: アルコ_a_l_5806.png
+    source_path: D:\阿尔可\阿尔可立绘\アルコ\アルコ_a_l_5806.png
+    ingest_calibration_id: cal-20260910T145805Z-61c3e9
+  sha256: e172ec7ad9ac2d3cd0363fd6565533944c83a8d9553e3e2c46dae90cf3a2fa06
+  variant_id: null
+  state_ids: []
+- asset_id: arco-expr-oblique-015
+  expression_id: expr-oblique-resigned-drained-01
+  path: assets/arco/expressions/oblique/arco-expr-oblique-015.png
+  asset_status: VERIFIED
+  roles:
+  - expression_evidence
+  reference_level: detail
+  view_angle: front_three_quarter
+  view_class: three_quarter_right
+  face_slot_id: face-slot-oblique-right-01
+  face_slot_membership: CONFIRMED
+  expression_set_id: expression-set-oblique-right-01
+  source_family_id: arco-official-standing-art-system-01
+  source_group_id: arco-expression-oblique-01
+  source_kind: official
+  source_authority: primary_official
+  derived_from_asset_id: null
+  provenance:
+    original_filename: アルコ_a_l_5807.png
+    source_path: D:\阿尔可\阿尔可立绘\アルコ\アルコ_a_l_5807.png
+    ingest_calibration_id: cal-20260910T145805Z-61c3e9
+  sha256: fd70abae2e6a3d4ca8e600287913afefd7b52e013bd7ceaab3d57756212eced3
+  variant_id: null
+  state_ids: []
+- asset_id: arco-expr-oblique-016
+  expression_id: expr-oblique-obvious-surprise-01
+  path: assets/arco/expressions/oblique/arco-expr-oblique-016.png
+  asset_status: VERIFIED
+  roles:
+  - expression_evidence
+  reference_level: detail
+  view_angle: front_three_quarter
+  view_class: three_quarter_right
+  face_slot_id: face-slot-oblique-right-01
+  face_slot_membership: CONFIRMED
+  expression_set_id: expression-set-oblique-right-01
+  source_family_id: arco-official-standing-art-system-01
+  source_group_id: arco-expression-oblique-01
+  source_kind: official
+  source_authority: primary_official
+  derived_from_asset_id: null
+  provenance:
+    original_filename: アルコ_a_l_5808.png
+    source_path: D:\阿尔可\阿尔可立绘\アルコ\アルコ_a_l_5808.png
+    ingest_calibration_id: cal-20260910T145805Z-61c3e9
+  sha256: dbad2a2a95ce9c8098c6e041612a6765a645ff59496a5c39bf489677a2f2b637
+  variant_id: null
+  state_ids: []
+- asset_id: arco-expr-oblique-017
+  expression_id: expr-oblique-gentle-smile-01
+  path: assets/arco/expressions/oblique/arco-expr-oblique-017.png
+  asset_status: VERIFIED
+  roles:
+  - expression_evidence
+  reference_level: detail
+  view_angle: front_three_quarter
+  view_class: three_quarter_right
+  face_slot_id: face-slot-oblique-right-01
+  face_slot_membership: CONFIRMED
+  expression_set_id: expression-set-oblique-right-01
+  source_family_id: arco-official-standing-art-system-01
+  source_group_id: arco-expression-oblique-01
+  source_kind: official
+  source_authority: primary_official
+  derived_from_asset_id: null
+  provenance:
+    original_filename: アルコ_a_l_5809.png
+    source_path: D:\阿尔可\阿尔可立绘\アルコ\アルコ_a_l_5809.png
+    ingest_calibration_id: cal-20260910T145805Z-61c3e9
+  sha256: 62f8c93d9a4a53940ab0d5c92b3bb130af78b95aeae6848ab0445cb28553e9cd
+  variant_id: null
+  state_ids: []
+- asset_id: arco-expr-oblique-018
+  expression_id: expr-oblique-cold-displeased-01
+  path: assets/arco/expressions/oblique/arco-expr-oblique-018.png
+  asset_status: VERIFIED
+  roles:
+  - expression_evidence
+  reference_level: detail
+  view_angle: front_three_quarter
+  view_class: three_quarter_right
+  face_slot_id: face-slot-oblique-right-01
+  face_slot_membership: CONFIRMED
+  expression_set_id: expression-set-oblique-right-01
+  source_family_id: arco-official-standing-art-system-01
+  source_group_id: arco-expression-oblique-01
+  source_kind: official
+  source_authority: primary_official
+  derived_from_asset_id: null
+  provenance:
+    original_filename: アルコ_a_l_5810.png
+    source_path: D:\阿尔可\阿尔可立绘\アルコ\アルコ_a_l_5810.png
+    ingest_calibration_id: cal-20260910T145805Z-61c3e9
+  sha256: da7fe1c1dd23514a839f1f21bfa76adc5082954d1625d52185123eeb2c2ffcbe
+  variant_id: null
+  state_ids: []
+- asset_id: arco-expr-oblique-019
+  expression_id: expr-oblique-reproachful-resigned-01
+  path: assets/arco/expressions/oblique/arco-expr-oblique-019.png
+  asset_status: VERIFIED
+  roles:
+  - expression_evidence
+  reference_level: detail
+  view_angle: front_three_quarter
+  view_class: three_quarter_right
+  face_slot_id: face-slot-oblique-right-01
+  face_slot_membership: CONFIRMED
+  expression_set_id: expression-set-oblique-right-01
+  source_family_id: arco-official-standing-art-system-01
+  source_group_id: arco-expression-oblique-01
+  source_kind: official
+  source_authority: primary_official
+  derived_from_asset_id: null
+  provenance:
+    original_filename: アルコ_a_l_5811.png
+    source_path: D:\阿尔可\阿尔可立绘\アルコ\アルコ_a_l_5811.png
+    ingest_calibration_id: cal-20260910T145805Z-61c3e9
+  sha256: 9cc2aa31d4498eaf8437c2f81594f190517b984f702d636719bfbb5d8fade16b
+  variant_id: null
+  state_ids: []
+- asset_id: arco-expr-oblique-020
+  expression_id: expr-oblique-low-gaze-contemplation-01
+  path: assets/arco/expressions/oblique/arco-expr-oblique-020.png
+  asset_status: VERIFIED
+  roles:
+  - expression_evidence
+  reference_level: detail
+  view_angle: front_three_quarter
+  view_class: three_quarter_right
+  face_slot_id: face-slot-oblique-right-01
+  face_slot_membership: CONFIRMED
+  expression_set_id: expression-set-oblique-right-01
+  source_family_id: arco-official-standing-art-system-01
+  source_group_id: arco-expression-oblique-01
+  source_kind: official
+  source_authority: primary_official
+  derived_from_asset_id: null
+  provenance:
+    original_filename: アルコ_a_l_5812.png
+    source_path: D:\阿尔可\阿尔可立绘\アルコ\アルコ_a_l_5812.png
+    ingest_calibration_id: cal-20260910T145805Z-61c3e9
+  sha256: 3923ec69c898ec60da4859cb1a34c16f473f3dcfde0132776db9cd1bee722fcf
+  variant_id: null
+  state_ids: []
+- asset_id: arco-expr-oblique-021
+  expression_id: expr-oblique-dejected-complaint-01
+  path: assets/arco/expressions/oblique/arco-expr-oblique-021.png
+  asset_status: VERIFIED
+  roles:
+  - expression_evidence
+  reference_level: detail
+  view_angle: front_three_quarter
+  view_class: three_quarter_right
+  face_slot_id: face-slot-oblique-right-01
+  face_slot_membership: CONFIRMED
+  expression_set_id: expression-set-oblique-right-01
+  source_family_id: arco-official-standing-art-system-01
+  source_group_id: arco-expression-oblique-01
+  source_kind: official
+  source_authority: primary_official
+  derived_from_asset_id: null
+  provenance:
+    original_filename: アルコ_a_l_5813.png
+    source_path: D:\阿尔可\阿尔可立绘\アルコ\アルコ_a_l_5813.png
+    ingest_calibration_id: cal-20260910T145805Z-61c3e9
+  sha256: c955932bf4c47a09a8cf22e3b0b4b4d5e1eee305e2862ad292c2ca4167c24bcf
+  variant_id: null
+  state_ids: []
+- asset_id: arco-expr-frontal-001
+  expression_id: expr-frontal-attentive-neutral-01
+  path: assets/arco/expressions/frontal/arco-expr-frontal-001.png
+  asset_status: VERIFIED
+  roles:
+  - expression_evidence
+  reference_level: detail
+  view_angle: front
+  view_class: frontal
+  face_slot_id: face-slot-frontal-01
+  face_slot_membership: CONFIRMED
+  expression_set_id: expression-set-frontal-01
+  source_family_id: arco-official-standing-art-system-01
+  source_group_id: arco-expression-frontal-01
+  source_kind: official
+  source_authority: primary_official
+  derived_from_asset_id: null
+  provenance:
+    original_filename: アルコ_b_l_7830.png
+    source_path: D:\阿尔可\阿尔可立绘\アルコ\アルコ_b_l_7830.png
+    ingest_calibration_id: cal-20260910T145805Z-61c3e9
+  sha256: 386cea17af789627dd06070002fd02261025ad5447e0c451f194bb401080d240
+  variant_id: null
+  state_ids: []
+- asset_id: arco-expr-frontal-002
+  expression_id: expr-frontal-closed-neutral-01
+  path: assets/arco/expressions/frontal/arco-expr-frontal-002.png
+  asset_status: VERIFIED
+  roles:
+  - expression_evidence
+  reference_level: detail
+  view_angle: front
+  view_class: frontal
+  face_slot_id: face-slot-frontal-01
+  face_slot_membership: CONFIRMED
+  expression_set_id: expression-set-frontal-01
+  source_family_id: arco-official-standing-art-system-01
+  source_group_id: arco-expression-frontal-01
+  source_kind: official
+  source_authority: primary_official
+  derived_from_asset_id: null
+  provenance:
+    original_filename: アルコ_b_l_7865.png
+    source_path: D:\阿尔可\阿尔可立绘\アルコ\アルコ_b_l_7865.png
+    ingest_calibration_id: cal-20260910T145805Z-61c3e9
+  sha256: c9ec738943c2a535e277d86569397f4207658dec1dd1a4b3476c87de1e345c1c
+  variant_id: null
+  state_ids: []
+- asset_id: arco-expr-frontal-003
+  expression_id: expr-frontal-cheerful-smile-01
+  path: assets/arco/expressions/frontal/arco-expr-frontal-003.png
+  asset_status: VERIFIED
+  roles:
+  - expression_evidence
+  reference_level: detail
+  view_angle: front
+  view_class: frontal
+  face_slot_id: face-slot-frontal-01
+  face_slot_membership: CONFIRMED
+  expression_set_id: expression-set-frontal-01
+  source_family_id: arco-official-standing-art-system-01
+  source_group_id: arco-expression-frontal-01
+  source_kind: official
+  source_authority: primary_official
+  derived_from_asset_id: null
+  provenance:
+    original_filename: アルコ_b_l_7914.png
+    source_path: D:\阿尔可\阿尔可立绘\アルコ\アルコ_b_l_7914.png
+    ingest_calibration_id: cal-20260910T145805Z-61c3e9
+  sha256: 827a18fd067fe4844c0f7cf45dd51b3ccb18a8ebcbd3a6132b038858bb1f2e1c
+  variant_id: null
+  state_ids: []
+- asset_id: arco-expr-frontal-004
+  expression_id: expr-frontal-excited-shout-01
+  path: assets/arco/expressions/frontal/arco-expr-frontal-004.png
+  asset_status: VERIFIED
+  roles:
+  - expression_evidence
+  reference_level: detail
+  view_angle: front
+  view_class: frontal
+  face_slot_id: face-slot-frontal-01
+  face_slot_membership: CONFIRMED
+  expression_set_id: expression-set-frontal-01
+  source_family_id: arco-official-standing-art-system-01
+  source_group_id: arco-expression-frontal-01
+  source_kind: official
+  source_authority: primary_official
+  derived_from_asset_id: null
+  provenance:
+    original_filename: アルコ_b_l_7963.png
+    source_path: D:\阿尔可\阿尔可立绘\アルコ\アルコ_b_l_7963.png
+    ingest_calibration_id: cal-20260910T145805Z-61c3e9
+  sha256: 82b7eb2e3da5b6053676633c766057e56a587778170a503dd217bc3f4212c649
+  variant_id: null
+  state_ids: []
+- asset_id: arco-expr-frontal-005
+  expression_id: expr-frontal-closed-eye-smile-01
+  path: assets/arco/expressions/frontal/arco-expr-frontal-005.png
+  asset_status: VERIFIED
+  roles:
+  - expression_evidence
+  reference_level: detail
+  view_angle: front
+  view_class: frontal
+  face_slot_id: face-slot-frontal-01
+  face_slot_membership: CONFIRMED
+  expression_set_id: expression-set-frontal-01
+  source_family_id: arco-official-standing-art-system-01
+  source_group_id: arco-expression-frontal-01
+  source_kind: official
+  source_authority: primary_official
+  derived_from_asset_id: null
+  provenance:
+    original_filename: アルコ_b_l_7998.png
+    source_path: D:\阿尔可\阿尔可立绘\アルコ\アルコ_b_l_7998.png
+    ingest_calibration_id: cal-20260910T145805Z-61c3e9
+  sha256: b1dd2a686220170fa0b30971797f3a0f36dd5c108d2ab2c2c530b360937da3f3
+  variant_id: null
+  state_ids: []
+- asset_id: arco-expr-frontal-006
+  expression_id: expr-frontal-closed-eye-laugh-01
+  path: assets/arco/expressions/frontal/arco-expr-frontal-006.png
+  asset_status: VERIFIED
+  roles:
+  - expression_evidence
+  reference_level: detail
+  view_angle: front
+  view_class: frontal
+  face_slot_id: face-slot-frontal-01
+  face_slot_membership: CONFIRMED
+  expression_set_id: expression-set-frontal-01
+  source_family_id: arco-official-standing-art-system-01
+  source_group_id: arco-expression-frontal-01
+  source_kind: official
+  source_authority: primary_official
+  derived_from_asset_id: null
+  provenance:
+    original_filename: アルコ_b_l_8033.png
+    source_path: D:\阿尔可\阿尔可立绘\アルコ\アルコ_b_l_8033.png
+    ingest_calibration_id: cal-20260910T145805Z-61c3e9
+  sha256: 4abad161afc32fd2cf021f5425172165ac80f8e620064b3c6cd9aaaf7c59b40b
+  variant_id: null
+  state_ids: []
+- asset_id: arco-expr-frontal-007
+  expression_id: expr-frontal-concerned-01
+  path: assets/arco/expressions/frontal/arco-expr-frontal-007.png
+  asset_status: VERIFIED
+  roles:
+  - expression_evidence
+  reference_level: detail
+  view_angle: front
+  view_class: frontal
+  face_slot_id: face-slot-frontal-01
+  face_slot_membership: CONFIRMED
+  expression_set_id: expression-set-frontal-01
+  source_family_id: arco-official-standing-art-system-01
+  source_group_id: arco-expression-frontal-01
+  source_kind: official
+  source_authority: primary_official
+  derived_from_asset_id: null
+  provenance:
+    original_filename: アルコ_b_l_8082.png
+    source_path: D:\阿尔可\阿尔可立绘\アルコ\アルコ_b_l_8082.png
+    ingest_calibration_id: cal-20260910T145805Z-61c3e9
+  sha256: 5d371637d020129bb1b606d6ae691a546874501b2c5047e74be4743a9b96963a
+  variant_id: null
+  state_ids: []
+- asset_id: arco-expr-frontal-008
+  expression_id: expr-frontal-frightened-exclamation-01
+  path: assets/arco/expressions/frontal/arco-expr-frontal-008.png
+  asset_status: VERIFIED
+  roles:
+  - expression_evidence
+  reference_level: detail
+  view_angle: front
+  view_class: frontal
+  face_slot_id: face-slot-frontal-01
+  face_slot_membership: CONFIRMED
+  expression_set_id: expression-set-frontal-01
+  source_family_id: arco-official-standing-art-system-01
+  source_group_id: arco-expression-frontal-01
+  source_kind: official
+  source_authority: primary_official
+  derived_from_asset_id: null
+  provenance:
+    original_filename: アルコ_b_l_8131.png
+    source_path: D:\阿尔可\阿尔可立绘\アルコ\アルコ_b_l_8131.png
+    ingest_calibration_id: cal-20260910T145805Z-61c3e9
+  sha256: 6921335c51c30d5dabf20f6e36612395af690e690841862bb17ea42e28186774
+  variant_id: null
+  state_ids: []
+- asset_id: arco-expr-frontal-009
+  expression_id: expr-frontal-difficult-deliberation-01
+  path: assets/arco/expressions/frontal/arco-expr-frontal-009.png
+  asset_status: VERIFIED
+  roles:
+  - expression_evidence
+  reference_level: detail
+  view_angle: front
+  view_class: frontal
+  face_slot_id: face-slot-frontal-01
+  face_slot_membership: CONFIRMED
+  expression_set_id: expression-set-frontal-01
+  source_family_id: arco-official-standing-art-system-01
+  source_group_id: arco-expression-frontal-01
+  source_kind: official
+  source_authority: primary_official
+  derived_from_asset_id: null
+  provenance:
+    original_filename: アルコ_b_l_8166.png
+    source_path: D:\阿尔可\阿尔可立绘\アルコ\アルコ_b_l_8166.png
+    ingest_calibration_id: cal-20260910T145805Z-61c3e9
+  sha256: b9a8d36116dd85207a275840eb3bc3c7a56c2987a2e7020dd401ab0004c514ce
+  variant_id: null
+  state_ids: []
+- asset_id: arco-expr-frontal-010
+  expression_id: expr-frontal-resigned-deliberative-speech-01
+  path: assets/arco/expressions/frontal/arco-expr-frontal-010.png
+  asset_status: VERIFIED
+  roles:
+  - expression_evidence
+  reference_level: detail
+  view_angle: front
+  view_class: frontal
+  face_slot_id: face-slot-frontal-01
+  face_slot_membership: CONFIRMED
+  expression_set_id: expression-set-frontal-01
+  source_family_id: arco-official-standing-art-system-01
+  source_group_id: arco-expression-frontal-01
+  source_kind: official
+  source_authority: primary_official
+  derived_from_asset_id: null
+  provenance:
+    original_filename: アルコ_b_l_8201.png
+    source_path: D:\阿尔可\阿尔可立绘\アルコ\アルコ_b_l_8201.png
+    ingest_calibration_id: cal-20260910T145805Z-61c3e9
+  sha256: 2664839ae5ddd668cc34b8a85ddd9557510c97aea169f3f5603fa5e4d70842f4
+  variant_id: null
+  state_ids: []
+- asset_id: arco-expr-frontal-011
+  expression_id: expr-frontal-neutral-serious-01
+  path: assets/arco/expressions/frontal/arco-expr-frontal-011.png
+  asset_status: VERIFIED
+  roles:
+  - expression_evidence
+  reference_level: detail
+  view_angle: front
+  view_class: frontal
+  face_slot_id: face-slot-frontal-01
+  face_slot_membership: CONFIRMED
+  expression_set_id: expression-set-frontal-01
+  source_family_id: arco-official-standing-art-system-01
+  source_group_id: arco-expression-frontal-01
+  source_kind: official
+  source_authority: primary_official
+  derived_from_asset_id: null
+  provenance:
+    original_filename: アルコ_b_l_8250.png
+    source_path: D:\阿尔可\阿尔可立绘\アルコ\アルコ_b_l_8250.png
+    ingest_calibration_id: cal-20260910T145805Z-61c3e9
+  sha256: 9fc37446350ddc2b9fa118bdb80c715134f6ebc1e343f5a33632e1f141bbf0bc
+  variant_id: null
+  state_ids: []
+- asset_id: arco-expr-frontal-012
+  expression_id: expr-frontal-surprised-saddened-01
+  path: assets/arco/expressions/frontal/arco-expr-frontal-012.png
+  asset_status: VERIFIED
+  roles:
+  - expression_evidence
+  reference_level: detail
+  view_angle: front
+  view_class: frontal
+  face_slot_id: face-slot-frontal-01
+  face_slot_membership: CONFIRMED
+  expression_set_id: expression-set-frontal-01
+  source_family_id: arco-official-standing-art-system-01
+  source_group_id: arco-expression-frontal-01
+  source_kind: official
+  source_authority: primary_official
+  derived_from_asset_id: null
+  provenance:
+    original_filename: アルコ_b_l_8299.png
+    source_path: D:\阿尔可\阿尔可立绘\アルコ\アルコ_b_l_8299.png
+    ingest_calibration_id: cal-20260910T145805Z-61c3e9
+  sha256: 40851a46b362f8b3ef01ec1c18e4d428119409d36e7fdd484a5cd902babcc0b6
+  variant_id: null
+  state_ids: []
+- asset_id: arco-expr-frontal-013
+  expression_id: expr-frontal-eyes-closed-composed-01
+  path: assets/arco/expressions/frontal/arco-expr-frontal-013.png
+  asset_status: VERIFIED
+  roles:
+  - expression_evidence
+  reference_level: detail
+  view_angle: front
+  view_class: frontal
+  face_slot_id: face-slot-frontal-01
+  face_slot_membership: CONFIRMED
+  expression_set_id: expression-set-frontal-01
+  source_family_id: arco-official-standing-art-system-01
+  source_group_id: arco-expression-frontal-01
+  source_kind: official
+  source_authority: primary_official
+  derived_from_asset_id: null
+  provenance:
+    original_filename: アルコ_b_l_8334.png
+    source_path: D:\阿尔可\阿尔可立绘\アルコ\アルコ_b_l_8334.png
+    ingest_calibration_id: cal-20260910T145805Z-61c3e9
+  sha256: 2c7f054e717dba98511742b20047ccda6d3460b3c82c5bf37111d5d103aab1a1
+  variant_id: null
+  state_ids: []
+- asset_id: arco-expr-frontal-014
+  expression_id: expr-frontal-eyes-closed-sigh-01
+  path: assets/arco/expressions/frontal/arco-expr-frontal-014.png
+  asset_status: VERIFIED
+  roles:
+  - expression_evidence
+  reference_level: detail
+  view_angle: front
+  view_class: frontal
+  face_slot_id: face-slot-frontal-01
+  face_slot_membership: CONFIRMED
+  expression_set_id: expression-set-frontal-01
+  source_family_id: arco-official-standing-art-system-01
+  source_group_id: arco-expression-frontal-01
+  source_kind: official
+  source_authority: primary_official
+  derived_from_asset_id: null
+  provenance:
+    original_filename: アルコ_b_l_8369.png
+    source_path: D:\阿尔可\阿尔可立绘\アルコ\アルコ_b_l_8369.png
+    ingest_calibration_id: cal-20260910T145805Z-61c3e9
+  sha256: 61b7504125b13a7fad6bbf1d43fcdab9472a9b08175798a20f0802bb21baa81c
+  variant_id: null
+  state_ids: []
+- asset_id: arco-expr-frontal-015
+  expression_id: expr-frontal-obvious-surprise-01
+  path: assets/arco/expressions/frontal/arco-expr-frontal-015.png
+  asset_status: VERIFIED
+  roles:
+  - expression_evidence
+  reference_level: detail
+  view_angle: front
+  view_class: frontal
+  face_slot_id: face-slot-frontal-01
+  face_slot_membership: CONFIRMED
+  expression_set_id: expression-set-frontal-01
+  source_family_id: arco-official-standing-art-system-01
+  source_group_id: arco-expression-frontal-01
+  source_kind: official
+  source_authority: primary_official
+  derived_from_asset_id: null
+  provenance:
+    original_filename: アルコ_b_l_8418.png
+    source_path: D:\阿尔可\阿尔可立绘\アルコ\アルコ_b_l_8418.png
+    ingest_calibration_id: cal-20260910T145805Z-61c3e9
+  sha256: 98d2f4e2979157e4f3fda372e8f7d21a59dd3c1ebaa60f25dd78275f352022d0
+  variant_id: null
+  state_ids: []
+- asset_id: arco-expr-frontal-016
+  expression_id: expr-frontal-neutral-serious-01
+  path: assets/arco/expressions/frontal/arco-expr-frontal-016.png
+  asset_status: VERIFIED
+  roles:
+  - expression_evidence
+  reference_level: detail
+  view_angle: front
+  view_class: frontal
+  face_slot_id: face-slot-frontal-01
+  face_slot_membership: CONFIRMED
+  expression_set_id: expression-set-frontal-01
+  source_family_id: arco-official-standing-art-system-01
+  source_group_id: arco-expression-frontal-01
+  source_kind: official
+  source_authority: primary_official
+  derived_from_asset_id: null
+  provenance:
+    original_filename: アルコ_b_l_8467.png
+    source_path: D:\阿尔可\阿尔可立绘\アルコ\アルコ_b_l_8467.png
+    ingest_calibration_id: cal-20260910T145805Z-61c3e9
+  sha256: 9fc37446350ddc2b9fa118bdb80c715134f6ebc1e343f5a33632e1f141bbf0bc
+  variant_id: null
+  state_ids: []
+- asset_id: arco-expr-frontal-017
+  expression_id: expr-frontal-excited-toothy-grin-01
+  path: assets/arco/expressions/frontal/arco-expr-frontal-017.png
+  asset_status: VERIFIED
+  roles:
+  - expression_evidence
+  reference_level: detail
+  view_angle: front
+  view_class: frontal
+  face_slot_id: face-slot-frontal-01
+  face_slot_membership: CONFIRMED
+  expression_set_id: expression-set-frontal-01
+  source_family_id: arco-official-standing-art-system-01
+  source_group_id: arco-expression-frontal-01
+  source_kind: official
+  source_authority: primary_official
+  derived_from_asset_id: null
+  provenance:
+    original_filename: アルコ_b_l_8516.png
+    source_path: D:\阿尔可\阿尔可立绘\アルコ\アルコ_b_l_8516.png
+    ingest_calibration_id: cal-20260910T145805Z-61c3e9
+  sha256: 765d3944e47fddd8653d26be4f2078e90c0bf93be0d8139c4032fd46caa116e1
+  variant_id: null
+  state_ids: []
+- asset_id: arco-expr-frontal-018
+  expression_id: expr-frontal-extreme-excited-toothy-grin-01
+  path: assets/arco/expressions/frontal/arco-expr-frontal-018.png
+  asset_status: VERIFIED
+  roles:
+  - expression_evidence
+  reference_level: detail
+  view_angle: front
+  view_class: frontal
+  face_slot_id: face-slot-frontal-01
+  face_slot_membership: CONFIRMED
+  expression_set_id: expression-set-frontal-01
+  source_family_id: arco-official-standing-art-system-01
+  source_group_id: arco-expression-frontal-01
+  source_kind: official
+  source_authority: primary_official
+  derived_from_asset_id: null
+  provenance:
+    original_filename: アルコ_b_l_8551.png
+    source_path: D:\阿尔可\阿尔可立绘\アルコ\アルコ_b_l_8551.png
+    ingest_calibration_id: cal-20260910T145805Z-61c3e9
+  sha256: a827d4bf789b1c22d08c8b853db909675f562ea6195744789cb85a12452dbbbc
+  variant_id: null
+  state_ids: []
+- asset_id: arco-expr-frontal-019
+  expression_id: expr-frontal-displeased-01
+  path: assets/arco/expressions/frontal/arco-expr-frontal-019.png
+  asset_status: VERIFIED
+  roles:
+  - expression_evidence
+  reference_level: detail
+  view_angle: front
+  view_class: frontal
+  face_slot_id: face-slot-frontal-01
+  face_slot_membership: CONFIRMED
+  expression_set_id: expression-set-frontal-01
+  source_family_id: arco-official-standing-art-system-01
+  source_group_id: arco-expression-frontal-01
+  source_kind: official
+  source_authority: primary_official
+  derived_from_asset_id: null
+  provenance:
+    original_filename: アルコ_b_l_8600.png
+    source_path: D:\阿尔可\阿尔可立绘\アルコ\アルコ_b_l_8600.png
+    ingest_calibration_id: cal-20260910T145805Z-61c3e9
+  sha256: f908928f438185fa99a202d9629164e78eea7ae6ac35f0d1ab8bb7ed8d584d38
+  variant_id: null
+  state_ids: []
+- asset_id: arco-expr-frontal-020
+  expression_id: expr-frontal-impatient-speaking-01
+  path: assets/arco/expressions/frontal/arco-expr-frontal-020.png
+  asset_status: VERIFIED
+  roles:
+  - expression_evidence
+  reference_level: detail
+  view_angle: front
+  view_class: frontal
+  face_slot_id: face-slot-frontal-01
+  face_slot_membership: CONFIRMED
+  expression_set_id: expression-set-frontal-01
+  source_family_id: arco-official-standing-art-system-01
+  source_group_id: arco-expression-frontal-01
+  source_kind: official
+  source_authority: primary_official
+  derived_from_asset_id: null
+  provenance:
+    original_filename: アルコ_b_l_8649.png
+    source_path: D:\阿尔可\阿尔可立绘\アルコ\アルコ_b_l_8649.png
+    ingest_calibration_id: cal-20260910T145805Z-61c3e9
+  sha256: 860e6405b0c628c9796202d4d1f2d0a922f21cf49657749801ccb6aef2286c47
+  variant_id: null
+  state_ids: []
+- asset_id: arco-expr-frontal-021
+  expression_id: expr-frontal-attentive-speaking-01
+  path: assets/arco/expressions/frontal/arco-expr-frontal-021.png
+  asset_status: VERIFIED
+  roles:
+  - expression_evidence
+  reference_level: detail
+  view_angle: front
+  view_class: frontal
+  face_slot_id: face-slot-frontal-01
+  face_slot_membership: CONFIRMED
+  expression_set_id: expression-set-frontal-01
+  source_family_id: arco-official-standing-art-system-01
+  source_group_id: arco-expression-frontal-01
+  source_kind: official
+  source_authority: primary_official
+  derived_from_asset_id: null
+  provenance:
+    original_filename: アルコ_b_l_8709.png
+    source_path: D:\阿尔可\阿尔可立绘\アルコ\アルコ_b_l_8709.png
+    ingest_calibration_id: cal-20260910T145805Z-61c3e9
+  sha256: 8a68a121e14eda387d0165772a9ef51404588e95d1ce7d5f647c4f328b2c8f83
+  variant_id: null
+  state_ids: []
+- asset_id: arco-expr-frontal-022
+  expression_id: expr-frontal-casual-speaking-01
+  path: assets/arco/expressions/frontal/arco-expr-frontal-022.png
+  asset_status: VERIFIED
+  roles:
+  - expression_evidence
+  reference_level: detail
+  view_angle: front
+  view_class: frontal
+  face_slot_id: face-slot-frontal-01
+  face_slot_membership: CONFIRMED
+  expression_set_id: expression-set-frontal-01
+  source_family_id: arco-official-standing-art-system-01
+  source_group_id: arco-expression-frontal-01
+  source_kind: official
+  source_authority: primary_official
+  derived_from_asset_id: null
+  provenance:
+    original_filename: アルコ_b_l_8769.png
+    source_path: D:\阿尔可\阿尔可立绘\アルコ\アルコ_b_l_8769.png
+    ingest_calibration_id: cal-20260910T145805Z-61c3e9
+  sha256: 06abd18bcddd7ca2e0f88e094af949e80ce50d32d3f5c5c8818004f199ce8549
+  variant_id: null
+  state_ids: []
+- asset_id: identity-p01
+  path: assets/arco/identity/p01-full.png
+  asset_status: VERIFIED
+  expression_id: null
+  variant_id: null
+  state_ids: []
+  reference_level: secondary
+  roles:
+  - identity_evidence
+  purpose_note_zh: Identity Calibration candidate
+  source_kind: official
+  source_authority: user_attested_official
+  source_group_id: arco-standing-open-arms-oblique-01
+  source_family_id: arco-official-standing-art-system-01
+  face_slot_id: null
+  face_slot_membership: null
+  expression_set_id: null
+  view_class: three_quarter_right
+  derived_from_asset_id: null
+  provenance:
+    original_filename: 阿尔可立绘1.png
+    source_path: D:\阿尔可\阿尔可立绘1.png
+    source_note: 用户确认的官方 standing-art；未虚构 URL、资源包路径或发布日期。
+    ingest_calibration_id: cal-20260911T031117Z-849ec7
+  sha256: bddba1d7b1bed2c21572892003ac50dc6c2340d53e8262a56b6db69b16cf1f86
+  can_be_generation_reference: true
+  generation_reference:
+    priority: secondary
+    supported_roles:
+    - identity_reference
+    preferred_for:
+    - full_body
+    excluded_for:
+    - back_view
+    coverage:
+      visible_fields:
+      - identity
+      - hair
+      - eyes
+      - face
+      view_angles:
+      - three_quarter_right
+    inheritance:
+      identity: inherit
+      outfit: do_not_inherit
+      pose: do_not_inherit
+      expression: do_not_inherit
+- asset_id: identity-p03
+  path: assets/arco/identity/p03-alternate.png
+  asset_status: VERIFIED
+  expression_id: null
+  variant_id: null
+  state_ids: []
+  reference_level: secondary
+  roles:
+  - identity_evidence
+  purpose_note_zh: Identity Calibration candidate
+  source_kind: official
+  source_authority: user_attested_official
+  source_group_id: arco-standing-open-arms-oblique-01
+  source_family_id: arco-official-standing-art-system-01
+  face_slot_id: null
+  face_slot_membership: null
+  expression_set_id: null
+  view_class: three_quarter_right
+  derived_from_asset_id: null
+  provenance:
+    original_filename: 阿尔可立绘3.png
+    source_path: D:\阿尔可\阿尔可立绘3.png
+    source_note: 用户确认的官方 standing-art；未虚构 URL、资源包路径或发布日期。
+    ingest_calibration_id: cal-20260911T031117Z-849ec7
+  sha256: 0056f16ff4468a0e26505b521a2fcd8f13a032ddb10e468c22c06c433a38206d
+  can_be_generation_reference: true
+  generation_reference:
+    priority: supplemental
+    supported_roles:
+    - identity_reference
+    preferred_for:
+    - portrait
+    - upper_body
+    - full_body
+    excluded_for:
+    - back_view
+    coverage:
+      visible_fields:
+      - identity
+      - hair
+      - eyes
+      - face
+      view_angles:
+      - three_quarter_right
+    inheritance:
+      identity: inherit
+      outfit: do_not_inherit
+      pose: do_not_inherit
+      expression: do_not_inherit
+- asset_id: identity-p01-crop
+  path: assets/arco/identity/p01-face-hair-crop.png
+  asset_status: VERIFIED
+  expression_id: null
+  variant_id: null
+  state_ids: []
+  reference_level: primary
+  roles:
+  - identity_reference
+  purpose_note_zh: Identity Calibration candidate
+  source_kind: official
+  source_authority: user_attested_official
+  source_group_id: arco-standing-open-arms-oblique-01
+  source_family_id: arco-official-standing-art-system-01
+  face_slot_id: null
+  face_slot_membership: null
+  expression_set_id: null
+  view_class: three_quarter_right
+  derived_from_asset_id: identity-p01
+  provenance:
+    original_filename: 阿尔可立绘1.png
+    source_path: D:\阿尔可\阿尔可立绘1.png
+    source_note: 用户确认的官方 standing-art；未虚构 URL、资源包路径或发布日期。
+    ingest_calibration_id: cal-20260911T031117Z-849ec7
+  sha256: f2787e9549dd05e65e1a816733f3fb3683a755b83cb449c7edbaa0741e9cbed4
+  can_be_generation_reference: true
+  generation_reference:
+    priority: primary
+    supported_roles:
+    - identity_reference
+    preferred_for:
+    - portrait
+    - upper_body
+    excluded_for:
+    - back_view
+    coverage:
+      visible_fields:
+      - identity
+      - hair
+      - eyes
+      - face
+      view_angles:
+      - three_quarter_right
+    inheritance:
+      identity: inherit
+      outfit: do_not_inherit
+      pose: do_not_inherit
+      expression: do_not_inherit
+  operation:
+    kind: deterministic_lossless_crop
+    crop_box_px:
+    - 250
+    - 0
+    - 1700
+    - 1500
+    source_sha256: bddba1d7b1bed2c21572892003ac50dc6c2340d53e8262a56b6db69b16cf1f86
+    evidence_independence: none

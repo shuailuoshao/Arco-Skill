@@ -1,0 +1,394 @@
+{
+  "calibration_id": "cal-20260911T031117Z-849ec7",
+  "publication_state": "COMPLETE",
+  "preflight": "PASS",
+  "stale_staging": false,
+  "actual_payload_count": 6,
+  "identity_assets_published": 3,
+  "formal_file_writes_including_history_and_completion": 8,
+  "revisions": {
+    "identity": 1,
+    "assets": 2,
+    "expressions": 1,
+    "variants": 0
+  },
+  "fact_counts": {
+    "total": 14,
+    "UNCERTAIN": 10,
+    "TODO_CALIBRATION": 4,
+    "CANON": 0,
+    "VISUAL_CONSENSUS": 0
+  },
+  "primary": "identity-p01-crop",
+  "primary_sha256": "386f95c28441a1adf4900cfc3ce52e1c52f0ce7435376bd4576dd9cc32976414",
+  "parent": "identity-p01",
+  "crop_box": [
+    680,
+    0,
+    760,
+    640
+  ],
+  "dimensions": [
+    760,
+    640
+  ],
+  "secondary": [
+    "identity-p01",
+    "identity-p03 (supplemental)"
+  ],
+  "generation_permission": "Only the three approved Identity assets; Body Base/Faceless/Expression remain forbidden.",
+  "coverage": {
+    "portrait": "READY",
+    "upper_body": "READY",
+    "full_body": "READY",
+    "back_view": "INCOMPLETE"
+  },
+  "global_reference_readiness": "PARTIAL",
+  "validation": {
+    "structure": "PASS",
+    "identity_final": {
+      "validator": "identity-staging-v2",
+      "status": "PASS",
+      "calibration_id": "cal-20260911T031117Z-849ec7",
+      "counts": {
+        "identity_facts": 14,
+        "uncertain": 10,
+        "todo": 4,
+        "todo_calibration": 4,
+        "canon": 0,
+        "visual_consensus": 0,
+        "candidate_assets": 46,
+        "identity_generation_assets": 3
+      },
+      "errors": [],
+      "warnings": [],
+      "publication_executed": false
+    },
+    "runtime": {
+      "coverage": {
+        "portrait": "READY",
+        "upper_body": "READY",
+        "full_body": "READY",
+        "back_view": "INCOMPLETE"
+      },
+      "selections": {
+        "portrait": [
+          "identity-p01-crop"
+        ],
+        "upper_body": [
+          "identity-p01-crop",
+          "identity-p01"
+        ],
+        "full_body": [
+          "identity-p01-crop",
+          "identity-p01"
+        ],
+        "back_view": [
+          "identity-p01-crop"
+        ]
+      },
+      "adapter": "argument capture only; no remote call"
+    },
+    "tests": [
+      {
+        "name": "identity-final",
+        "command": [
+          "D:\\learn\\Arco\\.venv\\Scripts\\python.exe",
+          "D:\\learn\\Arco\\scripts\\validate_identity_staging.py",
+          "--root",
+          "D:\\learn\\Arco",
+          "--staging",
+          "D:\\learn\\Arco\\calibration\\staging\\cal-20260911T031117Z-849ec7",
+          "--json"
+        ],
+        "start": "2026-09-13T12:27:29.201103+00:00",
+        "end": "2026-09-13T12:27:29.561268+00:00",
+        "duration_seconds": 0.36,
+        "exit_code": 0,
+        "status": "PASS",
+        "stdout": "{\r\n  \"validator\": \"identity-staging-v2\",\r\n  \"status\": \"PASS\",\r\n  \"calibration_id\": \"cal-20260911T031117Z-849ec7\",\r\n  \"counts\": {\r\n    \"identity_facts\": 14,\r\n    \"uncertain\": 10,\r\n    \"todo\": 4,\r\n    \"todo_calibration\": 4,\r\n    \"canon\": 0,\r\n    \"visual_consensus\": 0,\r\n    \"candidate_assets\": 46,\r\n    \"identity_generation_assets\": 3\r\n  },\r\n  \"errors\": [],\r\n  \"warnings\": [],\r\n  \"publication_executed\": false\r\n}\r\n",
+        "stderr": ""
+      },
+      {
+        "name": "runtime",
+        "command": [
+          "D:\\learn\\Arco\\.venv\\Scripts\\python.exe",
+          "-m",
+          "unittest",
+          "scripts.test_reference_runtime",
+          "-v"
+        ],
+        "start": "2026-09-13T12:27:29.561684+00:00",
+        "end": "2026-09-13T12:27:29.786105+00:00",
+        "duration_seconds": 0.224,
+        "exit_code": 0,
+        "status": "PASS",
+        "stdout": "",
+        "stderr": "test_adapter_boundary_contains_real_selected_paths_only (scripts.test_reference_runtime.RuntimeTests.test_adapter_boundary_contains_real_selected_paths_only) ... ok\r\ntest_conversation_transport_is_exact (scripts.test_reference_runtime.RuntimeTests.test_conversation_transport_is_exact) ... ok\r\ntest_current_global_readiness_is_incomplete (scripts.test_reference_runtime.RuntimeTests.test_current_global_readiness_is_incomplete) ... ok\r\ntest_incomplete_and_conflict (scripts.test_reference_runtime.RuntimeTests.test_incomplete_and_conflict) ... ok\r\ntest_managed_selector_checks_hash_and_role (scripts.test_reference_runtime.RuntimeTests.test_managed_selector_checks_hash_and_role) ... ok\r\ntest_mode_resolution (scripts.test_reference_runtime.RuntimeTests.test_mode_resolution) ... ok\r\ntest_permission_missing_is_false_and_layers_are_denied (scripts.test_reference_runtime.RuntimeTests.test_permission_missing_is_false_and_layers_are_denied) ... ok\r\ntest_prompt_only_args_have_prompt_only (scripts.test_reference_runtime.RuntimeTests.test_prompt_only_args_have_prompt_only) ... ok\r\ntest_reference_limits (scripts.test_reference_runtime.RuntimeTests.test_reference_limits) ... ok\r\ntest_request_coverage_profiles (scripts.test_reference_runtime.RuntimeTests.test_request_coverage_profiles) ... ok\r\ntest_request_scope_and_external_who_rules (scripts.test_reference_runtime.RuntimeTests.test_request_scope_and_external_who_rules) ... ok\r\ntest_request_scoped_never_changes_global (scripts.test_reference_runtime.RuntimeTests.test_request_scoped_never_changes_global) ... ok\r\ntest_runtime_planning_is_read_only_and_has_no_remote_client (scripts.test_reference_runtime.RuntimeTests.test_runtime_planning_is_read_only_and_has_no_remote_client) ... ok\r\ntest_selector_does_not_pick_unpermitted_or_random_files (scripts.test_reference_runtime.RuntimeTests.test_selector_does_not_pick_unpermitted_or_random_files) ... ok\r\ntest_variant_coverage_is_required (scripts.test_reference_runtime.RuntimeTests.test_variant_coverage_is_required) ... ok\r\n\r\n----------------------------------------------------------------------\r\nRan 15 tests in 0.014s\r\n\r\nOK\r\n"
+      },
+      {
+        "name": "coverage-inheritance",
+        "command": [
+          "D:\\learn\\Arco\\.venv\\Scripts\\python.exe",
+          "-m",
+          "unittest",
+          "scripts.test_prepublication_tooling",
+          "-v"
+        ],
+        "start": "2026-09-13T12:27:29.786504+00:00",
+        "end": "2026-09-13T12:27:30.694666+00:00",
+        "duration_seconds": 0.908,
+        "exit_code": 0,
+        "status": "PASS",
+        "stdout": "",
+        "stderr": "test_back_is_incomplete_and_global_partial (scripts.test_prepublication_tooling.ToolingTests.test_back_is_incomplete_and_global_partial) ... ok\r\ntest_candidate_schema_and_manifest (scripts.test_prepublication_tooling.ToolingTests.test_candidate_schema_and_manifest) ... ok\r\ntest_failed_lock_blocks_writes_but_not_read_only (scripts.test_prepublication_tooling.ToolingTests.test_failed_lock_blocks_writes_but_not_read_only) ... ok\r\ntest_forbidden_layers_and_legacy_permission_default (scripts.test_prepublication_tooling.ToolingTests.test_forbidden_layers_and_legacy_permission_default) ... ok\r\ntest_inheritance_metadata_to_contract_to_prompt_quality_gate (scripts.test_prepublication_tooling.ToolingTests.test_inheritance_metadata_to_contract_to_prompt_quality_gate) ... ok\r\ntest_portrait_primary_alone (scripts.test_prepublication_tooling.ToolingTests.test_portrait_primary_alone) ... ok\r\ntest_prompt_only_exact_args (scripts.test_prepublication_tooling.ToolingTests.test_prompt_only_exact_args) ... ok\r\ntest_runtime_source_contains_no_staging_discovery_or_remote_adapter (scripts.test_prepublication_tooling.ToolingTests.test_runtime_source_contains_no_staging_discovery_or_remote_adapter) ... ok\r\ntest_upper_and_full_add_minimal_secondary_not_supplemental (scripts.test_prepublication_tooling.ToolingTests.test_upper_and_full_add_minimal_secondary_not_supplemental) ... ok\r\n\r\n----------------------------------------------------------------------\r\nRan 9 tests in 0.714s\r\n\r\nOK\r\n"
+      },
+      {
+        "name": "identity-tests",
+        "command": [
+          "D:\\learn\\Arco\\.venv\\Scripts\\python.exe",
+          "-m",
+          "unittest",
+          "scripts.test_identity_staging",
+          "-v"
+        ],
+        "start": "2026-09-13T12:27:30.696031+00:00",
+        "end": "2026-09-13T12:27:31.095124+00:00",
+        "duration_seconds": 0.399,
+        "exit_code": 0,
+        "status": "PASS",
+        "stdout": "",
+        "stderr": "test_formal_identity_is_not_modified_by_staging (scripts.test_identity_staging.IdentityStagingTests.test_formal_identity_is_not_modified_by_staging) ... ok\r\ntest_historical_classes (scripts.test_identity_staging.IdentityStagingTests.test_historical_classes) ... ok\r\ntest_staging_validator_passes (scripts.test_identity_staging.IdentityStagingTests.test_staging_validator_passes) ... ok\r\n\r\n----------------------------------------------------------------------\r\nRan 3 tests in 0.206s\r\n\r\nOK\r\n"
+      },
+      {
+        "name": "supplemental",
+        "command": [
+          "D:\\learn\\Arco\\.venv\\Scripts\\python.exe",
+          "-m",
+          "unittest",
+          "scripts.test_validate_expression_staging",
+          "-v"
+        ],
+        "start": "2026-09-13T12:27:31.095803+00:00",
+        "end": "2026-09-13T12:28:06.809203+00:00",
+        "duration_seconds": 35.713,
+        "exit_code": 0,
+        "status": "PASS",
+        "stdout": "",
+        "stderr": "test_compatibility_upgrade (scripts.test_validate_expression_staging.Tests.test_compatibility_upgrade) ... ok\r\ntest_duplicate_id (scripts.test_validate_expression_staging.Tests.test_duplicate_id) ... ok\r\ntest_formal_published_baseline (scripts.test_validate_expression_staging.Tests.test_formal_published_baseline) ... ok\r\ntest_immutable_formal_expression_drift (scripts.test_validate_expression_staging.Tests.test_immutable_formal_expression_drift) ... ok\r\ntest_missing_file (scripts.test_validate_expression_staging.Tests.test_missing_file) ... ok\r\ntest_proposed_id_is_not_asset (scripts.test_validate_expression_staging.Tests.test_proposed_id_is_not_asset) ... ok\r\ntest_publication_gate (scripts.test_validate_expression_staging.Tests.test_publication_gate) ... ok\r\ntest_reference_and_role (scripts.test_validate_expression_staging.Tests.test_reference_and_role) ... ok\r\ntest_review_and_cluster (scripts.test_validate_expression_staging.Tests.test_review_and_cluster) ... ok\r\n\r\n----------------------------------------------------------------------\r\nRan 9 tests in 35.146s\r\n\r\nOK\r\n"
+      },
+      {
+        "name": "regression",
+        "command": [
+          "D:\\learn\\Arco\\.venv\\Scripts\\python.exe",
+          "-m",
+          "unittest",
+          "scripts.test_validate_library",
+          "-v"
+        ],
+        "start": "2026-09-13T12:28:06.809631+00:00",
+        "end": "2026-09-13T12:28:14.983829+00:00",
+        "duration_seconds": 8.174,
+        "exit_code": 0,
+        "status": "PASS",
+        "stdout": "",
+        "stderr": "test_history_without_completion_marker_is_rejected (scripts.test_validate_library.PublisherTests.test_history_without_completion_marker_is_rejected) ... ok\r\ntest_one_calibration_advances_multiple_entities_independently (scripts.test_validate_library.PublisherTests.test_one_calibration_advances_multiple_entities_independently) ... ok\r\ntest_publish_creates_history_and_completion_marker (scripts.test_validate_library.PublisherTests.test_publish_creates_history_and_completion_marker) ... ok\r\ntest_resume_after_one_file_was_replaced (scripts.test_validate_library.PublisherTests.test_resume_after_one_file_was_replaced) ... ok\r\ntest_rollback_restores_original_hash (scripts.test_validate_library.PublisherTests.test_rollback_restores_original_hash) ... ok\r\ntest_asset_cannot_carry_evidence_status (scripts.test_validate_library.ValidatorTests.test_asset_cannot_carry_evidence_status) ... ok\r\ntest_asset_schema_v2_defaults_generation_permission_to_false (scripts.test_validate_library.ValidatorTests.test_asset_schema_v2_defaults_generation_permission_to_false) ... ok\r\ntest_back_view_needs_variant_back_fact_and_reference (scripts.test_validate_library.ValidatorTests.test_back_view_needs_variant_back_fact_and_reference) ... ok\r\ntest_full_body_variant_lists_lower_body_and_footwear_gaps (scripts.test_validate_library.ValidatorTests.test_full_body_variant_lists_lower_body_and_footwear_gaps) ... ok\r\ntest_future_v3_generation_metadata_is_validated (scripts.test_validate_library.ValidatorTests.test_future_v3_generation_metadata_is_validated) ... ok\r\ntest_initial_library_is_structurally_valid_but_not_ready (scripts.test_validate_library.ValidatorTests.test_initial_library_is_structurally_valid_but_not_ready) ... ok\r\ntest_markdown_revision_mismatch_is_detected (scripts.test_validate_library.ValidatorTests.test_markdown_revision_mismatch_is_detected) ... ok\r\ntest_observation_requires_intrinsic_and_rendering_layers (scripts.test_validate_library.ValidatorTests.test_observation_requires_intrinsic_and_rendering_layers) ... ok\r\ntest_official_image_alone_does_not_make_a_claim_canon (scripts.test_validate_library.ValidatorTests.test_official_image_alone_does_not_make_a_claim_canon) ... ok\r\ntest_one_calibration_can_record_multiple_fields_for_one_entity_revision (scripts.test_validate_library.ValidatorTests.test_one_calibration_can_record_multiple_fields_for_one_entity_revision) ... ok\r\ntest_portrait_can_be_ready_while_global_identity_is_incomplete (scripts.test_validate_library.ValidatorTests.test_portrait_can_be_ready_while_global_identity_is_incomplete) ... ok\r\ntest_revision_without_history_is_detected (scripts.test_validate_library.ValidatorTests.test_revision_without_history_is_detected) ... ok\r\ntest_runtime_config_is_validated (scripts.test_validate_library.ValidatorTests.test_runtime_config_is_validated) ... ok\r\ntest_state_cannot_override_must_keep (scripts.test_validate_library.ValidatorTests.test_state_cannot_override_must_keep) ... ok\r\ntest_state_group_compatibility_and_exclusivity (scripts.test_validate_library.ValidatorTests.test_state_group_compatibility_and_exclusivity) ... ok\r\ntest_state_requires_and_explicit_conflicts_block_selection (scripts.test_validate_library.ValidatorTests.test_state_requires_and_explicit_conflicts_block_selection) ... ok\r\ntest_temporary_evidence_only_changes_request_readiness (scripts.test_validate_library.ValidatorTests.test_temporary_evidence_only_changes_request_readiness) ... ok\r\ntest_unfinished_publish_blocks_structure (scripts.test_validate_library.ValidatorTests.test_unfinished_publish_blocks_structure) ... ok\r\ntest_unfinished_publish_does_not_block_read_only_validation (scripts.test_validate_library.ValidatorTests.test_unfinished_publish_does_not_block_read_only_validation) ... ok\r\ntest_validator_is_read_only (scripts.test_validate_library.ValidatorTests.test_validator_is_read_only) ... ok\r\ntest_visual_consensus_requires_independent_groups (scripts.test_validate_library.ValidatorTests.test_visual_consensus_requires_independent_groups) ... ok\r\n\r\n----------------------------------------------------------------------\r\nRan 26 tests in 7.927s\r\n\r\nOK\r\n"
+      },
+      {
+        "name": "expression-baseline",
+        "command": [
+          "D:\\learn\\Arco\\.venv\\Scripts\\python.exe",
+          "D:\\learn\\Arco\\scripts\\validate_expression_staging.py",
+          "--candidate",
+          "D:\\learn\\Arco\\calibration\\staging\\cal-20260910T145805Z-61c3e9\\candidate-root",
+          "--staging",
+          "D:\\learn\\Arco\\calibration\\staging\\cal-20260910T145805Z-61c3e9",
+          "--formal",
+          "D:\\learn\\Arco",
+          "--phase",
+          "published",
+          "--json"
+        ],
+        "start": "2026-09-13T12:28:14.984664+00:00",
+        "end": "2026-09-13T12:28:18.316629+00:00",
+        "duration_seconds": 3.332,
+        "exit_code": 0,
+        "status": "PASS",
+        "stdout": "{\r\n  \"validator\": \"expression-staging-v1\",\r\n  \"calibration_id\": \"cal-20260910T145805Z-61c3e9\",\r\n  \"status\": \"PASS\",\r\n  \"counts\": {\r\n    \"assets\": 43,\r\n    \"semantics\": 42,\r\n    \"approved\": 42,\r\n    \"face_slots\": 2,\r\n    \"expression_sets\": 2,\r\n    \"confirmed_clusters\": 8,\r\n    \"similarity_groups\": 21,\r\n    \"pending_compatibility_evidence\": 4,\r\n    \"materialized_composite_compatibility\": 0\r\n  },\r\n  \"errors\": [],\r\n  \"warnings\": [\r\n    \"a_l_5797 faceless_composite: source locator outside current publication unit\",\r\n    \"a_l_5797 full_composite: source locator outside current publication unit\",\r\n    \"a_l_5799 faceless_composite: source locator outside current publication unit\",\r\n    \"a_l_5799 full_composite: source locator outside current publication unit\",\r\n    \"a_l_5802 faceless_composite: source locator outside current publication unit\",\r\n    \"a_l_5802 full_composite: source locator outside current publication unit\",\r\n    \"a_l_5811 faceless_composite: source locator outside current publication unit\",\r\n    \"a_l_5811 full_composite: source locator outside current publication unit\"\r\n  ]\r\n}\r\n",
+        "stderr": ""
+      },
+      {
+        "name": "formal-library",
+        "command": [
+          "D:\\learn\\Arco\\.venv\\Scripts\\python.exe",
+          "D:\\learn\\Arco\\scripts\\validate_library.py",
+          "--root",
+          "D:\\learn\\Arco",
+          "--json"
+        ],
+        "start": "2026-09-13T12:28:18.317642+00:00",
+        "end": "2026-09-13T12:28:18.744128+00:00",
+        "duration_seconds": 0.426,
+        "exit_code": 0,
+        "status": "PASS",
+        "stdout": "{\r\n  \"structure\": \"PASS\",\r\n  \"identity_readiness\": {\r\n    \"status\": \"INCOMPLETE\",\r\n    \"missing_fields\": [\r\n      \"body.chest_proportion\",\r\n      \"body.head_to_body_ratio\",\r\n      \"body.height\",\r\n      \"body.leg_proportion\",\r\n      \"body.overall_build\",\r\n      \"body.shoulder_width\",\r\n      \"body.waist_hip_ratio\",\r\n      \"eyes.color\",\r\n      \"face.feature_relationships\",\r\n      \"face.shape\",\r\n      \"hair.base_color\",\r\n      \"hair.base_identity\"\r\n    ]\r\n  },\r\n  \"variant_readiness\": {},\r\n  \"request_readiness\": {\r\n    \"status\": \"INCOMPLETE\",\r\n    \"exposure_profiles\": [],\r\n    \"missing_fields\": [\r\n      \"request_profile\"\r\n    ],\r\n    \"temporary_evidence_used\": []\r\n  },\r\n  \"global_reference_readiness\": {\r\n    \"identity\": \"PARTIAL\",\r\n    \"identity_profiles\": {\r\n      \"portrait\": \"READY\",\r\n      \"upper_body\": \"READY\",\r\n      \"full_body\": \"READY\",\r\n      \"back_view\": \"INCOMPLETE\"\r\n    },\r\n    \"variants\": {},\r\n    \"overall\": \"PARTIAL\"\r\n  },\r\n  \"issues\": [],\r\n  \"summary\": {\r\n    \"errors\": 0,\r\n    \"warnings\": 0\r\n  }\r\n}\r\n",
+        "stderr": ""
+      },
+      {
+        "name": "skill",
+        "command": [
+          "D:\\learn\\Arco\\.venv\\Scripts\\python.exe",
+          "C:/Users/shuai/.codex/skills/.system/skill-creator/scripts/quick_validate.py",
+          "D:\\learn\\Arco"
+        ],
+        "start": "2026-09-13T12:28:18.780518+00:00",
+        "end": "2026-09-13T12:28:18.871402+00:00",
+        "duration_seconds": 0.091,
+        "exit_code": 0,
+        "status": "PASS",
+        "stdout": "Skill is valid!\r\n",
+        "stderr": ""
+      }
+    ]
+  },
+  "protected_data_hash_verification": {
+    "status": "PASS",
+    "before": {
+      "character/assets.yaml": "405cd66e64acbfe0b0ac2b57a398e0b241090f59719e7878610370a7b98c099a",
+      "character/expressions.yaml": "0bc3c7ae8e18797c472dc79022d0cd74fe71b04c90d5ec02e571c180b41e7030",
+      "character/identity.md": "1737afec4b2b7f46353d59bbb3dbbb5b820cb0c607df650a191914621cece66a",
+      "character/identity.yaml": "ebdd02a3c7c2629ff61e63dca6b917d2f5e8c8809794e1405bbad86901cf4f69",
+      "variants/index.yaml": "d1f54d8ed48c41316f8817f94750b4c13f1c313877861970af8ef892a233bb1c",
+      "assets/arco/expressions/frontal/arco-expr-frontal-001.png": "386cea17af789627dd06070002fd02261025ad5447e0c451f194bb401080d240",
+      "assets/arco/expressions/frontal/arco-expr-frontal-002.png": "c9ec738943c2a535e277d86569397f4207658dec1dd1a4b3476c87de1e345c1c",
+      "assets/arco/expressions/frontal/arco-expr-frontal-003.png": "827a18fd067fe4844c0f7cf45dd51b3ccb18a8ebcbd3a6132b038858bb1f2e1c",
+      "assets/arco/expressions/frontal/arco-expr-frontal-004.png": "82b7eb2e3da5b6053676633c766057e56a587778170a503dd217bc3f4212c649",
+      "assets/arco/expressions/frontal/arco-expr-frontal-005.png": "b1dd2a686220170fa0b30971797f3a0f36dd5c108d2ab2c2c530b360937da3f3",
+      "assets/arco/expressions/frontal/arco-expr-frontal-006.png": "4abad161afc32fd2cf021f5425172165ac80f8e620064b3c6cd9aaaf7c59b40b",
+      "assets/arco/expressions/frontal/arco-expr-frontal-007.png": "5d371637d020129bb1b606d6ae691a546874501b2c5047e74be4743a9b96963a",
+      "assets/arco/expressions/frontal/arco-expr-frontal-008.png": "6921335c51c30d5dabf20f6e36612395af690e690841862bb17ea42e28186774",
+      "assets/arco/expressions/frontal/arco-expr-frontal-009.png": "b9a8d36116dd85207a275840eb3bc3c7a56c2987a2e7020dd401ab0004c514ce",
+      "assets/arco/expressions/frontal/arco-expr-frontal-010.png": "2664839ae5ddd668cc34b8a85ddd9557510c97aea169f3f5603fa5e4d70842f4",
+      "assets/arco/expressions/frontal/arco-expr-frontal-011.png": "9fc37446350ddc2b9fa118bdb80c715134f6ebc1e343f5a33632e1f141bbf0bc",
+      "assets/arco/expressions/frontal/arco-expr-frontal-012.png": "40851a46b362f8b3ef01ec1c18e4d428119409d36e7fdd484a5cd902babcc0b6",
+      "assets/arco/expressions/frontal/arco-expr-frontal-013.png": "2c7f054e717dba98511742b20047ccda6d3460b3c82c5bf37111d5d103aab1a1",
+      "assets/arco/expressions/frontal/arco-expr-frontal-014.png": "61b7504125b13a7fad6bbf1d43fcdab9472a9b08175798a20f0802bb21baa81c",
+      "assets/arco/expressions/frontal/arco-expr-frontal-015.png": "98d2f4e2979157e4f3fda372e8f7d21a59dd3c1ebaa60f25dd78275f352022d0",
+      "assets/arco/expressions/frontal/arco-expr-frontal-016.png": "9fc37446350ddc2b9fa118bdb80c715134f6ebc1e343f5a33632e1f141bbf0bc",
+      "assets/arco/expressions/frontal/arco-expr-frontal-017.png": "765d3944e47fddd8653d26be4f2078e90c0bf93be0d8139c4032fd46caa116e1",
+      "assets/arco/expressions/frontal/arco-expr-frontal-018.png": "a827d4bf789b1c22d08c8b853db909675f562ea6195744789cb85a12452dbbbc",
+      "assets/arco/expressions/frontal/arco-expr-frontal-019.png": "f908928f438185fa99a202d9629164e78eea7ae6ac35f0d1ab8bb7ed8d584d38",
+      "assets/arco/expressions/frontal/arco-expr-frontal-020.png": "860e6405b0c628c9796202d4d1f2d0a922f21cf49657749801ccb6aef2286c47",
+      "assets/arco/expressions/frontal/arco-expr-frontal-021.png": "8a68a121e14eda387d0165772a9ef51404588e95d1ce7d5f647c4f328b2c8f83",
+      "assets/arco/expressions/frontal/arco-expr-frontal-022.png": "06abd18bcddd7ca2e0f88e094af949e80ce50d32d3f5c5c8818004f199ce8549",
+      "assets/arco/expressions/oblique/arco-expr-oblique-001.png": "d03ebd27ea08ba3dd22e4f1b6885a7437d50f9b802ac97523eb8e5720002532b",
+      "assets/arco/expressions/oblique/arco-expr-oblique-002.png": "d0c4a0bef6f260aca4ae9312a6ad9929d2e2c5447d0bdc4f6b75a8d4cac5a398",
+      "assets/arco/expressions/oblique/arco-expr-oblique-003.png": "0425d957385cf790598b992ef085837a73c18ee438f0117d8ba87f51f5166fc1",
+      "assets/arco/expressions/oblique/arco-expr-oblique-004.png": "6cde93f0af3fb9aa82c3cec8273e18e69e6d735563ca6bf6029fe6fed48770db",
+      "assets/arco/expressions/oblique/arco-expr-oblique-005.png": "282ba8b4b97d2af28eef0fc8b68c114af8fa7fea73f392911019966fc28e5b58",
+      "assets/arco/expressions/oblique/arco-expr-oblique-006.png": "72357eb15a2f9736932eb5a4329fabafb5b14f52a48356977ecf8cf37c45cacf",
+      "assets/arco/expressions/oblique/arco-expr-oblique-007.png": "cd5bc627f3a11b6e076c501b1a46690a80c4267b0f9955bcb31eb194990598cf",
+      "assets/arco/expressions/oblique/arco-expr-oblique-008.png": "dd7ad32900de00b18dc420752a654507285b1dd9592468f2613673470184f01a",
+      "assets/arco/expressions/oblique/arco-expr-oblique-009.png": "3dd10fc5e8e21ac4b01c3915efb448b5bee5cae27a9e13c5bba83e32ffca754a",
+      "assets/arco/expressions/oblique/arco-expr-oblique-010.png": "e917a36cc6d0ec0370479877baa355eab3cd182bb55d2b84d625e7a7ca04d55c",
+      "assets/arco/expressions/oblique/arco-expr-oblique-011.png": "f9fd789dd0695ef10f9d49d87c5f782f9bfea93123a0c29c470374db2edd5c94",
+      "assets/arco/expressions/oblique/arco-expr-oblique-012.png": "3b5bb564842fe81b38f7aa93f04b2df22e3e5fc017a9474f641773edde90bf30",
+      "assets/arco/expressions/oblique/arco-expr-oblique-013.png": "a67145fc6a207df371e37e34e0de031ff897ec665f21fe4875a88b7a69bd3efe",
+      "assets/arco/expressions/oblique/arco-expr-oblique-014.png": "e172ec7ad9ac2d3cd0363fd6565533944c83a8d9553e3e2c46dae90cf3a2fa06",
+      "assets/arco/expressions/oblique/arco-expr-oblique-015.png": "fd70abae2e6a3d4ca8e600287913afefd7b52e013bd7ceaab3d57756212eced3",
+      "assets/arco/expressions/oblique/arco-expr-oblique-016.png": "dbad2a2a95ce9c8098c6e041612a6765a645ff59496a5c39bf489677a2f2b637",
+      "assets/arco/expressions/oblique/arco-expr-oblique-017.png": "62f8c93d9a4a53940ab0d5c92b3bb130af78b95aeae6848ab0445cb28553e9cd",
+      "assets/arco/expressions/oblique/arco-expr-oblique-018.png": "da7fe1c1dd23514a839f1f21bfa76adc5082954d1625d52185123eeb2c2ffcbe",
+      "assets/arco/expressions/oblique/arco-expr-oblique-019.png": "9cc2aa31d4498eaf8437c2f81594f190517b984f702d636719bfbb5d8fade16b",
+      "assets/arco/expressions/oblique/arco-expr-oblique-020.png": "3923ec69c898ec60da4859cb1a34c16f473f3dcfde0132776db9cd1bee722fcf",
+      "assets/arco/expressions/oblique/arco-expr-oblique-021.png": "c955932bf4c47a09a8cf22e3b0b4b4d5e1eee305e2862ad292c2ca4167c24bcf",
+      "calibration/history/cal-20260910T145805Z-61c3e9.complete": "6c3d0d20085eb1a4a26de063d4d5fc42162fc19bd3c01274ad81459db4168d89",
+      "calibration/history/cal-20260910T145805Z-61c3e9.yaml": "f170ed3819cafc1e75cb20c174c52cd1a62e954b992a4cd9851b19869f0d112c"
+    },
+    "after": {
+      "character/assets.yaml": "5fc9b027de91a92fb12a5c340955066f5ff457090b05d437b9a75038c048e32b",
+      "character/expressions.yaml": "0bc3c7ae8e18797c472dc79022d0cd74fe71b04c90d5ec02e571c180b41e7030",
+      "character/identity.md": "9fd5238102dbfab7ae608604f91b00210c52f0a9892522d883ab7f7e07136b25",
+      "character/identity.yaml": "beffb1b0c1479891fa292e69dbd6682cba434996a7ab1030c8ef8d4dee6d3507",
+      "variants/index.yaml": "d1f54d8ed48c41316f8817f94750b4c13f1c313877861970af8ef892a233bb1c",
+      "assets/arco/identity/p01-face-hair-primary-a.png": "386f95c28441a1adf4900cfc3ce52e1c52f0ce7435376bd4576dd9cc32976414",
+      "assets/arco/identity/p01-full.png": "bddba1d7b1bed2c21572892003ac50dc6c2340d53e8262a56b6db69b16cf1f86",
+      "assets/arco/identity/p03-alternate.png": "0056f16ff4468a0e26505b521a2fcd8f13a032ddb10e468c22c06c433a38206d",
+      "assets/arco/expressions/frontal/arco-expr-frontal-001.png": "386cea17af789627dd06070002fd02261025ad5447e0c451f194bb401080d240",
+      "assets/arco/expressions/frontal/arco-expr-frontal-002.png": "c9ec738943c2a535e277d86569397f4207658dec1dd1a4b3476c87de1e345c1c",
+      "assets/arco/expressions/frontal/arco-expr-frontal-003.png": "827a18fd067fe4844c0f7cf45dd51b3ccb18a8ebcbd3a6132b038858bb1f2e1c",
+      "assets/arco/expressions/frontal/arco-expr-frontal-004.png": "82b7eb2e3da5b6053676633c766057e56a587778170a503dd217bc3f4212c649",
+      "assets/arco/expressions/frontal/arco-expr-frontal-005.png": "b1dd2a686220170fa0b30971797f3a0f36dd5c108d2ab2c2c530b360937da3f3",
+      "assets/arco/expressions/frontal/arco-expr-frontal-006.png": "4abad161afc32fd2cf021f5425172165ac80f8e620064b3c6cd9aaaf7c59b40b",
+      "assets/arco/expressions/frontal/arco-expr-frontal-007.png": "5d371637d020129bb1b606d6ae691a546874501b2c5047e74be4743a9b96963a",
+      "assets/arco/expressions/frontal/arco-expr-frontal-008.png": "6921335c51c30d5dabf20f6e36612395af690e690841862bb17ea42e28186774",
+      "assets/arco/expressions/frontal/arco-expr-frontal-009.png": "b9a8d36116dd85207a275840eb3bc3c7a56c2987a2e7020dd401ab0004c514ce",
+      "assets/arco/expressions/frontal/arco-expr-frontal-010.png": "2664839ae5ddd668cc34b8a85ddd9557510c97aea169f3f5603fa5e4d70842f4",
+      "assets/arco/expressions/frontal/arco-expr-frontal-011.png": "9fc37446350ddc2b9fa118bdb80c715134f6ebc1e343f5a33632e1f141bbf0bc",
+      "assets/arco/expressions/frontal/arco-expr-frontal-012.png": "40851a46b362f8b3ef01ec1c18e4d428119409d36e7fdd484a5cd902babcc0b6",
+      "assets/arco/expressions/frontal/arco-expr-frontal-013.png": "2c7f054e717dba98511742b20047ccda6d3460b3c82c5bf37111d5d103aab1a1",
+      "assets/arco/expressions/frontal/arco-expr-frontal-014.png": "61b7504125b13a7fad6bbf1d43fcdab9472a9b08175798a20f0802bb21baa81c",
+      "assets/arco/expressions/frontal/arco-expr-frontal-015.png": "98d2f4e2979157e4f3fda372e8f7d21a59dd3c1ebaa60f25dd78275f352022d0",
+      "assets/arco/expressions/frontal/arco-expr-frontal-016.png": "9fc37446350ddc2b9fa118bdb80c715134f6ebc1e343f5a33632e1f141bbf0bc",
+      "assets/arco/expressions/frontal/arco-expr-frontal-017.png": "765d3944e47fddd8653d26be4f2078e90c0bf93be0d8139c4032fd46caa116e1",
+      "assets/arco/expressions/frontal/arco-expr-frontal-018.png": "a827d4bf789b1c22d08c8b853db909675f562ea6195744789cb85a12452dbbbc",
+      "assets/arco/expressions/frontal/arco-expr-frontal-019.png": "f908928f438185fa99a202d9629164e78eea7ae6ac35f0d1ab8bb7ed8d584d38",
+      "assets/arco/expressions/frontal/arco-expr-frontal-020.png": "860e6405b0c628c9796202d4d1f2d0a922f21cf49657749801ccb6aef2286c47",
+      "assets/arco/expressions/frontal/arco-expr-frontal-021.png": "8a68a121e14eda387d0165772a9ef51404588e95d1ce7d5f647c4f328b2c8f83",
+      "assets/arco/expressions/frontal/arco-expr-frontal-022.png": "06abd18bcddd7ca2e0f88e094af949e80ce50d32d3f5c5c8818004f199ce8549",
+      "assets/arco/expressions/oblique/arco-expr-oblique-001.png": "d03ebd27ea08ba3dd22e4f1b6885a7437d50f9b802ac97523eb8e5720002532b",
+      "assets/arco/expressions/oblique/arco-expr-oblique-002.png": "d0c4a0bef6f260aca4ae9312a6ad9929d2e2c5447d0bdc4f6b75a8d4cac5a398",
+      "assets/arco/expressions/oblique/arco-expr-oblique-003.png": "0425d957385cf790598b992ef085837a73c18ee438f0117d8ba87f51f5166fc1",
+      "assets/arco/expressions/oblique/arco-expr-oblique-004.png": "6cde93f0af3fb9aa82c3cec8273e18e69e6d735563ca6bf6029fe6fed48770db",
+      "assets/arco/expressions/oblique/arco-expr-oblique-005.png": "282ba8b4b97d2af28eef0fc8b68c114af8fa7fea73f392911019966fc28e5b58",
+      "assets/arco/expressions/oblique/arco-expr-oblique-006.png": "72357eb15a2f9736932eb5a4329fabafb5b14f52a48356977ecf8cf37c45cacf",
+      "assets/arco/expressions/oblique/arco-expr-oblique-007.png": "cd5bc627f3a11b6e076c501b1a46690a80c4267b0f9955bcb31eb194990598cf",
+      "assets/arco/expressions/oblique/arco-expr-oblique-008.png": "dd7ad32900de00b18dc420752a654507285b1dd9592468f2613673470184f01a",
+      "assets/arco/expressions/oblique/arco-expr-oblique-009.png": "3dd10fc5e8e21ac4b01c3915efb448b5bee5cae27a9e13c5bba83e32ffca754a",
+      "assets/arco/expressions/oblique/arco-expr-oblique-010.png": "e917a36cc6d0ec0370479877baa355eab3cd182bb55d2b84d625e7a7ca04d55c",
+      "assets/arco/expressions/oblique/arco-expr-oblique-011.png": "f9fd789dd0695ef10f9d49d87c5f782f9bfea93123a0c29c470374db2edd5c94",
+      "assets/arco/expressions/oblique/arco-expr-oblique-012.png": "3b5bb564842fe81b38f7aa93f04b2df22e3e5fc017a9474f641773edde90bf30",
+      "assets/arco/expressions/oblique/arco-expr-oblique-013.png": "a67145fc6a207df371e37e34e0de031ff897ec665f21fe4875a88b7a69bd3efe",
+      "assets/arco/expressions/oblique/arco-expr-oblique-014.png": "e172ec7ad9ac2d3cd0363fd6565533944c83a8d9553e3e2c46dae90cf3a2fa06",
+      "assets/arco/expressions/oblique/arco-expr-oblique-015.png": "fd70abae2e6a3d4ca8e600287913afefd7b52e013bd7ceaab3d57756212eced3",
+      "assets/arco/expressions/oblique/arco-expr-oblique-016.png": "dbad2a2a95ce9c8098c6e041612a6765a645ff59496a5c39bf489677a2f2b637",
+      "assets/arco/expressions/oblique/arco-expr-oblique-017.png": "62f8c93d9a4a53940ab0d5c92b3bb130af78b95aeae6848ab0445cb28553e9cd",
+      "assets/arco/expressions/oblique/arco-expr-oblique-018.png": "da7fe1c1dd23514a839f1f21bfa76adc5082954d1625d52185123eeb2c2ffcbe",
+      "assets/arco/expressions/oblique/arco-expr-oblique-019.png": "9cc2aa31d4498eaf8437c2f81594f190517b984f702d636719bfbb5d8fade16b",
+      "assets/arco/expressions/oblique/arco-expr-oblique-020.png": "3923ec69c898ec60da4859cb1a34c16f473f3dcfde0132776db9cd1bee722fcf",
+      "assets/arco/expressions/oblique/arco-expr-oblique-021.png": "c955932bf4c47a09a8cf22e3b0b4b4d5e1eee305e2862ad292c2ca4167c24bcf",
+      "calibration/history/cal-20260910T145805Z-61c3e9.complete": "6c3d0d20085eb1a4a26de063d4d5fc42162fc19bd3c01274ad81459db4168d89",
+      "calibration/history/cal-20260910T145805Z-61c3e9.yaml": "f170ed3819cafc1e75cb20c174c52cd1a62e954b992a4cd9851b19869f0d112c",
+      "calibration/history/cal-20260911T031117Z-849ec7.complete": "a5dcc667706d1d14e3a3caaccbd577ab494ee68678b4f3dcef740ddd6fa56b80",
+      "calibration/history/cal-20260911T031117Z-849ec7.yaml": "8b5c333bcba924041e1de5c77e1034e2cf1b31b5ac2f4548cdd2daf889e7fbcc"
+    },
+    "changed_paths": [
+      "assets/arco/identity/p01-face-hair-primary-a.png",
+      "assets/arco/identity/p01-full.png",
+      "assets/arco/identity/p03-alternate.png",
+      "calibration/history/cal-20260911T031117Z-849ec7.complete",
+      "calibration/history/cal-20260911T031117Z-849ec7.yaml",
+      "character/assets.yaml",
+      "character/identity.md",
+      "character/identity.yaml"
+    ],
+    "unapproved_changes": []
+  },
+  "history_path": "D:\\learn\\Arco\\calibration\\history\\cal-20260911T031117Z-849ec7.yaml",
+  "completion_marker": "D:\\learn\\Arco\\calibration\\history\\cal-20260911T031117Z-849ec7.complete",
+  "completion_marker_exists": true,
+  "publication_in_progress_cleared": true,
+  "actual_recovery_or_rollback": false,
+  "isolated_failure_injections": 5,
+  "remote_generation": false,
+  "remote_upload": false,
+  "payload_after_hashes": {
+    "character/identity.yaml": "beffb1b0c1479891fa292e69dbd6682cba434996a7ab1030c8ef8d4dee6d3507",
+    "character/assets.yaml": "5fc9b027de91a92fb12a5c340955066f5ff457090b05d437b9a75038c048e32b",
+    "assets/arco/identity/p01-full.png": "bddba1d7b1bed2c21572892003ac50dc6c2340d53e8262a56b6db69b16cf1f86",
+    "assets/arco/identity/p01-face-hair-primary-a.png": "386f95c28441a1adf4900cfc3ce52e1c52f0ce7435376bd4576dd9cc32976414",
+    "assets/arco/identity/p03-alternate.png": "0056f16ff4468a0e26505b521a2fcd8f13a032ddb10e468c22c06c433a38206d",
+    "character/identity.md": "9fd5238102dbfab7ae608604f91b00210c52f0a9892522d883ab7f7e07136b25"
+  },
+  "recommendation": "IDENTITY_PUBLICATION_COMPLETE; stop; Variant Calibration requires a separate request."
+}

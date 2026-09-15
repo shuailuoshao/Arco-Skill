@@ -1,0 +1,67 @@
+calibration_id: cal-20260914T070842Z-68b810
+source_family_id: arco-official-standing-art-system-01
+accepted_assets:
+- asset_id: casual-outfit-primary
+  source: D:\阿尔可\阿尔可立绘1.png
+  managed: assets/arco/variants/casual-outfit/primary/casual-outfit-primary.png
+  sha256: bddba1d7b1bed2c21572892003ac50dc6c2340d53e8262a56b6db69b16cf1f86
+  filename: 阿尔可立绘1.png
+  group: arco-standing-open-arms-oblique-01
+  view_class: three_quarter_right
+  view_angle: front_three_quarter
+  reference_level: primary
+  asset_type: full_composite
+  purpose: 常服全身结构与生成用 OUTFIT Primary；与 identity-p01 内容相同但合同独立。
+- asset_id: casual-outfit-open-arms-no-horns-evidence
+  source: D:\阿尔可\阿尔可立绘\アルコ\アルコ_a_l_5685.png
+  managed: assets/arco/variants/casual-outfit/evidence/open-arms-no-horns.png
+  sha256: 06c61729cdd23ede65e7376beabe50c7f32da8276709730a750452819c367f3d
+  filename: アルコ_a_l_5685.png
+  group: arco-standing-open-arms-oblique-01
+  view_class: three_quarter_right
+  view_angle: front_three_quarter
+  reference_level: detail
+  asset_type: faceless_composite
+  purpose: 无角 open-arms 常服结构证据；禁止生成输入。
+- asset_id: casual-outfit-open-arms-horns-evidence
+  source: D:\阿尔可\阿尔可立绘\アルコ\アルコ_a_l_6592.png
+  managed: assets/arco/variants/casual-outfit/evidence/open-arms-horns.png
+  sha256: 37ec7c9841d98e9676ca262eebadea0da5e3e82928b2c93d75f919faeedd5a3a
+  filename: アルコ_a_l_6592.png
+  group: arco-standing-open-arms-oblique-01
+  view_class: three_quarter_right
+  view_angle: front_three_quarter
+  reference_level: detail
+  asset_type: faceless_composite
+  purpose: 有角同姿势对照，仅证明 horns 可与常服分离；禁止生成输入。
+- asset_id: casual-outfit-crossed-arms-evidence
+  source: D:\阿尔可\阿尔可立绘\アルコ\アルコ_b_l_8781.png
+  managed: assets/arco/variants/casual-outfit/evidence/crossed-arms.png
+  sha256: 4eff91bea4e535e646ad406a5e8aae5e402c337cee635feb1e6339f0eaa8d974
+  filename: アルコ_b_l_8781.png
+  group: arco-standing-crossed-arms-frontal-01
+  view_class: front
+  view_angle: front
+  reference_level: detail
+  asset_type: faceless_composite
+  purpose: crossed-arms 跨姿势常服证据；禁止生成输入。
+- asset_id: casual-outfit-raised-fists-evidence
+  source: D:\阿尔可\阿尔可立绘\アルコ\アルコ_b_l_8783.png
+  managed: assets/arco/variants/casual-outfit/evidence/raised-fists.png
+  sha256: f8d8b38fe4ddaa3eee2d0f3d6a8e659ba25b5926a35a9fcf57f5247ed3172270
+  filename: アルコ_b_l_8783.png
+  group: arco-standing-raised-fists-frontal-01
+  view_class: front
+  view_angle: front
+  reference_level: detail
+  asset_type: faceless_composite
+  purpose: raised-fists frontal 常服结构证据；禁止生成输入。
+provenance_queue:
+- candidate_id: CQ01
+  original_filename: 日常.png
+  source_path: D:\阿尔可\日常.png
+  sha256: b0d7d5828c91d96e3a8223eecaa0ffc878c1f932c297f5e6ccec5fb1cf1a1dd2
+  registration_status: UNREGISTERED
+  reason: official provenance not established; History only
+independence_note: CA01–CA05 are one source family; pose/group differences do not
+  create independent source families.

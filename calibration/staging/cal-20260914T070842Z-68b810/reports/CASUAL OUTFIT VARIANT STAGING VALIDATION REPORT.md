@@ -1,0 +1,51 @@
+# CASUAL OUTFIT VARIANT STAGING VALIDATION REPORT
+
+- **calibration_id**: cal-20260914T070842Z-68b810
+- **staging_path**: D:\learn\Arco\calibration\staging\cal-20260914T070842Z-68b810
+- **validator**: PASS
+- **variant_id**: casual-outfit
+- **variant_candidate_revision**: 1
+- **variant_index_candidate_revision**: 1
+- **asset_index_candidate_revision**: 3
+- **identity_revision_unchanged**: {"revision": 1, "unchanged": true}
+- **expression_revision_unchanged**: {"revision": 1, "unchanged": true}
+- **variant_facts_count**: 10
+- **evidence_status_counts**: {"UNCERTAIN": 10, "TODO_CALIBRATION": 0, "VISUAL_CONSENSUS": 0, "CANON": 0}
+- **primary_asset**: casual-outfit-primary
+- **primary_sha256**: bddba1d7b1bed2c21572892003ac50dc6c2340d53e8262a56b6db69b16cf1f86
+- **primary_provenance**: {"original_filename": "阿尔可立绘1.png", "source_path": "D:\\阿尔可\\阿尔可立绘1.png", "source_note": "用户确认的官方 standing-art；来源关系沿用已批准 Design Preview，未虚构 URL 或发布日期。", "ingest_calibration_id": "cal-20260914T070842Z-68b810"}
+- **secondary_assets**: []
+- **detail_assets**: []
+- **evidence_only_assets**: ["casual-outfit-crossed-arms-evidence", "casual-outfit-open-arms-horns-evidence", "casual-outfit-open-arms-no-horns-evidence", "casual-outfit-raised-fists-evidence"]
+- **generation_permission_list**: {"enabled": ["casual-outfit-primary"], "disabled": ["casual-outfit-crossed-arms-evidence", "casual-outfit-open-arms-horns-evidence", "casual-outfit-open-arms-no-horns-evidence", "casual-outfit-raised-fists-evidence"]}
+- **must_keep_fields**: ["outfit.upper_garment.base_color", "outfit.upper_garment.structure", "outfit.chest_detail", "outfit.torso_structure", "outfit.lower_garment", "outfit.legwear", "outfit.footwear"]
+- **state_mutable_fields**: ["overlay.horns", "overlay.cape", "overlay.weapon", "overlay.temporary_prop"]
+- **upper_body_coverage**: READY
+- **lower_body_coverage**: READY
+- **full_body_coverage**: READY
+- **footwear_coverage**: READY
+- **back_view_coverage**: INCOMPLETE
+- **global_casual_variant_readiness**: PARTIAL
+- **who_outfit_contract_validation**: PASS
+- **selected_variant_id_filtering_test**: PASS
+- **wrong_variant_contract_test**: PASS; returns CONFLICT
+- **adapter_boundary_result**: PASS; Identity -> Variant -> optional External HOW; no evidence-only/staging images
+- **prompt_compiler_result**: PASS; WHO and OUTFIT inheritance instructions closed
+- **runtime_tests**: 21/21 PASS
+- **casual_staging_tests**: 9/9 PASS
+- **regression_suite**: 77/77 PASS
+- **formal_library_validator**: PASS; 0 errors; 0 warnings
+- **skill_validation**: PASS
+- **warnings**: {"candidate": [], "formal_library": [], "existing_expression_baseline": ["a_l_5797 faceless_composite: source locator outside current publication unit", "a_l_5797 full_composite: source locator outside current publication unit", "a_l_5799 faceless_composite: source locator outside current publication unit", "a_l_5799 full_composite: source locator outside current publication unit", "a_l_5802 faceless_composite: source locator outside current publication unit", "a_l_5802 full_composite: source locator outside current publication unit", "a_l_5811 faceless_composite: source locator outside current publication unit", "a_l_5811 full_composite: source locator outside current publication unit"]}
+- **history_draft_state**: DRAFT_UNPUBLISHED_UNFINISHED
+- **publish_manifest_state**: STAGED_VALIDATED_AWAITING_AUTHORIZATION; publication_authorized=false
+- **protected_formal_data_hash_comparison**: {"status": "UNCHANGED", "files_checked": 55, "drift": {}}
+- **publication_executed**: False
+- **remote_image_generation_executed**: False
+- **remote_image_upload_executed**: False
+- **final_recommendation**: READY_FOR_CASUAL_VARIANT_PUBLICATION
+- **publication_payload_count**: 9
+- **only_publication_preflight**: PASS; no files written
+- **notes**: ["Fact readiness remains INCOMPLETE because all ten facts are UNCERTAIN; this is separate from reference readiness PARTIAL.", "CQ01 日常.png remains UNREGISTERED in the provenance queue.", "No completion marker or formal History was created."]
+
+> Publication、正式 History、completion marker、远程生图与远程上传均未执行。

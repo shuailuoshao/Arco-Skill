@@ -1,0 +1,53 @@
+schema_version: 1
+calibration_id: cal-20260914T091518Z-0529a2
+draft: true
+publication_status: NOT_PUBLISHED
+target_entity: character.assets
+revision_before: 3
+revision_after: 4
+patch_type: generation-contract explicitness repair
+patch_reason: First Live Smoke Test exposed a contract explicitness gap.
+knowledge_change: false
+publication_not_executed: true
+user_confirmed: true
+reason: Contract explicitness repair; not new identity knowledge.
+evidence_ids: []
+observations: []
+validation_result:
+  structure: PASS
+targets:
+- entity_ref: character.assets
+  target_type: asset_generation_contract
+  target_id: identity-p01-crop
+  revision_before: 3
+  revision_after: 4
+  changed_fields:
+  - revision
+  - last_calibration_id
+  - assets.identity-p01-crop.generation_reference.inheritance
+  before:
+    revision: 3
+    last_calibration_id: cal-20260914T070842Z-68b810
+  after:
+    revision: 4
+    last_calibration_id: cal-20260914T091518Z-0529a2
+  status_before: null
+  status_after: null
+asset_id: identity-p01-crop
+before:
+  inherit:
+  - identity
+  do_not_inherit:
+  - expression
+  - outfit
+  - pose
+after:
+  inherit:
+  - identity
+  - face
+  - hair
+  - eyes
+  do_not_inherit:
+  - outfit
+  - pose
+  - expression
