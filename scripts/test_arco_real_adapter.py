@@ -19,6 +19,7 @@ from reference_runtime import (  # noqa: E402
     build_builtin_imagegen_args,
     build_invocation_plan,
     compile_reference_instructions,
+    compile_prompt,
     select_references,
 )
 
@@ -127,6 +128,58 @@ class ArcoRealAdapterTests(unittest.TestCase):
             )
             self.assertEqual(contract, original_contract)
             self.assertEqual(hashlib.sha256(watched.read_bytes()).hexdigest(), before)
+
+    def test_adapter_schema_unchanged_after_style_and_hygiene_compilation(self):
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            contract = make_contract(root)
+            style_context = {
+                "mode": "official_fallback",
+                "primary_reference_id": None,
+                "secondary_reference_id": None,
+                "resolved_axes": {
+                    "linework": {
+                        "description": "thin clean restrained contours",
+                        "source": "official-test-baseline",
+                        "source_type": "official_baseline",
+                        "confidence": "HIGH",
+                    },
+                    "detail_density": {
+                        "description": "moderate readable detail density",
+                        "source": "official-test-baseline",
+                        "source_type": "official_baseline",
+                        "confidence": "MEDIUM",
+                    }
+                },
+                "protected_identity_properties": ["hair_color", "eye_color", "variant_key_colors"],
+            }
+            prompt = compile_prompt(
+                base_prompt="Arco stands in a quiet garden.",
+                references=[contract],
+                style_context=style_context,
+                rendering_hygiene_policy=yaml.safe_load(
+                    (ROOT / "runtime" / "style-policy.yaml").read_text(encoding="utf-8")
+                ),
+            )
+            plan = build_invocation_plan(
+                mode="reference_conditioned",
+                prompt=prompt,
+                selected_references=[contract],
+            )
+            provider = FakeBuiltinImageGen(root / "generated.png")
+
+            result = ArcoRealAdapter(provider).generate(
+                invocation_plan=plan,
+                reference_contracts=[contract],
+                reference_image_paths=[contract["path"]],
+            )
+
+            self.assertEqual(result, (root / "generated.png").resolve())
+            self.assertEqual(
+                provider.calls,
+                [{"prompt": plan["prompt"], "referenced_image_paths": [contract["path"]]}],
+            )
+            self.assertEqual(set(provider.calls[0]), {"prompt", "referenced_image_paths"})
 
     def test_contract_ids_must_match_plan_order_before_provider_call(self):
         with tempfile.TemporaryDirectory() as td:
@@ -345,7 +398,7 @@ class ArcoRealAdapterTests(unittest.TestCase):
         )
         self.assertEqual(
             [reference["asset_id"] for reference in selected],
-            ["identity-p01-crop", "identity-p01", "casual-outfit-primary"],
+            ["identity-p01", "casual-outfit-primary"],
         )
         prompt = compile_reference_instructions(selected) + " Arco in a rainy night street."
         plan = build_invocation_plan(
@@ -369,6 +422,25 @@ class ArcoRealAdapterTests(unittest.TestCase):
         self.assertEqual(
             {path: hashlib.sha256(path.read_bytes()).hexdigest() for path in protected},
             before,
+        )
+
+    def test_published_selector_excludes_profile_for_upper_body(self):
+        assets = yaml.safe_load((ROOT / "character" / "assets.yaml").read_text(encoding="utf-8"))
+        config = yaml.safe_load((ROOT / "runtime" / "generation.yaml").read_text(encoding="utf-8"))
+
+        selected = select_references(
+            root=ROOT,
+            managed_assets=assets["assets"],
+            requested_roles=["identity_reference", "outfit_reference"],
+            selected_variant_id="casual-outfit",
+            exposure_profile="upper_body",
+            variant_required=True,
+            config=config,
+        )
+
+        self.assertEqual(
+            [reference["asset_id"] for reference in selected],
+            ["identity-p01", "casual-outfit-primary"],
         )
 
 

@@ -1,0 +1,79 @@
+{
+  "base_prompt": "Arco walks through a quiet street at night.",
+  "references": [
+    {
+      "reference_id": "external-primary",
+      "source_scope": "external_how",
+      "path": "C:/request/external-primary.png",
+      "role": "style_reference",
+      "authority": "user_request_external",
+      "persistent": false,
+      "calibrating": false,
+      "inherit": ["pose", "composition"],
+      "do_not_inherit": ["identity", "hair", "eyes", "face", "body_proportions", "outfit", "variant"],
+      "coverage": {},
+      "style_priority": "primary",
+      "style_axes": ["shading", "color_logic", "texture_language", "lighting_language"]
+    },
+    {
+      "reference_id": "external-secondary",
+      "source_scope": "external_how",
+      "path": "C:/request/external-secondary.png",
+      "role": "style_reference",
+      "authority": "user_request_external",
+      "persistent": false,
+      "calibrating": false,
+      "inherit": ["pose", "composition"],
+      "do_not_inherit": ["identity", "hair", "eyes", "face", "body_proportions", "outfit", "variant"],
+      "coverage": {},
+      "style_priority": "secondary",
+      "style_axes": ["edge_treatment", "linework"]
+    }
+  ],
+  "style_briefs": [
+    {
+      "schema_version": 1,
+      "source_reference_id": "external-primary",
+      "style_priority": "primary",
+      "active_axes": ["shading", "color_logic", "texture_language", "lighting_language"],
+      "axes": {
+        "shading": {"description": "painterly form transitions with visible brush modulation", "confidence": "LOW"},
+        "color_logic": {"description": "muted warm ochre palette with low saturation", "confidence": "MEDIUM"},
+        "texture_language": {"description": "layered painterly surface marks", "confidence": "HIGH"},
+        "lighting_language": {"description": "warm directional lighting", "confidence": "HIGH"}
+      }
+    },
+    {
+      "schema_version": 1,
+      "source_reference_id": "external-secondary",
+      "style_priority": "secondary",
+      "active_axes": ["edge_treatment", "linework"],
+      "axes": {
+        "edge_treatment": {"description": "soft transitions with selectively retained crisp edges", "confidence": "HIGH"},
+        "linework": {"description": "loose painterly contour strokes", "confidence": "MEDIUM"}
+      }
+    }
+  ],
+  "user_style_overrides": {
+    "lighting_language": {"description": "cold blue night illumination", "confidence": "HIGH"}
+  },
+  "official_style_baseline": {
+    "schema_version": 1,
+    "baseline_id": "unused-official-baseline",
+    "mode": "fallback_only",
+    "source_family_id": "unused-family",
+    "evidence": {
+      "asset_ids": ["identity-p01", "identity-p03"],
+      "sha256": ["hash-p01", "hash-p03"]
+    },
+    "consensus_rule": {"minimum_support": 2, "outlier_features_excluded": true},
+    "axes": {
+      "linework": {"description": "baseline linework should not appear", "confidence": "HIGH"},
+      "shading": {"description": "baseline shading should not appear", "confidence": "HIGH"},
+      "color_logic": {"description": "baseline color should not appear", "confidence": "HIGH"},
+      "highlight_language": {"description": "baseline highlights should not appear", "confidence": "HIGH"},
+      "texture_language": {"description": "baseline texture should not appear", "confidence": "HIGH"},
+      "detail_density": {"description": "baseline detail should not appear", "confidence": "HIGH"}
+    }
+  }
+}

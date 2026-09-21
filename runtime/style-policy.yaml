@@ -1,0 +1,33 @@
+schema_version: 2
+policy_id: style-aware-rendering-hygiene-v1.1
+unsupported_detail_inflation:
+  enabled: true
+  requires:
+    any_of:
+      - detail_density
+highlight_organization_drift:
+  enabled: true
+  requires:
+    any_of:
+      - highlight_language
+texture_noise_drift:
+  enabled: true
+  requires:
+    any_of:
+      - texture_language
+material_rendering_drift:
+  enabled: true
+  requires:
+    any_of:
+      - material_rendering
+lighting_effect_inflation:
+  enabled: true
+  requires:
+    any_of:
+      - lighting_language
+detail_hierarchy_flattening:
+  enabled: true
+  requires:
+    any_of:
+      - detail_density
+      - background_rendering

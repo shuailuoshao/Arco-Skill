@@ -1,0 +1,63 @@
+{
+  "base_prompt": "Arco stands beneath a tree.",
+  "exposure_profile": "portrait",
+  "allow_uncertain_working": true,
+  "identity": {
+    "facts": [
+      {
+        "field_id": "body.chest_proportion",
+        "value": "small-to-modest",
+        "status": "UNCERTAIN"
+      }
+    ]
+  },
+  "references": [
+    {
+      "reference_id": "arco-identity-01",
+      "request_reference_id": "arco-identity-01",
+      "source_scope": "request_scoped_arco",
+      "path": "C:/request/arco.png",
+      "role": "identity_reference",
+      "authority": "user_request",
+      "persistent": false,
+      "calibrating": false,
+      "inherit": ["identity"],
+      "do_not_inherit": ["scene", "lighting"],
+      "coverage": {
+        "profiles": ["portrait"],
+        "visible_fields": ["identity", "hair", "eyes", "face"],
+        "view_angles": ["front"],
+        "occluded_fields": []
+      }
+    },
+    {
+      "reference_id": "external-style-01",
+      "source_scope": "external_how",
+      "path": "C:/request/external-style-01.png",
+      "role": "style_reference",
+      "authority": "user_request_external",
+      "persistent": false,
+      "calibrating": false,
+      "inherit": ["pose", "composition"],
+      "do_not_inherit": ["identity", "hair", "eyes", "face", "body_proportions", "outfit", "variant"],
+      "coverage": {},
+      "style_priority": "primary",
+      "style_axes": ["linework", "shading", "highlight_language", "texture_language"]
+    }
+  ],
+  "style_briefs": [
+    {
+      "schema_version": 1,
+      "source_reference_id": "external-style-01",
+      "style_priority": "primary",
+      "active_axes": ["linework", "shading", "highlight_language", "texture_language"],
+      "axes": {
+        "linework": {"description": "thin, clean, restrained contours", "confidence": "HIGH"},
+        "shading": {"description": "restrained cel shading with compact shadows and limited soft blending", "confidence": "MEDIUM"},
+        "highlight_language": {"description": "grouped highlights reserved for major forms", "confidence": "LOW"},
+        "texture_language": {"description": "low surface texture with mostly smooth fills", "confidence": "HIGH"}
+      }
+    }
+  ],
+  "official_style_baseline": null
+}

@@ -1,0 +1,12 @@
+Rendering style requirements:
+- Linework: loose painterly contour strokes
+- Shading: painterly form transitions with visible brush modulation
+- Color logic: muted warm ochre palette with low saturation
+  Color scope: Color logic affects overall rendering and palette relationships only; preserve intrinsic identity colors for hair color, eye color, and variant key colors.
+- Texture language: layered painterly surface marks
+- Lighting language: cold blue night illumination
+- Edge treatment: soft transitions with selectively retained crisp edges
+
+Reference external-primary: use to define pose, composition. Use as the primary Style Reference. Do not inherit: identity, hair, eyes, face, body_proportions, outfit, variant. Reference external-secondary: use to define pose, composition. Use as the secondary Style Reference. Do not inherit: identity, hair, eyes, face, body_proportions, outfit, variant.
+
+Arco walks through a quiet street at night.

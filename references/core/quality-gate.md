@@ -21,6 +21,12 @@
 
 - 只继承 HOW，未继承外部角色身份、服装或专属配饰。
 - 多图职责没有未解决的关键冲突。
+- 有 Style Reference duty 时必须有与当前引用来源一致的 `ResolvedStyleContext`。
+- 每个已解析 Style Axis 都出现在结构化 Style block 中；block 不含 Context 未声明的轴或 WHO 身份描述。
+- `color_logic` 只约束整体 palette relationships，并保留 Context 声明的 intrinsic identity colors。
+- 显式启用 Rendering Hygiene 时，最终 Prompt 必须包含且只包含一个与当前 policy 模板一致的 Hygiene block；缺失、模板偏离、WHO 污染和未知 rule family 分别使用稳定错误码。
+- Hygiene 只能约束 Resolved Style 与显式 scene/user request 均不支持的额外 rendering inflation/drift。合法 grain、texture、gloss、highlight、bloom、rim light 和 painterly rendering 不得被全局禁止。
+- Rendering Hygiene 不检查 anatomy、hand、geometry、perspective 或 object structure；这些属于 Structural Artifacts。
 
 ## Reference-conditioned Runtime
 

@@ -7,6 +7,19 @@ description: Plan and generate Arco/阿尔可 images from managed Identity, Vari
 
 为阿尔可编译 Prompt，并在正式 generation references 足够或用户提供合格的本轮临时参考时规划 reference-conditioned generation。真实图像调用必须经过独立授权的 `ArcoRealAdapter`；适配器接收并复核 Invocation Plan、Reference Contract 与参考图路径后，才可调用 `builtin_image_gen`。
 
+## 生产 Style Transfer V1.0
+
+正常生成通过 `scripts/arco_production.py` 的 `run_production_generation()` 进入统一流程。调用方只需提供用户请求、阿尔可参考图或已发布资产、可选的外部 HOW 参考图，以及由上游解析得到的 Style Brief；入口会依次完成角色职责解析、Style Reference Resolver、`ResolvedStyleContext`、Prompt Compiler、Quality Gate 和真实图像调用。
+
+生产默认值固定为：
+
+- Style Transfer：`ON`
+- Rendering Hygiene：`OFF`
+
+没有外部 Style Reference 时，Style Transfer 使用 Official Arco calibrated style baseline。Rendering Hygiene V1.1 只接受显式 `rendering_hygiene: hygiene_v11` 作为实验性 request-scoped opt-in，不会自动启用。
+
+Style Brief 必须由上游按当前 Style Reference 绑定并通过 Runtime 校验；缺失、来源不匹配或包含 WHO 身份污染时 fail closed。生产入口不读取实验 manifest、盲评记录或 formal regression 状态，也不写入 Character、Variant、Asset Registry 或 Calibration History。
+
 ## 不变量
 
 - 普通 Prompt 任务只读。不得修改 `character/`、`variants/`、`assets/arco/` 或 `calibration/history/`。
@@ -26,13 +39,14 @@ description: Plan and generate Arco/阿尔可 images from managed Identity, Vari
 
 ### Prompt 与 Generation Planning
 
-1. 阅读 [模式](references/core/modes.md)、[权威与只读边界](references/core/authority-model.md) 和 [参考路由](references/core/reference-routing.md)。
+1. 阅读 [模式](references/core/modes.md)、[权威与只读边界](references/core/authority-model.md)、[参考路由](references/core/reference-routing.md) 和 [Style Reference Contract](references/core/style-reference.md)。
 2. 读取 `character/identity.yaml`、`variants/index.yaml`，以及用户选定 Variant/State 的 YAML；用户指定表情时额外读取正式 `character/expressions.yaml`，只接受 APPROVED Semantic 作为默认稳定语义。
 3. 从 portrait、upper_body、full_body、back_view 中确定本轮 exposure profile；含糊且会改变必需字段时进入 Reviewer。
-4. 按 [冲突规则](references/core/conflict-resolution.md) 解析 State、Identity Override 与外部参考。
-5. 按 [Generation Runtime](references/core/generation-runtime.md) 解析模式与 Global/Request Reference Readiness；reference-conditioned 模式再读取 [Reference Selector](references/core/reference-selector.md)、[Image Input Builder](references/core/image-input-builder.md) 与 [Real Adapter](references/core/real-adapter.md)。
-6. 按 [Prompt Compiler](references/core/prompt-compiler.md) 和目标 [模型 profile](references/profiles/neutral-zh.md) 编译。
-7. 通过 [Quality Gate](references/core/quality-gate.md) 后输出 Prompt 或 Invocation Plan。语言与安全规则见 [language-safety.md](references/core/language-safety.md)。
+4. 按 [冲突规则](references/core/conflict-resolution.md) 解析 State、Identity Override 与外部参考；External Style Reference 额外遵循 [Style Brief Contract](references/core/style-brief.md) 的 request-scoped 边界。
+5. 对已解析的 Style Reference 校验并绑定 Style Brief，按 Primary / Secondary / Official Style Baseline 和 User Axis Override 解析纯 Runtime `ResolvedStyleContext`。该 Context 只用于本次规划，不写回持久化资料。
+6. 按 [Generation Runtime](references/core/generation-runtime.md) 解析模式与 Global/Request Reference Readiness；reference-conditioned 模式再读取 [Reference Selector](references/core/reference-selector.md)、[Image Input Builder](references/core/image-input-builder.md) 与 [Real Adapter](references/core/real-adapter.md)。
+7. 按 [Prompt Compiler](references/core/prompt-compiler.md) 和目标 [模型 profile](references/profiles/neutral-zh.md) 编译；将 Resolver 最终产生的 `ResolvedStyleContext` 作为唯一 Style 输入，原始 Style Brief、Baseline 与 Override 不直接进入编译器。
+8. 通过 [Quality Gate](references/core/quality-gate.md) 后输出 Prompt 或 Invocation Plan。语言与安全规则见 [language-safety.md](references/core/language-safety.md)。
 
 ### Calibration
 

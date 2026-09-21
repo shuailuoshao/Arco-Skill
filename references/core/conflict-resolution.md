@@ -25,6 +25,31 @@ Primary > Secondary > Detail
 
 低级别资料与高级别资料冲突时，高级别优先。同级资料存在无法解释的重要冲突时，不挑一张偷偷覆盖，进入 Reviewer。
 
+## External Style Reference
+
+External Style Reference 的 `role` 保持 canonical role；`duties` 只声明 HOW duties。Identity / Variant / State 的权威始终属于 Arco Identity Contract，Style Reference 只能控制 HOW。
+
+Style Reference 使用固定 10 个 Style Axis：
+
+```text
+linework, shading, color_logic, highlight_language, material_rendering,
+texture_language, lighting_language, background_rendering, detail_density,
+edge_treatment
+```
+
+Style Reference 可以声明 `style_priority: primary` 或 `style_priority: secondary`，最多各一个。只有一个 Style Reference 且未声明 priority 时自动成为 Primary；多图缺省 priority、两个 Primary 或超过一个 Secondary 都 fail closed。Primary 与 Secondary 不做数值权重混合；双方声明同一 Style Axis 时抛出 `STYLE_AXIS_CONFLICT`。Reference resolution、Brief、Baseline 与 Override 汇总为唯一 `ResolvedStyleContext`；Prompt Compiler 只消费这个最终 Context，不重新决定 axis ownership，也不向 Provider 增加 Style 字段。
+
+Style Context 的最终 Axis precedence 为：
+
+```text
+User Style Axis Override
+> Primary Style Brief
+> Secondary Style Brief
+> Official Style Baseline
+```
+
+Official Style Baseline 只在没有 External Primary 时参与 fallback；存在 Primary 时完全不读取、不校验。只有 Secondary 没有 Primary 时进入 `official_fallback`，不将 Secondary 与 Baseline 混合。Primary 已声明但没有对应 Brief 的 Axis 使用 `STYLE_BRIEF_MISSING` 拒绝。每个已解析 Axis 都保留 `source`、`source_type` 与 confidence；`hair_color`、`eye_color`、`variant_key_colors` 的 intrinsic identity protection 始终保留。
+
 ## State 闭世界组合
 
 1. 同一 `exclusive_group` 的 State 冲突。

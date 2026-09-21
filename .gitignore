@@ -1,4 +1,8 @@
 .venv/
 **/__pycache__/
 *.py[cod]
-
+evaluation/style-regression/private-assets/
+evaluation/style-regression/outputs/
+evaluation/style-regression/pilot/outputs/
+evaluation/style-regression/host-smoke/outputs/
+evaluation/style-regression/blind-map.private.json

@@ -1,0 +1,13 @@
+a slim, lightly built figure with a narrow upper torso and a small-to-modest, understated bust
+
+Rendering style requirements:
+- Linework: thin, clean, restrained contours
+- Shading: restrained cel shading with compact shadows and limited soft blending
+- Highlight language: grouped highlights reserved for major forms
+- Texture language: low surface texture with mostly smooth fills
+
+Reference arco-identity-01: use to define identity. Do not inherit: scene, lighting. Reference external-style-01: use to define pose, composition. Use as the primary Style Reference. Do not inherit: identity, hair, eyes, face, body_proportions, outfit, variant.
+
+Arco stands beneath a tree.
+
+no exaggerated chest volume

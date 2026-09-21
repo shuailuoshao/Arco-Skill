@@ -39,10 +39,10 @@ class ToolingTests(unittest.TestCase):
         self.assertEqual([x['asset_id'] for x in selected],['identity-p01-crop'])
         self.assertEqual(compute_request_reference_readiness(exposure_profile='portrait',references=selected)['status'],'READY')
 
-    def test_upper_and_full_add_minimal_secondary_not_supplemental(self):
+    def test_upper_and_full_skip_profile_excluded_primary(self):
         for profile in ('upper_body','full_body'):
             selected=self.select(profile)
-            self.assertEqual([x['asset_id'] for x in selected],['identity-p01-crop','identity-p01'])
+            self.assertEqual([x['asset_id'] for x in selected],['identity-p01'])
             self.assertNotIn('identity-p03',[x['asset_id'] for x in selected])
             self.assertEqual(compute_request_reference_readiness(exposure_profile=profile,references=selected)['status'],'READY')
 
@@ -55,9 +55,10 @@ class ToolingTests(unittest.TestCase):
         self.assertEqual(global_result['overall'],'PARTIAL')
 
     def test_inheritance_metadata_to_contract_to_prompt_quality_gate(self):
-        selected=self.select('full_body'); secondary=selected[1]
-        self.assertEqual(set(secondary['inherit']),{'identity','body_proportions','hair_length'})
-        self.assertEqual(set(secondary['do_not_inherit']),{'outfit','pose','expression'})
+        selected=self.select('full_body'); identity=selected[0]
+        self.assertEqual([item['asset_id'] for item in selected],['identity-p01'])
+        self.assertEqual(set(identity['inherit']),{'identity','body_proportions','hair_length'})
+        self.assertEqual(set(identity['do_not_inherit']),{'outfit','pose','expression'})
         instructions=compile_reference_instructions(selected)
         validate_reference_instructions(selected,instructions)
         self.assertIn('Reference identity-p01:',instructions)

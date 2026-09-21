@@ -1,0 +1,33 @@
+schema_version: 1
+baseline_id: arco-official-style-v1
+mode: fallback_only
+source_family_id: arco-official-standing-art-system-01
+evidence:
+  asset_ids:
+    - identity-p01
+    - identity-p03
+  sha256:
+    - bddba1d7b1bed2c21572892003ac50dc6c2340d53e8262a56b6db69b16cf1f86
+    - 0056f16ff4468a0e26505b521a2fcd8f13a032ddb10e468c22c06c433a38206d
+consensus_rule:
+  minimum_support: 2
+  outlier_features_excluded: true
+axes:
+  linework:
+    description: clean, crisp anime linework with controlled contours
+    confidence: HIGH
+  shading:
+    description: soft cel-shaded form modeling with limited blending
+    confidence: HIGH
+  color_logic:
+    description: clear local-color separation with a clean anime palette
+    confidence: HIGH
+  highlight_language:
+    description: selective grouped highlights on major forms and glossy surfaces
+    confidence: MEDIUM
+  texture_language:
+    description: minimal low-frequency texture and mostly smooth digital surfaces
+    confidence: MEDIUM
+  detail_density:
+    description: moderate, readable detail density with clear focal hierarchy
+    confidence: MEDIUM

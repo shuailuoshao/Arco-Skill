@@ -1,0 +1,7 @@
+schema_version: 1
+production:
+  style_transfer:
+    default: enabled
+  rendering_hygiene:
+    default: disabled
+    experimental_opt_in: hygiene_v11

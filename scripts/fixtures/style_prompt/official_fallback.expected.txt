@@ -1,0 +1,12 @@
+Rendering style requirements:
+- Linework: conservative clean linework with controlled contours
+- Shading: soft cel shading with limited blending
+- Color logic: clear local color separation with a balanced anime palette
+  Color scope: Color logic affects overall rendering and palette relationships only; preserve intrinsic identity colors for hair color, eye color, and variant key colors.
+- Highlight language: selective grouped highlights
+- Texture language: minimal surface texture with mostly smooth fills
+- Detail density: moderate readable detail density
+
+Reference arco-identity-fallback: use to define identity. Do not inherit: scene, lighting.
+
+Arco sits beside a small garden pond.

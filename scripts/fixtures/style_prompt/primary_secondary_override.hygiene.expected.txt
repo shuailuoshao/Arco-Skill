@@ -1,0 +1,21 @@
+Rendering style requirements:
+- Linework: loose painterly contour strokes
+- Shading: painterly form transitions with visible brush modulation
+- Color logic: muted warm ochre palette with low saturation
+  Color scope: Color logic affects overall rendering and palette relationships only; preserve intrinsic identity colors for hair color, eye color, and variant key colors.
+- Texture language: layered painterly surface marks
+- Lighting language: cold blue night illumination
+- Edge treatment: soft transitions with selectively retained crisp edges
+
+Reference external-primary: use to define pose, composition. Use as the primary Style Reference. Do not inherit: identity, hair, eyes, face, body_proportions, outfit, variant. Reference external-secondary: use to define pose, composition. Use as the secondary Style Reference. Do not inherit: identity, hair, eyes, face, body_proportions, outfit, variant.
+
+Arco walks through a quiet street at night.
+
+Rendering hygiene guardrails:
+- Detail density: Keep local micro-detail within the level supported by the resolved style and explicit scene instructions; do not inflate it without support.
+- Highlight organization: Preserve the resolved style's highlight organization; do not fragment or expand highlights beyond style or scene support.
+- Texture: Preserve texture supported by the resolved style, including intentional grain and surface marks; prevent only unsupported pseudo-texture or uniform micro-noise.
+- Materials: Keep material rendering within the treatment supported by the resolved style and scene; do not add unsupported gloss, plasticity, or smoothing.
+- Lighting: Add no lighting effect unless it is supported by the resolved style or explicit scene instructions.
+- Detail hierarchy: Preserve the resolved style's hierarchy across the subject, secondary elements, and background; do not raise every region to one density or sharpness.
+- Priority: Honor explicit user requests first, then the Resolved Style. Do not suppress any rendering characteristic supported by either; constrain only unsupported additions.

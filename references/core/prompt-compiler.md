@@ -38,22 +38,30 @@ profile routing and does not gain a special body rule.
 
 ## 编译顺序
 
-1. 阿尔可身份要求；
-2. Outfit Variant；
-3. State；
-4. 动作与身体姿态；
-5. 表情与视线；
-6. 场景与时间；
-7. 构图和空间关系；
-8. 镜头、景别、视角和透视；
-9. 主光、环境光和轮廓光；
-10. 主色、辅色、点缀色与冷暖关系；
-11. 画风与上色/阴影方式；
-12. 环境细节与动态；
-13. 角色一致性约束；
-14. 禁止项。
+`compile_prompt()` 按以下段落顺序组装最终文本：
+
+1. Identity fact fragments 与已解析的 WHO 要求；
+2. `ResolvedStyleContext` 编译出的 Style instructions；
+3. 每张 Reference 的职责与继承边界；
+4. 用户的 base scene prompt；
+5. 可选的 Style-aware Rendering Hygiene；
+6. Identity soft constraints。
+
+Rendering Hygiene 由调用方通过 `rendering_hygiene_policy` 显式启用，必须位于 base scene 之后、Identity soft constraints 之前。未传 policy 时，Batch 3 Style-only Prompt 保持逐字不变。Hygiene 的定义、policy contract 和质量边界见 [Rendering Hygiene](rendering-hygiene.md)。
 
 写成自然、连贯的语言，重点回答“谁在什么地方，以什么姿态，被怎样的镜头和光线表现”。把最重要的 Identity、Variant Must Keep 和构图锚点放在前部，避免埋在低价值细节里。
+
+## Resolved Style Context
+
+`compile_style_instructions(style_context)` 只接收 `resolve_style_context()` 的最终结果。它按 canonical `STYLE_AXES` 顺序输出 `resolved_axes` 中实际声明的轴及其 description；缺失轴保持 unspecified。Compiler 不重新解析优先级、不读取 Baseline 文件、不输出 confidence，也不从默认美学补充 rendering 特征。
+
+有 `color_logic` 且 `protected_identity_properties` 非空时，Style block 明确限定色彩描述只影响整体 rendering 与 palette relationships，并保留列出的固有角色颜色。Style description 继续通过 WHO token guard；Style Reference duty 缺少 Context 或 Context provenance 与当前 Reference 不一致时 fail closed。
+
+`validate_style_prompt()` 检查每个 resolved axis 是否进入结构化 Style block、block 是否含未声明内容、color identity guard 是否存在、Style 文本是否污染 WHO，以及带 Style provenance 的 Context 是否实际编译。它只检查 Style block，不对 scene 文本做自然语言分类。
+
+`compile_rendering_hygiene(style_context, *, policy)` 只使用受控、相对型模板，不从 Style Axis 自由文本推断属性。显式用户要求优先于 Resolved Style，二者均优先于 Hygiene；active Hygiene block 必须包含 escape clause。`validate_rendering_hygiene()` 检查最终 Prompt 中的 block 是否与模板完全一致、唯一且不含 WHO 内容，不尝试进行通用自然语言冲突分类。
+
+稳定错误码包括 `STYLE_CONTEXT_MISSING`、`STYLE_CONTEXT_INVALID`、`STYLE_CONTEXT_REFERENCE_MISMATCH`、`STYLE_AXIS_NOT_COMPILED`、`STYLE_AXIS_UNDECLARED`、`STYLE_AXIS_ORDER_INVALID`、`STYLE_IDENTITY_PROTECTION_MISSING`、`STYLE_PROMPT_WHO_POLLUTION` 和 `STYLE_REFERENCE_UNUSED`。
 
 不要依赖 `masterpiece`、`best quality`、`8K`、`ultra detailed` 等空泛词控制结果。
 
@@ -66,7 +74,7 @@ candidate Identity document.  This does not make candidate data production
 data: normal Runtime planning continues to read only the formal published
 root and never discovers staging paths.
 
-每个 Reference Contract 的 `inherit` 与 `do_not_inherit` 必须逐项进入 Reference Instructions。Quality Gate 对照 Contract 检查引用 ID 和全部排除字段；缺失任一排除项即失败。Identity full-body Secondary 可以继承身份、整体身体比例和整体发长，但不得默认继承 outfit、pose 或 expression。
+每个 Reference Contract 的 `inherit` 与 `do_not_inherit` 必须逐项进入 Reference Instructions。Reference Instructions 说明哪张图片负责什么，并标出已解析的 Style Reference priority；Style instructions 说明 Resolver 已确定的视觉行为，不重复来源或 priority。Quality Gate 对照 Contract 检查引用 ID 和全部排除字段；缺失任一排除项即失败。Identity full-body Secondary 可以继承身份、整体身体比例和整体发长，但不得默认继承 outfit、pose 或 expression。
 
 ## Request Readiness
 

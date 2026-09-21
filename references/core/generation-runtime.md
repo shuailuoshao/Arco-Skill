@@ -1,6 +1,26 @@
 # Reference-Conditioned Generation Runtime
 
-运行链路：Mode Resolver → Identity/Variant/State/Pose/Expression Resolver → Reference Selector → Reference Contract → Image Input Builder → Prompt Compiler → Quality Gate → Invocation Plan → Arco Real Adapter → builtin_image_gen。
+运行链路：Mode Resolver → Identity/Variant/State/Pose/Expression Resolver → Reference Selector → Reference Contract → Style Reference/Brief Resolver → `ResolvedStyleContext` → Image Input Builder → Prompt Compiler → Quality Gate → Invocation Plan → Arco Real Adapter → builtin_image_gen。
+
+Prompt Compiler 将最终 `ResolvedStyleContext` 渲染为 Style instructions；Adapter 与 Provider 仍只接收既有 Prompt 和 image transport 字段。
+
+## Production Style Transfer V1.0
+
+正常 Arco Skill 生成由 `scripts/arco_production.py` 的
+`run_production_generation(request, builtin_image_gen=...)` 统一编排。入口只接受
+高层用户请求、阿尔可参考图/已发布资产、可选 External HOW References 和上游绑定的
+Style Brief；它不会读取或依赖任何实验 runner、Pilot manifest、盲评或 formal
+regression 状态。
+
+Style Transfer 在生产入口中始终启用。没有 External Primary Style Reference 时，
+Runtime 使用 `character/style-baseline.yaml` 的 Official Style Baseline fallback；
+存在有效 External Style Reference 时，入口继续使用既有 Reference Role Resolver、
+Style Reference Resolver、Style Brief validation、`ResolvedStyleContext`、Style
+Conflict Resolver、Prompt Compiler 和 Identity protection。
+
+Rendering Hygiene 默认关闭。只有 request 明确指定
+`rendering_hygiene: hygiene_v11` 时，入口才加载 `runtime/style-policy.yaml` 并将
+Hygiene block 编译进本次 Prompt；未知或隐式 Hygiene 值 fail closed。
 
 Prompt Compiler receives resolved Identity fact fragments separately from the
 Reference Contract.  The body-proportion fragment is an optional textual

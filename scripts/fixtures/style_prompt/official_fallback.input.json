@@ -1,0 +1,43 @@
+{
+  "base_prompt": "Arco sits beside a small garden pond.",
+  "references": [
+    {
+      "reference_id": "arco-identity-fallback",
+      "request_reference_id": "arco-identity-fallback",
+      "source_scope": "request_scoped_arco",
+      "path": "C:/request/arco-fallback.png",
+      "role": "identity_reference",
+      "authority": "user_request",
+      "persistent": false,
+      "calibrating": false,
+      "inherit": ["identity"],
+      "do_not_inherit": ["scene", "lighting"],
+      "coverage": {
+        "profiles": ["portrait"],
+        "visible_fields": ["identity", "hair", "eyes", "face"],
+        "view_angles": ["front"],
+        "occluded_fields": []
+      }
+    }
+  ],
+  "style_briefs": [],
+  "official_style_baseline": {
+    "schema_version": 1,
+    "baseline_id": "arco-official-style-v1",
+    "mode": "fallback_only",
+    "source_family_id": "arco-official-standing-art-system-01",
+    "evidence": {
+      "asset_ids": ["identity-p01", "identity-p03"],
+      "sha256": ["hash-p01", "hash-p03"]
+    },
+    "consensus_rule": {"minimum_support": 2, "outlier_features_excluded": true},
+    "axes": {
+      "linework": {"description": "conservative clean linework with controlled contours", "confidence": "HIGH"},
+      "shading": {"description": "soft cel shading with limited blending", "confidence": "HIGH"},
+      "color_logic": {"description": "clear local color separation with a balanced anime palette", "confidence": "HIGH"},
+      "highlight_language": {"description": "selective grouped highlights", "confidence": "MEDIUM"},
+      "texture_language": {"description": "minimal surface texture with mostly smooth fills", "confidence": "MEDIUM"},
+      "detail_density": {"description": "moderate readable detail density", "confidence": "MEDIUM"}
+    }
+  }
+}
