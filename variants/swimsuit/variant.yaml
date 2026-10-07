@@ -1,0 +1,191 @@
+schema_version: 1
+entity_type: variant
+entity_ref: variants.swimsuit
+variant_id: swimsuit
+display_name_zh: 泳装
+display_name_en: Swimsuit
+lifecycle_status: published
+revision: 1
+last_calibration_id: cal-20261001T033925Z-71cba8
+facts:
+- field_id: outfit.silhouette
+  display_name_zh: 泳装整体结构
+  value: 蓝色格纹两件式泳装，由挂颈式上装与带短荷叶边的泳裤组成
+  status: UNCERTAIN
+  evidence_ids:
+  - swimsuit-primary
+  conflicts: []
+  note_zh: '单张用户提供立绘；visual confidence: high。用户确认不构成官方定义或独立跨图共识。'
+  required_global: true
+  required_for:
+  - upper_body
+  - full_body
+- field_id: outfit.upper_garment.base_color
+  display_name_zh: 泳装基础配色
+  value: 蓝色为主，深浅蓝色交错；荷叶边和局部边饰为白色
+  status: UNCERTAIN
+  evidence_ids:
+  - swimsuit-primary
+  conflicts: []
+  note_zh: '单张用户提供立绘；visual confidence: high。用户确认不构成官方定义或独立跨图共识。'
+  required_global: true
+  required_for:
+  - upper_body
+  - full_body
+- field_id: outfit.pattern
+  display_name_zh: 泳装格纹
+  value: 上下装采用同款深浅蓝色格纹，叠加白色与黄色细线；具体线条方向受透视影响
+  status: UNCERTAIN
+  evidence_ids:
+  - swimsuit-primary
+  conflicts: []
+  note_zh: '单张用户提供立绘；visual confidence: high。用户确认不构成官方定义或独立跨图共识。'
+  required_global: true
+  required_for:
+  - upper_body
+  - full_body
+- field_id: outfit.upper_garment.structure
+  display_name_zh: 泳装上装结构
+  value: 独立两件式泳装上装，前部蓝色格纹，下缘中央略收拢；不推定背部扣合方式
+  status: UNCERTAIN
+  evidence_ids:
+  - swimsuit-primary
+  conflicts: []
+  note_zh: '单张用户提供立绘；visual confidence: high。用户确认不构成官方定义或独立跨图共识。'
+  required_global: true
+  required_for:
+  - upper_body
+  - full_body
+- field_id: outfit.upper_garment.straps
+  display_name_zh: 上装系带
+  value: 蓝色细带从上装两侧向颈后延伸，形成挂颈式结构；后部细节被头发遮挡
+  status: UNCERTAIN
+  evidence_ids:
+  - swimsuit-primary
+  conflicts: []
+  note_zh: '单张用户提供立绘；visual confidence: high。用户确认不构成官方定义或独立跨图共识。'
+  required_global: true
+  required_for:
+  - portrait
+  - upper_body
+  - full_body
+- field_id: outfit.upper_garment.trim
+  display_name_zh: 上装边饰
+  value: 上装上缘带白色短荷叶边
+  status: UNCERTAIN
+  evidence_ids:
+  - swimsuit-primary
+  conflicts: []
+  note_zh: '单张用户提供立绘；visual confidence: high。用户确认不构成官方定义或独立跨图共识。'
+  required_global: true
+  required_for:
+  - upper_body
+  - full_body
+- field_id: outfit.chest_detail
+  display_name_zh: 上装中央饰片
+  value: 上装中央有浅色竖条，竖条上可见两枚圆形扣饰
+  status: UNCERTAIN
+  evidence_ids:
+  - swimsuit-primary
+  conflicts: []
+  note_zh: '单张用户提供立绘；visual confidence: high。用户确认不构成官方定义或独立跨图共识。'
+  required_global: true
+  required_for:
+  - upper_body
+  - full_body
+- field_id: outfit.lower_garment
+  display_name_zh: 泳装下装
+  value: 同款蓝色格纹泳裤，腰缘带短荷叶边；不是独立长裙
+  status: UNCERTAIN
+  evidence_ids:
+  - swimsuit-primary
+  conflicts: []
+  note_zh: '单张用户提供立绘；visual confidence: high。用户确认不构成官方定义或独立跨图共识。'
+  required_global: true
+  required_for:
+  - full_body
+- field_id: outfit.lower_garment.side_ties
+  display_name_zh: 下装侧边细节
+  value: 画面右侧髋部可见蓝色系带和白色边饰；不推定另一侧也有相同结构
+  status: UNCERTAIN
+  evidence_ids:
+  - swimsuit-primary
+  conflicts: []
+  note_zh: '单张用户提供立绘；visual confidence: high。用户确认不构成官方定义或独立跨图共识。'
+  required_global: true
+  required_for:
+  - full_body
+- field_id: outfit.legwear
+  display_name_zh: 腿部服装
+  value: 当前泳装搭配无袜
+  status: UNCERTAIN
+  evidence_ids:
+  - swimsuit-primary
+  conflicts: []
+  note_zh: '单张用户提供立绘；visual confidence: high。用户确认不构成官方定义或独立跨图共识。'
+  required_global: true
+  required_for:
+  - full_body
+- field_id: outfit.footwear
+  display_name_zh: 鞋履
+  value: 当前泳装搭配赤足，无鞋履
+  status: UNCERTAIN
+  evidence_ids:
+  - swimsuit-primary
+  conflicts: []
+  note_zh: '单张用户提供立绘；visual confidence: high。用户确认不构成官方定义或独立跨图共识。'
+  required_global: true
+  required_for:
+  - full_body
+- field_id: outfit.back_structure
+  display_name_zh: 背面结构
+  value: null
+  status: TODO_CALIBRATION
+  evidence_ids: []
+  conflicts: []
+  note_zh: 当前无背面参考；不推定上装背部扣合、后部系带和格纹接续。
+  required_global: false
+  required_for:
+  - back_view
+- field_id: outfit.opposite_side_ties
+  display_name_zh: 另一侧系带结构
+  value: null
+  status: TODO_CALIBRATION
+  evidence_ids: []
+  conflicts: []
+  note_zh: 仅画面右侧系带可见，不推定另一侧结构。
+  required_global: false
+  required_for: []
+reference_asset_ids:
+  primary:
+  - swimsuit-primary
+  secondary: []
+  detail: []
+state_mutable_fields: []
+must_keep_fields:
+- outfit.silhouette
+- outfit.upper_garment.base_color
+- outfit.pattern
+- outfit.upper_garment.structure
+- outfit.upper_garment.straps
+- outfit.upper_garment.trim
+- outfit.chest_detail
+- outfit.lower_garment
+- outfit.lower_garment.side_ties
+- outfit.legwear
+- outfit.footwear
+state_groups: {}
+state_files: []
+known_generation_risks:
+- Primary 仅继承服装，不继承身份、发型、五官、姿势、表情或画风。
+- 背面结构缺少证据，不支持 back_view。
+- 原图红黑色角仅作附加外观观察，不是泳装事实或 Must Keep；参考不继承角。
+- 单图工作事实均为 UNCERTAIN；须显式允许工作事实或使用已批准图像参考。
+- 官方出处未核实；格纹方向和荷叶边展开程度受透视与姿势影响。
+coverage:
+  upper_body: READY
+  lower_body: READY
+  full_body: READY
+  footwear: READY
+  back_view: INCOMPLETE
+  overall: PARTIAL

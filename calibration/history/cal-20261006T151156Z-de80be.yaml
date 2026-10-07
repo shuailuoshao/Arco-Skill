@@ -1,0 +1,85 @@
+schema_version: 1
+calibration_id: cal-20261006T151156Z-de80be
+timestamp: '2026-10-06T15:11:56.954317+00:00'
+operation: update
+user_confirmed: true
+reason: 修改一下参考图的胸部大小，现在的胸部太大了
+evidence_ids:
+- maid-outfit-front-r2
+- maid-outfit-right-three-quarter-r2
+- maid-outfit-detail-back-apron-r2
+- maid-outfit-detail-trims-r2
+observations: []
+targets:
+- entity_ref: variants.maid-outfit
+  target_type: variant
+  target_id: maid-outfit
+  revision_before: 1
+  revision_after: 2
+  changed_fields:
+  - revision
+  - last_calibration_id
+  - reference_asset_ids
+  - reference_corrections
+  before:
+    revision: 1
+    last_calibration_id: cal-20261004T165937Z-a1f765
+    reference_asset_ids:
+      primary:
+      - maid-outfit-front
+      secondary:
+      - maid-outfit-right-three-quarter
+      - maid-outfit-back
+      detail:
+      - maid-outfit-detail-back-apron
+      - maid-outfit-detail-trims
+      - maid-outfit-detail-hosiery-footwear
+  after:
+    revision: 2
+    last_calibration_id: cal-20261006T151156Z-de80be
+    reference_asset_ids:
+      primary:
+      - maid-outfit-front-r2
+      secondary:
+      - maid-outfit-right-three-quarter-r2
+      - maid-outfit-back
+      detail:
+      - maid-outfit-detail-back-apron-r2
+      - maid-outfit-detail-trims-r2
+      - maid-outfit-detail-hosiery-footwear
+    reference_corrections:
+    - user_message: 修改一下参考图的胸部大小，现在的胸部太大了
+      scope: Chest-size correction only; approved outfit design and Identity/evidence
+        states unchanged.
+      identity_baseline_asset_id: casual-outfit-open-arms-no-horns-evidence
+      body_chest_proportion: small-to-modest
+      evidence_status: UNCERTAIN
+      reference_pack_sha256: e9a15a5a0676d178eb48e94a9dcb764f60d4d1949065c176b7b233aed35ead3f
+      reviewer: maid_visual_reviewer
+      review_mode: delegated_independent_visual_review
+      user_reviewed_each_new_image: false
+      pack_review_sha256: dbffda85c7a3627fe3554e59b47e871f92654bffc2c7defcb363d97a719e3a83
+  status_before: null
+  status_after: null
+- entity_ref: character.assets
+  target_type: asset_registry
+  target_id: character.assets
+  revision_before: 10
+  revision_after: 11
+  changed_fields:
+  - revision
+  - last_calibration_id
+  before:
+    revision: 10
+    last_calibration_id: cal-20261004T165937Z-a1f765
+  after:
+    revision: 11
+    last_calibration_id: cal-20261006T151156Z-de80be
+  status_before: null
+  status_after: null
+preparation_id: maid-chest-correction-20261006
+reference_pack_sha256: e9a15a5a0676d178eb48e94a9dcb764f60d4d1949065c176b7b233aed35ead3f
+validation_result:
+  structure: PASS
+  visual_acceptance: delegated independent review PASS
+  evidence_statuses_changed: false

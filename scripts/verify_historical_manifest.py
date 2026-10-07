@@ -88,6 +88,8 @@ def verify_completed_manifest(manifest: dict[str, Any], formal_root: Path) -> di
                 errors.append(f"protected entity unreadable: {target}")
                 continue
             published_path = formal_root / "calibration" / "staging" / str(manifest.get("calibration_id")) / str(item.get("staged_path", ""))
+            if not published_path.exists():
+                published_path = formal_root / "scripts/fixtures/calibration" / str(manifest.get("calibration_id")) / str(item.get("staged_path", ""))
             if published_path.is_file():
                 published_data = yaml.safe_load(published_path.read_text(encoding="utf-8")) or {}
                 if int(current_data.get("revision", -1)) < int(published_data.get("revision", -1)):

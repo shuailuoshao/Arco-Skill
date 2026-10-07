@@ -8,12 +8,15 @@
 
 - request readiness 已满足的 Arco Identity facts；
 - 指定 Variant、合法 State 组合和 Must Keep；
+- 已发布 Variant 的 `design_definition` 与哈希绑定的 `approval_context`，包括固定补全、改款和穿法；
 - 用户本轮明确要求；
 - 本轮临时 Arco reference 中足以补齐的字段；
 - 外部参考提供的 HOW 信息；
 - 当前模型 profile。
 
 不得把 `TODO_CALIBRATION` 写入 Prompt。`UNCERTAIN` 只有用户明确允许时才能作为弱参考，并在解析摘要中标明。
+
+普通生产显式读取所选 Variant YAML，通过 `outfit_design.compile_design()` 将独立获批设计加入最终提示词；此设计权威不改变 Fact 的证据状态。背面另外读取 `approved_view_designs.back`。旧三套服装无设计字段时继续沿用原有参考规则。
 
 ### Identity Fact Resolution
 
@@ -44,8 +47,14 @@ profile routing and does not gain a special body rule.
 2. `ResolvedStyleContext` 编译出的 Style instructions；
 3. 每张 Reference 的职责与继承边界；
 4. 用户的 base scene prompt；
-5. 可选的 Style-aware Rendering Hygiene；
-6. Identity soft constraints。
+5. 请求明确需要时的 Composition Readability block；
+6. 仅 DIRECT_EDIT 修订可选的 Revision Stability block；
+7. 可选的 Style-aware Rendering Hygiene；
+8. Identity soft constraints。
+
+Revision Stability 的结构与激活边界见 [Phase 4 Revision Stability Guard](revision-stability.md)。
+
+Composition Readability 的请求字段、尺度阈值、冲突与修订边界见 [Phase 5 Composition Readability](composition-readability.md)。
 
 Rendering Hygiene 由调用方通过 `rendering_hygiene_policy` 显式启用，必须位于 base scene 之后、Identity soft constraints 之前。未传 policy 时，Batch 3 Style-only Prompt 保持逐字不变。Hygiene 的定义、policy contract 和质量边界见 [Rendering Hygiene](rendering-hygiene.md)。
 
@@ -67,7 +76,7 @@ Rendering Hygiene 由调用方通过 `rendering_hygiene_policy` 显式启用，�
 
 ## Reference Instructions
 
-Reference-conditioned 模式为每张图片明确职责：Identity/Variant 图片提供 WHO，External 图片只提供 HOW，并逐项声明不得继承的外部身份、发色、瞳色、脸、体型与服装。参考图存在时仍保留关键 Identity Lock 和 Variant Must Keep，但不重复几十项已经清晰可见的低价值细节。Expression PNG 不进入 image input；只把 APPROVED Semantic 的 visual features 编译为自然语言。
+Reference-conditioned 模式为每张图片明确职责：Identity/Variant 图片提供 WHO，External 图片只提供 HOW，并逐项声明不得继承的外部身份、发色、瞳色、脸、体型与服装。参考图存在时仍保留关键 Identity Lock 和 Variant Must Keep，但不重复几十项已经清晰可见的低价值细节。获准 Expression PNG 作为 face_reference 提供阿尔可五官结构；目标表情由本轮分析决定。APPROVED Semantic 可提供稳定语义，其他状态仅依据明确可见特征描述。
 
 For an offline candidate dry-run, the resolver may receive an explicit
 candidate Identity document.  This does not make candidate data production
@@ -100,3 +109,5 @@ root and never discovers staging paths.
 输出一条连续自然语言 Prompt。默认中文；用户使用英文或明确要求英文时输出英文。Negative Prompt 只在模型 profile 明确支持独立字段时另行输出。
 
 若本轮还要求 generation planning，追加 Reference Contract、Global/Request Reference Readiness 与 Invocation Plan。Prompt-only 的 built-in 参数中不得出现任何图片字段。
+
+生产入口在现有 Compiler 后追加已校验的 Reference Analysis block，逐项保留身份、构图、动作、眉眼嘴与明暗关系；Style Axes 继续仅由 ResolvedStyleContext 编译。详见 [分析确认](reference-analysis.md)。

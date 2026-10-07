@@ -1,0 +1,469 @@
+schema_version: 1
+entity_type: variant
+entity_ref: variants.maid-outfit
+variant_id: maid-outfit
+display_name_zh: 长裙女仆装
+display_name_en: maid-outfit
+lifecycle_status: published
+revision: 2
+last_calibration_id: cal-20261006T151156Z-de80be
+facts: []
+reference_asset_ids:
+  primary:
+  - maid-outfit-front-r2
+  secondary:
+  - maid-outfit-right-three-quarter-r2
+  - maid-outfit-back
+  detail:
+  - maid-outfit-detail-back-apron-r2
+  - maid-outfit-detail-trims-r2
+  - maid-outfit-detail-hosiery-footwear
+must_keep_fields: []
+state_mutable_fields: []
+state_files: []
+state_groups: {}
+design_definition:
+  schema_version: 1
+  design_id: white-garters-large-bow
+  parts:
+    upper:
+      origin: source
+      description: 黑色收腰连衣裙上身：闭合白色圆角翻领、泡泡肩袖接窄长袖、宽白袖口，保留两颗袖口扣；与下装同属一件连衣裙。
+      source_bindings:
+      - source_id: dress-structure
+        part_id: dress-front-upper
+      - source_id: dress-structure
+        part_id: dress-back-upper
+      - source_id: dress-structure
+        part_id: cuff-construction
+      - source_id: worn-front
+        part_id: worn-bodice
+      - source_id: assembled-structure
+        part_id: assembled-front
+      fixed_features:
+      - 保留原款闭合领口、收腰结构和长袖长度。
+      - 白袖口保持宽阔，袖口扣作为稳定外观细节。
+    lower:
+      origin: source
+      description: 黑色宽大长裙与上身相连，长度接近足踝、主要露鞋尖；腰部起褶，内穿白色层叠衬裙保持自然饱满廓形。
+      source_bindings:
+      - source_id: dress-structure
+        part_id: dress-front-skirt
+      - source_id: dress-structure
+        part_id: dress-back-skirt
+      - source_id: worn-front
+        part_id: worn-skirt
+      - source_id: petticoat-detail
+        part_id: soft-petticoat
+      fixed_features:
+      - 长裙保持原款长度和连续黑色下摆。
+      - 围裙的白色下摆高于黑裙下摆，保留清楚的一圈黑裙边。
+      - 衬裙平时位于外裙内，不改变原款长裙的正常垂落。
+    footwear:
+      origin: completion
+      description: 黑色素面闭口圆头低跟鞋，一双；约2厘米低跟，简洁鞋面，无额外鞋面蝴蝶结或金属饰件。
+      source_bindings: []
+      fixed_features:
+      - 黑色、圆头、闭口、低跟、素面。
+      decision_reason: 原图只露鞋尖，完整鞋型没有确定；采用之前推荐的简洁圆头低跟方案作为待验收补全。
+    hosiery:
+      origin: completion
+      description: 一对白色不透明吊带长袜，袜口到大腿上部，配白色吊袜腰带与四条白色吊带（每腿前后各一条），以小型素面吊袜夹连接平整袜口；正常穿着时位于长裙与衬裙内。
+      source_bindings: []
+      fixed_features:
+      - 用户明确指定白色吊带袜，必须是左右分开的长袜，通过吊带固定。
+      - 白色袜身和平整袜口保持不透明布面，吊带与腰带均为白色。
+      - 主穿着图保持完整长裙；连接结构通过衣物细节图呈现。
+      decision_reason: 品类与白色来自用户文字；参考未清楚给出袜口、腰带及夹子的款式，采用素面白色腰带、四吊带和小夹作为具体补全，等待设计与试穿计划确认。
+    accessories:
+      origin: source
+      description: 白色胸兜式长围裙，腰带在后腰系大蝴蝶结，白色肩带在背部交叉，肩带外侧有白色大褶边；白色荷叶边头箍；白领下方一只黑色大蝴蝶结。
+      source_bindings:
+      - source_id: apron-structure
+        part_id: apron-front
+      - source_id: apron-structure
+        part_id: apron-back
+      - source_id: assembled-structure
+        part_id: assembled-back
+      - source_id: worn-front
+        part_id: worn-apron
+      - source_id: headdress-detail
+        part_id: ruffled-headband
+      - source_id: shoulder-frill-detail
+        part_id: apron-shoulder-frill
+      - source_id: neckwear-detail
+        part_id: large-neck-bow
+      fixed_features:
+      - 采用用户选定的弧形荷叶边头箍和大黑色蝴蝶结。
+      - 后背X形肩带、肩部白褶边、后腰大蝴蝶结及两条垂尾保持一致。
+      - 围裙覆盖连衣裙胸腹和裙身前方，白色胸兜与腰带连接清楚。
+    outerwear:
+      origin: omitted
+      description: 不加外套或披肩。
+      source_bindings: []
+      fixed_features: []
+  wearing_relations:
+  - 黑色上身和黑色长裙是一件收腰连衣裙，白色衬裙位于其内层。
+  - 白色围裙穿在黑色连衣裙外，胸兜接腰带，肩带从胸兜向上经过肩部并在背部交叉，腰带在后腰居中系结。
+  - 肩部白色褶边属于围裙肩带，位于黑色泡泡袖上方；大黑色领结位于白领正下方、围裙胸兜上沿附近。
+  - 白色吊袜腰带、四条吊带和一对白色长袜位于裙内；袜身覆盖足部并进入黑色闭口鞋。
+  - 荷叶边头箍佩戴于阿尔可头顶发丝上，保留既有刘海、披散长发和粉色发梢。
+  - 背面穿着图保留自然披散长发的遮挡；完整肩带与蝴蝶结构造通过无头发的衣物细节图补充。
+  fixed_constraints:
+  - 新增为一套完整固定的黑白长裙女仆装，保留原裙长度、原袖长和闭合领口。
+  - 身份、发型、体型比例与画风使用正式阿尔可基准；教程人物仅提供指定衣服区域。
+  - 普通穿着参考采用全身中立站姿、清晰浅色背景和无五官形式。
+  - 吊带长袜为白色；领饰为大黑色蝴蝶结；头饰为白色荷叶边头箍。
+  - 主图与后续视图均依据获认可的同一设计；未认可候选不作为其他视图设计依据。
+  detail_requirements:
+  - view_id: detail-back-apron
+    description: 衣物单独展示：黑色连衣裙和白围裙的背面上身到后腰，完整显示X形肩带、肩部褶边、腰带和后腰大蝴蝶结及垂尾；无头发遮挡，浅色背景，不改变人物的正常披散发型。
+    source_ids:
+    - dress-structure
+    - apron-structure
+    - shoulder-frill-detail
+  - view_id: detail-trims
+    description: 同一套装的服装细节页：白色荷叶边头箍、白领配大黑蝴蝶结、宽白袖口和两颗扣；分成清楚的衣物局部小图，浅色背景，保持主图款式。
+    source_ids:
+    - headdress-detail
+    - shoulder-frill-detail
+    - neckwear-detail
+  - view_id: detail-hosiery-footwear
+    description: 衣物单独平铺展示：一对白色不透明大腿长袜、白色吊袜腰带、四条连接吊带及小型素面夹子，旁边配一双黑色素面圆头闭口低跟鞋。清晰展示连接关系、袜口和鞋型；不呈现人体或提裙动作。
+    source_ids: []
+  gap_resolutions:
+    hosiery: 按用户明确要求设计一对白色吊带长袜；腰带、四条吊带、袜口和夹子采用素面白色补全。
+    footwear: 黑色素面闭口圆头低跟鞋，约2厘米低跟，主体穿着图主要露鞋尖，完整鞋型由细节页展示。
+    color_and_material: 将教程的灰阶外观落实为黑色连衣裙、白色围裙和衬裙、白色头箍与袜子、黑色大领结和鞋；采用哑光织物效果，小纽扣和夹子为简洁低光泽。
+    rear_occlusion: 保留阿尔可既有披散长发；使用衣物背面细节图展示可能被遮挡的X形肩带和后腰系结。
+  conflict_resolutions:
+    headdress_variants: 用户已选补图2的荷叶边头箍，后脑罩式款不属于该套装。
+    neckwear_variants: 用户已选补图4左侧大蝴蝶结，取代原全身图的椭圆胸针领巾。
+    hosiery_previous_default: 白色吊带长袜取代之前讨论的黑色不透裤袜建议。
+approval_context:
+  user_confirmed: true
+  user_message: 接受
+  design_sha256: e6ab7b753e0f3da0ff108798c02405fcf73170e6b473fad0be764dc4ae6b390d
+  preparation_id: prep-20261004T165937Z-a1f765
+  reference_pack_sha256: a83b40cebb7ebf9e8812a7b7f9eb543d4295a6f9f6930f2ffe7b84742ae20cbe
+  design_preview_sha256: ad3618dde4bfc71f8424bdb4239dd9704050b1599ea8cb06a1db1b8047471f4d
+  main_approval:
+    user_confirmed: true
+    preview_sha256: 775ab90d1eb080ac0b65ba13a64dbaf71da26196b4fe2968caf54c08975a3aad
+    user_message: 给你全部权限，你自主生成图片并且调用一个AGENT来判断图片是否合适，直到完成这套服装的录入
+    acceptance_mode: user_delegated_independent_agent_review
+    review_agent: /root/maid_visual_reviewer
+    main_candidate_id: front-44e5537f
+    independent_review_path: D:\learn\Arco\output\maid-outfit-20261005\agent-reviews\front-44e5537f.json
+    independent_review_sha256: 434db9bc11a0a1bd623d3f6064ceb5bdb83c121145207cdbf0541aea5f9f7112
+    delegation_authorization_path: D:\learn\Arco\output\maid-outfit-20261005\autonomous-acceptance-authorization.json
+source_materials:
+- source_id: dress-structure
+  path: C:\Users\shuai\AppData\Local\Temp\codex-clipboard-c9648c88-f4ca-4087-ba12-7a9062a917a5.png
+  kind: partial
+  view: 连衣裙前后平面结构及局部细节
+  occlusions: 穿着示意的手和头发遮住部分前身；黑白图不确定彩色材质
+  source_note: 原图1：取独立衣服图；同一教程来源，不能因多图而增加独立证据。
+  parts:
+  - part_id: dress-front-upper
+    slot: upper
+    observations: 连衣裙前上身收腰，鼓起的短泡泡袖接窄长袖，闭合白翻领和宽白袖口。
+    evidence_status: UNCERTAIN
+    region:
+      kind: box
+      xyxy:
+      - 0.424
+      - 0.16
+      - 0.612
+      - 0.464
+  - part_id: dress-back-upper
+    slot: upper
+    observations: 独立后视连衣裙图显示闭合后背和收腰接缝。
+    evidence_status: UNCERTAIN
+    region:
+      kind: box
+      xyxy:
+      - 0.626
+      - 0.154
+      - 0.858
+      - 0.455
+  - part_id: dress-front-skirt
+    slot: lower
+    observations: 黑白图中的深色长裙从腰部褶裥展开，裙身宽大、自然垂落。
+    evidence_status: UNCERTAIN
+    region:
+      kind: box
+      xyxy:
+      - 0.382
+      - 0.407
+      - 0.624
+      - 0.702
+  - part_id: dress-back-skirt
+    slot: lower
+    observations: 独立后视长裙从腰缝起褶，下摆连续。
+    evidence_status: UNCERTAIN
+    region:
+      kind: box
+      xyxy:
+      - 0.6
+      - 0.398
+      - 0.862
+      - 0.718
+  - part_id: cuff-construction
+    slot: upper
+    observations: 独立白袖口和纽扣结构，保留宽袖口及两颗扣的外观。
+    evidence_status: UNCERTAIN
+    region:
+      kind: box
+      xyxy:
+      - 0.441
+      - 0.718
+      - 0.626
+      - 0.965
+  source_group_id: user-maid-tutorial-family-20261004
+  sha256: c646d5cc89a1b04cd202b8ba06e487a2b430ffcd0b36143dc4da101f3c6ca943
+  source_kind: user_provided
+  evidence_independence: independent
+  retained_path: D:\learn\Arco\calibration\preparations\prep-20261004T165937Z-a1f765\originals\dress-structure-c646d5cc89a1.png
+  asset_id: maid-outfit-source-dress-structure
+  published_path: assets/arco/variants/maid-outfit/sources/dress-structure.png
+- source_id: apron-structure
+  path: C:\Users\shuai\AppData\Local\Temp\codex-clipboard-e92f9270-2ea7-43a3-a787-ab81f3cd6602.png
+  kind: partial
+  view: 围裙前后结构、交叉肩带与后腰系结
+  occlusions: 黑白教程提供多种褶边变化；原人物头发会遮挡肩带
+  source_note: 原图2：选左上前后围裙和与原穿着图一致的肩带结构。
+  parts:
+  - part_id: apron-front
+    slot: accessories
+    observations: 白色胸兜式长围裙，腰带清楚，前裙片宽大，下摆有荷叶边。
+    evidence_status: UNCERTAIN
+    region:
+      kind: box
+      xyxy:
+      - 0.055
+      - 0.119
+      - 0.243
+      - 0.655
+  - part_id: apron-back
+    slot: accessories
+    observations: 围裙肩带在背部交叉，后腰系大蝴蝶结和两条垂尾。
+    evidence_status: UNCERTAIN
+    region:
+      kind: box
+      xyxy:
+      - 0.226
+      - 0.128
+      - 0.395
+      - 0.671
+  source_group_id: user-maid-tutorial-family-20261004
+  sha256: a6b815c622ff7d0b231f7187ba1d5530175867b8b3dcc4f19d99e0fb018d82b5
+  source_kind: user_provided
+  evidence_independence: independent
+  retained_path: D:\learn\Arco\calibration\preparations\prep-20261004T165937Z-a1f765\originals\apron-structure-a6b815c622ff.png
+  asset_id: maid-outfit-source-apron-structure
+  published_path: assets/arco/variants/maid-outfit/sources/apron-structure.png
+- source_id: assembled-structure
+  path: C:\Users\shuai\AppData\Local\Temp\codex-clipboard-46517500-ad87-4808-96d3-f057610d2df7.png
+  kind: partial
+  view: 穿着组合前后图与可替换小物
+  occlusions: 头饰、领饰图含多个替代选项；右侧人体和动作演示不作为取用部件
+  source_note: 原图3：取左侧完整套装前后结构；补图是同页局部放大，按同源记录。
+  parts:
+  - part_id: assembled-front
+    slot: upper
+    observations: 左上装配图显示泡泡长袖、白领、白袖口与白围裙胸兜的层叠关系。
+    evidence_status: UNCERTAIN
+    region:
+      kind: box
+      xyxy:
+      - 0.032
+      - 0.179
+      - 0.237
+      - 0.436
+  - part_id: assembled-back
+    slot: accessories
+    observations: 左侧后视装配图清楚交代白色交叉肩带、荷叶边和后腰大蝴蝶结。
+    evidence_status: UNCERTAIN
+    region:
+      kind: box
+      xyxy:
+      - 0.21
+      - 0.122
+      - 0.427
+      - 0.721
+  source_group_id: user-maid-tutorial-family-20261004
+  sha256: 194cf708758ef20841e2bd304c671e417dfc57b41628b21a9bef6f40a0d98618
+  source_kind: user_provided
+  evidence_independence: independent
+  retained_path: D:\learn\Arco\calibration\preparations\prep-20261004T165937Z-a1f765\originals\assembled-structure-194cf708758e.png
+  asset_id: maid-outfit-source-assembled-structure
+  published_path: assets/arco/variants/maid-outfit/sources/assembled-structure.png
+- source_id: worn-front
+  path: C:\Users\shuai\AppData\Local\Temp\codex-clipboard-aab89fd6-62e9-47b9-8f5c-dea8011d8cce.png
+  kind: partial
+  view: 原款正面全身穿着图
+  occlusions: 头发和交叠双手遮挡前身，鞋只露局部，袜子与吊带未显示
+  source_note: 原图4：整套轮廓主依据。原人物的发型、脸、比例、姿势和黑白画风排除；领饰改用用户选定的大蝴蝶结。
+  parts:
+  - part_id: worn-bodice
+    slot: upper
+    observations: 深色收腰连衣裙上身，泡泡肩袖接窄长袖，白色闭合翻领和宽白袖口。
+    evidence_status: UNCERTAIN
+    region:
+      kind: box
+      xyxy:
+      - 0.377
+      - 0.166
+      - 0.841
+      - 0.469
+  - part_id: worn-skirt
+    slot: lower
+    observations: 深色裙身长至足踝附近，白围裙下摆高于黑裙下摆，黑色下缘形成一圈连续裙边。
+    evidence_status: UNCERTAIN
+    region:
+      kind: box
+      xyxy:
+      - 0.11
+      - 0.348
+      - 0.97
+      - 0.994
+  - part_id: worn-apron
+    slot: accessories
+    observations: 白色围裙胸兜、宽腰带、大前裙片和下摆荷叶边，肩部褶边清晰。
+    evidence_status: UNCERTAIN
+    region:
+      kind: box
+      xyxy:
+      - 0.278
+      - 0.195
+      - 0.922
+      - 0.921
+  source_group_id: user-maid-tutorial-family-20261004
+  sha256: a62233b7084e8af117cc33ed8f20a2bcee55826dd720d4729b7df24b4fcbe5d3
+  source_kind: user_provided
+  evidence_independence: independent
+  retained_path: D:\learn\Arco\calibration\preparations\prep-20261004T165937Z-a1f765\originals\worn-front-a62233b7084e.png
+  asset_id: maid-outfit-source-worn-front
+  published_path: assets/arco/variants/maid-outfit/sources/worn-front.png
+- source_id: petticoat-detail
+  path: C:\Users\shuai\AppData\Local\Temp\codex-clipboard-4956dc55-1d99-4f38-8e83-d3dd3bba0fac.png
+  kind: partial
+  view: 内层衬裙和支撑层示意
+  occlusions: 同图的人体、掀裙动作、腿部示意不作为角色或动作参考；没有清晰的白袜袜口与吊袜夹近景
+  source_note: 补图1：仅取左中层叠衬裙结构；白色吊带袜品类与颜色来自用户明确文字要求。
+  parts:
+  - part_id: soft-petticoat
+    slot: lower
+    observations: 腰下层叠荷叶边衬裙的外形，用于支撑原长裙的饱满廓形。
+    evidence_status: UNCERTAIN
+    region:
+      kind: box
+      xyxy:
+      - 0.16
+      - 0.475
+      - 0.449
+      - 0.651
+  source_group_id: user-maid-tutorial-family-20261004
+  sha256: 3b52fe07dfba2a0e7b86c7da02874b4d9eb27b79ff88a3ebbc8299525202828d
+  source_kind: user_provided
+  evidence_independence: independent
+  retained_path: D:\learn\Arco\calibration\preparations\prep-20261004T165937Z-a1f765\originals\petticoat-detail-3b52fe07dfba.png
+  asset_id: maid-outfit-source-petticoat-detail
+  published_path: assets/arco/variants/maid-outfit/sources/petticoat-detail.png
+- source_id: headdress-detail
+  path: C:\Users\shuai\AppData\Local\Temp\codex-clipboard-4b1f3ea8-def8-4ded-9892-df297e38d41d.png
+  kind: partial
+  view: 头箍正面弧形与佩戴位置
+  occlusions: 下排还有后脑罩式替换款，用户已选择上方荷叶边头箍
+  source_note: 补图2：用户已选荷叶边头箍。只取头箍和白色褶边；图中人物的头发与脸不继承。
+  parts:
+  - part_id: ruffled-headband
+    slot: accessories
+    observations: 上右弧形头箍沿顶部及两侧外缘加白色荷叶边，前额和大部分头发保持露出。
+    evidence_status: UNCERTAIN
+    region:
+      kind: box
+      xyxy:
+      - 0.664
+      - 0
+      - 0.984
+      - 0.319
+  source_group_id: user-maid-tutorial-family-20261004
+  sha256: c77c59b7b09e0e9fef93321d171559becb8762542a345f0e995880432283e77e
+  source_kind: user_provided
+  evidence_independence: independent
+  retained_path: D:\learn\Arco\calibration\preparations\prep-20261004T165937Z-a1f765\originals\headdress-detail-c77c59b7b09e.png
+  asset_id: maid-outfit-source-headdress-detail
+  published_path: assets/arco/variants/maid-outfit/sources/headdress-detail.png
+- source_id: shoulder-frill-detail
+  path: C:\Users\shuai\AppData\Local\Temp\codex-clipboard-8b27f2da-6db1-4eec-97b2-8c5687ae13fa.png
+  kind: partial
+  view: 围裙肩带褶边与固定结构侧视
+  occlusions: 文字和背景排除；窄肩带、褶边属于围裙而非连衣裙袖子
+  source_note: 补图3：同页细节放大；取肩带荷叶边与固定结构，不另计来源。
+  parts:
+  - part_id: apron-shoulder-frill
+    slot: accessories
+    observations: 窄围裙肩带外侧缝有大幅白色褶边，肩带和褶边连续，带固定扣/纽扣结构。
+    evidence_status: UNCERTAIN
+    region:
+      kind: box
+      xyxy:
+      - 0.181
+      - 0.028
+      - 0.77
+      - 0.493
+  source_group_id: user-maid-tutorial-family-20261004
+  sha256: 84278bc249f5317a2491bce65c89280a4e2cbaf8250c575420cde1e03f76f68b
+  source_kind: user_provided
+  evidence_independence: independent
+  retained_path: D:\learn\Arco\calibration\preparations\prep-20261004T165937Z-a1f765\originals\shoulder-frill-detail-84278bc249f5.png
+  asset_id: maid-outfit-source-shoulder-frill-detail
+  published_path: assets/arco/variants/maid-outfit/sources/shoulder-frill-detail.png
+- source_id: neckwear-detail
+  path: C:\Users\shuai\AppData\Local\Temp\codex-clipboard-2473ece3-2364-4d85-94da-33bdb475d279.png
+  kind: partial
+  view: 三种互斥领饰的结构示意
+  occlusions: 中间椭圆胸针领巾和右侧窄缎带不属于本套装；用户明确选左侧大蝴蝶结
+  source_note: 补图4：只取左侧大蝴蝶结，作为用户选定设计。边缘和颜色采用黑色布面效果。
+  parts:
+  - part_id: large-neck-bow
+    slot: accessories
+    observations: 左侧白领下面是一只宽大蝴蝶结，双侧蝶翼和中央结明确。
+    evidence_status: UNCERTAIN
+    region:
+      kind: box
+      xyxy:
+      - 0.066
+      - 0.219
+      - 0.396
+      - 0.869
+  source_group_id: user-maid-tutorial-family-20261004
+  sha256: fa0611211e86ce7a42faa0bcd69533df729afe9c9afd7d9771d185c69fd0d32c
+  source_kind: user_provided
+  evidence_independence: independent
+  retained_path: D:\learn\Arco\calibration\preparations\prep-20261004T165937Z-a1f765\originals\neckwear-detail-fa0611211e86.png
+  asset_id: maid-outfit-source-neckwear-detail
+  published_path: assets/arco/variants/maid-outfit/sources/neckwear-detail.png
+known_risks:
+- Authored completion constraints are design decisions, not elevated evidence Facts.
+coverage:
+  upper_body: READY
+  lower_body: READY
+  full_body: READY
+  footwear: READY
+  back_view: READY
+  overall: READY
+reference_corrections:
+- user_message: 修改一下参考图的胸部大小，现在的胸部太大了
+  scope: Chest-size correction only; approved outfit design and Identity/evidence
+    states unchanged.
+  identity_baseline_asset_id: casual-outfit-open-arms-no-horns-evidence
+  body_chest_proportion: small-to-modest
+  evidence_status: UNCERTAIN
+  reference_pack_sha256: e9a15a5a0676d178eb48e94a9dcb764f60d4d1949065c176b7b233aed35ead3f
+  reviewer: maid_visual_reviewer
+  review_mode: delegated_independent_visual_review
+  user_reviewed_each_new_image: false
+  pack_review_sha256: dbffda85c7a3627fe3554e59b47e871f92654bffc2c7defcb363d97a719e3a83

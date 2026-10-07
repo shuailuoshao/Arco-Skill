@@ -48,6 +48,8 @@ canon_basis:
 
 Variant 包含 facts、恰好一个 Primary、Secondary/Detail 列表、Must Keep、可变字段、State group 规则、State 路径和已知风险。
 
+新服装可附加独立 `design_definition`、`approval_context` 和 `source_materials`，合同见 [服装准备流程](outfit-preparation.md)。认可的补全和改款是固定设计，原图观察证据状态继续保留。Identity 的 `approved_view_designs.back` 保存独立确认的背面设计及正式背面身份参考。
+
 ## State
 
 State 必须带真实证据状态和 `evidence_ids`，并声明 `state_group`、可空 `exclusive_group`、`compatible_with`、`conflicts_with`、`requires` 与 `overrides`。
@@ -89,7 +91,9 @@ generation_reference:
 顶层保存 `derived_from_asset_id` 与 `evidence_independence: none`；具体裁剪参数保存在
 `operation`，裁剪不会增加证据独立性。
 
-Runtime Policy 不能建立绕过 Asset Index 的 per-asset allowlist。Expression Asset 默认不可上传；Body Base 与 Faceless Composite 在当前 Runtime policy 中不可作为 generation input。正式 schema v3 adoption、migration 与 Asset Index revision 推进必须另走 Calibration。
+Runtime Policy 不能建立绕过 Asset Index 的 per-asset allowlist。Body Base 当前只用于本地证据；着装 Faceless Composite 和表情 PNG 按正式 schema v3 中获批的具体职责选择。新增许可与 Asset Index revision 推进必须另走 Calibration。
+
+多来源合成参考使用 `derived_from_asset_ids` 与 `derivation_sources`，和单亲 `derived_from_asset_id` 互斥。每个输入绑定 asset_id、sha256、usage，服装输入还保存 parts/区域、原套装版本及处理记录；生成记录绑定 preparation_id、candidate_id、plan_sha256、output_sha256 和调用尝试。合成图统一 `source_kind: derivative`、`evidence_independence: none`，不增加 VISUAL_CONSENSUS 的独立来源数。
 
 ## Observation
 

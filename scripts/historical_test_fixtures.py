@@ -16,8 +16,8 @@ import yaml
 
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
-IDENTITY_STAGING = PROJECT_ROOT / "calibration/staging/cal-20260911T031117Z-849ec7"
-CASUAL_STAGING = PROJECT_ROOT / "calibration/staging/cal-20260914T070842Z-68b810"
+IDENTITY_STAGING = PROJECT_ROOT / "scripts/fixtures/calibration/cal-20260911T031117Z-849ec7"
+CASUAL_STAGING = PROJECT_ROOT / "scripts/fixtures/calibration/cal-20260914T070842Z-68b810"
 
 
 def _copy_project(holder: tempfile.TemporaryDirectory[str]) -> Path:
@@ -25,7 +25,7 @@ def _copy_project(holder: tempfile.TemporaryDirectory[str]) -> Path:
     shutil.copytree(
         PROJECT_ROOT,
         root,
-        ignore=shutil.ignore_patterns(".venv", "__pycache__", "calibration"),
+        ignore=shutil.ignore_patterns(".git", ".venv", "__pycache__", "calibration", "evaluation", "output", "outputs", "archive", "作品"),
     )
     return root
 

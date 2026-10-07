@@ -19,6 +19,9 @@ from reference_runtime import (  # noqa: E402
 )
 
 
+from legacy_generation_fixture import legacy_generation_root
+ROOT = legacy_generation_root()
+
 class IdentityContractPatchTests(unittest.TestCase):
     def setUp(self):
         self.assets = yaml.safe_load((ROOT / "character/assets.yaml").read_text(encoding="utf-8"))["assets"]

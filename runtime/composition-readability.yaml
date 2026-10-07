@@ -1,0 +1,7 @@
+schema_version: 1
+composition_readability:
+  very_small_max_exclusive: 0.15
+  small_max_exclusive: 0.25
+  close_min_inclusive: 0.50
+  full_body_preferred_min_frame_height_ratio: 0.25
+  full_body_preferred_target_frame_height_ratio: 0.30

@@ -4,6 +4,7 @@ import argparse, hashlib, json
 from pathlib import Path
 import yaml
 from verify_historical_manifest import verify_completed_manifest
+from archive_paths import historical_file
 
 def sha(p):
     h=hashlib.sha256()
@@ -84,7 +85,7 @@ def validate(candidate:Path, staging:Path, formal:Path, phase:str='staging'):
         historical = verify_completed_manifest(md, formal)
         req(historical['status']=='PASS', 'historical manifest verification failed: ' + '; '.join(historical['errors']))
     for x in md.get('files',[]):
-        p=staging/x.get('staged_path',''); req(p.is_file(),f"manifest file missing: {x.get('target_path')}")
+        p=historical_file(staging/x.get('staged_path','')); req(p.is_file(),f"manifest file missing: {x.get('target_path')}")
         if p.is_file(): req(sha(p)==x.get('candidate_hash'),f"candidate hash mismatch: {x.get('target_path')}")
         if phase=='staging': req(x.get('after_hash') is None and x.get('publication_status')=='pending','publication progress found')
         else:

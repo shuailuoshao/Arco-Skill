@@ -9,8 +9,9 @@ if str(SCRIPT_DIR) not in sys.path:
 from validate_expression_staging import validate
 
 ROOT = Path(__file__).resolve().parents[1]
-EXPRESSION_STAGING = ROOT / "calibration/staging/cal-20260910T145805Z-61c3e9"
-FORMAL = ROOT
+EXPRESSION_STAGING = ROOT / "scripts/fixtures/calibration/cal-20260910T145805Z-61c3e9"
+from legacy_generation_fixture import legacy_generation_root
+FORMAL = legacy_generation_root()
 
 def load(path): return yaml.safe_load(Path(path).read_text(encoding="utf-8"))
 def dump(path, data): Path(path).write_text(yaml.safe_dump(data, allow_unicode=True, sort_keys=False), encoding="utf-8")

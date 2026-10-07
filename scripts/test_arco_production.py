@@ -8,11 +8,13 @@ ROOT = SCRIPT_DIR.parent
 if str(SCRIPT_DIR) not in sys.path:
     sys.path.insert(0, str(SCRIPT_DIR))
 
+from legacy_generation_fixture import legacy_generation_root
+
 from arco_production import run_production_generation  # noqa: E402
 from reference_runtime import ReferenceRuntimeError  # noqa: E402
 
 
-STYLE_PATH = (ROOT / "evaluation" / "style-regression" / "private-assets" / "style-references" / "case-01.jpg").resolve()
+STYLE_PATH = (ROOT / "archive/实验/evaluation" / "style-regression" / "private-assets" / "style-references" / "case-01.jpg").resolve()
 
 
 class FakeProvider:
@@ -86,7 +88,7 @@ class ProductionGenerationTests(unittest.TestCase):
         temp = tempfile.TemporaryDirectory()
         self.addCleanup(temp.cleanup)
         provider = FakeProvider(Path(temp.name) / "generated.png")
-        result = run_production_generation(request, builtin_image_gen=provider, root=ROOT)
+        result = run_production_generation(request, builtin_image_gen=provider, root=legacy_generation_root())
         return result, provider
 
     def test_external_style_reference_compiles_and_reaches_provider(self):
@@ -139,7 +141,7 @@ class ProductionGenerationTests(unittest.TestCase):
             run_production_generation(
                 base_request(rendering_hygiene=True),
                 builtin_image_gen=lambda **_: None,
-                root=ROOT,
+                root=legacy_generation_root(),
             )
         self.assertEqual(raised.exception.code, "INVALID_RENDERING_HYGIENE_MODE")
 
@@ -148,7 +150,7 @@ class ProductionGenerationTests(unittest.TestCase):
             run_production_generation(
                 base_request(allow_uncertain_working="yes"),
                 builtin_image_gen=lambda **_: self.fail("provider must not be called"),
-                root=ROOT,
+                root=legacy_generation_root(),
             )
         self.assertEqual(raised.exception.code, "MALFORMED_GENERATION_PLAN")
 
@@ -157,7 +159,7 @@ class ProductionGenerationTests(unittest.TestCase):
             run_production_generation(
                 base_request(external_references=[external_style()]),
                 builtin_image_gen=lambda **_: self.fail("provider must not be called"),
-                root=ROOT,
+                root=legacy_generation_root(),
             )
         self.assertEqual(raised.exception.code, "STYLE_BRIEF_MISSING")
 
@@ -171,7 +173,7 @@ class ProductionGenerationTests(unittest.TestCase):
             run_production_generation(
                 base_request(external_references=[polluted], style_briefs=[style_brief()]),
                 builtin_image_gen=lambda **_: self.fail("provider must not be called"),
-                root=ROOT,
+                root=legacy_generation_root(),
             )
         self.assertEqual(raised.exception.code, "EXTERNAL_IDENTITY_POLLUTION")
 
@@ -179,7 +181,7 @@ class ProductionGenerationTests(unittest.TestCase):
             run_production_generation(
                 base_request(group="B"),
                 builtin_image_gen=lambda **_: self.fail("provider must not be called"),
-                root=ROOT,
+                root=legacy_generation_root(),
             )
         self.assertEqual(raised.exception.code, "MALFORMED_GENERATION_PLAN")
 
@@ -194,14 +196,19 @@ class ProductionGenerationTests(unittest.TestCase):
             }
             for index in range(3)
         ]
-        for reference in references:
+        images = tempfile.TemporaryDirectory()
+        self.addCleanup(images.cleanup)
+        for index, reference in enumerate(references):
+            path = Path(images.name) / f"reference-{index}.png"
+            path.write_bytes(STYLE_PATH.read_bytes())
+            reference["path"] = str(path)
             reference.pop("style_priority", None)
             reference.pop("style_axes", None)
         with self.assertRaises(ReferenceRuntimeError) as raised:
             run_production_generation(
                 base_request(external_references=references),
                 builtin_image_gen=lambda **_: self.fail("provider must not be called"),
-                root=ROOT,
+                root=legacy_generation_root(),
             )
         self.assertEqual(raised.exception.code, "REFERENCE_LIMIT_EXCEEDED")
 

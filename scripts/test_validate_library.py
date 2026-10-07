@@ -40,10 +40,10 @@ class Fixture:
     def __init__(self) -> None:
         self.temp = tempfile.TemporaryDirectory()
         self.root = Path(self.temp.name) / "arco"
-        shutil.copytree(PROJECT_ROOT, self.root, ignore=shutil.ignore_patterns('.venv','__pycache__','calibration'))
+        shutil.copytree(PROJECT_ROOT, self.root, ignore=shutil.ignore_patterns('.git','.venv','__pycache__','calibration','evaluation','output','outputs','archive','作品'))
         # Default fixture is an intentionally minimal legacy revision-0 library.
         # Current-baseline tests opt into CurrentBaselineFixture below.
-        original_identity=PROJECT_ROOT/'calibration/staging/cal-20260911T031117Z-849ec7/candidate-root/character/identity.base.yaml'
+        original_identity=PROJECT_ROOT/'scripts/fixtures/calibration/cal-20260911T031117Z-849ec7/candidate-root/character/identity.base.yaml'
         if original_identity.is_file():
             shutil.copy2(original_identity,self.root/'character/identity.yaml')
             md=self.root/'character/identity.md'

@@ -30,7 +30,7 @@ if str(SCRIPT_DIR) not in sys.path:
 import run_style_regression as runner  # noqa: E402
 
 
-EVALUATION_DIR = ROOT / "evaluation" / "style-regression"
+EVALUATION_DIR = ROOT / "archive/实验/evaluation" / "style-regression"
 V_ROOT = EVALUATION_DIR / "verdict-replacements" / "batch-4b.3v"
 AUDIT_PATH = V_ROOT / "audit.json"
 PLAN_PATH = V_ROOT / "replacement-plan.json"
@@ -163,13 +163,13 @@ def _snapshot_historical_artifacts() -> dict[str, Any]:
         path = EVALUATION_DIR / relative
         files.append(
             {
-                "path": (Path("evaluation/style-regression") / relative).as_posix(),
+                "path": (Path("archive/实验/evaluation/style-regression") / relative).as_posix(),
                 "sha256": runner.sha256_file(path),
                 "size_bytes": path.stat().st_size,
             }
         )
     return {
-        "scope": "evaluation/style-regression excluding verdict-replacements, verdict-set.json, and the V report",
+        "scope": "archive/实验/evaluation/style-regression excluding verdict-replacements, verdict-set.json, and the V report",
         "files": files,
         "tree_sha256": _sha256_bytes(_json_bytes(files)),
     }
@@ -295,8 +295,9 @@ def _bc_hygiene_only(prompt_b: str, prompt_c: str) -> dict[str, Any]:
 
 
 def _load_task_and_receipt(row: Mapping[str, Any]) -> tuple[dict[str, Any], dict[str, Any]]:
-    task_path = ROOT / str(row["task_path"])
-    output_path = ROOT / str(row["output_path"])
+    from archive_paths import relocate
+    task_path = relocate(ROOT / str(row["task_path"]), root=ROOT)
+    output_path = relocate(ROOT / str(row["output_path"]), root=ROOT)
     allowlist = _historical_runner_allowlist()
     task = runner.load_codex_task(
         task_path,
@@ -494,7 +495,7 @@ def audit_original_samples() -> dict[str, Any]:
         "replacement_policy": {
             "safety_clarification": SAFETY_CLARIFICATION,
             "safety_clarification_sha256": SAFETY_BLOCK_SHA256,
-            "canonical_prompt_dir": "evaluation/style-regression/style-context/case-04",
+            "canonical_prompt_dir": "archive/实验/evaluation/style-regression/style-context/case-04",
             "groups": {"A": "Corrected Legacy", "B": "Style Transfer", "C": "Style Transfer + Hygiene"},
         },
         "created_at": datetime.now(timezone.utc).isoformat(),

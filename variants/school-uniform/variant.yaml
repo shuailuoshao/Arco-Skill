@@ -1,0 +1,170 @@
+schema_version: 1
+entity_type: variant
+entity_ref: variants.school-uniform
+variant_id: school-uniform
+display_name_zh: 校服
+display_name_en: School Uniform
+lifecycle_status: published
+revision: 1
+last_calibration_id: cal-20261001T031544Z-8df760
+facts:
+- field_id: outfit.silhouette
+  display_name_zh: 服装整体轮廓
+  value: 深色收腰西装、橙金色大蝴蝶结、黑灰格纹短裙、深色及膝长袜和黑色乐福鞋构成校服轮廓
+  status: UNCERTAIN
+  evidence_ids:
+  - school-uniform-primary
+  conflicts: []
+  note_zh: '单张用户提供立绘；visual confidence: high。用户确认不构成官方定义或独立跨图共识。'
+  required_global: true
+  required_for:
+  - upper_body
+  - full_body
+- field_id: outfit.upper_garment.base_color
+  display_name_zh: 外套基础颜色
+  value: 黑色至深炭灰色；阴影和高光造成局部明暗差异
+  status: UNCERTAIN
+  evidence_ids:
+  - school-uniform-primary
+  conflicts: []
+  note_zh: '单张用户提供立绘；visual confidence: high。用户确认不构成官方定义或独立跨图共识。'
+  required_global: true
+  required_for:
+  - upper_body
+  - full_body
+- field_id: outfit.upper_garment.structure
+  display_name_zh: 外套与内搭结构
+  value: 合身收腰长袖西装，正面下摆呈圆弧并分开；内搭白色衬衫，领口和袖口外露，遮挡部分不推定
+  status: UNCERTAIN
+  evidence_ids:
+  - school-uniform-primary
+  conflicts: []
+  note_zh: '单张用户提供立绘；visual confidence: high。用户确认不构成官方定义或独立跨图共识。'
+  required_global: true
+  required_for:
+  - upper_body
+  - full_body
+- field_id: outfit.upper_garment.collar
+  display_name_zh: 领部结构
+  value: 深色西装翻驳领与内搭白色衬衫领口
+  status: UNCERTAIN
+  evidence_ids:
+  - school-uniform-primary
+  conflicts: []
+  note_zh: '单张用户提供立绘；visual confidence: high。用户确认不构成官方定义或独立跨图共识。'
+  required_global: true
+  required_for:
+  - portrait
+  - upper_body
+  - full_body
+- field_id: outfit.upper_garment.sleeves
+  display_name_zh: 袖部结构
+  value: 深色长袖延伸至手腕，袖口露出窄幅白色衬衫袖口
+  status: UNCERTAIN
+  evidence_ids:
+  - school-uniform-primary
+  conflicts: []
+  note_zh: '单张用户提供立绘；visual confidence: high。用户确认不构成官方定义或独立跨图共识。'
+  required_global: true
+  required_for:
+  - upper_body
+  - full_body
+- field_id: outfit.chest_detail
+  display_name_zh: 胸前领饰
+  value: 橙金色大蝴蝶结，结体有明显褶皱，下方有下垂结带
+  status: UNCERTAIN
+  evidence_ids:
+  - school-uniform-primary
+  conflicts: []
+  note_zh: '单张用户提供立绘；visual confidence: high。用户确认不构成官方定义或独立跨图共识。'
+  required_global: true
+  required_for:
+  - portrait
+  - upper_body
+  - full_body
+- field_id: outfit.upper_garment.buttons
+  display_name_zh: 外套纽扣
+  value: 正面可见两枚金色纽扣
+  status: UNCERTAIN
+  evidence_ids:
+  - school-uniform-primary
+  conflicts: []
+  note_zh: '单张用户提供立绘；visual confidence: high。用户确认不构成官方定义或独立跨图共识。'
+  required_global: true
+  required_for:
+  - upper_body
+  - full_body
+- field_id: outfit.lower_garment
+  display_name_zh: 下装
+  value: 黑灰格纹短裙，带褶裥与蓬展轮廓；当前裙摆展开程度受姿势影响
+  status: UNCERTAIN
+  evidence_ids:
+  - school-uniform-primary
+  conflicts: []
+  note_zh: '单张用户提供立绘；visual confidence: high。用户确认不构成官方定义或独立跨图共识。'
+  required_global: true
+  required_for:
+  - full_body
+- field_id: outfit.legwear
+  display_name_zh: 腿部服装
+  value: 深色及膝长袜，两侧袜口附近各有一道金色细横条
+  status: UNCERTAIN
+  evidence_ids:
+  - school-uniform-primary
+  conflicts: []
+  note_zh: '单张用户提供立绘；visual confidence: high。用户确认不构成官方定义或独立跨图共识。'
+  required_global: true
+  required_for:
+  - full_body
+- field_id: outfit.footwear
+  display_name_zh: 鞋履
+  value: 黑色圆头乐福鞋，鞋面有横向带饰，鞋底较厚
+  status: UNCERTAIN
+  evidence_ids:
+  - school-uniform-primary
+  conflicts: []
+  note_zh: '单张用户提供立绘；visual confidence: medium。用户确认不构成官方定义或独立跨图共识。'
+  required_global: true
+  required_for:
+  - full_body
+- field_id: outfit.back_structure
+  display_name_zh: 背面结构
+  value: null
+  status: TODO_CALIBRATION
+  evidence_ids: []
+  conflicts: []
+  note_zh: 当前无背面参考；不推定后领、后片、开衩或格纹接续。
+  required_global: false
+  required_for:
+  - back_view
+reference_asset_ids:
+  primary:
+  - school-uniform-primary
+  secondary: []
+  detail: []
+state_mutable_fields: []
+must_keep_fields:
+- outfit.silhouette
+- outfit.upper_garment.base_color
+- outfit.upper_garment.structure
+- outfit.upper_garment.collar
+- outfit.upper_garment.sleeves
+- outfit.chest_detail
+- outfit.upper_garment.buttons
+- outfit.lower_garment
+- outfit.legwear
+- outfit.footwear
+state_groups: {}
+state_files: []
+known_generation_risks:
+- Primary 仅继承服装，不继承身份、发型、五官、姿势、表情或画风。
+- 背面结构缺少证据，不支持 back_view。
+- 单图工作事实均为 UNCERTAIN；须显式允许工作事实或使用已批准图像参考。
+- 官方出处未核实；格纹受透视影响，裙摆蓬展程度受动作影响。
+coverage:
+  upper_body: READY
+  lower_body: READY
+  full_body: READY
+  footwear: READY
+  back_view: INCOMPLETE
+  overall: PARTIAL

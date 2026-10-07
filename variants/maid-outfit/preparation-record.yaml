@@ -1,0 +1,2959 @@
+schema_version: 1
+purpose: outfit_preparation
+preparation_id: prep-20261004T165937Z-a1f765
+source_materials:
+- source_id: dress-structure
+  path: C:\Users\shuai\AppData\Local\Temp\codex-clipboard-c9648c88-f4ca-4087-ba12-7a9062a917a5.png
+  kind: partial
+  view: 连衣裙前后平面结构及局部细节
+  occlusions: 穿着示意的手和头发遮住部分前身；黑白图不确定彩色材质
+  source_note: 原图1：取独立衣服图；同一教程来源，不能因多图而增加独立证据。
+  parts:
+  - part_id: dress-front-upper
+    slot: upper
+    observations: 连衣裙前上身收腰，鼓起的短泡泡袖接窄长袖，闭合白翻领和宽白袖口。
+    evidence_status: UNCERTAIN
+    region:
+      kind: box
+      xyxy:
+      - 0.424
+      - 0.16
+      - 0.612
+      - 0.464
+  - part_id: dress-back-upper
+    slot: upper
+    observations: 独立后视连衣裙图显示闭合后背和收腰接缝。
+    evidence_status: UNCERTAIN
+    region:
+      kind: box
+      xyxy:
+      - 0.626
+      - 0.154
+      - 0.858
+      - 0.455
+  - part_id: dress-front-skirt
+    slot: lower
+    observations: 黑白图中的深色长裙从腰部褶裥展开，裙身宽大、自然垂落。
+    evidence_status: UNCERTAIN
+    region:
+      kind: box
+      xyxy:
+      - 0.382
+      - 0.407
+      - 0.624
+      - 0.702
+  - part_id: dress-back-skirt
+    slot: lower
+    observations: 独立后视长裙从腰缝起褶，下摆连续。
+    evidence_status: UNCERTAIN
+    region:
+      kind: box
+      xyxy:
+      - 0.6
+      - 0.398
+      - 0.862
+      - 0.718
+  - part_id: cuff-construction
+    slot: upper
+    observations: 独立白袖口和纽扣结构，保留宽袖口及两颗扣的外观。
+    evidence_status: UNCERTAIN
+    region:
+      kind: box
+      xyxy:
+      - 0.441
+      - 0.718
+      - 0.626
+      - 0.965
+  source_group_id: user-maid-tutorial-family-20261004
+  sha256: c646d5cc89a1b04cd202b8ba06e487a2b430ffcd0b36143dc4da101f3c6ca943
+  source_kind: user_provided
+  evidence_independence: independent
+  retained_path: D:\learn\Arco\calibration\preparations\prep-20261004T165937Z-a1f765\originals\dress-structure-c646d5cc89a1.png
+  asset_id: maid-outfit-source-dress-structure
+  published_path: assets/arco/variants/maid-outfit/sources/dress-structure.png
+- source_id: apron-structure
+  path: C:\Users\shuai\AppData\Local\Temp\codex-clipboard-e92f9270-2ea7-43a3-a787-ab81f3cd6602.png
+  kind: partial
+  view: 围裙前后结构、交叉肩带与后腰系结
+  occlusions: 黑白教程提供多种褶边变化；原人物头发会遮挡肩带
+  source_note: 原图2：选左上前后围裙和与原穿着图一致的肩带结构。
+  parts:
+  - part_id: apron-front
+    slot: accessories
+    observations: 白色胸兜式长围裙，腰带清楚，前裙片宽大，下摆有荷叶边。
+    evidence_status: UNCERTAIN
+    region:
+      kind: box
+      xyxy:
+      - 0.055
+      - 0.119
+      - 0.243
+      - 0.655
+  - part_id: apron-back
+    slot: accessories
+    observations: 围裙肩带在背部交叉，后腰系大蝴蝶结和两条垂尾。
+    evidence_status: UNCERTAIN
+    region:
+      kind: box
+      xyxy:
+      - 0.226
+      - 0.128
+      - 0.395
+      - 0.671
+  source_group_id: user-maid-tutorial-family-20261004
+  sha256: a6b815c622ff7d0b231f7187ba1d5530175867b8b3dcc4f19d99e0fb018d82b5
+  source_kind: user_provided
+  evidence_independence: independent
+  retained_path: D:\learn\Arco\calibration\preparations\prep-20261004T165937Z-a1f765\originals\apron-structure-a6b815c622ff.png
+  asset_id: maid-outfit-source-apron-structure
+  published_path: assets/arco/variants/maid-outfit/sources/apron-structure.png
+- source_id: assembled-structure
+  path: C:\Users\shuai\AppData\Local\Temp\codex-clipboard-46517500-ad87-4808-96d3-f057610d2df7.png
+  kind: partial
+  view: 穿着组合前后图与可替换小物
+  occlusions: 头饰、领饰图含多个替代选项；右侧人体和动作演示不作为取用部件
+  source_note: 原图3：取左侧完整套装前后结构；补图是同页局部放大，按同源记录。
+  parts:
+  - part_id: assembled-front
+    slot: upper
+    observations: 左上装配图显示泡泡长袖、白领、白袖口与白围裙胸兜的层叠关系。
+    evidence_status: UNCERTAIN
+    region:
+      kind: box
+      xyxy:
+      - 0.032
+      - 0.179
+      - 0.237
+      - 0.436
+  - part_id: assembled-back
+    slot: accessories
+    observations: 左侧后视装配图清楚交代白色交叉肩带、荷叶边和后腰大蝴蝶结。
+    evidence_status: UNCERTAIN
+    region:
+      kind: box
+      xyxy:
+      - 0.21
+      - 0.122
+      - 0.427
+      - 0.721
+  source_group_id: user-maid-tutorial-family-20261004
+  sha256: 194cf708758ef20841e2bd304c671e417dfc57b41628b21a9bef6f40a0d98618
+  source_kind: user_provided
+  evidence_independence: independent
+  retained_path: D:\learn\Arco\calibration\preparations\prep-20261004T165937Z-a1f765\originals\assembled-structure-194cf708758e.png
+  asset_id: maid-outfit-source-assembled-structure
+  published_path: assets/arco/variants/maid-outfit/sources/assembled-structure.png
+- source_id: worn-front
+  path: C:\Users\shuai\AppData\Local\Temp\codex-clipboard-aab89fd6-62e9-47b9-8f5c-dea8011d8cce.png
+  kind: partial
+  view: 原款正面全身穿着图
+  occlusions: 头发和交叠双手遮挡前身，鞋只露局部，袜子与吊带未显示
+  source_note: 原图4：整套轮廓主依据。原人物的发型、脸、比例、姿势和黑白画风排除；领饰改用用户选定的大蝴蝶结。
+  parts:
+  - part_id: worn-bodice
+    slot: upper
+    observations: 深色收腰连衣裙上身，泡泡肩袖接窄长袖，白色闭合翻领和宽白袖口。
+    evidence_status: UNCERTAIN
+    region:
+      kind: box
+      xyxy:
+      - 0.377
+      - 0.166
+      - 0.841
+      - 0.469
+  - part_id: worn-skirt
+    slot: lower
+    observations: 深色裙身长至足踝附近，白围裙下摆高于黑裙下摆，黑色下缘形成一圈连续裙边。
+    evidence_status: UNCERTAIN
+    region:
+      kind: box
+      xyxy:
+      - 0.11
+      - 0.348
+      - 0.97
+      - 0.994
+  - part_id: worn-apron
+    slot: accessories
+    observations: 白色围裙胸兜、宽腰带、大前裙片和下摆荷叶边，肩部褶边清晰。
+    evidence_status: UNCERTAIN
+    region:
+      kind: box
+      xyxy:
+      - 0.278
+      - 0.195
+      - 0.922
+      - 0.921
+  source_group_id: user-maid-tutorial-family-20261004
+  sha256: a62233b7084e8af117cc33ed8f20a2bcee55826dd720d4729b7df24b4fcbe5d3
+  source_kind: user_provided
+  evidence_independence: independent
+  retained_path: D:\learn\Arco\calibration\preparations\prep-20261004T165937Z-a1f765\originals\worn-front-a62233b7084e.png
+  asset_id: maid-outfit-source-worn-front
+  published_path: assets/arco/variants/maid-outfit/sources/worn-front.png
+- source_id: petticoat-detail
+  path: C:\Users\shuai\AppData\Local\Temp\codex-clipboard-4956dc55-1d99-4f38-8e83-d3dd3bba0fac.png
+  kind: partial
+  view: 内层衬裙和支撑层示意
+  occlusions: 同图的人体、掀裙动作、腿部示意不作为角色或动作参考；没有清晰的白袜袜口与吊袜夹近景
+  source_note: 补图1：仅取左中层叠衬裙结构；白色吊带袜品类与颜色来自用户明确文字要求。
+  parts:
+  - part_id: soft-petticoat
+    slot: lower
+    observations: 腰下层叠荷叶边衬裙的外形，用于支撑原长裙的饱满廓形。
+    evidence_status: UNCERTAIN
+    region:
+      kind: box
+      xyxy:
+      - 0.16
+      - 0.475
+      - 0.449
+      - 0.651
+  source_group_id: user-maid-tutorial-family-20261004
+  sha256: 3b52fe07dfba2a0e7b86c7da02874b4d9eb27b79ff88a3ebbc8299525202828d
+  source_kind: user_provided
+  evidence_independence: independent
+  retained_path: D:\learn\Arco\calibration\preparations\prep-20261004T165937Z-a1f765\originals\petticoat-detail-3b52fe07dfba.png
+  asset_id: maid-outfit-source-petticoat-detail
+  published_path: assets/arco/variants/maid-outfit/sources/petticoat-detail.png
+- source_id: headdress-detail
+  path: C:\Users\shuai\AppData\Local\Temp\codex-clipboard-4b1f3ea8-def8-4ded-9892-df297e38d41d.png
+  kind: partial
+  view: 头箍正面弧形与佩戴位置
+  occlusions: 下排还有后脑罩式替换款，用户已选择上方荷叶边头箍
+  source_note: 补图2：用户已选荷叶边头箍。只取头箍和白色褶边；图中人物的头发与脸不继承。
+  parts:
+  - part_id: ruffled-headband
+    slot: accessories
+    observations: 上右弧形头箍沿顶部及两侧外缘加白色荷叶边，前额和大部分头发保持露出。
+    evidence_status: UNCERTAIN
+    region:
+      kind: box
+      xyxy:
+      - 0.664
+      - 0
+      - 0.984
+      - 0.319
+  source_group_id: user-maid-tutorial-family-20261004
+  sha256: c77c59b7b09e0e9fef93321d171559becb8762542a345f0e995880432283e77e
+  source_kind: user_provided
+  evidence_independence: independent
+  retained_path: D:\learn\Arco\calibration\preparations\prep-20261004T165937Z-a1f765\originals\headdress-detail-c77c59b7b09e.png
+  asset_id: maid-outfit-source-headdress-detail
+  published_path: assets/arco/variants/maid-outfit/sources/headdress-detail.png
+- source_id: shoulder-frill-detail
+  path: C:\Users\shuai\AppData\Local\Temp\codex-clipboard-8b27f2da-6db1-4eec-97b2-8c5687ae13fa.png
+  kind: partial
+  view: 围裙肩带褶边与固定结构侧视
+  occlusions: 文字和背景排除；窄肩带、褶边属于围裙而非连衣裙袖子
+  source_note: 补图3：同页细节放大；取肩带荷叶边与固定结构，不另计来源。
+  parts:
+  - part_id: apron-shoulder-frill
+    slot: accessories
+    observations: 窄围裙肩带外侧缝有大幅白色褶边，肩带和褶边连续，带固定扣/纽扣结构。
+    evidence_status: UNCERTAIN
+    region:
+      kind: box
+      xyxy:
+      - 0.181
+      - 0.028
+      - 0.77
+      - 0.493
+  source_group_id: user-maid-tutorial-family-20261004
+  sha256: 84278bc249f5317a2491bce65c89280a4e2cbaf8250c575420cde1e03f76f68b
+  source_kind: user_provided
+  evidence_independence: independent
+  retained_path: D:\learn\Arco\calibration\preparations\prep-20261004T165937Z-a1f765\originals\shoulder-frill-detail-84278bc249f5.png
+  asset_id: maid-outfit-source-shoulder-frill-detail
+  published_path: assets/arco/variants/maid-outfit/sources/shoulder-frill-detail.png
+- source_id: neckwear-detail
+  path: C:\Users\shuai\AppData\Local\Temp\codex-clipboard-2473ece3-2364-4d85-94da-33bdb475d279.png
+  kind: partial
+  view: 三种互斥领饰的结构示意
+  occlusions: 中间椭圆胸针领巾和右侧窄缎带不属于本套装；用户明确选左侧大蝴蝶结
+  source_note: 补图4：只取左侧大蝴蝶结，作为用户选定设计。边缘和颜色采用黑色布面效果。
+  parts:
+  - part_id: large-neck-bow
+    slot: accessories
+    observations: 左侧白领下面是一只宽大蝴蝶结，双侧蝶翼和中央结明确。
+    evidence_status: UNCERTAIN
+    region:
+      kind: box
+      xyxy:
+      - 0.066
+      - 0.219
+      - 0.396
+      - 0.869
+  source_group_id: user-maid-tutorial-family-20261004
+  sha256: fa0611211e86ce7a42faa0bcd69533df729afe9c9afd7d9771d185c69fd0d32c
+  source_kind: user_provided
+  evidence_independence: independent
+  retained_path: D:\learn\Arco\calibration\preparations\prep-20261004T165937Z-a1f765\originals\neckwear-detail-fa0611211e86.png
+  asset_id: maid-outfit-source-neckwear-detail
+  published_path: assets/arco/variants/maid-outfit/sources/neckwear-detail.png
+design_definition:
+  schema_version: 1
+  design_id: white-garters-large-bow
+  parts:
+    upper:
+      origin: source
+      description: 黑色收腰连衣裙上身：闭合白色圆角翻领、泡泡肩袖接窄长袖、宽白袖口，保留两颗袖口扣；与下装同属一件连衣裙。
+      source_bindings:
+      - source_id: dress-structure
+        part_id: dress-front-upper
+      - source_id: dress-structure
+        part_id: dress-back-upper
+      - source_id: dress-structure
+        part_id: cuff-construction
+      - source_id: worn-front
+        part_id: worn-bodice
+      - source_id: assembled-structure
+        part_id: assembled-front
+      fixed_features:
+      - 保留原款闭合领口、收腰结构和长袖长度。
+      - 白袖口保持宽阔，袖口扣作为稳定外观细节。
+    lower:
+      origin: source
+      description: 黑色宽大长裙与上身相连，长度接近足踝、主要露鞋尖；腰部起褶，内穿白色层叠衬裙保持自然饱满廓形。
+      source_bindings:
+      - source_id: dress-structure
+        part_id: dress-front-skirt
+      - source_id: dress-structure
+        part_id: dress-back-skirt
+      - source_id: worn-front
+        part_id: worn-skirt
+      - source_id: petticoat-detail
+        part_id: soft-petticoat
+      fixed_features:
+      - 长裙保持原款长度和连续黑色下摆。
+      - 围裙的白色下摆高于黑裙下摆，保留清楚的一圈黑裙边。
+      - 衬裙平时位于外裙内，不改变原款长裙的正常垂落。
+    footwear:
+      origin: completion
+      description: 黑色素面闭口圆头低跟鞋，一双；约2厘米低跟，简洁鞋面，无额外鞋面蝴蝶结或金属饰件。
+      source_bindings: []
+      fixed_features:
+      - 黑色、圆头、闭口、低跟、素面。
+      decision_reason: 原图只露鞋尖，完整鞋型没有确定；采用之前推荐的简洁圆头低跟方案作为待验收补全。
+    hosiery:
+      origin: completion
+      description: 一对白色不透明吊带长袜，袜口到大腿上部，配白色吊袜腰带与四条白色吊带（每腿前后各一条），以小型素面吊袜夹连接平整袜口；正常穿着时位于长裙与衬裙内。
+      source_bindings: []
+      fixed_features:
+      - 用户明确指定白色吊带袜，必须是左右分开的长袜，通过吊带固定。
+      - 白色袜身和平整袜口保持不透明布面，吊带与腰带均为白色。
+      - 主穿着图保持完整长裙；连接结构通过衣物细节图呈现。
+      decision_reason: 品类与白色来自用户文字；参考未清楚给出袜口、腰带及夹子的款式，采用素面白色腰带、四吊带和小夹作为具体补全，等待设计与试穿计划确认。
+    accessories:
+      origin: source
+      description: 白色胸兜式长围裙，腰带在后腰系大蝴蝶结，白色肩带在背部交叉，肩带外侧有白色大褶边；白色荷叶边头箍；白领下方一只黑色大蝴蝶结。
+      source_bindings:
+      - source_id: apron-structure
+        part_id: apron-front
+      - source_id: apron-structure
+        part_id: apron-back
+      - source_id: assembled-structure
+        part_id: assembled-back
+      - source_id: worn-front
+        part_id: worn-apron
+      - source_id: headdress-detail
+        part_id: ruffled-headband
+      - source_id: shoulder-frill-detail
+        part_id: apron-shoulder-frill
+      - source_id: neckwear-detail
+        part_id: large-neck-bow
+      fixed_features:
+      - 采用用户选定的弧形荷叶边头箍和大黑色蝴蝶结。
+      - 后背X形肩带、肩部白褶边、后腰大蝴蝶结及两条垂尾保持一致。
+      - 围裙覆盖连衣裙胸腹和裙身前方，白色胸兜与腰带连接清楚。
+    outerwear:
+      origin: omitted
+      description: 不加外套或披肩。
+      source_bindings: []
+      fixed_features: []
+  wearing_relations:
+  - 黑色上身和黑色长裙是一件收腰连衣裙，白色衬裙位于其内层。
+  - 白色围裙穿在黑色连衣裙外，胸兜接腰带，肩带从胸兜向上经过肩部并在背部交叉，腰带在后腰居中系结。
+  - 肩部白色褶边属于围裙肩带，位于黑色泡泡袖上方；大黑色领结位于白领正下方、围裙胸兜上沿附近。
+  - 白色吊袜腰带、四条吊带和一对白色长袜位于裙内；袜身覆盖足部并进入黑色闭口鞋。
+  - 荷叶边头箍佩戴于阿尔可头顶发丝上，保留既有刘海、披散长发和粉色发梢。
+  - 背面穿着图保留自然披散长发的遮挡；完整肩带与蝴蝶结构造通过无头发的衣物细节图补充。
+  fixed_constraints:
+  - 新增为一套完整固定的黑白长裙女仆装，保留原裙长度、原袖长和闭合领口。
+  - 身份、发型、体型比例与画风使用正式阿尔可基准；教程人物仅提供指定衣服区域。
+  - 普通穿着参考采用全身中立站姿、清晰浅色背景和无五官形式。
+  - 吊带长袜为白色；领饰为大黑色蝴蝶结；头饰为白色荷叶边头箍。
+  - 主图与后续视图均依据获认可的同一设计；未认可候选不作为其他视图设计依据。
+  detail_requirements:
+  - view_id: detail-back-apron
+    description: 衣物单独展示：黑色连衣裙和白围裙的背面上身到后腰，完整显示X形肩带、肩部褶边、腰带和后腰大蝴蝶结及垂尾；无头发遮挡，浅色背景，不改变人物的正常披散发型。
+    source_ids:
+    - dress-structure
+    - apron-structure
+    - shoulder-frill-detail
+  - view_id: detail-trims
+    description: 同一套装的服装细节页：白色荷叶边头箍、白领配大黑蝴蝶结、宽白袖口和两颗扣；分成清楚的衣物局部小图，浅色背景，保持主图款式。
+    source_ids:
+    - headdress-detail
+    - shoulder-frill-detail
+    - neckwear-detail
+  - view_id: detail-hosiery-footwear
+    description: 衣物单独平铺展示：一对白色不透明大腿长袜、白色吊袜腰带、四条连接吊带及小型素面夹子，旁边配一双黑色素面圆头闭口低跟鞋。清晰展示连接关系、袜口和鞋型；不呈现人体或提裙动作。
+    source_ids: []
+  gap_resolutions:
+    hosiery: 按用户明确要求设计一对白色吊带长袜；腰带、四条吊带、袜口和夹子采用素面白色补全。
+    footwear: 黑色素面闭口圆头低跟鞋，约2厘米低跟，主体穿着图主要露鞋尖，完整鞋型由细节页展示。
+    color_and_material: 将教程的灰阶外观落实为黑色连衣裙、白色围裙和衬裙、白色头箍与袜子、黑色大领结和鞋；采用哑光织物效果，小纽扣和夹子为简洁低光泽。
+    rear_occlusion: 保留阿尔可既有披散长发；使用衣物背面细节图展示可能被遮挡的X形肩带和后腰系结。
+  conflict_resolutions:
+    headdress_variants: 用户已选补图2的荷叶边头箍，后脑罩式款不属于该套装。
+    neckwear_variants: 用户已选补图4左侧大蝴蝶结，取代原全身图的椭圆胸针领巾。
+    hosiery_previous_default: 白色吊带长袜取代之前讨论的黑色不透裤袜建议。
+plans:
+  front:
+    provider: builtin_image_gen
+    capability: reference_conditioned_image_generation
+    mode: reference_conditioned
+    purpose: outfit_preparation
+    view_id: front
+    prompt: "Prepare a fixed Arco outfit reference: front full-body neutral standing\
+      \ view.\nFaceless wearing reference: retain Arco head/hair/body silhouette,\
+      \ omit facial features. Use a clear plain background, unobstructed full-body\
+      \ framing and the official Arco baseline drawing style.\nPreserve selected source\
+      \ garments' original cut, length and colors. Solve joins through the approved\
+      \ wearing relations; apply only explicitly approved redesigns.\n[Approved Variant\
+      \ Design]\nUse this fixed complete outfit, including its approved authored completions.\n\
+      upper (source): 黑色收腰连衣裙上身：闭合白色圆角翻领、泡泡肩袖接窄长袖、宽白袖口，保留两颗袖口扣；与下装同属一件连衣裙。\nKeep:\
+      \ 保留原款闭合领口、收腰结构和长袖长度。\nKeep: 白袖口保持宽阔，袖口扣作为稳定外观细节。\nlower (source): 黑色宽大长裙与上身相连，长度接近足踝、主要露鞋尖；腰部起褶，内穿白色层叠衬裙保持自然饱满廓形。\n\
+      Keep: 长裙保持原款长度和连续黑色下摆。\nKeep: 围裙的白色下摆高于黑裙下摆，保留清楚的一圈黑裙边。\nKeep: 衬裙平时位于外裙内，不改变原款长裙的正常垂落。\n\
+      footwear (completion): 黑色素面闭口圆头低跟鞋，一双；约2厘米低跟，简洁鞋面，无额外鞋面蝴蝶结或金属饰件。\nKeep: 黑色、圆头、闭口、低跟、素面。\n\
+      Approved decision: 原图只露鞋尖，完整鞋型没有确定；采用之前推荐的简洁圆头低跟方案作为待验收补全。\nhosiery (completion):\
+      \ 一对白色不透明吊带长袜，袜口到大腿上部，配白色吊袜腰带与四条白色吊带（每腿前后各一条），以小型素面吊袜夹连接平整袜口；正常穿着时位于长裙与衬裙内。\n\
+      Keep: 用户明确指定白色吊带袜，必须是左右分开的长袜，通过吊带固定。\nKeep: 白色袜身和平整袜口保持不透明布面，吊带与腰带均为白色。\nKeep:\
+      \ 主穿着图保持完整长裙；连接结构通过衣物细节图呈现。\nApproved decision: 品类与白色来自用户文字；参考未清楚给出袜口、腰带及夹子的款式，采用素面白色腰带、四吊带和小夹作为具体补全，等待设计与试穿计划确认。\n\
+      accessories (source): 白色胸兜式长围裙，腰带在后腰系大蝴蝶结，白色肩带在背部交叉，肩带外侧有白色大褶边；白色荷叶边头箍；白领下方一只黑色大蝴蝶结。\n\
+      Keep: 采用用户选定的弧形荷叶边头箍和大黑色蝴蝶结。\nKeep: 后背X形肩带、肩部白褶边、后腰大蝴蝶结及两条垂尾保持一致。\nKeep: 围裙覆盖连衣裙胸腹和裙身前方，白色胸兜与腰带连接清楚。\n\
+      outerwear (omitted): 不加外套或披肩。\nWearing relation: 黑色上身和黑色长裙是一件收腰连衣裙，白色衬裙位于其内层。\n\
+      Wearing relation: 白色围裙穿在黑色连衣裙外，胸兜接腰带，肩带从胸兜向上经过肩部并在背部交叉，腰带在后腰居中系结。\nWearing relation:\
+      \ 肩部白色褶边属于围裙肩带，位于黑色泡泡袖上方；大黑色领结位于白领正下方、围裙胸兜上沿附近。\nWearing relation: 白色吊袜腰带、四条吊带和一对白色长袜位于裙内；袜身覆盖足部并进入黑色闭口鞋。\n\
+      Wearing relation: 荷叶边头箍佩戴于阿尔可头顶发丝上，保留既有刘海、披散长发和粉色发梢。\nWearing relation: 背面穿着图保留自然披散长发的遮挡；完整肩带与蝴蝶结构造通过无头发的衣物细节图补充。\n\
+      Fixed constraint: 新增为一套完整固定的黑白长裙女仆装，保留原裙长度、原袖长和闭合领口。\nFixed constraint: 身份、发型、体型比例与画风使用正式阿尔可基准；教程人物仅提供指定衣服区域。\n\
+      Fixed constraint: 普通穿着参考采用全身中立站姿、清晰浅色背景和无五官形式。\nFixed constraint: 吊带长袜为白色；领饰为大黑色蝴蝶结；头饰为白色荷叶边头箍。\n\
+      Fixed constraint: 主图与后续视图均依据获认可的同一设计；未认可候选不作为其他视图设计依据。\nApproved gap_resolutions\
+      \ hosiery: 按用户明确要求设计一对白色吊带长袜；腰带、四条吊带、袜口和夹子采用素面白色补全。\nApproved gap_resolutions\
+      \ footwear: 黑色素面闭口圆头低跟鞋，约2厘米低跟，主体穿着图主要露鞋尖，完整鞋型由细节页展示。\nApproved gap_resolutions\
+      \ color_and_material: 将教程的灰阶外观落实为黑色连衣裙、白色围裙和衬裙、白色头箍与袜子、黑色大领结和鞋；采用哑光织物效果，小纽扣和夹子为简洁低光泽。\n\
+      Approved gap_resolutions rear_occlusion: 保留阿尔可既有披散长发；使用衣物背面细节图展示可能被遮挡的X形肩带和后腰系结。\n\
+      Approved conflict_resolutions headdress_variants: 用户已选补图2的荷叶边头箍，后脑罩式款不属于该套装。\n\
+      Approved conflict_resolutions neckwear_variants: 用户已选补图4左侧大蝴蝶结，取代原全身图的椭圆胸针领巾。\n\
+      Approved conflict_resolutions hosiery_previous_default: 白色吊带长袜取代之前讨论的黑色不透裤袜建议。\n\
+      [/Approved Variant Design]\nRendering style requirements:\n- Linework: clean,\
+      \ crisp anime linework with controlled contours\n- Shading: soft cel-shaded\
+      \ form modeling with limited blending\n- Color logic: clear local-color separation\
+      \ with a clean anime palette\n  Color scope: Color logic affects overall rendering\
+      \ and palette relationships only; preserve intrinsic identity colors for hair\
+      \ color, eye color, and variant key colors.\n- Highlight language: selective\
+      \ grouped highlights on major forms and glossy surfaces\n- Texture language:\
+      \ minimal low-frequency texture and mostly smooth digital surfaces\n- Detail\
+      \ density: moderate, readable detail density with clear focal hierarchy\nImage\
+      \ 1: approved Arco identity silhouette/proportions and baseline style only;\
+      \ exclude its clothing, pose and expression.\nImage 2 garment-only: take only\
+      \ these parts/regions: [{\"evidence_status\": \"UNCERTAIN\", \"observations\"\
+      : \"深色收腰连衣裙上身，泡泡肩袖接窄长袖，白色闭合翻领和宽白袖口。\", \"part_id\": \"worn-bodice\", \"region\"\
+      : {\"kind\": \"box\", \"xyxy\": [0.377, 0.166, 0.841, 0.469]}, \"slot\": \"\
+      upper\"}, {\"evidence_status\": \"UNCERTAIN\", \"observations\": \"深色裙身长至足踝附近，白围裙下摆高于黑裙下摆，黑色下缘形成一圈连续裙边。\"\
+      , \"part_id\": \"worn-skirt\", \"region\": {\"kind\": \"box\", \"xyxy\": [0.11,\
+      \ 0.348, 0.97, 0.994]}, \"slot\": \"lower\"}, {\"evidence_status\": \"UNCERTAIN\"\
+      , \"observations\": \"白色围裙胸兜、宽腰带、大前裙片和下摆荷叶边，肩部褶边清晰。\", \"part_id\": \"worn-apron\"\
+      , \"region\": {\"kind\": \"box\", \"xyxy\": [0.278, 0.195, 0.922, 0.921]}, \"\
+      slot\": \"accessories\"}]. Exclude the source person's identity, hair, facial\
+      \ expression, pose, drawing style, background and all unselected accessories.\n\
+      Image 3 garment-only: take only these parts/regions: [{\"evidence_status\":\
+      \ \"UNCERTAIN\", \"observations\": \"上右弧形头箍沿顶部及两侧外缘加白色荷叶边，前额和大部分头发保持露出。\", \"\
+      part_id\": \"ruffled-headband\", \"region\": {\"kind\": \"box\", \"xyxy\": [0.664,\
+      \ 0, 0.984, 0.319]}, \"slot\": \"accessories\"}]. Exclude the source person's\
+      \ identity, hair, facial expression, pose, drawing style, background and all\
+      \ unselected accessories.\nImage 4 garment-only: take only these parts/regions:\
+      \ [{\"evidence_status\": \"UNCERTAIN\", \"observations\": \"窄围裙肩带外侧缝有大幅白色褶边，肩带和褶边连续，带固定扣/纽扣结构。\"\
+      , \"part_id\": \"apron-shoulder-frill\", \"region\": {\"kind\": \"box\", \"\
+      xyxy\": [0.181, 0.028, 0.77, 0.493]}, \"slot\": \"accessories\"}]. Exclude the\
+      \ source person's identity, hair, facial expression, pose, drawing style, background\
+      \ and all unselected accessories.\nImage 5 garment-only: take only these parts/regions:\
+      \ [{\"evidence_status\": \"UNCERTAIN\", \"observations\": \"左侧白领下面是一只宽大蝴蝶结，双侧蝶翼和中央结明确。\"\
+      , \"part_id\": \"large-neck-bow\", \"region\": {\"kind\": \"box\", \"xyxy\"\
+      : [0.066, 0.219, 0.396, 0.869]}, \"slot\": \"accessories\"}]. Exclude the source\
+      \ person's identity, hair, facial expression, pose, drawing style, background\
+      \ and all unselected accessories."
+    references:
+    - reference_id: identity-front
+      asset_id: casual-outfit-crossed-arms-evidence
+      path: D:\learn\Arco\assets\arco\variants\casual-outfit\evidence\crossed-arms.png
+      sha256: 4eff91bea4e535e646ad406a5e8aae5e402c337cee635feb1e6339f0eaa8d974
+      usage: identity
+      view_class: front
+      inherit:
+      - identity
+      - hair
+      - body_proportions
+      - official_arco_style
+      exclude:
+      - outfit
+      - pose
+      - expression
+      - scene
+    - reference_id: material-worn-front
+      source_id: worn-front
+      asset_id: null
+      path: C:\Users\shuai\AppData\Local\Temp\codex-clipboard-aab89fd6-62e9-47b9-8f5c-dea8011d8cce.png
+      sha256: a62233b7084e8af117cc33ed8f20a2bcee55826dd720d4729b7df24b4fcbe5d3
+      usage: garment
+      parts:
+      - part_id: worn-bodice
+        slot: upper
+        observations: 深色收腰连衣裙上身，泡泡肩袖接窄长袖，白色闭合翻领和宽白袖口。
+        evidence_status: UNCERTAIN
+        region:
+          kind: box
+          xyxy:
+          - 0.377
+          - 0.166
+          - 0.841
+          - 0.469
+      - part_id: worn-skirt
+        slot: lower
+        observations: 深色裙身长至足踝附近，白围裙下摆高于黑裙下摆，黑色下缘形成一圈连续裙边。
+        evidence_status: UNCERTAIN
+        region:
+          kind: box
+          xyxy:
+          - 0.11
+          - 0.348
+          - 0.97
+          - 0.994
+      - part_id: worn-apron
+        slot: accessories
+        observations: 白色围裙胸兜、宽腰带、大前裙片和下摆荷叶边，肩部褶边清晰。
+        evidence_status: UNCERTAIN
+        region:
+          kind: box
+          xyxy:
+          - 0.278
+          - 0.195
+          - 0.922
+          - 0.921
+      inherit:
+      - selected_garment_parts
+      exclude:
+      - source_person_identity
+      - source_hair
+      - source_expression
+      - source_pose
+      - source_style
+      - source_background
+      - unselected_accessories
+    - reference_id: material-headdress-detail
+      source_id: headdress-detail
+      asset_id: null
+      path: C:\Users\shuai\AppData\Local\Temp\codex-clipboard-4b1f3ea8-def8-4ded-9892-df297e38d41d.png
+      sha256: c77c59b7b09e0e9fef93321d171559becb8762542a345f0e995880432283e77e
+      usage: garment
+      parts:
+      - part_id: ruffled-headband
+        slot: accessories
+        observations: 上右弧形头箍沿顶部及两侧外缘加白色荷叶边，前额和大部分头发保持露出。
+        evidence_status: UNCERTAIN
+        region:
+          kind: box
+          xyxy:
+          - 0.664
+          - 0
+          - 0.984
+          - 0.319
+      inherit:
+      - selected_garment_parts
+      exclude:
+      - source_person_identity
+      - source_hair
+      - source_expression
+      - source_pose
+      - source_style
+      - source_background
+      - unselected_accessories
+    - reference_id: material-shoulder-frill-detail
+      source_id: shoulder-frill-detail
+      asset_id: null
+      path: C:\Users\shuai\AppData\Local\Temp\codex-clipboard-8b27f2da-6db1-4eec-97b2-8c5687ae13fa.png
+      sha256: 84278bc249f5317a2491bce65c89280a4e2cbaf8250c575420cde1e03f76f68b
+      usage: garment
+      parts:
+      - part_id: apron-shoulder-frill
+        slot: accessories
+        observations: 窄围裙肩带外侧缝有大幅白色褶边，肩带和褶边连续，带固定扣/纽扣结构。
+        evidence_status: UNCERTAIN
+        region:
+          kind: box
+          xyxy:
+          - 0.181
+          - 0.028
+          - 0.77
+          - 0.493
+      inherit:
+      - selected_garment_parts
+      exclude:
+      - source_person_identity
+      - source_hair
+      - source_expression
+      - source_pose
+      - source_style
+      - source_background
+      - unselected_accessories
+    - reference_id: material-neckwear-detail
+      source_id: neckwear-detail
+      asset_id: null
+      path: C:\Users\shuai\AppData\Local\Temp\codex-clipboard-2473ece3-2364-4d85-94da-33bdb475d279.png
+      sha256: fa0611211e86ce7a42faa0bcd69533df729afe9c9afd7d9771d185c69fd0d32c
+      usage: garment
+      parts:
+      - part_id: large-neck-bow
+        slot: accessories
+        observations: 左侧白领下面是一只宽大蝴蝶结，双侧蝶翼和中央结明确。
+        evidence_status: UNCERTAIN
+        region:
+          kind: box
+          xyxy:
+          - 0.066
+          - 0.219
+          - 0.396
+          - 0.869
+      inherit:
+      - selected_garment_parts
+      exclude:
+      - source_person_identity
+      - source_hair
+      - source_expression
+      - source_pose
+      - source_style
+      - source_background
+      - unselected_accessories
+    bindings:
+      D:\learn\Arco\character\identity.yaml: 5f54dea96c70887fc57d52b559c2568e429840815c9d9fab94c07413cf703cb9
+      D:\learn\Arco\character\assets.yaml: f2b171acac5582668933bdcebb0355abb43060b3173c4e146abc8fd20db9eacc
+      D:\learn\Arco\character\style-baseline.yaml: 31353d7bea8f60a237d1b5f78cdbb8d9ea29de41e60d2c0829176a38dd485bd0
+      D:\learn\Arco\variants\index.yaml: 2c5b498a87402ad8cbedd84a0baf74abf195c185b90cd9eb8e7073c947576481
+      C:\Users\shuai\AppData\Local\Temp\codex-clipboard-c9648c88-f4ca-4087-ba12-7a9062a917a5.png: c646d5cc89a1b04cd202b8ba06e487a2b430ffcd0b36143dc4da101f3c6ca943
+      C:\Users\shuai\AppData\Local\Temp\codex-clipboard-e92f9270-2ea7-43a3-a787-ab81f3cd6602.png: a6b815c622ff7d0b231f7187ba1d5530175867b8b3dcc4f19d99e0fb018d82b5
+      C:\Users\shuai\AppData\Local\Temp\codex-clipboard-46517500-ad87-4808-96d3-f057610d2df7.png: 194cf708758ef20841e2bd304c671e417dfc57b41628b21a9bef6f40a0d98618
+      C:\Users\shuai\AppData\Local\Temp\codex-clipboard-aab89fd6-62e9-47b9-8f5c-dea8011d8cce.png: a62233b7084e8af117cc33ed8f20a2bcee55826dd720d4729b7df24b4fcbe5d3
+      C:\Users\shuai\AppData\Local\Temp\codex-clipboard-4956dc55-1d99-4f38-8e83-d3dd3bba0fac.png: 3b52fe07dfba2a0e7b86c7da02874b4d9eb27b79ff88a3ebbc8299525202828d
+      C:\Users\shuai\AppData\Local\Temp\codex-clipboard-4b1f3ea8-def8-4ded-9892-df297e38d41d.png: c77c59b7b09e0e9fef93321d171559becb8762542a345f0e995880432283e77e
+      C:\Users\shuai\AppData\Local\Temp\codex-clipboard-8b27f2da-6db1-4eec-97b2-8c5687ae13fa.png: 84278bc249f5317a2491bce65c89280a4e2cbaf8250c575420cde1e03f76f68b
+      C:\Users\shuai\AppData\Local\Temp\codex-clipboard-2473ece3-2364-4d85-94da-33bdb475d279.png: fa0611211e86ce7a42faa0bcd69533df729afe9c9afd7d9771d185c69fd0d32c
+      D:\learn\Arco\assets\arco\variants\casual-outfit\evidence\crossed-arms.png: 4eff91bea4e535e646ad406a5e8aae5e402c337cee635feb1e6339f0eaa8d974
+      D:\learn\Arco\assets\arco\variants\casual-outfit\evidence\open-arms-no-horns.png: 06c61729cdd23ede65e7376beabe50c7f32da8276709730a750452819c367f3d
+      D:\learn\Arco\assets\arco\identity\back\arco-identity-back-b23d33.png: a9570d82af09d82316fac9a43aec0dd908664183454341f95aea00c990f68f8e
+    selected_reference_ids:
+    - identity-front
+    - material-worn-front
+    - material-headdress-detail
+    - material-shoulder-frill-detail
+    - material-neckwear-detail
+    referenced_image_paths:
+    - D:\learn\Arco\assets\arco\variants\casual-outfit\evidence\crossed-arms.png
+    - C:\Users\shuai\AppData\Local\Temp\codex-clipboard-aab89fd6-62e9-47b9-8f5c-dea8011d8cce.png
+    - C:\Users\shuai\AppData\Local\Temp\codex-clipboard-4b1f3ea8-def8-4ded-9892-df297e38d41d.png
+    - C:\Users\shuai\AppData\Local\Temp\codex-clipboard-8b27f2da-6db1-4eec-97b2-8c5687ae13fa.png
+    - C:\Users\shuai\AppData\Local\Temp\codex-clipboard-2473ece3-2364-4d85-94da-33bdb475d279.png
+    max_automatic_repairs: 2
+    context_sha256: 603b6a3289f777b2870faed09e931287ed934252c7dc2cec7e77d12ea22dec95
+    plan_sha256: b64d04ffe423df5762ff4e6ce7c09de4d034ac731edf6d0537e35b515257cd13
+  right-three-quarter:
+    provider: builtin_image_gen
+    capability: reference_conditioned_image_generation
+    mode: reference_conditioned
+    purpose: outfit_preparation
+    view_id: right-three-quarter
+    prompt: "Prepare a fixed Arco outfit reference: right three-quarter full-body\
+      \ neutral standing view.\nFaceless wearing reference: retain Arco head/hair/body\
+      \ silhouette, omit facial features. Use a clear plain background, unobstructed\
+      \ full-body framing and the official Arco baseline drawing style.\nPreserve\
+      \ selected source garments' original cut, length and colors. Solve joins through\
+      \ the approved wearing relations; apply only explicitly approved redesigns.\n\
+      [Approved Variant Design]\nUse this fixed complete outfit, including its approved\
+      \ authored completions.\nupper (source): 黑色收腰连衣裙上身：闭合白色圆角翻领、泡泡肩袖接窄长袖、宽白袖口，保留两颗袖口扣；与下装同属一件连衣裙。\n\
+      Keep: 保留原款闭合领口、收腰结构和长袖长度。\nKeep: 白袖口保持宽阔，袖口扣作为稳定外观细节。\nlower (source): 黑色宽大长裙与上身相连，长度接近足踝、主要露鞋尖；腰部起褶，内穿白色层叠衬裙保持自然饱满廓形。\n\
+      Keep: 长裙保持原款长度和连续黑色下摆。\nKeep: 围裙的白色下摆高于黑裙下摆，保留清楚的一圈黑裙边。\nKeep: 衬裙平时位于外裙内，不改变原款长裙的正常垂落。\n\
+      footwear (completion): 黑色素面闭口圆头低跟鞋，一双；约2厘米低跟，简洁鞋面，无额外鞋面蝴蝶结或金属饰件。\nKeep: 黑色、圆头、闭口、低跟、素面。\n\
+      Approved decision: 原图只露鞋尖，完整鞋型没有确定；采用之前推荐的简洁圆头低跟方案作为待验收补全。\nhosiery (completion):\
+      \ 一对白色不透明吊带长袜，袜口到大腿上部，配白色吊袜腰带与四条白色吊带（每腿前后各一条），以小型素面吊袜夹连接平整袜口；正常穿着时位于长裙与衬裙内。\n\
+      Keep: 用户明确指定白色吊带袜，必须是左右分开的长袜，通过吊带固定。\nKeep: 白色袜身和平整袜口保持不透明布面，吊带与腰带均为白色。\nKeep:\
+      \ 主穿着图保持完整长裙；连接结构通过衣物细节图呈现。\nApproved decision: 品类与白色来自用户文字；参考未清楚给出袜口、腰带及夹子的款式，采用素面白色腰带、四吊带和小夹作为具体补全，等待设计与试穿计划确认。\n\
+      accessories (source): 白色胸兜式长围裙，腰带在后腰系大蝴蝶结，白色肩带在背部交叉，肩带外侧有白色大褶边；白色荷叶边头箍；白领下方一只黑色大蝴蝶结。\n\
+      Keep: 采用用户选定的弧形荷叶边头箍和大黑色蝴蝶结。\nKeep: 后背X形肩带、肩部白褶边、后腰大蝴蝶结及两条垂尾保持一致。\nKeep: 围裙覆盖连衣裙胸腹和裙身前方，白色胸兜与腰带连接清楚。\n\
+      outerwear (omitted): 不加外套或披肩。\nWearing relation: 黑色上身和黑色长裙是一件收腰连衣裙，白色衬裙位于其内层。\n\
+      Wearing relation: 白色围裙穿在黑色连衣裙外，胸兜接腰带，肩带从胸兜向上经过肩部并在背部交叉，腰带在后腰居中系结。\nWearing relation:\
+      \ 肩部白色褶边属于围裙肩带，位于黑色泡泡袖上方；大黑色领结位于白领正下方、围裙胸兜上沿附近。\nWearing relation: 白色吊袜腰带、四条吊带和一对白色长袜位于裙内；袜身覆盖足部并进入黑色闭口鞋。\n\
+      Wearing relation: 荷叶边头箍佩戴于阿尔可头顶发丝上，保留既有刘海、披散长发和粉色发梢。\nWearing relation: 背面穿着图保留自然披散长发的遮挡；完整肩带与蝴蝶结构造通过无头发的衣物细节图补充。\n\
+      Fixed constraint: 新增为一套完整固定的黑白长裙女仆装，保留原裙长度、原袖长和闭合领口。\nFixed constraint: 身份、发型、体型比例与画风使用正式阿尔可基准；教程人物仅提供指定衣服区域。\n\
+      Fixed constraint: 普通穿着参考采用全身中立站姿、清晰浅色背景和无五官形式。\nFixed constraint: 吊带长袜为白色；领饰为大黑色蝴蝶结；头饰为白色荷叶边头箍。\n\
+      Fixed constraint: 主图与后续视图均依据获认可的同一设计；未认可候选不作为其他视图设计依据。\nApproved gap_resolutions\
+      \ hosiery: 按用户明确要求设计一对白色吊带长袜；腰带、四条吊带、袜口和夹子采用素面白色补全。\nApproved gap_resolutions\
+      \ footwear: 黑色素面闭口圆头低跟鞋，约2厘米低跟，主体穿着图主要露鞋尖，完整鞋型由细节页展示。\nApproved gap_resolutions\
+      \ color_and_material: 将教程的灰阶外观落实为黑色连衣裙、白色围裙和衬裙、白色头箍与袜子、黑色大领结和鞋；采用哑光织物效果，小纽扣和夹子为简洁低光泽。\n\
+      Approved gap_resolutions rear_occlusion: 保留阿尔可既有披散长发；使用衣物背面细节图展示可能被遮挡的X形肩带和后腰系结。\n\
+      Approved conflict_resolutions headdress_variants: 用户已选补图2的荷叶边头箍，后脑罩式款不属于该套装。\n\
+      Approved conflict_resolutions neckwear_variants: 用户已选补图4左侧大蝴蝶结，取代原全身图的椭圆胸针领巾。\n\
+      Approved conflict_resolutions hosiery_previous_default: 白色吊带长袜取代之前讨论的黑色不透裤袜建议。\n\
+      [/Approved Variant Design]\nRendering style requirements:\n- Linework: clean,\
+      \ crisp anime linework with controlled contours\n- Shading: soft cel-shaded\
+      \ form modeling with limited blending\n- Color logic: clear local-color separation\
+      \ with a clean anime palette\n  Color scope: Color logic affects overall rendering\
+      \ and palette relationships only; preserve intrinsic identity colors for hair\
+      \ color, eye color, and variant key colors.\n- Highlight language: selective\
+      \ grouped highlights on major forms and glossy surfaces\n- Texture language:\
+      \ minimal low-frequency texture and mostly smooth digital surfaces\n- Detail\
+      \ density: moderate, readable detail density with clear focal hierarchy\nImage\
+      \ 1: approved Arco identity silhouette/proportions and baseline style only;\
+      \ exclude its clothing, pose and expression.\nImage 2: human-accepted front\
+      \ design anchor; preserve the locked outfit structure across views. Do not copy\
+      \ its front camera into the requested view.\nImage 3 garment-only: take only\
+      \ these parts/regions: [{\"evidence_status\": \"UNCERTAIN\", \"observations\"\
+      : \"深色收腰连衣裙上身，泡泡肩袖接窄长袖，白色闭合翻领和宽白袖口。\", \"part_id\": \"worn-bodice\", \"region\"\
+      : {\"kind\": \"box\", \"xyxy\": [0.377, 0.166, 0.841, 0.469]}, \"slot\": \"\
+      upper\"}, {\"evidence_status\": \"UNCERTAIN\", \"observations\": \"深色裙身长至足踝附近，白围裙下摆高于黑裙下摆，黑色下缘形成一圈连续裙边。\"\
+      , \"part_id\": \"worn-skirt\", \"region\": {\"kind\": \"box\", \"xyxy\": [0.11,\
+      \ 0.348, 0.97, 0.994]}, \"slot\": \"lower\"}, {\"evidence_status\": \"UNCERTAIN\"\
+      , \"observations\": \"白色围裙胸兜、宽腰带、大前裙片和下摆荷叶边，肩部褶边清晰。\", \"part_id\": \"worn-apron\"\
+      , \"region\": {\"kind\": \"box\", \"xyxy\": [0.278, 0.195, 0.922, 0.921]}, \"\
+      slot\": \"accessories\"}]. Exclude the source person's identity, hair, facial\
+      \ expression, pose, drawing style, background and all unselected accessories.\n\
+      Image 4 garment-only: take only these parts/regions: [{\"evidence_status\":\
+      \ \"UNCERTAIN\", \"observations\": \"上右弧形头箍沿顶部及两侧外缘加白色荷叶边，前额和大部分头发保持露出。\", \"\
+      part_id\": \"ruffled-headband\", \"region\": {\"kind\": \"box\", \"xyxy\": [0.664,\
+      \ 0, 0.984, 0.319]}, \"slot\": \"accessories\"}]. Exclude the source person's\
+      \ identity, hair, facial expression, pose, drawing style, background and all\
+      \ unselected accessories.\nImage 5 garment-only: take only these parts/regions:\
+      \ [{\"evidence_status\": \"UNCERTAIN\", \"observations\": \"窄围裙肩带外侧缝有大幅白色褶边，肩带和褶边连续，带固定扣/纽扣结构。\"\
+      , \"part_id\": \"apron-shoulder-frill\", \"region\": {\"kind\": \"box\", \"\
+      xyxy\": [0.181, 0.028, 0.77, 0.493]}, \"slot\": \"accessories\"}]. Exclude the\
+      \ source person's identity, hair, facial expression, pose, drawing style, background\
+      \ and all unselected accessories."
+    references:
+    - reference_id: identity-right-three-quarter
+      asset_id: casual-outfit-open-arms-no-horns-evidence
+      path: D:\learn\Arco\assets\arco\variants\casual-outfit\evidence\open-arms-no-horns.png
+      sha256: 06c61729cdd23ede65e7376beabe50c7f32da8276709730a750452819c367f3d
+      usage: identity
+      view_class: three_quarter_right
+      inherit:
+      - identity
+      - hair
+      - body_proportions
+      - official_arco_style
+      exclude:
+      - outfit
+      - pose
+      - expression
+      - scene
+    - reference_id: accepted-primary
+      candidate_id: front-44e5537f
+      path: D:\learn\Arco\calibration\preparations\prep-20261004T165937Z-a1f765\candidates\front-44e5537f.png
+      sha256: 7b7a3c14c6216c2c8a38e0cc91af29fafe0c2ad148d8d80bebe0de5516d400b2
+      usage: accepted_primary
+    - reference_id: material-worn-front
+      source_id: worn-front
+      asset_id: null
+      path: C:\Users\shuai\AppData\Local\Temp\codex-clipboard-aab89fd6-62e9-47b9-8f5c-dea8011d8cce.png
+      sha256: a62233b7084e8af117cc33ed8f20a2bcee55826dd720d4729b7df24b4fcbe5d3
+      usage: garment
+      parts:
+      - part_id: worn-bodice
+        slot: upper
+        observations: 深色收腰连衣裙上身，泡泡肩袖接窄长袖，白色闭合翻领和宽白袖口。
+        evidence_status: UNCERTAIN
+        region:
+          kind: box
+          xyxy:
+          - 0.377
+          - 0.166
+          - 0.841
+          - 0.469
+      - part_id: worn-skirt
+        slot: lower
+        observations: 深色裙身长至足踝附近，白围裙下摆高于黑裙下摆，黑色下缘形成一圈连续裙边。
+        evidence_status: UNCERTAIN
+        region:
+          kind: box
+          xyxy:
+          - 0.11
+          - 0.348
+          - 0.97
+          - 0.994
+      - part_id: worn-apron
+        slot: accessories
+        observations: 白色围裙胸兜、宽腰带、大前裙片和下摆荷叶边，肩部褶边清晰。
+        evidence_status: UNCERTAIN
+        region:
+          kind: box
+          xyxy:
+          - 0.278
+          - 0.195
+          - 0.922
+          - 0.921
+      inherit:
+      - selected_garment_parts
+      exclude:
+      - source_person_identity
+      - source_hair
+      - source_expression
+      - source_pose
+      - source_style
+      - source_background
+      - unselected_accessories
+    - reference_id: material-headdress-detail
+      source_id: headdress-detail
+      asset_id: null
+      path: C:\Users\shuai\AppData\Local\Temp\codex-clipboard-4b1f3ea8-def8-4ded-9892-df297e38d41d.png
+      sha256: c77c59b7b09e0e9fef93321d171559becb8762542a345f0e995880432283e77e
+      usage: garment
+      parts:
+      - part_id: ruffled-headband
+        slot: accessories
+        observations: 上右弧形头箍沿顶部及两侧外缘加白色荷叶边，前额和大部分头发保持露出。
+        evidence_status: UNCERTAIN
+        region:
+          kind: box
+          xyxy:
+          - 0.664
+          - 0
+          - 0.984
+          - 0.319
+      inherit:
+      - selected_garment_parts
+      exclude:
+      - source_person_identity
+      - source_hair
+      - source_expression
+      - source_pose
+      - source_style
+      - source_background
+      - unselected_accessories
+    - reference_id: material-shoulder-frill-detail
+      source_id: shoulder-frill-detail
+      asset_id: null
+      path: C:\Users\shuai\AppData\Local\Temp\codex-clipboard-8b27f2da-6db1-4eec-97b2-8c5687ae13fa.png
+      sha256: 84278bc249f5317a2491bce65c89280a4e2cbaf8250c575420cde1e03f76f68b
+      usage: garment
+      parts:
+      - part_id: apron-shoulder-frill
+        slot: accessories
+        observations: 窄围裙肩带外侧缝有大幅白色褶边，肩带和褶边连续，带固定扣/纽扣结构。
+        evidence_status: UNCERTAIN
+        region:
+          kind: box
+          xyxy:
+          - 0.181
+          - 0.028
+          - 0.77
+          - 0.493
+      inherit:
+      - selected_garment_parts
+      exclude:
+      - source_person_identity
+      - source_hair
+      - source_expression
+      - source_pose
+      - source_style
+      - source_background
+      - unselected_accessories
+    bindings:
+      D:\learn\Arco\character\identity.yaml: 5f54dea96c70887fc57d52b559c2568e429840815c9d9fab94c07413cf703cb9
+      D:\learn\Arco\character\assets.yaml: f2b171acac5582668933bdcebb0355abb43060b3173c4e146abc8fd20db9eacc
+      D:\learn\Arco\character\style-baseline.yaml: 31353d7bea8f60a237d1b5f78cdbb8d9ea29de41e60d2c0829176a38dd485bd0
+      D:\learn\Arco\variants\index.yaml: 2c5b498a87402ad8cbedd84a0baf74abf195c185b90cd9eb8e7073c947576481
+      C:\Users\shuai\AppData\Local\Temp\codex-clipboard-c9648c88-f4ca-4087-ba12-7a9062a917a5.png: c646d5cc89a1b04cd202b8ba06e487a2b430ffcd0b36143dc4da101f3c6ca943
+      C:\Users\shuai\AppData\Local\Temp\codex-clipboard-e92f9270-2ea7-43a3-a787-ab81f3cd6602.png: a6b815c622ff7d0b231f7187ba1d5530175867b8b3dcc4f19d99e0fb018d82b5
+      C:\Users\shuai\AppData\Local\Temp\codex-clipboard-46517500-ad87-4808-96d3-f057610d2df7.png: 194cf708758ef20841e2bd304c671e417dfc57b41628b21a9bef6f40a0d98618
+      C:\Users\shuai\AppData\Local\Temp\codex-clipboard-aab89fd6-62e9-47b9-8f5c-dea8011d8cce.png: a62233b7084e8af117cc33ed8f20a2bcee55826dd720d4729b7df24b4fcbe5d3
+      C:\Users\shuai\AppData\Local\Temp\codex-clipboard-4956dc55-1d99-4f38-8e83-d3dd3bba0fac.png: 3b52fe07dfba2a0e7b86c7da02874b4d9eb27b79ff88a3ebbc8299525202828d
+      C:\Users\shuai\AppData\Local\Temp\codex-clipboard-4b1f3ea8-def8-4ded-9892-df297e38d41d.png: c77c59b7b09e0e9fef93321d171559becb8762542a345f0e995880432283e77e
+      C:\Users\shuai\AppData\Local\Temp\codex-clipboard-8b27f2da-6db1-4eec-97b2-8c5687ae13fa.png: 84278bc249f5317a2491bce65c89280a4e2cbaf8250c575420cde1e03f76f68b
+      C:\Users\shuai\AppData\Local\Temp\codex-clipboard-2473ece3-2364-4d85-94da-33bdb475d279.png: fa0611211e86ce7a42faa0bcd69533df729afe9c9afd7d9771d185c69fd0d32c
+      D:\learn\Arco\assets\arco\variants\casual-outfit\evidence\crossed-arms.png: 4eff91bea4e535e646ad406a5e8aae5e402c337cee635feb1e6339f0eaa8d974
+      D:\learn\Arco\assets\arco\variants\casual-outfit\evidence\open-arms-no-horns.png: 06c61729cdd23ede65e7376beabe50c7f32da8276709730a750452819c367f3d
+      D:\learn\Arco\assets\arco\identity\back\arco-identity-back-b23d33.png: a9570d82af09d82316fac9a43aec0dd908664183454341f95aea00c990f68f8e
+      D:\learn\Arco\calibration\preparations\prep-20261004T165937Z-a1f765\candidates\front-44e5537f.png: 7b7a3c14c6216c2c8a38e0cc91af29fafe0c2ad148d8d80bebe0de5516d400b2
+    selected_reference_ids:
+    - identity-right-three-quarter
+    - accepted-primary
+    - material-worn-front
+    - material-headdress-detail
+    - material-shoulder-frill-detail
+    referenced_image_paths:
+    - D:\learn\Arco\assets\arco\variants\casual-outfit\evidence\open-arms-no-horns.png
+    - D:\learn\Arco\calibration\preparations\prep-20261004T165937Z-a1f765\candidates\front-44e5537f.png
+    - C:\Users\shuai\AppData\Local\Temp\codex-clipboard-aab89fd6-62e9-47b9-8f5c-dea8011d8cce.png
+    - C:\Users\shuai\AppData\Local\Temp\codex-clipboard-4b1f3ea8-def8-4ded-9892-df297e38d41d.png
+    - C:\Users\shuai\AppData\Local\Temp\codex-clipboard-8b27f2da-6db1-4eec-97b2-8c5687ae13fa.png
+    max_automatic_repairs: 2
+    context_sha256: 805b751b1cf754cbc3d259d0aad6a5ffd79195fef4ebed0015e03ed06b604687
+    plan_sha256: 599d402850d6953c2970c5735215462967fdee882815696973477d59be173fb9
+  back:
+    provider: builtin_image_gen
+    capability: reference_conditioned_image_generation
+    mode: reference_conditioned
+    purpose: outfit_preparation
+    view_id: back
+    prompt: "Prepare a fixed Arco outfit reference: back full-body neutral standing\
+      \ view, face invisible.\nFaceless wearing reference: retain Arco head/hair/body\
+      \ silhouette, omit facial features. Use a clear plain background, unobstructed\
+      \ full-body framing and the official Arco baseline drawing style.\nPreserve\
+      \ selected source garments' original cut, length and colors. Solve joins through\
+      \ the approved wearing relations; apply only explicitly approved redesigns.\n\
+      [Approved Variant Design]\nUse this fixed complete outfit, including its approved\
+      \ authored completions.\nupper (source): 黑色收腰连衣裙上身：闭合白色圆角翻领、泡泡肩袖接窄长袖、宽白袖口，保留两颗袖口扣；与下装同属一件连衣裙。\n\
+      Keep: 保留原款闭合领口、收腰结构和长袖长度。\nKeep: 白袖口保持宽阔，袖口扣作为稳定外观细节。\nlower (source): 黑色宽大长裙与上身相连，长度接近足踝、主要露鞋尖；腰部起褶，内穿白色层叠衬裙保持自然饱满廓形。\n\
+      Keep: 长裙保持原款长度和连续黑色下摆。\nKeep: 围裙的白色下摆高于黑裙下摆，保留清楚的一圈黑裙边。\nKeep: 衬裙平时位于外裙内，不改变原款长裙的正常垂落。\n\
+      footwear (completion): 黑色素面闭口圆头低跟鞋，一双；约2厘米低跟，简洁鞋面，无额外鞋面蝴蝶结或金属饰件。\nKeep: 黑色、圆头、闭口、低跟、素面。\n\
+      Approved decision: 原图只露鞋尖，完整鞋型没有确定；采用之前推荐的简洁圆头低跟方案作为待验收补全。\nhosiery (completion):\
+      \ 一对白色不透明吊带长袜，袜口到大腿上部，配白色吊袜腰带与四条白色吊带（每腿前后各一条），以小型素面吊袜夹连接平整袜口；正常穿着时位于长裙与衬裙内。\n\
+      Keep: 用户明确指定白色吊带袜，必须是左右分开的长袜，通过吊带固定。\nKeep: 白色袜身和平整袜口保持不透明布面，吊带与腰带均为白色。\nKeep:\
+      \ 主穿着图保持完整长裙；连接结构通过衣物细节图呈现。\nApproved decision: 品类与白色来自用户文字；参考未清楚给出袜口、腰带及夹子的款式，采用素面白色腰带、四吊带和小夹作为具体补全，等待设计与试穿计划确认。\n\
+      accessories (source): 白色胸兜式长围裙，腰带在后腰系大蝴蝶结，白色肩带在背部交叉，肩带外侧有白色大褶边；白色荷叶边头箍；白领下方一只黑色大蝴蝶结。\n\
+      Keep: 采用用户选定的弧形荷叶边头箍和大黑色蝴蝶结。\nKeep: 后背X形肩带、肩部白褶边、后腰大蝴蝶结及两条垂尾保持一致。\nKeep: 围裙覆盖连衣裙胸腹和裙身前方，白色胸兜与腰带连接清楚。\n\
+      outerwear (omitted): 不加外套或披肩。\nWearing relation: 黑色上身和黑色长裙是一件收腰连衣裙，白色衬裙位于其内层。\n\
+      Wearing relation: 白色围裙穿在黑色连衣裙外，胸兜接腰带，肩带从胸兜向上经过肩部并在背部交叉，腰带在后腰居中系结。\nWearing relation:\
+      \ 肩部白色褶边属于围裙肩带，位于黑色泡泡袖上方；大黑色领结位于白领正下方、围裙胸兜上沿附近。\nWearing relation: 白色吊袜腰带、四条吊带和一对白色长袜位于裙内；袜身覆盖足部并进入黑色闭口鞋。\n\
+      Wearing relation: 荷叶边头箍佩戴于阿尔可头顶发丝上，保留既有刘海、披散长发和粉色发梢。\nWearing relation: 背面穿着图保留自然披散长发的遮挡；完整肩带与蝴蝶结构造通过无头发的衣物细节图补充。\n\
+      Fixed constraint: 新增为一套完整固定的黑白长裙女仆装，保留原裙长度、原袖长和闭合领口。\nFixed constraint: 身份、发型、体型比例与画风使用正式阿尔可基准；教程人物仅提供指定衣服区域。\n\
+      Fixed constraint: 普通穿着参考采用全身中立站姿、清晰浅色背景和无五官形式。\nFixed constraint: 吊带长袜为白色；领饰为大黑色蝴蝶结；头饰为白色荷叶边头箍。\n\
+      Fixed constraint: 主图与后续视图均依据获认可的同一设计；未认可候选不作为其他视图设计依据。\nApproved gap_resolutions\
+      \ hosiery: 按用户明确要求设计一对白色吊带长袜；腰带、四条吊带、袜口和夹子采用素面白色补全。\nApproved gap_resolutions\
+      \ footwear: 黑色素面闭口圆头低跟鞋，约2厘米低跟，主体穿着图主要露鞋尖，完整鞋型由细节页展示。\nApproved gap_resolutions\
+      \ color_and_material: 将教程的灰阶外观落实为黑色连衣裙、白色围裙和衬裙、白色头箍与袜子、黑色大领结和鞋；采用哑光织物效果，小纽扣和夹子为简洁低光泽。\n\
+      Approved gap_resolutions rear_occlusion: 保留阿尔可既有披散长发；使用衣物背面细节图展示可能被遮挡的X形肩带和后腰系结。\n\
+      Approved conflict_resolutions headdress_variants: 用户已选补图2的荷叶边头箍，后脑罩式款不属于该套装。\n\
+      Approved conflict_resolutions neckwear_variants: 用户已选补图4左侧大蝴蝶结，取代原全身图的椭圆胸针领巾。\n\
+      Approved conflict_resolutions hosiery_previous_default: 白色吊带长袜取代之前讨论的黑色不透裤袜建议。\n\
+      [/Approved Variant Design]\nRendering style requirements:\n- Linework: clean,\
+      \ crisp anime linework with controlled contours\n- Shading: soft cel-shaded\
+      \ form modeling with limited blending\n- Color logic: clear local-color separation\
+      \ with a clean anime palette\n  Color scope: Color logic affects overall rendering\
+      \ and palette relationships only; preserve intrinsic identity colors for hair\
+      \ color, eye color, and variant key colors.\n- Highlight language: selective\
+      \ grouped highlights on major forms and glossy surfaces\n- Texture language:\
+      \ minimal low-frequency texture and mostly smooth digital surfaces\n- Detail\
+      \ density: moderate, readable detail density with clear focal hierarchy\n[Approved\
+      \ Back Identity]\n延续正式阿尔可正面和右斜侧参考的冰银浅蓝长发、粉色发梢、纤细修长体型和既有相对比例。\n后方长发自然披散，保持前后相容的发量、发长和发梢层次；头饰和其他服装饰物由各套装单独决定。\n\
+      此标定只建立全局复用的后脑发束与背面身体轮廓，衣服使用正式常服作遮蔽，不登记新的常服背面设计。\nApproved rear completion: 后脑到后背的未见发束连接采用自然散发的连续层次，不新增编发、扎发或改变发长；按两张正式图中发梢相对腰臀的位置补齐后方发尾。\n\
+      [/Approved Back Identity]\nImage 1: approved Arco identity silhouette/proportions\
+      \ and baseline style only; exclude its clothing, pose and expression.\nImage\
+      \ 2: human-accepted front design anchor; preserve the locked outfit structure\
+      \ across views. Do not copy its front camera into the requested view.\nImage\
+      \ 3 garment-only: take only these parts/regions: [{\"evidence_status\": \"UNCERTAIN\"\
+      , \"observations\": \"连衣裙前上身收腰，鼓起的短泡泡袖接窄长袖，闭合白翻领和宽白袖口。\", \"part_id\": \"dress-front-upper\"\
+      , \"region\": {\"kind\": \"box\", \"xyxy\": [0.424, 0.16, 0.612, 0.464]}, \"\
+      slot\": \"upper\"}, {\"evidence_status\": \"UNCERTAIN\", \"observations\": \"\
+      独立后视连衣裙图显示闭合后背和收腰接缝。\", \"part_id\": \"dress-back-upper\", \"region\": {\"kind\"\
+      : \"box\", \"xyxy\": [0.626, 0.154, 0.858, 0.455]}, \"slot\": \"upper\"}, {\"\
+      evidence_status\": \"UNCERTAIN\", \"observations\": \"黑白图中的深色长裙从腰部褶裥展开，裙身宽大、自然垂落。\"\
+      , \"part_id\": \"dress-front-skirt\", \"region\": {\"kind\": \"box\", \"xyxy\"\
+      : [0.382, 0.407, 0.624, 0.702]}, \"slot\": \"lower\"}, {\"evidence_status\"\
+      : \"UNCERTAIN\", \"observations\": \"独立后视长裙从腰缝起褶，下摆连续。\", \"part_id\": \"dress-back-skirt\"\
+      , \"region\": {\"kind\": \"box\", \"xyxy\": [0.6, 0.398, 0.862, 0.718]}, \"\
+      slot\": \"lower\"}, {\"evidence_status\": \"UNCERTAIN\", \"observations\": \"\
+      独立白袖口和纽扣结构，保留宽袖口及两颗扣的外观。\", \"part_id\": \"cuff-construction\", \"region\":\
+      \ {\"kind\": \"box\", \"xyxy\": [0.441, 0.718, 0.626, 0.965]}, \"slot\": \"\
+      upper\"}]. Exclude the source person's identity, hair, facial expression, pose,\
+      \ drawing style, background and all unselected accessories.\nImage 4 garment-only:\
+      \ take only these parts/regions: [{\"evidence_status\": \"UNCERTAIN\", \"observations\"\
+      : \"白色胸兜式长围裙，腰带清楚，前裙片宽大，下摆有荷叶边。\", \"part_id\": \"apron-front\", \"region\"\
+      : {\"kind\": \"box\", \"xyxy\": [0.055, 0.119, 0.243, 0.655]}, \"slot\": \"\
+      accessories\"}, {\"evidence_status\": \"UNCERTAIN\", \"observations\": \"围裙肩带在背部交叉，后腰系大蝴蝶结和两条垂尾。\"\
+      , \"part_id\": \"apron-back\", \"region\": {\"kind\": \"box\", \"xyxy\": [0.226,\
+      \ 0.128, 0.395, 0.671]}, \"slot\": \"accessories\"}]. Exclude the source person's\
+      \ identity, hair, facial expression, pose, drawing style, background and all\
+      \ unselected accessories.\nImage 5 garment-only: take only these parts/regions:\
+      \ [{\"evidence_status\": \"UNCERTAIN\", \"observations\": \"窄围裙肩带外侧缝有大幅白色褶边，肩带和褶边连续，带固定扣/纽扣结构。\"\
+      , \"part_id\": \"apron-shoulder-frill\", \"region\": {\"kind\": \"box\", \"\
+      xyxy\": [0.181, 0.028, 0.77, 0.493]}, \"slot\": \"accessories\"}]. Exclude the\
+      \ source person's identity, hair, facial expression, pose, drawing style, background\
+      \ and all unselected accessories."
+    references:
+    - reference_id: identity-back
+      asset_id: arco-identity-back-b23d33
+      path: D:\learn\Arco\assets\arco\identity\back\arco-identity-back-b23d33.png
+      sha256: a9570d82af09d82316fac9a43aec0dd908664183454341f95aea00c990f68f8e
+      usage: identity
+      view_class: back
+      inherit:
+      - identity
+      - hair
+      - body_proportions
+      - official_arco_style
+      exclude:
+      - outfit
+      - pose
+      - expression
+      - scene
+    - reference_id: accepted-primary
+      candidate_id: front-44e5537f
+      path: D:\learn\Arco\calibration\preparations\prep-20261004T165937Z-a1f765\candidates\front-44e5537f.png
+      sha256: 7b7a3c14c6216c2c8a38e0cc91af29fafe0c2ad148d8d80bebe0de5516d400b2
+      usage: accepted_primary
+    - reference_id: material-dress-structure
+      source_id: dress-structure
+      asset_id: null
+      path: C:\Users\shuai\AppData\Local\Temp\codex-clipboard-c9648c88-f4ca-4087-ba12-7a9062a917a5.png
+      sha256: c646d5cc89a1b04cd202b8ba06e487a2b430ffcd0b36143dc4da101f3c6ca943
+      usage: garment
+      parts:
+      - part_id: dress-front-upper
+        slot: upper
+        observations: 连衣裙前上身收腰，鼓起的短泡泡袖接窄长袖，闭合白翻领和宽白袖口。
+        evidence_status: UNCERTAIN
+        region:
+          kind: box
+          xyxy:
+          - 0.424
+          - 0.16
+          - 0.612
+          - 0.464
+      - part_id: dress-back-upper
+        slot: upper
+        observations: 独立后视连衣裙图显示闭合后背和收腰接缝。
+        evidence_status: UNCERTAIN
+        region:
+          kind: box
+          xyxy:
+          - 0.626
+          - 0.154
+          - 0.858
+          - 0.455
+      - part_id: dress-front-skirt
+        slot: lower
+        observations: 黑白图中的深色长裙从腰部褶裥展开，裙身宽大、自然垂落。
+        evidence_status: UNCERTAIN
+        region:
+          kind: box
+          xyxy:
+          - 0.382
+          - 0.407
+          - 0.624
+          - 0.702
+      - part_id: dress-back-skirt
+        slot: lower
+        observations: 独立后视长裙从腰缝起褶，下摆连续。
+        evidence_status: UNCERTAIN
+        region:
+          kind: box
+          xyxy:
+          - 0.6
+          - 0.398
+          - 0.862
+          - 0.718
+      - part_id: cuff-construction
+        slot: upper
+        observations: 独立白袖口和纽扣结构，保留宽袖口及两颗扣的外观。
+        evidence_status: UNCERTAIN
+        region:
+          kind: box
+          xyxy:
+          - 0.441
+          - 0.718
+          - 0.626
+          - 0.965
+      inherit:
+      - selected_garment_parts
+      exclude:
+      - source_person_identity
+      - source_hair
+      - source_expression
+      - source_pose
+      - source_style
+      - source_background
+      - unselected_accessories
+    - reference_id: material-apron-structure
+      source_id: apron-structure
+      asset_id: null
+      path: C:\Users\shuai\AppData\Local\Temp\codex-clipboard-e92f9270-2ea7-43a3-a787-ab81f3cd6602.png
+      sha256: a6b815c622ff7d0b231f7187ba1d5530175867b8b3dcc4f19d99e0fb018d82b5
+      usage: garment
+      parts:
+      - part_id: apron-front
+        slot: accessories
+        observations: 白色胸兜式长围裙，腰带清楚，前裙片宽大，下摆有荷叶边。
+        evidence_status: UNCERTAIN
+        region:
+          kind: box
+          xyxy:
+          - 0.055
+          - 0.119
+          - 0.243
+          - 0.655
+      - part_id: apron-back
+        slot: accessories
+        observations: 围裙肩带在背部交叉，后腰系大蝴蝶结和两条垂尾。
+        evidence_status: UNCERTAIN
+        region:
+          kind: box
+          xyxy:
+          - 0.226
+          - 0.128
+          - 0.395
+          - 0.671
+      inherit:
+      - selected_garment_parts
+      exclude:
+      - source_person_identity
+      - source_hair
+      - source_expression
+      - source_pose
+      - source_style
+      - source_background
+      - unselected_accessories
+    - reference_id: material-shoulder-frill-detail
+      source_id: shoulder-frill-detail
+      asset_id: null
+      path: C:\Users\shuai\AppData\Local\Temp\codex-clipboard-8b27f2da-6db1-4eec-97b2-8c5687ae13fa.png
+      sha256: 84278bc249f5317a2491bce65c89280a4e2cbaf8250c575420cde1e03f76f68b
+      usage: garment
+      parts:
+      - part_id: apron-shoulder-frill
+        slot: accessories
+        observations: 窄围裙肩带外侧缝有大幅白色褶边，肩带和褶边连续，带固定扣/纽扣结构。
+        evidence_status: UNCERTAIN
+        region:
+          kind: box
+          xyxy:
+          - 0.181
+          - 0.028
+          - 0.77
+          - 0.493
+      inherit:
+      - selected_garment_parts
+      exclude:
+      - source_person_identity
+      - source_hair
+      - source_expression
+      - source_pose
+      - source_style
+      - source_background
+      - unselected_accessories
+    bindings:
+      D:\learn\Arco\character\identity.yaml: 5f54dea96c70887fc57d52b559c2568e429840815c9d9fab94c07413cf703cb9
+      D:\learn\Arco\character\assets.yaml: f2b171acac5582668933bdcebb0355abb43060b3173c4e146abc8fd20db9eacc
+      D:\learn\Arco\character\style-baseline.yaml: 31353d7bea8f60a237d1b5f78cdbb8d9ea29de41e60d2c0829176a38dd485bd0
+      D:\learn\Arco\variants\index.yaml: 2c5b498a87402ad8cbedd84a0baf74abf195c185b90cd9eb8e7073c947576481
+      C:\Users\shuai\AppData\Local\Temp\codex-clipboard-c9648c88-f4ca-4087-ba12-7a9062a917a5.png: c646d5cc89a1b04cd202b8ba06e487a2b430ffcd0b36143dc4da101f3c6ca943
+      C:\Users\shuai\AppData\Local\Temp\codex-clipboard-e92f9270-2ea7-43a3-a787-ab81f3cd6602.png: a6b815c622ff7d0b231f7187ba1d5530175867b8b3dcc4f19d99e0fb018d82b5
+      C:\Users\shuai\AppData\Local\Temp\codex-clipboard-46517500-ad87-4808-96d3-f057610d2df7.png: 194cf708758ef20841e2bd304c671e417dfc57b41628b21a9bef6f40a0d98618
+      C:\Users\shuai\AppData\Local\Temp\codex-clipboard-aab89fd6-62e9-47b9-8f5c-dea8011d8cce.png: a62233b7084e8af117cc33ed8f20a2bcee55826dd720d4729b7df24b4fcbe5d3
+      C:\Users\shuai\AppData\Local\Temp\codex-clipboard-4956dc55-1d99-4f38-8e83-d3dd3bba0fac.png: 3b52fe07dfba2a0e7b86c7da02874b4d9eb27b79ff88a3ebbc8299525202828d
+      C:\Users\shuai\AppData\Local\Temp\codex-clipboard-4b1f3ea8-def8-4ded-9892-df297e38d41d.png: c77c59b7b09e0e9fef93321d171559becb8762542a345f0e995880432283e77e
+      C:\Users\shuai\AppData\Local\Temp\codex-clipboard-8b27f2da-6db1-4eec-97b2-8c5687ae13fa.png: 84278bc249f5317a2491bce65c89280a4e2cbaf8250c575420cde1e03f76f68b
+      C:\Users\shuai\AppData\Local\Temp\codex-clipboard-2473ece3-2364-4d85-94da-33bdb475d279.png: fa0611211e86ce7a42faa0bcd69533df729afe9c9afd7d9771d185c69fd0d32c
+      D:\learn\Arco\assets\arco\variants\casual-outfit\evidence\crossed-arms.png: 4eff91bea4e535e646ad406a5e8aae5e402c337cee635feb1e6339f0eaa8d974
+      D:\learn\Arco\assets\arco\variants\casual-outfit\evidence\open-arms-no-horns.png: 06c61729cdd23ede65e7376beabe50c7f32da8276709730a750452819c367f3d
+      D:\learn\Arco\assets\arco\identity\back\arco-identity-back-b23d33.png: a9570d82af09d82316fac9a43aec0dd908664183454341f95aea00c990f68f8e
+      D:\learn\Arco\calibration\preparations\prep-20261004T165937Z-a1f765\candidates\front-44e5537f.png: 7b7a3c14c6216c2c8a38e0cc91af29fafe0c2ad148d8d80bebe0de5516d400b2
+    selected_reference_ids:
+    - identity-back
+    - accepted-primary
+    - material-dress-structure
+    - material-apron-structure
+    - material-shoulder-frill-detail
+    referenced_image_paths:
+    - D:\learn\Arco\assets\arco\identity\back\arco-identity-back-b23d33.png
+    - D:\learn\Arco\calibration\preparations\prep-20261004T165937Z-a1f765\candidates\front-44e5537f.png
+    - C:\Users\shuai\AppData\Local\Temp\codex-clipboard-c9648c88-f4ca-4087-ba12-7a9062a917a5.png
+    - C:\Users\shuai\AppData\Local\Temp\codex-clipboard-e92f9270-2ea7-43a3-a787-ab81f3cd6602.png
+    - C:\Users\shuai\AppData\Local\Temp\codex-clipboard-8b27f2da-6db1-4eec-97b2-8c5687ae13fa.png
+    max_automatic_repairs: 2
+    context_sha256: 805b751b1cf754cbc3d259d0aad6a5ffd79195fef4ebed0015e03ed06b604687
+    plan_sha256: 98c194d2e092ca635eb500d71b3612b2316511dd3f6ec65b66537b528e49880e
+  detail-back-apron:
+    provider: builtin_image_gen
+    capability: reference_conditioned_image_generation
+    mode: reference_conditioned
+    purpose: outfit_preparation
+    view_id: detail-back-apron
+    prompt: "Prepare a fixed Arco outfit reference: 衣物单独展示：黑色连衣裙和白围裙的背面上身到后腰，完整显示X形肩带、肩部褶边、腰带和后腰大蝴蝶结及垂尾；无头发遮挡，浅色背景，不改变人物的正常披散发型。.\n\
+      Garment-only detail reference: use a close-up or flat-lay composition as specified\
+      \ by the detail requirement. Render only the garment items named in that requirement;\
+      \ use the whole-outfit design and wearing relations only to keep those items\
+      \ consistent. Do not depict a person, human body, head, hair or facial features.\
+      \ Use a clear plain background and the official Arco baseline drawing style.\n\
+      Preserve selected source garments' original cut, length and colors. Solve joins\
+      \ through the approved wearing relations; apply only explicitly approved redesigns.\n\
+      [Approved Variant Design]\nUse this fixed complete outfit, including its approved\
+      \ authored completions.\nupper (source): 黑色收腰连衣裙上身：闭合白色圆角翻领、泡泡肩袖接窄长袖、宽白袖口，保留两颗袖口扣；与下装同属一件连衣裙。\n\
+      Keep: 保留原款闭合领口、收腰结构和长袖长度。\nKeep: 白袖口保持宽阔，袖口扣作为稳定外观细节。\nlower (source): 黑色宽大长裙与上身相连，长度接近足踝、主要露鞋尖；腰部起褶，内穿白色层叠衬裙保持自然饱满廓形。\n\
+      Keep: 长裙保持原款长度和连续黑色下摆。\nKeep: 围裙的白色下摆高于黑裙下摆，保留清楚的一圈黑裙边。\nKeep: 衬裙平时位于外裙内，不改变原款长裙的正常垂落。\n\
+      footwear (completion): 黑色素面闭口圆头低跟鞋，一双；约2厘米低跟，简洁鞋面，无额外鞋面蝴蝶结或金属饰件。\nKeep: 黑色、圆头、闭口、低跟、素面。\n\
+      Approved decision: 原图只露鞋尖，完整鞋型没有确定；采用之前推荐的简洁圆头低跟方案作为待验收补全。\nhosiery (completion):\
+      \ 一对白色不透明吊带长袜，袜口到大腿上部，配白色吊袜腰带与四条白色吊带（每腿前后各一条），以小型素面吊袜夹连接平整袜口；正常穿着时位于长裙与衬裙内。\n\
+      Keep: 用户明确指定白色吊带袜，必须是左右分开的长袜，通过吊带固定。\nKeep: 白色袜身和平整袜口保持不透明布面，吊带与腰带均为白色。\nKeep:\
+      \ 主穿着图保持完整长裙；连接结构通过衣物细节图呈现。\nApproved decision: 品类与白色来自用户文字；参考未清楚给出袜口、腰带及夹子的款式，采用素面白色腰带、四吊带和小夹作为具体补全，等待设计与试穿计划确认。\n\
+      accessories (source): 白色胸兜式长围裙，腰带在后腰系大蝴蝶结，白色肩带在背部交叉，肩带外侧有白色大褶边；白色荷叶边头箍；白领下方一只黑色大蝴蝶结。\n\
+      Keep: 采用用户选定的弧形荷叶边头箍和大黑色蝴蝶结。\nKeep: 后背X形肩带、肩部白褶边、后腰大蝴蝶结及两条垂尾保持一致。\nKeep: 围裙覆盖连衣裙胸腹和裙身前方，白色胸兜与腰带连接清楚。\n\
+      outerwear (omitted): 不加外套或披肩。\nWearing relation: 黑色上身和黑色长裙是一件收腰连衣裙，白色衬裙位于其内层。\n\
+      Wearing relation: 白色围裙穿在黑色连衣裙外，胸兜接腰带，肩带从胸兜向上经过肩部并在背部交叉，腰带在后腰居中系结。\nWearing relation:\
+      \ 肩部白色褶边属于围裙肩带，位于黑色泡泡袖上方；大黑色领结位于白领正下方、围裙胸兜上沿附近。\nWearing relation: 白色吊袜腰带、四条吊带和一对白色长袜位于裙内；袜身覆盖足部并进入黑色闭口鞋。\n\
+      Wearing relation: 荷叶边头箍佩戴于阿尔可头顶发丝上，保留既有刘海、披散长发和粉色发梢。\nWearing relation: 背面穿着图保留自然披散长发的遮挡；完整肩带与蝴蝶结构造通过无头发的衣物细节图补充。\n\
+      Fixed constraint: 新增为一套完整固定的黑白长裙女仆装，保留原裙长度、原袖长和闭合领口。\nFixed constraint: 身份、发型、体型比例与画风使用正式阿尔可基准；教程人物仅提供指定衣服区域。\n\
+      Fixed constraint: 普通穿着参考采用全身中立站姿、清晰浅色背景和无五官形式。\nFixed constraint: 吊带长袜为白色；领饰为大黑色蝴蝶结；头饰为白色荷叶边头箍。\n\
+      Fixed constraint: 主图与后续视图均依据获认可的同一设计；未认可候选不作为其他视图设计依据。\nApproved gap_resolutions\
+      \ hosiery: 按用户明确要求设计一对白色吊带长袜；腰带、四条吊带、袜口和夹子采用素面白色补全。\nApproved gap_resolutions\
+      \ footwear: 黑色素面闭口圆头低跟鞋，约2厘米低跟，主体穿着图主要露鞋尖，完整鞋型由细节页展示。\nApproved gap_resolutions\
+      \ color_and_material: 将教程的灰阶外观落实为黑色连衣裙、白色围裙和衬裙、白色头箍与袜子、黑色大领结和鞋；采用哑光织物效果，小纽扣和夹子为简洁低光泽。\n\
+      Approved gap_resolutions rear_occlusion: 保留阿尔可既有披散长发；使用衣物背面细节图展示可能被遮挡的X形肩带和后腰系结。\n\
+      Approved conflict_resolutions headdress_variants: 用户已选补图2的荷叶边头箍，后脑罩式款不属于该套装。\n\
+      Approved conflict_resolutions neckwear_variants: 用户已选补图4左侧大蝴蝶结，取代原全身图的椭圆胸针领巾。\n\
+      Approved conflict_resolutions hosiery_previous_default: 白色吊带长袜取代之前讨论的黑色不透裤袜建议。\n\
+      [/Approved Variant Design]\nRendering style requirements:\n- Linework: clean,\
+      \ crisp anime linework with controlled contours\n- Shading: soft cel-shaded\
+      \ form modeling with limited blending\n- Color logic: clear local-color separation\
+      \ with a clean anime palette\n  Color scope: Color logic affects overall rendering\
+      \ and palette relationships only; preserve intrinsic identity colors for hair\
+      \ color, eye color, and variant key colors.\n- Highlight language: selective\
+      \ grouped highlights on major forms and glossy surfaces\n- Texture language:\
+      \ minimal low-frequency texture and mostly smooth digital surfaces\n- Detail\
+      \ density: moderate, readable detail density with clear focal hierarchy\nImage\
+      \ 1: official Arco rendering style only; exclude its person, head, hair, body,\
+      \ clothing, pose and expression.\nImage 2: human-accepted garment design anchor;\
+      \ preserve the locked clothing construction and details only. Exclude its wearer,\
+      \ hair, pose and camera framing.\nImage 3 garment-only: take only these parts/regions:\
+      \ [{\"evidence_status\": \"UNCERTAIN\", \"observations\": \"连衣裙前上身收腰，鼓起的短泡泡袖接窄长袖，闭合白翻领和宽白袖口。\"\
+      , \"part_id\": \"dress-front-upper\", \"region\": {\"kind\": \"box\", \"xyxy\"\
+      : [0.424, 0.16, 0.612, 0.464]}, \"slot\": \"upper\"}, {\"evidence_status\":\
+      \ \"UNCERTAIN\", \"observations\": \"独立后视连衣裙图显示闭合后背和收腰接缝。\", \"part_id\": \"\
+      dress-back-upper\", \"region\": {\"kind\": \"box\", \"xyxy\": [0.626, 0.154,\
+      \ 0.858, 0.455]}, \"slot\": \"upper\"}, {\"evidence_status\": \"UNCERTAIN\"\
+      , \"observations\": \"黑白图中的深色长裙从腰部褶裥展开，裙身宽大、自然垂落。\", \"part_id\": \"dress-front-skirt\"\
+      , \"region\": {\"kind\": \"box\", \"xyxy\": [0.382, 0.407, 0.624, 0.702]}, \"\
+      slot\": \"lower\"}, {\"evidence_status\": \"UNCERTAIN\", \"observations\": \"\
+      独立后视长裙从腰缝起褶，下摆连续。\", \"part_id\": \"dress-back-skirt\", \"region\": {\"kind\"\
+      : \"box\", \"xyxy\": [0.6, 0.398, 0.862, 0.718]}, \"slot\": \"lower\"}, {\"\
+      evidence_status\": \"UNCERTAIN\", \"observations\": \"独立白袖口和纽扣结构，保留宽袖口及两颗扣的外观。\"\
+      , \"part_id\": \"cuff-construction\", \"region\": {\"kind\": \"box\", \"xyxy\"\
+      : [0.441, 0.718, 0.626, 0.965]}, \"slot\": \"upper\"}]. Exclude the source person's\
+      \ identity, hair, facial expression, pose, drawing style, background and all\
+      \ unselected accessories.\nImage 4 garment-only: take only these parts/regions:\
+      \ [{\"evidence_status\": \"UNCERTAIN\", \"observations\": \"白色胸兜式长围裙，腰带清楚，前裙片宽大，下摆有荷叶边。\"\
+      , \"part_id\": \"apron-front\", \"region\": {\"kind\": \"box\", \"xyxy\": [0.055,\
+      \ 0.119, 0.243, 0.655]}, \"slot\": \"accessories\"}, {\"evidence_status\": \"\
+      UNCERTAIN\", \"observations\": \"围裙肩带在背部交叉，后腰系大蝴蝶结和两条垂尾。\", \"part_id\": \"\
+      apron-back\", \"region\": {\"kind\": \"box\", \"xyxy\": [0.226, 0.128, 0.395,\
+      \ 0.671]}, \"slot\": \"accessories\"}]. Exclude the source person's identity,\
+      \ hair, facial expression, pose, drawing style, background and all unselected\
+      \ accessories.\nImage 5 garment-only: take only these parts/regions: [{\"evidence_status\"\
+      : \"UNCERTAIN\", \"observations\": \"窄围裙肩带外侧缝有大幅白色褶边，肩带和褶边连续，带固定扣/纽扣结构。\", \"\
+      part_id\": \"apron-shoulder-frill\", \"region\": {\"kind\": \"box\", \"xyxy\"\
+      : [0.181, 0.028, 0.77, 0.493]}, \"slot\": \"accessories\"}]. Exclude the source\
+      \ person's identity, hair, facial expression, pose, drawing style, background\
+      \ and all unselected accessories."
+    references:
+    - reference_id: identity-front
+      asset_id: casual-outfit-crossed-arms-evidence
+      path: D:\learn\Arco\assets\arco\variants\casual-outfit\evidence\crossed-arms.png
+      sha256: 4eff91bea4e535e646ad406a5e8aae5e402c337cee635feb1e6339f0eaa8d974
+      usage: identity
+      view_class: front
+      inherit:
+      - identity
+      - hair
+      - body_proportions
+      - official_arco_style
+      exclude:
+      - outfit
+      - pose
+      - expression
+      - scene
+    - reference_id: accepted-primary
+      candidate_id: front-44e5537f
+      path: D:\learn\Arco\calibration\preparations\prep-20261004T165937Z-a1f765\candidates\front-44e5537f.png
+      sha256: 7b7a3c14c6216c2c8a38e0cc91af29fafe0c2ad148d8d80bebe0de5516d400b2
+      usage: accepted_primary
+    - reference_id: material-dress-structure
+      source_id: dress-structure
+      asset_id: null
+      path: C:\Users\shuai\AppData\Local\Temp\codex-clipboard-c9648c88-f4ca-4087-ba12-7a9062a917a5.png
+      sha256: c646d5cc89a1b04cd202b8ba06e487a2b430ffcd0b36143dc4da101f3c6ca943
+      usage: garment
+      parts:
+      - part_id: dress-front-upper
+        slot: upper
+        observations: 连衣裙前上身收腰，鼓起的短泡泡袖接窄长袖，闭合白翻领和宽白袖口。
+        evidence_status: UNCERTAIN
+        region:
+          kind: box
+          xyxy:
+          - 0.424
+          - 0.16
+          - 0.612
+          - 0.464
+      - part_id: dress-back-upper
+        slot: upper
+        observations: 独立后视连衣裙图显示闭合后背和收腰接缝。
+        evidence_status: UNCERTAIN
+        region:
+          kind: box
+          xyxy:
+          - 0.626
+          - 0.154
+          - 0.858
+          - 0.455
+      - part_id: dress-front-skirt
+        slot: lower
+        observations: 黑白图中的深色长裙从腰部褶裥展开，裙身宽大、自然垂落。
+        evidence_status: UNCERTAIN
+        region:
+          kind: box
+          xyxy:
+          - 0.382
+          - 0.407
+          - 0.624
+          - 0.702
+      - part_id: dress-back-skirt
+        slot: lower
+        observations: 独立后视长裙从腰缝起褶，下摆连续。
+        evidence_status: UNCERTAIN
+        region:
+          kind: box
+          xyxy:
+          - 0.6
+          - 0.398
+          - 0.862
+          - 0.718
+      - part_id: cuff-construction
+        slot: upper
+        observations: 独立白袖口和纽扣结构，保留宽袖口及两颗扣的外观。
+        evidence_status: UNCERTAIN
+        region:
+          kind: box
+          xyxy:
+          - 0.441
+          - 0.718
+          - 0.626
+          - 0.965
+      inherit:
+      - selected_garment_parts
+      exclude:
+      - source_person_identity
+      - source_hair
+      - source_expression
+      - source_pose
+      - source_style
+      - source_background
+      - unselected_accessories
+    - reference_id: material-apron-structure
+      source_id: apron-structure
+      asset_id: null
+      path: C:\Users\shuai\AppData\Local\Temp\codex-clipboard-e92f9270-2ea7-43a3-a787-ab81f3cd6602.png
+      sha256: a6b815c622ff7d0b231f7187ba1d5530175867b8b3dcc4f19d99e0fb018d82b5
+      usage: garment
+      parts:
+      - part_id: apron-front
+        slot: accessories
+        observations: 白色胸兜式长围裙，腰带清楚，前裙片宽大，下摆有荷叶边。
+        evidence_status: UNCERTAIN
+        region:
+          kind: box
+          xyxy:
+          - 0.055
+          - 0.119
+          - 0.243
+          - 0.655
+      - part_id: apron-back
+        slot: accessories
+        observations: 围裙肩带在背部交叉，后腰系大蝴蝶结和两条垂尾。
+        evidence_status: UNCERTAIN
+        region:
+          kind: box
+          xyxy:
+          - 0.226
+          - 0.128
+          - 0.395
+          - 0.671
+      inherit:
+      - selected_garment_parts
+      exclude:
+      - source_person_identity
+      - source_hair
+      - source_expression
+      - source_pose
+      - source_style
+      - source_background
+      - unselected_accessories
+    - reference_id: material-shoulder-frill-detail
+      source_id: shoulder-frill-detail
+      asset_id: null
+      path: C:\Users\shuai\AppData\Local\Temp\codex-clipboard-8b27f2da-6db1-4eec-97b2-8c5687ae13fa.png
+      sha256: 84278bc249f5317a2491bce65c89280a4e2cbaf8250c575420cde1e03f76f68b
+      usage: garment
+      parts:
+      - part_id: apron-shoulder-frill
+        slot: accessories
+        observations: 窄围裙肩带外侧缝有大幅白色褶边，肩带和褶边连续，带固定扣/纽扣结构。
+        evidence_status: UNCERTAIN
+        region:
+          kind: box
+          xyxy:
+          - 0.181
+          - 0.028
+          - 0.77
+          - 0.493
+      inherit:
+      - selected_garment_parts
+      exclude:
+      - source_person_identity
+      - source_hair
+      - source_expression
+      - source_pose
+      - source_style
+      - source_background
+      - unselected_accessories
+    bindings:
+      D:\learn\Arco\character\identity.yaml: 5f54dea96c70887fc57d52b559c2568e429840815c9d9fab94c07413cf703cb9
+      D:\learn\Arco\character\assets.yaml: f2b171acac5582668933bdcebb0355abb43060b3173c4e146abc8fd20db9eacc
+      D:\learn\Arco\character\style-baseline.yaml: 31353d7bea8f60a237d1b5f78cdbb8d9ea29de41e60d2c0829176a38dd485bd0
+      D:\learn\Arco\variants\index.yaml: 2c5b498a87402ad8cbedd84a0baf74abf195c185b90cd9eb8e7073c947576481
+      C:\Users\shuai\AppData\Local\Temp\codex-clipboard-c9648c88-f4ca-4087-ba12-7a9062a917a5.png: c646d5cc89a1b04cd202b8ba06e487a2b430ffcd0b36143dc4da101f3c6ca943
+      C:\Users\shuai\AppData\Local\Temp\codex-clipboard-e92f9270-2ea7-43a3-a787-ab81f3cd6602.png: a6b815c622ff7d0b231f7187ba1d5530175867b8b3dcc4f19d99e0fb018d82b5
+      C:\Users\shuai\AppData\Local\Temp\codex-clipboard-46517500-ad87-4808-96d3-f057610d2df7.png: 194cf708758ef20841e2bd304c671e417dfc57b41628b21a9bef6f40a0d98618
+      C:\Users\shuai\AppData\Local\Temp\codex-clipboard-aab89fd6-62e9-47b9-8f5c-dea8011d8cce.png: a62233b7084e8af117cc33ed8f20a2bcee55826dd720d4729b7df24b4fcbe5d3
+      C:\Users\shuai\AppData\Local\Temp\codex-clipboard-4956dc55-1d99-4f38-8e83-d3dd3bba0fac.png: 3b52fe07dfba2a0e7b86c7da02874b4d9eb27b79ff88a3ebbc8299525202828d
+      C:\Users\shuai\AppData\Local\Temp\codex-clipboard-4b1f3ea8-def8-4ded-9892-df297e38d41d.png: c77c59b7b09e0e9fef93321d171559becb8762542a345f0e995880432283e77e
+      C:\Users\shuai\AppData\Local\Temp\codex-clipboard-8b27f2da-6db1-4eec-97b2-8c5687ae13fa.png: 84278bc249f5317a2491bce65c89280a4e2cbaf8250c575420cde1e03f76f68b
+      C:\Users\shuai\AppData\Local\Temp\codex-clipboard-2473ece3-2364-4d85-94da-33bdb475d279.png: fa0611211e86ce7a42faa0bcd69533df729afe9c9afd7d9771d185c69fd0d32c
+      D:\learn\Arco\assets\arco\variants\casual-outfit\evidence\crossed-arms.png: 4eff91bea4e535e646ad406a5e8aae5e402c337cee635feb1e6339f0eaa8d974
+      D:\learn\Arco\assets\arco\variants\casual-outfit\evidence\open-arms-no-horns.png: 06c61729cdd23ede65e7376beabe50c7f32da8276709730a750452819c367f3d
+      D:\learn\Arco\assets\arco\identity\back\arco-identity-back-b23d33.png: a9570d82af09d82316fac9a43aec0dd908664183454341f95aea00c990f68f8e
+      D:\learn\Arco\calibration\preparations\prep-20261004T165937Z-a1f765\candidates\front-44e5537f.png: 7b7a3c14c6216c2c8a38e0cc91af29fafe0c2ad148d8d80bebe0de5516d400b2
+    selected_reference_ids:
+    - identity-front
+    - accepted-primary
+    - material-dress-structure
+    - material-apron-structure
+    - material-shoulder-frill-detail
+    referenced_image_paths:
+    - D:\learn\Arco\assets\arco\variants\casual-outfit\evidence\crossed-arms.png
+    - D:\learn\Arco\calibration\preparations\prep-20261004T165937Z-a1f765\candidates\front-44e5537f.png
+    - C:\Users\shuai\AppData\Local\Temp\codex-clipboard-c9648c88-f4ca-4087-ba12-7a9062a917a5.png
+    - C:\Users\shuai\AppData\Local\Temp\codex-clipboard-e92f9270-2ea7-43a3-a787-ab81f3cd6602.png
+    - C:\Users\shuai\AppData\Local\Temp\codex-clipboard-8b27f2da-6db1-4eec-97b2-8c5687ae13fa.png
+    max_automatic_repairs: 2
+    context_sha256: 805b751b1cf754cbc3d259d0aad6a5ffd79195fef4ebed0015e03ed06b604687
+    plan_sha256: 0569d0259e9e55c13d97b5840afe961707205d9bd0126dce8a2ba26b85eac400
+  detail-trims:
+    provider: builtin_image_gen
+    capability: reference_conditioned_image_generation
+    mode: reference_conditioned
+    purpose: outfit_preparation
+    view_id: detail-trims
+    prompt: "Prepare a fixed Arco outfit reference: 同一套装的服装细节页：白色荷叶边头箍、白领配大黑蝴蝶结、宽白袖口和两颗扣；分成清楚的衣物局部小图，浅色背景，保持主图款式。.\n\
+      Garment-only detail reference: use a close-up or flat-lay composition as specified\
+      \ by the detail requirement. Render only the garment items named in that requirement;\
+      \ use the whole-outfit design and wearing relations only to keep those items\
+      \ consistent. Do not depict a person, human body, head, hair or facial features.\
+      \ Use a clear plain background and the official Arco baseline drawing style.\n\
+      Preserve selected source garments' original cut, length and colors. Solve joins\
+      \ through the approved wearing relations; apply only explicitly approved redesigns.\n\
+      [Approved Variant Design]\nUse this fixed complete outfit, including its approved\
+      \ authored completions.\nupper (source): 黑色收腰连衣裙上身：闭合白色圆角翻领、泡泡肩袖接窄长袖、宽白袖口，保留两颗袖口扣；与下装同属一件连衣裙。\n\
+      Keep: 保留原款闭合领口、收腰结构和长袖长度。\nKeep: 白袖口保持宽阔，袖口扣作为稳定外观细节。\nlower (source): 黑色宽大长裙与上身相连，长度接近足踝、主要露鞋尖；腰部起褶，内穿白色层叠衬裙保持自然饱满廓形。\n\
+      Keep: 长裙保持原款长度和连续黑色下摆。\nKeep: 围裙的白色下摆高于黑裙下摆，保留清楚的一圈黑裙边。\nKeep: 衬裙平时位于外裙内，不改变原款长裙的正常垂落。\n\
+      footwear (completion): 黑色素面闭口圆头低跟鞋，一双；约2厘米低跟，简洁鞋面，无额外鞋面蝴蝶结或金属饰件。\nKeep: 黑色、圆头、闭口、低跟、素面。\n\
+      Approved decision: 原图只露鞋尖，完整鞋型没有确定；采用之前推荐的简洁圆头低跟方案作为待验收补全。\nhosiery (completion):\
+      \ 一对白色不透明吊带长袜，袜口到大腿上部，配白色吊袜腰带与四条白色吊带（每腿前后各一条），以小型素面吊袜夹连接平整袜口；正常穿着时位于长裙与衬裙内。\n\
+      Keep: 用户明确指定白色吊带袜，必须是左右分开的长袜，通过吊带固定。\nKeep: 白色袜身和平整袜口保持不透明布面，吊带与腰带均为白色。\nKeep:\
+      \ 主穿着图保持完整长裙；连接结构通过衣物细节图呈现。\nApproved decision: 品类与白色来自用户文字；参考未清楚给出袜口、腰带及夹子的款式，采用素面白色腰带、四吊带和小夹作为具体补全，等待设计与试穿计划确认。\n\
+      accessories (source): 白色胸兜式长围裙，腰带在后腰系大蝴蝶结，白色肩带在背部交叉，肩带外侧有白色大褶边；白色荷叶边头箍；白领下方一只黑色大蝴蝶结。\n\
+      Keep: 采用用户选定的弧形荷叶边头箍和大黑色蝴蝶结。\nKeep: 后背X形肩带、肩部白褶边、后腰大蝴蝶结及两条垂尾保持一致。\nKeep: 围裙覆盖连衣裙胸腹和裙身前方，白色胸兜与腰带连接清楚。\n\
+      outerwear (omitted): 不加外套或披肩。\nWearing relation: 黑色上身和黑色长裙是一件收腰连衣裙，白色衬裙位于其内层。\n\
+      Wearing relation: 白色围裙穿在黑色连衣裙外，胸兜接腰带，肩带从胸兜向上经过肩部并在背部交叉，腰带在后腰居中系结。\nWearing relation:\
+      \ 肩部白色褶边属于围裙肩带，位于黑色泡泡袖上方；大黑色领结位于白领正下方、围裙胸兜上沿附近。\nWearing relation: 白色吊袜腰带、四条吊带和一对白色长袜位于裙内；袜身覆盖足部并进入黑色闭口鞋。\n\
+      Wearing relation: 荷叶边头箍佩戴于阿尔可头顶发丝上，保留既有刘海、披散长发和粉色发梢。\nWearing relation: 背面穿着图保留自然披散长发的遮挡；完整肩带与蝴蝶结构造通过无头发的衣物细节图补充。\n\
+      Fixed constraint: 新增为一套完整固定的黑白长裙女仆装，保留原裙长度、原袖长和闭合领口。\nFixed constraint: 身份、发型、体型比例与画风使用正式阿尔可基准；教程人物仅提供指定衣服区域。\n\
+      Fixed constraint: 普通穿着参考采用全身中立站姿、清晰浅色背景和无五官形式。\nFixed constraint: 吊带长袜为白色；领饰为大黑色蝴蝶结；头饰为白色荷叶边头箍。\n\
+      Fixed constraint: 主图与后续视图均依据获认可的同一设计；未认可候选不作为其他视图设计依据。\nApproved gap_resolutions\
+      \ hosiery: 按用户明确要求设计一对白色吊带长袜；腰带、四条吊带、袜口和夹子采用素面白色补全。\nApproved gap_resolutions\
+      \ footwear: 黑色素面闭口圆头低跟鞋，约2厘米低跟，主体穿着图主要露鞋尖，完整鞋型由细节页展示。\nApproved gap_resolutions\
+      \ color_and_material: 将教程的灰阶外观落实为黑色连衣裙、白色围裙和衬裙、白色头箍与袜子、黑色大领结和鞋；采用哑光织物效果，小纽扣和夹子为简洁低光泽。\n\
+      Approved gap_resolutions rear_occlusion: 保留阿尔可既有披散长发；使用衣物背面细节图展示可能被遮挡的X形肩带和后腰系结。\n\
+      Approved conflict_resolutions headdress_variants: 用户已选补图2的荷叶边头箍，后脑罩式款不属于该套装。\n\
+      Approved conflict_resolutions neckwear_variants: 用户已选补图4左侧大蝴蝶结，取代原全身图的椭圆胸针领巾。\n\
+      Approved conflict_resolutions hosiery_previous_default: 白色吊带长袜取代之前讨论的黑色不透裤袜建议。\n\
+      [/Approved Variant Design]\nRendering style requirements:\n- Linework: clean,\
+      \ crisp anime linework with controlled contours\n- Shading: soft cel-shaded\
+      \ form modeling with limited blending\n- Color logic: clear local-color separation\
+      \ with a clean anime palette\n  Color scope: Color logic affects overall rendering\
+      \ and palette relationships only; preserve intrinsic identity colors for hair\
+      \ color, eye color, and variant key colors.\n- Highlight language: selective\
+      \ grouped highlights on major forms and glossy surfaces\n- Texture language:\
+      \ minimal low-frequency texture and mostly smooth digital surfaces\n- Detail\
+      \ density: moderate, readable detail density with clear focal hierarchy\nImage\
+      \ 1: official Arco rendering style only; exclude its person, head, hair, body,\
+      \ clothing, pose and expression.\nImage 2: human-accepted garment design anchor;\
+      \ preserve the locked clothing construction and details only. Exclude its wearer,\
+      \ hair, pose and camera framing.\nImage 3 garment-only: take only these parts/regions:\
+      \ [{\"evidence_status\": \"UNCERTAIN\", \"observations\": \"上右弧形头箍沿顶部及两侧外缘加白色荷叶边，前额和大部分头发保持露出。\"\
+      , \"part_id\": \"ruffled-headband\", \"region\": {\"kind\": \"box\", \"xyxy\"\
+      : [0.664, 0, 0.984, 0.319]}, \"slot\": \"accessories\"}]. Exclude the source\
+      \ person's identity, hair, facial expression, pose, drawing style, background\
+      \ and all unselected accessories.\nImage 4 garment-only: take only these parts/regions:\
+      \ [{\"evidence_status\": \"UNCERTAIN\", \"observations\": \"窄围裙肩带外侧缝有大幅白色褶边，肩带和褶边连续，带固定扣/纽扣结构。\"\
+      , \"part_id\": \"apron-shoulder-frill\", \"region\": {\"kind\": \"box\", \"\
+      xyxy\": [0.181, 0.028, 0.77, 0.493]}, \"slot\": \"accessories\"}]. Exclude the\
+      \ source person's identity, hair, facial expression, pose, drawing style, background\
+      \ and all unselected accessories.\nImage 5 garment-only: take only these parts/regions:\
+      \ [{\"evidence_status\": \"UNCERTAIN\", \"observations\": \"左侧白领下面是一只宽大蝴蝶结，双侧蝶翼和中央结明确。\"\
+      , \"part_id\": \"large-neck-bow\", \"region\": {\"kind\": \"box\", \"xyxy\"\
+      : [0.066, 0.219, 0.396, 0.869]}, \"slot\": \"accessories\"}]. Exclude the source\
+      \ person's identity, hair, facial expression, pose, drawing style, background\
+      \ and all unselected accessories."
+    references:
+    - reference_id: identity-front
+      asset_id: casual-outfit-crossed-arms-evidence
+      path: D:\learn\Arco\assets\arco\variants\casual-outfit\evidence\crossed-arms.png
+      sha256: 4eff91bea4e535e646ad406a5e8aae5e402c337cee635feb1e6339f0eaa8d974
+      usage: identity
+      view_class: front
+      inherit:
+      - identity
+      - hair
+      - body_proportions
+      - official_arco_style
+      exclude:
+      - outfit
+      - pose
+      - expression
+      - scene
+    - reference_id: accepted-primary
+      candidate_id: front-44e5537f
+      path: D:\learn\Arco\calibration\preparations\prep-20261004T165937Z-a1f765\candidates\front-44e5537f.png
+      sha256: 7b7a3c14c6216c2c8a38e0cc91af29fafe0c2ad148d8d80bebe0de5516d400b2
+      usage: accepted_primary
+    - reference_id: material-headdress-detail
+      source_id: headdress-detail
+      asset_id: null
+      path: C:\Users\shuai\AppData\Local\Temp\codex-clipboard-4b1f3ea8-def8-4ded-9892-df297e38d41d.png
+      sha256: c77c59b7b09e0e9fef93321d171559becb8762542a345f0e995880432283e77e
+      usage: garment
+      parts:
+      - part_id: ruffled-headband
+        slot: accessories
+        observations: 上右弧形头箍沿顶部及两侧外缘加白色荷叶边，前额和大部分头发保持露出。
+        evidence_status: UNCERTAIN
+        region:
+          kind: box
+          xyxy:
+          - 0.664
+          - 0
+          - 0.984
+          - 0.319
+      inherit:
+      - selected_garment_parts
+      exclude:
+      - source_person_identity
+      - source_hair
+      - source_expression
+      - source_pose
+      - source_style
+      - source_background
+      - unselected_accessories
+    - reference_id: material-shoulder-frill-detail
+      source_id: shoulder-frill-detail
+      asset_id: null
+      path: C:\Users\shuai\AppData\Local\Temp\codex-clipboard-8b27f2da-6db1-4eec-97b2-8c5687ae13fa.png
+      sha256: 84278bc249f5317a2491bce65c89280a4e2cbaf8250c575420cde1e03f76f68b
+      usage: garment
+      parts:
+      - part_id: apron-shoulder-frill
+        slot: accessories
+        observations: 窄围裙肩带外侧缝有大幅白色褶边，肩带和褶边连续，带固定扣/纽扣结构。
+        evidence_status: UNCERTAIN
+        region:
+          kind: box
+          xyxy:
+          - 0.181
+          - 0.028
+          - 0.77
+          - 0.493
+      inherit:
+      - selected_garment_parts
+      exclude:
+      - source_person_identity
+      - source_hair
+      - source_expression
+      - source_pose
+      - source_style
+      - source_background
+      - unselected_accessories
+    - reference_id: material-neckwear-detail
+      source_id: neckwear-detail
+      asset_id: null
+      path: C:\Users\shuai\AppData\Local\Temp\codex-clipboard-2473ece3-2364-4d85-94da-33bdb475d279.png
+      sha256: fa0611211e86ce7a42faa0bcd69533df729afe9c9afd7d9771d185c69fd0d32c
+      usage: garment
+      parts:
+      - part_id: large-neck-bow
+        slot: accessories
+        observations: 左侧白领下面是一只宽大蝴蝶结，双侧蝶翼和中央结明确。
+        evidence_status: UNCERTAIN
+        region:
+          kind: box
+          xyxy:
+          - 0.066
+          - 0.219
+          - 0.396
+          - 0.869
+      inherit:
+      - selected_garment_parts
+      exclude:
+      - source_person_identity
+      - source_hair
+      - source_expression
+      - source_pose
+      - source_style
+      - source_background
+      - unselected_accessories
+    bindings:
+      D:\learn\Arco\character\identity.yaml: 5f54dea96c70887fc57d52b559c2568e429840815c9d9fab94c07413cf703cb9
+      D:\learn\Arco\character\assets.yaml: f2b171acac5582668933bdcebb0355abb43060b3173c4e146abc8fd20db9eacc
+      D:\learn\Arco\character\style-baseline.yaml: 31353d7bea8f60a237d1b5f78cdbb8d9ea29de41e60d2c0829176a38dd485bd0
+      D:\learn\Arco\variants\index.yaml: 2c5b498a87402ad8cbedd84a0baf74abf195c185b90cd9eb8e7073c947576481
+      C:\Users\shuai\AppData\Local\Temp\codex-clipboard-c9648c88-f4ca-4087-ba12-7a9062a917a5.png: c646d5cc89a1b04cd202b8ba06e487a2b430ffcd0b36143dc4da101f3c6ca943
+      C:\Users\shuai\AppData\Local\Temp\codex-clipboard-e92f9270-2ea7-43a3-a787-ab81f3cd6602.png: a6b815c622ff7d0b231f7187ba1d5530175867b8b3dcc4f19d99e0fb018d82b5
+      C:\Users\shuai\AppData\Local\Temp\codex-clipboard-46517500-ad87-4808-96d3-f057610d2df7.png: 194cf708758ef20841e2bd304c671e417dfc57b41628b21a9bef6f40a0d98618
+      C:\Users\shuai\AppData\Local\Temp\codex-clipboard-aab89fd6-62e9-47b9-8f5c-dea8011d8cce.png: a62233b7084e8af117cc33ed8f20a2bcee55826dd720d4729b7df24b4fcbe5d3
+      C:\Users\shuai\AppData\Local\Temp\codex-clipboard-4956dc55-1d99-4f38-8e83-d3dd3bba0fac.png: 3b52fe07dfba2a0e7b86c7da02874b4d9eb27b79ff88a3ebbc8299525202828d
+      C:\Users\shuai\AppData\Local\Temp\codex-clipboard-4b1f3ea8-def8-4ded-9892-df297e38d41d.png: c77c59b7b09e0e9fef93321d171559becb8762542a345f0e995880432283e77e
+      C:\Users\shuai\AppData\Local\Temp\codex-clipboard-8b27f2da-6db1-4eec-97b2-8c5687ae13fa.png: 84278bc249f5317a2491bce65c89280a4e2cbaf8250c575420cde1e03f76f68b
+      C:\Users\shuai\AppData\Local\Temp\codex-clipboard-2473ece3-2364-4d85-94da-33bdb475d279.png: fa0611211e86ce7a42faa0bcd69533df729afe9c9afd7d9771d185c69fd0d32c
+      D:\learn\Arco\assets\arco\variants\casual-outfit\evidence\crossed-arms.png: 4eff91bea4e535e646ad406a5e8aae5e402c337cee635feb1e6339f0eaa8d974
+      D:\learn\Arco\assets\arco\variants\casual-outfit\evidence\open-arms-no-horns.png: 06c61729cdd23ede65e7376beabe50c7f32da8276709730a750452819c367f3d
+      D:\learn\Arco\assets\arco\identity\back\arco-identity-back-b23d33.png: a9570d82af09d82316fac9a43aec0dd908664183454341f95aea00c990f68f8e
+      D:\learn\Arco\calibration\preparations\prep-20261004T165937Z-a1f765\candidates\front-44e5537f.png: 7b7a3c14c6216c2c8a38e0cc91af29fafe0c2ad148d8d80bebe0de5516d400b2
+    selected_reference_ids:
+    - identity-front
+    - accepted-primary
+    - material-headdress-detail
+    - material-shoulder-frill-detail
+    - material-neckwear-detail
+    referenced_image_paths:
+    - D:\learn\Arco\assets\arco\variants\casual-outfit\evidence\crossed-arms.png
+    - D:\learn\Arco\calibration\preparations\prep-20261004T165937Z-a1f765\candidates\front-44e5537f.png
+    - C:\Users\shuai\AppData\Local\Temp\codex-clipboard-4b1f3ea8-def8-4ded-9892-df297e38d41d.png
+    - C:\Users\shuai\AppData\Local\Temp\codex-clipboard-8b27f2da-6db1-4eec-97b2-8c5687ae13fa.png
+    - C:\Users\shuai\AppData\Local\Temp\codex-clipboard-2473ece3-2364-4d85-94da-33bdb475d279.png
+    max_automatic_repairs: 2
+    context_sha256: 805b751b1cf754cbc3d259d0aad6a5ffd79195fef4ebed0015e03ed06b604687
+    plan_sha256: db3cd27e11a8bf3fcdc1b842b79aa84968165377eef48631e2bc1036893fb793
+  detail-hosiery-footwear:
+    provider: builtin_image_gen
+    capability: reference_conditioned_image_generation
+    mode: reference_conditioned
+    purpose: outfit_preparation
+    view_id: detail-hosiery-footwear
+    prompt: "Prepare a fixed Arco outfit reference: 衣物单独平铺展示：一对白色不透明大腿长袜、白色吊袜腰带、四条连接吊带及小型素面夹子，旁边配一双黑色素面圆头闭口低跟鞋。清晰展示连接关系、袜口和鞋型；不呈现人体或提裙动作。.\n\
+      Garment-only detail reference: use a close-up or flat-lay composition as specified\
+      \ by the detail requirement. Render only the garment items named in that requirement;\
+      \ use the whole-outfit design and wearing relations only to keep those items\
+      \ consistent. Do not depict a person, human body, head, hair or facial features.\
+      \ Use a clear plain background and the official Arco baseline drawing style.\n\
+      Preserve selected source garments' original cut, length and colors. Solve joins\
+      \ through the approved wearing relations; apply only explicitly approved redesigns.\n\
+      [Approved Variant Design]\nUse this fixed complete outfit, including its approved\
+      \ authored completions.\nupper (source): 黑色收腰连衣裙上身：闭合白色圆角翻领、泡泡肩袖接窄长袖、宽白袖口，保留两颗袖口扣；与下装同属一件连衣裙。\n\
+      Keep: 保留原款闭合领口、收腰结构和长袖长度。\nKeep: 白袖口保持宽阔，袖口扣作为稳定外观细节。\nlower (source): 黑色宽大长裙与上身相连，长度接近足踝、主要露鞋尖；腰部起褶，内穿白色层叠衬裙保持自然饱满廓形。\n\
+      Keep: 长裙保持原款长度和连续黑色下摆。\nKeep: 围裙的白色下摆高于黑裙下摆，保留清楚的一圈黑裙边。\nKeep: 衬裙平时位于外裙内，不改变原款长裙的正常垂落。\n\
+      footwear (completion): 黑色素面闭口圆头低跟鞋，一双；约2厘米低跟，简洁鞋面，无额外鞋面蝴蝶结或金属饰件。\nKeep: 黑色、圆头、闭口、低跟、素面。\n\
+      Approved decision: 原图只露鞋尖，完整鞋型没有确定；采用之前推荐的简洁圆头低跟方案作为待验收补全。\nhosiery (completion):\
+      \ 一对白色不透明吊带长袜，袜口到大腿上部，配白色吊袜腰带与四条白色吊带（每腿前后各一条），以小型素面吊袜夹连接平整袜口；正常穿着时位于长裙与衬裙内。\n\
+      Keep: 用户明确指定白色吊带袜，必须是左右分开的长袜，通过吊带固定。\nKeep: 白色袜身和平整袜口保持不透明布面，吊带与腰带均为白色。\nKeep:\
+      \ 主穿着图保持完整长裙；连接结构通过衣物细节图呈现。\nApproved decision: 品类与白色来自用户文字；参考未清楚给出袜口、腰带及夹子的款式，采用素面白色腰带、四吊带和小夹作为具体补全，等待设计与试穿计划确认。\n\
+      accessories (source): 白色胸兜式长围裙，腰带在后腰系大蝴蝶结，白色肩带在背部交叉，肩带外侧有白色大褶边；白色荷叶边头箍；白领下方一只黑色大蝴蝶结。\n\
+      Keep: 采用用户选定的弧形荷叶边头箍和大黑色蝴蝶结。\nKeep: 后背X形肩带、肩部白褶边、后腰大蝴蝶结及两条垂尾保持一致。\nKeep: 围裙覆盖连衣裙胸腹和裙身前方，白色胸兜与腰带连接清楚。\n\
+      outerwear (omitted): 不加外套或披肩。\nWearing relation: 黑色上身和黑色长裙是一件收腰连衣裙，白色衬裙位于其内层。\n\
+      Wearing relation: 白色围裙穿在黑色连衣裙外，胸兜接腰带，肩带从胸兜向上经过肩部并在背部交叉，腰带在后腰居中系结。\nWearing relation:\
+      \ 肩部白色褶边属于围裙肩带，位于黑色泡泡袖上方；大黑色领结位于白领正下方、围裙胸兜上沿附近。\nWearing relation: 白色吊袜腰带、四条吊带和一对白色长袜位于裙内；袜身覆盖足部并进入黑色闭口鞋。\n\
+      Wearing relation: 荷叶边头箍佩戴于阿尔可头顶发丝上，保留既有刘海、披散长发和粉色发梢。\nWearing relation: 背面穿着图保留自然披散长发的遮挡；完整肩带与蝴蝶结构造通过无头发的衣物细节图补充。\n\
+      Fixed constraint: 新增为一套完整固定的黑白长裙女仆装，保留原裙长度、原袖长和闭合领口。\nFixed constraint: 身份、发型、体型比例与画风使用正式阿尔可基准；教程人物仅提供指定衣服区域。\n\
+      Fixed constraint: 普通穿着参考采用全身中立站姿、清晰浅色背景和无五官形式。\nFixed constraint: 吊带长袜为白色；领饰为大黑色蝴蝶结；头饰为白色荷叶边头箍。\n\
+      Fixed constraint: 主图与后续视图均依据获认可的同一设计；未认可候选不作为其他视图设计依据。\nApproved gap_resolutions\
+      \ hosiery: 按用户明确要求设计一对白色吊带长袜；腰带、四条吊带、袜口和夹子采用素面白色补全。\nApproved gap_resolutions\
+      \ footwear: 黑色素面闭口圆头低跟鞋，约2厘米低跟，主体穿着图主要露鞋尖，完整鞋型由细节页展示。\nApproved gap_resolutions\
+      \ color_and_material: 将教程的灰阶外观落实为黑色连衣裙、白色围裙和衬裙、白色头箍与袜子、黑色大领结和鞋；采用哑光织物效果，小纽扣和夹子为简洁低光泽。\n\
+      Approved gap_resolutions rear_occlusion: 保留阿尔可既有披散长发；使用衣物背面细节图展示可能被遮挡的X形肩带和后腰系结。\n\
+      Approved conflict_resolutions headdress_variants: 用户已选补图2的荷叶边头箍，后脑罩式款不属于该套装。\n\
+      Approved conflict_resolutions neckwear_variants: 用户已选补图4左侧大蝴蝶结，取代原全身图的椭圆胸针领巾。\n\
+      Approved conflict_resolutions hosiery_previous_default: 白色吊带长袜取代之前讨论的黑色不透裤袜建议。\n\
+      [/Approved Variant Design]\nRendering style requirements:\n- Linework: clean,\
+      \ crisp anime linework with controlled contours\n- Shading: soft cel-shaded\
+      \ form modeling with limited blending\n- Color logic: clear local-color separation\
+      \ with a clean anime palette\n  Color scope: Color logic affects overall rendering\
+      \ and palette relationships only; preserve intrinsic identity colors for hair\
+      \ color, eye color, and variant key colors.\n- Highlight language: selective\
+      \ grouped highlights on major forms and glossy surfaces\n- Texture language:\
+      \ minimal low-frequency texture and mostly smooth digital surfaces\n- Detail\
+      \ density: moderate, readable detail density with clear focal hierarchy\nImage\
+      \ 1: official Arco rendering style only; exclude its person, head, hair, body,\
+      \ clothing, pose and expression.\nImage 2: human-accepted garment design anchor;\
+      \ preserve the locked clothing construction and details only. Exclude its wearer,\
+      \ hair, pose and camera framing."
+    references:
+    - reference_id: identity-front
+      asset_id: casual-outfit-crossed-arms-evidence
+      path: D:\learn\Arco\assets\arco\variants\casual-outfit\evidence\crossed-arms.png
+      sha256: 4eff91bea4e535e646ad406a5e8aae5e402c337cee635feb1e6339f0eaa8d974
+      usage: identity
+      view_class: front
+      inherit:
+      - identity
+      - hair
+      - body_proportions
+      - official_arco_style
+      exclude:
+      - outfit
+      - pose
+      - expression
+      - scene
+    - reference_id: accepted-primary
+      candidate_id: front-44e5537f
+      path: D:\learn\Arco\calibration\preparations\prep-20261004T165937Z-a1f765\candidates\front-44e5537f.png
+      sha256: 7b7a3c14c6216c2c8a38e0cc91af29fafe0c2ad148d8d80bebe0de5516d400b2
+      usage: accepted_primary
+    bindings:
+      D:\learn\Arco\character\identity.yaml: 5f54dea96c70887fc57d52b559c2568e429840815c9d9fab94c07413cf703cb9
+      D:\learn\Arco\character\assets.yaml: f2b171acac5582668933bdcebb0355abb43060b3173c4e146abc8fd20db9eacc
+      D:\learn\Arco\character\style-baseline.yaml: 31353d7bea8f60a237d1b5f78cdbb8d9ea29de41e60d2c0829176a38dd485bd0
+      D:\learn\Arco\variants\index.yaml: 2c5b498a87402ad8cbedd84a0baf74abf195c185b90cd9eb8e7073c947576481
+      C:\Users\shuai\AppData\Local\Temp\codex-clipboard-c9648c88-f4ca-4087-ba12-7a9062a917a5.png: c646d5cc89a1b04cd202b8ba06e487a2b430ffcd0b36143dc4da101f3c6ca943
+      C:\Users\shuai\AppData\Local\Temp\codex-clipboard-e92f9270-2ea7-43a3-a787-ab81f3cd6602.png: a6b815c622ff7d0b231f7187ba1d5530175867b8b3dcc4f19d99e0fb018d82b5
+      C:\Users\shuai\AppData\Local\Temp\codex-clipboard-46517500-ad87-4808-96d3-f057610d2df7.png: 194cf708758ef20841e2bd304c671e417dfc57b41628b21a9bef6f40a0d98618
+      C:\Users\shuai\AppData\Local\Temp\codex-clipboard-aab89fd6-62e9-47b9-8f5c-dea8011d8cce.png: a62233b7084e8af117cc33ed8f20a2bcee55826dd720d4729b7df24b4fcbe5d3
+      C:\Users\shuai\AppData\Local\Temp\codex-clipboard-4956dc55-1d99-4f38-8e83-d3dd3bba0fac.png: 3b52fe07dfba2a0e7b86c7da02874b4d9eb27b79ff88a3ebbc8299525202828d
+      C:\Users\shuai\AppData\Local\Temp\codex-clipboard-4b1f3ea8-def8-4ded-9892-df297e38d41d.png: c77c59b7b09e0e9fef93321d171559becb8762542a345f0e995880432283e77e
+      C:\Users\shuai\AppData\Local\Temp\codex-clipboard-8b27f2da-6db1-4eec-97b2-8c5687ae13fa.png: 84278bc249f5317a2491bce65c89280a4e2cbaf8250c575420cde1e03f76f68b
+      C:\Users\shuai\AppData\Local\Temp\codex-clipboard-2473ece3-2364-4d85-94da-33bdb475d279.png: fa0611211e86ce7a42faa0bcd69533df729afe9c9afd7d9771d185c69fd0d32c
+      D:\learn\Arco\assets\arco\variants\casual-outfit\evidence\crossed-arms.png: 4eff91bea4e535e646ad406a5e8aae5e402c337cee635feb1e6339f0eaa8d974
+      D:\learn\Arco\assets\arco\variants\casual-outfit\evidence\open-arms-no-horns.png: 06c61729cdd23ede65e7376beabe50c7f32da8276709730a750452819c367f3d
+      D:\learn\Arco\assets\arco\identity\back\arco-identity-back-b23d33.png: a9570d82af09d82316fac9a43aec0dd908664183454341f95aea00c990f68f8e
+      D:\learn\Arco\calibration\preparations\prep-20261004T165937Z-a1f765\candidates\front-44e5537f.png: 7b7a3c14c6216c2c8a38e0cc91af29fafe0c2ad148d8d80bebe0de5516d400b2
+    selected_reference_ids:
+    - identity-front
+    - accepted-primary
+    referenced_image_paths:
+    - D:\learn\Arco\assets\arco\variants\casual-outfit\evidence\crossed-arms.png
+    - D:\learn\Arco\calibration\preparations\prep-20261004T165937Z-a1f765\candidates\front-44e5537f.png
+    max_automatic_repairs: 2
+    context_sha256: 805b751b1cf754cbc3d259d0aad6a5ffd79195fef4ebed0015e03ed06b604687
+    plan_sha256: 04069a9096ede1e53a9c2026ace083cb8881de7c5732f90fe7b320cc07d0e504
+attempts:
+- attempt_id: cd04c44323d14dde85aa021ee91a7723
+  view_id: front
+  plan_sha256: b64d04ffe423df5762ff4e6ce7c09de4d034ac731edf6d0537e35b515257cd13
+  repair_number: 0
+  restore_dimensions: []
+  state: COMPLETED
+  reserved_at: '2026-10-04T16:59:38.181816+00:00'
+  actual_prompt_sha256: d26708fedcaffcb91844e431c14d1bb8bad9c6cfa20d64a3c06f826f4239ca64
+  invocation_sha256: c7e66d6ccafd822aa6ae8b34b474cf15a8a755c28e8b7a9413f9dedd68663ec9
+  candidate_id: front-cd04c443
+  completed_at: '2026-10-04T17:11:42.857126+00:00'
+- attempt_id: 1e0bbe89d44b4ef1872f50644ba2ee70
+  view_id: front
+  plan_sha256: b64d04ffe423df5762ff4e6ce7c09de4d034ac731edf6d0537e35b515257cd13
+  repair_number: 1
+  restore_dimensions:
+  - parts
+  - wearing_occlusion
+  state: COMPLETED
+  reserved_at: '2026-10-04T17:20:19.446845+00:00'
+  restore_constraints:
+  - 黑色宽大长裙与上身相连，长度接近足踝、主要露鞋尖；腰部起褶，内穿白色层叠衬裙保持自然饱满廓形。
+  - 长裙保持原款长度和连续黑色下摆。
+  - 围裙的白色下摆高于黑裙下摆，保留清楚的一圈黑裙边。
+  - 衬裙平时位于外裙内，不改变原款长裙的正常垂落。
+  actual_prompt_sha256: 448b68b3bbca9e1dbbe780461a0813be3f22d2d2ab1f115ed35e73b23943d7ab
+  invocation_sha256: d3f3763b4fb44f116032d3776d4fa368541621174162a6dd530e62fcde21bd6e
+  candidate_id: front-1e0bbe89
+  completed_at: '2026-10-04T17:25:45.104860+00:00'
+- attempt_id: 44e5537f2b22485884023ea14353840f
+  view_id: front
+  plan_sha256: b64d04ffe423df5762ff4e6ce7c09de4d034ac731edf6d0537e35b515257cd13
+  repair_number: 2
+  restore_dimensions:
+  - parts
+  - wearing_occlusion
+  state: COMPLETED
+  reserved_at: '2026-10-04T17:32:10.416079+00:00'
+  restore_constraints:
+  - 黑色宽大长裙与上身相连，长度接近足踝、主要露鞋尖；腰部起褶，内穿白色层叠衬裙保持自然饱满廓形。
+  - 长裙保持原款长度和连续黑色下摆。
+  - 围裙的白色下摆高于黑裙下摆，保留清楚的一圈黑裙边。
+  - 衬裙平时位于外裙内，不改变原款长裙的正常垂落。
+  actual_prompt_sha256: be57c8402b08281ce91ea7485b409d23cd7d7948b794b122984e7f97545fd31e
+  invocation_sha256: 53225ce80d3206f9f29c9b429900d54d47dd69713108dd119e714f7972a93d83
+  candidate_id: front-44e5537f
+  completed_at: '2026-10-04T17:33:40.459446+00:00'
+- attempt_id: 4be17354804e4266a3eab866f2b82ac0
+  view_id: right-three-quarter
+  plan_sha256: 599d402850d6953c2970c5735215462967fdee882815696973477d59be173fb9
+  repair_number: 0
+  restore_dimensions: []
+  state: COMPLETED
+  reserved_at: '2026-10-04T17:38:25.234073+00:00'
+  actual_prompt_sha256: 2e426baf7120ce564794528f6aceb2e33abb5f98aa57086d9ff44b52427031f8
+  invocation_sha256: efe92c7bb174f714bca1378bec4db4667d01db3412421f412e7f6405d0db7ac9
+  candidate_id: right-three-quarter-4be17354
+  completed_at: '2026-10-04T17:40:25.061985+00:00'
+- attempt_id: 89295f1508034c819cd36abeb4c33f21
+  view_id: back
+  plan_sha256: 98c194d2e092ca635eb500d71b3612b2316511dd3f6ec65b66537b528e49880e
+  repair_number: 0
+  restore_dimensions: []
+  state: COMPLETED
+  reserved_at: '2026-10-04T17:42:01.796560+00:00'
+  actual_prompt_sha256: 6a5f515d634e9539d1c2d771853a119b4b60edc49f4f8a2f0dfa68bccfeab35c
+  invocation_sha256: 0555db0328cfe69f5102390507d323699d8b0c67ce87dfb439215534d1f22d04
+  candidate_id: back-89295f15
+  completed_at: '2026-10-04T17:43:54.815467+00:00'
+- attempt_id: 9e6ce1eb59584800b588c92339e76454
+  view_id: right-three-quarter
+  plan_sha256: 599d402850d6953c2970c5735215462967fdee882815696973477d59be173fb9
+  repair_number: 1
+  restore_dimensions:
+  - parts
+  - wearing_occlusion
+  - cross_view
+  state: COMPLETED
+  reserved_at: '2026-10-04T17:49:32.911382+00:00'
+  restore_constraints:
+  - 黑色宽大长裙与上身相连，长度接近足踝、主要露鞋尖；腰部起褶，内穿白色层叠衬裙保持自然饱满廓形。
+  - 长裙保持原款长度和连续黑色下摆。
+  - 围裙的白色下摆高于黑裙下摆，保留清楚的一圈黑裙边。
+  - 衬裙平时位于外裙内，不改变原款长裙的正常垂落。
+  actual_prompt_sha256: e7ec016750588a9d218f9c6315ff21c68109810f1c11d3c59f3eba0dad72fea7
+  invocation_sha256: 21b5285504b42fa8ca18af76545d0f1c60af8db1410be4ccd0fc13916115ee45
+  candidate_id: right-three-quarter-9e6ce1eb
+  completed_at: '2026-10-04T17:50:56.907614+00:00'
+- attempt_id: fd1bafaeeb9b439a8b5202542549a528
+  view_id: back
+  plan_sha256: 98c194d2e092ca635eb500d71b3612b2316511dd3f6ec65b66537b528e49880e
+  repair_number: 1
+  restore_dimensions:
+  - parts
+  - wearing_occlusion
+  - cross_view
+  state: COMPLETED
+  reserved_at: '2026-10-04T17:52:39.570787+00:00'
+  restore_constraints:
+  - 黑色宽大长裙与上身相连，长度接近足踝、主要露鞋尖；腰部起褶，内穿白色层叠衬裙保持自然饱满廓形。
+  - 长裙保持原款长度和连续黑色下摆。
+  - 围裙的白色下摆高于黑裙下摆，保留清楚的一圈黑裙边。
+  - 衬裙平时位于外裙内，不改变原款长裙的正常垂落。
+  - 白色胸兜式长围裙，腰带在后腰系大蝴蝶结，白色肩带在背部交叉，肩带外侧有白色大褶边；白色荷叶边头箍；白领下方一只黑色大蝴蝶结。
+  - 采用用户选定的弧形荷叶边头箍和大黑色蝴蝶结。
+  - 后背X形肩带、肩部白褶边、后腰大蝴蝶结及两条垂尾保持一致。
+  - 围裙覆盖连衣裙胸腹和裙身前方，白色胸兜与腰带连接清楚。
+  - 黑色素面闭口圆头低跟鞋，一双；约2厘米低跟，简洁鞋面，无额外鞋面蝴蝶结或金属饰件。
+  - 黑色、圆头、闭口、低跟、素面。
+  actual_prompt_sha256: 378c0b91c215a75318be8f6715fdd79c86f926e8df2807128c90bf13ecd0debb
+  invocation_sha256: ca5644d1dc10eb297698332451d979b7b36bd8cff25d2e2b009bfcd307faf9a5
+  candidate_id: back-fd1bafae
+  completed_at: '2026-10-04T17:53:52.077990+00:00'
+- attempt_id: 42449613f9cf437c88272343702718af
+  view_id: detail-back-apron
+  plan_sha256: 0569d0259e9e55c13d97b5840afe961707205d9bd0126dce8a2ba26b85eac400
+  repair_number: 0
+  restore_dimensions: []
+  state: COMPLETED
+  reserved_at: '2026-10-04T17:54:26.110558+00:00'
+  actual_prompt_sha256: 76a20a7255c9cfc18b631d0d4bc5955cb5c433d8cad8301ad04ca13691b9e5e8
+  invocation_sha256: a4297dbbef8247780101bb0732f0729cea0d7e09d16d485c854672bbd1af2227
+  candidate_id: detail-back-apron-42449613
+  completed_at: '2026-10-04T17:56:34.655601+00:00'
+- attempt_id: 2e08c54dd3494b91a18b2895a6c4d2b2
+  view_id: detail-trims
+  plan_sha256: db3cd27e11a8bf3fcdc1b842b79aa84968165377eef48631e2bc1036893fb793
+  repair_number: 0
+  restore_dimensions: []
+  state: COMPLETED
+  reserved_at: '2026-10-04T17:57:03.264347+00:00'
+  actual_prompt_sha256: aa0f9c4b3ef0296a0d569ae4d548f358ba43dabb0b349d815166cee33e555104
+  invocation_sha256: 74421b1822183935f997615df4772e5cfe61ab9d7ae440e737208d91b1d338c2
+  candidate_id: detail-trims-2e08c54d
+  completed_at: '2026-10-04T17:58:21.257137+00:00'
+- attempt_id: 115e14551497462f805ccfaa53b979f6
+  view_id: detail-hosiery-footwear
+  plan_sha256: 04069a9096ede1e53a9c2026ace083cb8881de7c5732f90fe7b320cc07d0e504
+  repair_number: 0
+  restore_dimensions: []
+  state: COMPLETED
+  reserved_at: '2026-10-04T17:58:59.610835+00:00'
+  actual_prompt_sha256: 8c5dc6752bfd39e54a1fcc037d04b24253b9dea7a50394b8ddfb55eac22aa250
+  invocation_sha256: e4578a7ac8c73a49da6aac9408bceb9c065f7da39efc7b83cdd0b09ce816f1af
+  candidate_id: detail-hosiery-footwear-115e1455
+  completed_at: '2026-10-04T18:00:19.615455+00:00'
+- attempt_id: fc2f1220df45486a8f20151dce8212fc
+  view_id: detail-hosiery-footwear
+  plan_sha256: 04069a9096ede1e53a9c2026ace083cb8881de7c5732f90fe7b320cc07d0e504
+  repair_number: 1
+  restore_dimensions:
+  - identity
+  - parts
+  - wearing_occlusion
+  - cross_view
+  state: COMPLETED
+  reserved_at: '2026-10-04T18:03:15.204905+00:00'
+  restore_constraints:
+  - 一对白色不透明吊带长袜，袜口到大腿上部，配白色吊袜腰带与四条白色吊带（每腿前后各一条），以小型素面吊袜夹连接平整袜口；正常穿着时位于长裙与衬裙内。
+  - 用户明确指定白色吊带袜，必须是左右分开的长袜，通过吊带固定。
+  - 白色袜身和平整袜口保持不透明布面，吊带与腰带均为白色。
+  - 主穿着图保持完整长裙；连接结构通过衣物细节图呈现。
+  - 黑色素面闭口圆头低跟鞋，一双；约2厘米低跟，简洁鞋面，无额外鞋面蝴蝶结或金属饰件。
+  - 黑色、圆头、闭口、低跟、素面。
+  - 黑色宽大长裙与上身相连，长度接近足踝、主要露鞋尖；腰部起褶，内穿白色层叠衬裙保持自然饱满廓形。
+  - 长裙保持原款长度和连续黑色下摆。
+  - 围裙的白色下摆高于黑裙下摆，保留清楚的一圈黑裙边。
+  - 衬裙平时位于外裙内，不改变原款长裙的正常垂落。
+  actual_prompt_sha256: 306c36d97491aa11e470bd93b3554b55132b58c1eb61f5e52cbdfd2c2dbcbddd
+  invocation_sha256: 943a6169d5ab522c54e0c5dfdd2e727e68819148b84639514f34038d3943164b
+  candidate_id: detail-hosiery-footwear-fc2f1220
+  completed_at: '2026-10-04T18:04:26.193171+00:00'
+candidates:
+- candidate_id: front-cd04c443
+  view_id: front
+  path: D:\learn\Arco\calibration\preparations\prep-20261004T165937Z-a1f765\candidates\front-cd04c443.png
+  sha256: 064add77fb4e930b37a9cbc92566f8eeb556806780de54405db638199e88615e
+  plan_sha256: b64d04ffe423df5762ff4e6ce7c09de4d034ac731edf6d0537e35b515257cd13
+  attempt_id: cd04c44323d14dde85aa021ee91a7723
+  repair_number: 0
+  actual_prompt_sha256: d26708fedcaffcb91844e431c14d1bb8bad9c6cfa20d64a3c06f826f4239ca64
+  main_sha256: null
+  review:
+    output_sha256: 064add77fb4e930b37a9cbc92566f8eeb556806780de54405db638199e88615e
+    plan_sha256: b64d04ffe423df5762ff4e6ce7c09de4d034ac731edf6d0537e35b515257cd13
+    inspected_original_size: true
+    checks:
+      identity:
+        status: PASS
+        evidence: 原尺寸对照正式正面身份：银蓝长发、粉色发梢、厚刘海与纤细身体比例基本相容；无五官，头箍属于新增服装。
+      parts:
+        status: FAIL
+        evidence: 白色荷叶边头箍、大黑领结、泡泡肩袖接窄长袖、宽白袖口每侧两颗扣、白围裙胸兜及裙摆荷叶边符合设计；黑裙下摆偏短，露出明显小腿，不符合已批准的接近足踝且主要露鞋尖的原款裙长。
+      wearing_occlusion:
+        status: FAIL
+        evidence: 肩部白褶边覆盖黑泡泡袖，白围裙在黑裙外，围裙下摆高于黑裙并保留黑裙边；但裙长不足，白袜小腿段大面积露出。吊带与腰带隐藏，无法在本张验证连接结构，留待平铺细节图。
+      cross_view:
+        status: PASS
+        evidence: 本阶段只有正面候选；已与原款正面轮廓和正式身份图比较。未生成斜侧／背面，因此这里不声明尚未完成的跨视图一致性。
+      image_quality:
+        status: PASS
+        evidence: 完整头箍和双鞋入画，浅色背景；衣物轮廓、手部、纽扣及发色层次可辨，无教程文字、水印、红圈或额外肢体。
+    status: FAIL
+    user_accepted: false
+    restore_design_parts:
+    - lower
+  user_accepted: false
+  invalidated: false
+  review_history:
+  - output_sha256: 064add77fb4e930b37a9cbc92566f8eeb556806780de54405db638199e88615e
+    plan_sha256: b64d04ffe423df5762ff4e6ce7c09de4d034ac731edf6d0537e35b515257cd13
+    inspected_original_size: true
+    checks:
+      identity:
+        status: PASS
+        evidence: 原尺寸对照正式正面身份：银蓝长发、粉色发梢、厚刘海与纤细身体比例基本相容；无五官，头箍属于新增服装。
+      parts:
+        status: FAIL
+        evidence: 白色荷叶边头箍、大黑领结、泡泡肩袖接窄长袖、宽白袖口每侧两颗扣、白围裙胸兜及裙摆荷叶边符合设计；黑裙下摆偏短，露出明显小腿，不符合已批准的接近足踝且主要露鞋尖的原款裙长。
+      wearing_occlusion:
+        status: FAIL
+        evidence: 肩部白褶边覆盖黑泡泡袖，白围裙在黑裙外，围裙下摆高于黑裙并保留黑裙边；但裙长不足，白袜小腿段大面积露出。吊带与腰带隐藏，无法在本张验证连接结构，留待平铺细节图。
+      cross_view:
+        status: PASS
+        evidence: 本阶段只有正面候选；已与原款正面轮廓和正式身份图比较。未生成斜侧／背面，因此这里不声明尚未完成的跨视图一致性。
+      image_quality:
+        status: PASS
+        evidence: 完整头箍和双鞋入画，浅色背景；衣物轮廓、手部、纽扣及发色层次可辨，无教程文字、水印、红圈或额外肢体。
+    status: FAIL
+    user_accepted: false
+- candidate_id: front-1e0bbe89
+  view_id: front
+  path: D:\learn\Arco\calibration\preparations\prep-20261004T165937Z-a1f765\candidates\front-1e0bbe89.png
+  sha256: 7b30339421d4aa619d81fa500cb085e95198689903f802e914dfb16ae1077a75
+  plan_sha256: b64d04ffe423df5762ff4e6ce7c09de4d034ac731edf6d0537e35b515257cd13
+  attempt_id: 1e0bbe89d44b4ef1872f50644ba2ee70
+  repair_number: 1
+  actual_prompt_sha256: 448b68b3bbca9e1dbbe780461a0813be3f22d2d2ab1f115ed35e73b23943d7ab
+  main_sha256: null
+  review:
+    output_sha256: 7b30339421d4aa619d81fa500cb085e95198689903f802e914dfb16ae1077a75
+    plan_sha256: b64d04ffe423df5762ff4e6ce7c09de4d034ac731edf6d0537e35b515257cd13
+    checks:
+      identity:
+        status: PASS
+        evidence: 银蓝厚刘海长发和粉色发梢、窄肩细腰修长手臂、无五官脸型与正式阿尔可参考相容；画风未继承教程灰阶。
+      parts:
+        status: FAIL
+        evidence: 领结、头箍、袖口各2扣、泡泡长袖和白围裙符合要求；黑裙虽比首版略低，中心下摆约y1630，而左鞋鞋口约y1785、鞋底约y1840，仍露出连续约150像素白袜/踝部且显示大部分完整鞋面。对照原款几乎遮到鞋尖、仅少量鞋尖露出的裙长，仍未恢复固定设计。
+      wearing_occlusion:
+        status: FAIL
+        evidence: 围裙高于连续黑裙边，胸兜腰带层叠可读，肩部褶边在黑泡泡袖之上。但正常站立时露出的较长白袜段与近足踝/主要露鞋尖要求冲突；不能用正常袜色正确放行裙长错误。袜口、吊带、腰带未见，留待细节图。
+      cross_view:
+        status: UNVERIFIED
+        evidence: 尚无获准锁定主图以及其余候选，不可能证明完整多视图一致性；当前仅可核对正面和教程取用关系。
+      image_quality:
+        status: PASS
+        evidence: 原尺寸841×1871全身完整、白背景清晰、无水印文字；衣料褶皱与线稿可读，宽白袖口2扣和黑裙连续边清楚。
+    restore_design_parts:
+    - lower
+    inspected_original_size: true
+    inspected_dimensions:
+    - 841
+    - 1871
+    reviewer: maid_visual_reviewer
+    independent_agent_review_path: D:\learn\Arco\output\maid-outfit-20261005\agent-reviews\front-1e0bbe89.json
+    independent_agent_review_sha256: 2a298c6d98cda298dbc7e396f5264bb6d88d2d89141fd07d838d28187b91da72
+    status: FAIL
+    user_accepted: false
+  user_accepted: false
+  invalidated: false
+- candidate_id: front-44e5537f
+  view_id: front
+  path: D:\learn\Arco\calibration\preparations\prep-20261004T165937Z-a1f765\candidates\front-44e5537f.png
+  sha256: 7b7a3c14c6216c2c8a38e0cc91af29fafe0c2ad148d8d80bebe0de5516d400b2
+  plan_sha256: b64d04ffe423df5762ff4e6ce7c09de4d034ac731edf6d0537e35b515257cd13
+  attempt_id: 44e5537f2b22485884023ea14353840f
+  repair_number: 2
+  actual_prompt_sha256: be57c8402b08281ce91ea7485b409d23cd7d7948b794b122984e7f97545fd31e
+  main_sha256: null
+  review:
+    output_sha256: 7b7a3c14c6216c2c8a38e0cc91af29fafe0c2ad148d8d80bebe0de5516d400b2
+    plan_sha256: b64d04ffe423df5762ff4e6ce7c09de4d034ac731edf6d0537e35b515257cd13
+    inspected_original_size: true
+    checks:
+      identity:
+        status: PASS
+        evidence: 银蓝白基色长发、厚刘海、两側长发束和明确粉色发梢保留；脸无五官，窄肩细腰与修长手臂符合正式着装身份。裙装遮挡腿长，不从衣裙轮廓推断新的身体比例。
+      parts:
+        status: PASS
+        evidence: 黑色连衣裙收腰，泡泡肩袖接窄长袖，闭合白翻领，宽白袖口各2颗扣，白胸兜长围裙、肩部大荷叶边、白弧形荷叶边头箍、大黑领结均清楚。黑裙下摆覆盖袜腿和鞋口，只露双圆头鞋尖与少量薄鞋底；白围裙褶边高于黑裙且形成连续黑色下缘，已恢复近足踝原款长度。
+      wearing_occlusion:
+        status: PASS
+        evidence: 白围裙胸兜→腰带→前裙片连续，肩部白褶边在黑泡泡袖上，领结在白领下；无白袜/小腿暴露、没有抬裙行为。后腰蝴蝶结翼在两侧可部分见但不能由正面数清尾条；内衬裙及吊袜结构被正常遮挡，必须交由后续细节图补证。
+      cross_view:
+        status: PASS
+        scope: current_original_references
+        evidence: 当前可见身份与正式正面/斜侧 Identity 相容，黑裙与白围裙长度和层叠符合原款教程前视，头箍和领结选择符合补充取用图；未观察到当前来源之间的可见结构矛盾。此项只验证现有来源相容，不证明尚未生成的套装多视图一致性。
+      image_quality:
+        status: PASS
+        evidence: 1024×1536原尺寸完整头箍至鞋尖均入画，白色背景、线稿和柔和赛璐璐层次清楚；无文字、水印、红圈、断裂裙摆或重复四肢。双手中立交叠仍可读。
+    reviewer: maid_visual_reviewer
+    independent_agent_review_path: D:\learn\Arco\output\maid-outfit-20261005\agent-reviews\front-44e5537f.json
+    independent_agent_review_sha256: 434db9bc11a0a1bd623d3f6064ceb5bdb83c121145207cdbf0541aea5f9f7112
+    deferred_requirements:
+    - 右斜侧和背面候选必须逐一与锁定主图比对，最终整包独立检查跨视图长度、配色和部件一致性。
+    - 背面X肩带、后腰大蝴蝶结及恰好两条垂尾通过背面及衣物背部细节图验证，长发自然遮挡不能算失败或算已证实。
+    - 白吊袜腰带、恰好4条白吊带、左右两只不透明白长袜、平整袜口和小夹连接通过无人体平铺图验证。
+    - 黑色圆头闭口素面约2cm低跟鞋完整鞋型由平铺图验收，主图仅证明鞋尖颜色与形状。
+    - 白内衬裙当前遮挡，不声称直接见到其内部层叠结构。
+    cross_view_scope: current_original_references
+    status: PASS
+    user_accepted: false
+  user_accepted: true
+  invalidated: false
+- candidate_id: right-three-quarter-4be17354
+  view_id: right-three-quarter
+  path: D:\learn\Arco\calibration\preparations\prep-20261004T165937Z-a1f765\candidates\right-three-quarter-4be17354.png
+  sha256: ec28069423570b7095685ca4d84392e8838fd7c82ba02c1d760da0dc0adbcf36
+  plan_sha256: 599d402850d6953c2970c5735215462967fdee882815696973477d59be173fb9
+  attempt_id: 4be17354804e4266a3eab866f2b82ac0
+  repair_number: 0
+  actual_prompt_sha256: 2e426baf7120ce564794528f6aceb2e33abb5f98aa57086d9ff44b52427031f8
+  main_sha256: 7b7a3c14c6216c2c8a38e0cc91af29fafe0c2ad148d8d80bebe0de5516d400b2
+  review:
+    candidate_id: right-three-quarter-4be17354
+    view_id: right-three-quarter
+    output_path: D:/learn/Arco/calibration/preparations/prep-20261004T165937Z-a1f765/candidates/right-three-quarter-4be17354.png
+    output_sha256: ec28069423570b7095685ca4d84392e8838fd7c82ba02c1d760da0dc0adbcf36
+    plan_sha256: 599d402850d6953c2970c5735215462967fdee882815696973477d59be173fb9
+    main_sha256: 7b7a3c14c6216c2c8a38e0cc91af29fafe0c2ad148d8d80bebe0de5516d400b2
+    inspected_original_size: true
+    inspected_dimensions:
+    - 1024
+    - 1536
+    reviewer: maid_visual_reviewer
+    decision: FAIL
+    restore_design_parts:
+    - lower
+    checks:
+      identity:
+        status: PASS
+        evidence: 斜侧无五官脸型、银蓝长刘海及披散长发粉色发梢与正式斜侧身份相容；未附加角、黑发等原人物特征，整体肩腰和手臂比例保持。
+      parts:
+        status: FAIL
+        evidence: 黑裙中心边约y1388，鞋尖约y1486，鞋口上方白襪踝部约50至70像素明显可见，完整鞋面和鞋跟全露。固定原裙长度要求主要露鞋尖，锁定正面也完全不露白袜，此侧图裙摆偏短。其余白头箍、大黑领结、白翻领、泡泡长袖和各2扣白袖口可见且基本一致。
+      wearing_occlusion:
+        status: FAIL
+        evidence: 围裙覆黑裙、肩带褶边在黑泡泡袖外侧、胸兜接白腰带合理；长发自然落在背侧。但裙摆遮挡不足，白袜/脚踝和鞋口可见，与正常袜装藏在近足踝長裙中及主要露鞋尖的既定穿法冲突。
+      cross_view:
+        status: FAIL
+        scope: locked_front_and_current_original_references
+        evidence: 对照 front-44e5537f，主图黑裙遮住袜腿及鞋口、只短鞋尖外露，本张斜侧却露白襪踝部及整个鞋面；这是同一裙长约束的直接跨视图矛盾，不能归为合理视角差异。上身黑白配色和固定配件一致。
+      image_quality:
+        status: PASS
+        evidence: 1024×1536全身斜侧和鞋底完整入画，白背景清晰，发丝、腰带、裙褶线条可辨；无水印文本和明显多余四肢。
+    repair_recommendation: 只恢复 lower 的原批准近足踝裙长和锁定正面的脚部覆盖：黑裙下缘延至鞋尖前缘上方，遮住白袜、小腿/踝部、鞋口及绝大部分鞋面，正常只露黑色短圆鞋尖与薄鞋底；白围裙随之保持同一锁定长度比例，仍高于黑裙连续边。保留当前右斜侧视角、身份、手势、头箍/领结/袖口等。
+    deferred_requirements:
+    - 背部X肩带及恰好2条蝴蝶结垂尾由背面和无头发细节图证明
+    - 白腰带/4白吊带/两白长袜连接由平铺图证明
+    - 最终六图整包交叉检查
+    independent_report_path: output\maid-outfit-20261005\agent-reviews\right-three-quarter-4be17354.json
+    independent_report_sha256: d6bc46767ad2e0c9047ee38b86740e4e2b3de06ccdbbfa4c2a0b08d3c3a4cebb
+    acceptance_mode: user_delegated_independent_agent_review
+    status: FAIL
+    user_accepted: false
+  user_accepted: false
+  invalidated: false
+- candidate_id: back-89295f15
+  view_id: back
+  path: D:\learn\Arco\calibration\preparations\prep-20261004T165937Z-a1f765\candidates\back-89295f15.png
+  sha256: 32d345a1f36a70cdd7e809ce35c9d8caa489f1403de9aeb8fc443f25522cabe1
+  plan_sha256: 98c194d2e092ca635eb500d71b3612b2316511dd3f6ec65b66537b528e49880e
+  attempt_id: 89295f1508034c819cd36abeb4c33f21
+  repair_number: 0
+  actual_prompt_sha256: 6a5f515d634e9539d1c2d771853a119b4b60edc49f4f8a2f0dfa68bccfeab35c
+  main_sha256: 7b7a3c14c6216c2c8a38e0cc91af29fafe0c2ad148d8d80bebe0de5516d400b2
+  review:
+    candidate_id: back-89295f15
+    view_id: back
+    output_path: D:/learn/Arco/calibration/preparations/prep-20261004T165937Z-a1f765/candidates/back-89295f15.png
+    output_sha256: 32d345a1f36a70cdd7e809ce35c9d8caa489f1403de9aeb8fc443f25522cabe1
+    plan_sha256: 98c194d2e092ca635eb500d71b3612b2316511dd3f6ec65b66537b528e49880e
+    main_sha256: 7b7a3c14c6216c2c8a38e0cc91af29fafe0c2ad148d8d80bebe0de5516d400b2
+    inspected_original_size: true
+    inspected_dimensions:
+    - 841
+    - 1870
+    reviewer: maid_visual_reviewer
+    decision: FAIL
+    restore_design_parts:
+    - lower
+    - accessories
+    - footwear
+    checks:
+      identity:
+        status: PASS
+        evidence: 严格背视，没有前向五官；银蓝披散长发、中央连续后脑发束、粉色长发梢和身体后侧轮廓符合获准背面 Identity。未通过扎发/短发去强行显示服装。
+      parts:
+        status: FAIL
+        evidence: 后腰居中大白蝴蝶结和2条宽垂尾可辨，宽白袖口各2扣、黑泡泡长袖及白头箍保留。但新增从两侧背部白围裙垂边沿裙后下部连成完整U形的白荷叶边横桥；原教程背视仅前围裙侧缘在两侧可见，中间为完整黑裙，不存在横跨黑裙背面的白围裙底边。黑裙太短，白袜踝部和大部分鞋后帮可见；鞋后跟为显著高度的独立厚块，视觉近原常服中跟，未体现约2cm低跟。
+      wearing_occlusion:
+        status: FAIL
+        evidence: 背部X肩带只见腰结上方交叉的一段，被长发遮挡其上端属允许遮挡，需细节图核验。不允许新增U形围裙背框代替原前围裙围绕关系；当前白袜踝部可见且鞋后帮大面积暴露，违背裙长覆盖。严格背视应仅小黑后跟/鞋底边缘露出，不能要求前鞋尖可见。
+      cross_view:
+        status: FAIL
+        scope: locked_front_formal_back_identity_and_original_tutorial
+        evidence: 与锁定正面只露鞋尖的黑裙长度不相容，背面白袜/踝部重新露出；白色U形围裙后横桥不符合教程围裙背部构造，会导致前后不属于同一固定设计。身份头发与正式背图保持相容。
+      image_quality:
+        status: PASS
+        evidence: 841×1870原尺寸全身背视完整，线条和白/黑裙边可辨、2条尾带明确；背景清晰无文字水印，无正面膝盖问题。
+    repair_recommendation: 恢复 lower 近足踝裙长遮掉全部白袜/踝部和鞋后帮，仅保留小黑色后跟/鞋底边缘；恢复 accessories
+      中的围裙为前胸兜和前裙片，两侧边缘可在背视两边露出，取消背面横跨黑裙的白荷叶边U形横桥，保留后背X肩带及居中大白腰结和恰好2尾；恢复 footwear
+      的约2cm低跟，不沿用正式常服鞋的明显高块后跟。所有身份、披散长发、背视方向保持不变。
+    deferred_requirements:
+    - 长发遮挡的X肩带上端和后背衣裙连接须无头发背部衣物细节图验收
+    - 正常隐藏的白腰带4吊带和两袜连接须平铺图验收
+    - 最终六图整包交叉检查
+    independent_report_path: output\maid-outfit-20261005\agent-reviews\back-89295f15.json
+    independent_report_sha256: 5097056b2c4c9853ce5368aea41bef816b1480af67f2784f537926d932ee1bc5
+    acceptance_mode: user_delegated_independent_agent_review
+    status: FAIL
+    user_accepted: false
+  user_accepted: false
+  invalidated: false
+- candidate_id: right-three-quarter-9e6ce1eb
+  view_id: right-three-quarter
+  path: D:\learn\Arco\calibration\preparations\prep-20261004T165937Z-a1f765\candidates\right-three-quarter-9e6ce1eb.png
+  sha256: 83a3b5bd42fb6dc7c605e09ccf323464092013e88a5645fd69a59fd70a760315
+  plan_sha256: 599d402850d6953c2970c5735215462967fdee882815696973477d59be173fb9
+  attempt_id: 9e6ce1eb59584800b588c92339e76454
+  repair_number: 1
+  actual_prompt_sha256: e7ec016750588a9d218f9c6315ff21c68109810f1c11d3c59f3eba0dad72fea7
+  main_sha256: 7b7a3c14c6216c2c8a38e0cc91af29fafe0c2ad148d8d80bebe0de5516d400b2
+  review:
+    candidate_id: right-three-quarter-9e6ce1eb
+    view_id: right-three-quarter
+    output_path: D:/learn/Arco/calibration/preparations/prep-20261004T165937Z-a1f765/candidates/right-three-quarter-9e6ce1eb.png
+    output_sha256: 83a3b5bd42fb6dc7c605e09ccf323464092013e88a5645fd69a59fd70a760315
+    plan_sha256: 599d402850d6953c2970c5735215462967fdee882815696973477d59be173fb9
+    main_sha256: 7b7a3c14c6216c2c8a38e0cc91af29fafe0c2ad148d8d80bebe0de5516d400b2
+    inspected_original_size: true
+    inspected_dimensions:
+    - 1024
+    - 1536
+    reviewer: maid_visual_reviewer
+    decision: PASS
+    decision_scope: 右斜侧可见范围及已有锁定主图一致性；尚非完整参考包验收
+    restore_design_parts: []
+    checks:
+      identity:
+        status: PASS
+        evidence: 相机为右斜侧三分之四、面朝画面左侧，与正式斜侧身份方向相容；无五官小下巴、厚银蓝刘海、长发粉色发梢、窄肩细腰修长手臂保持。
+      parts:
+        status: PASS
+        evidence: 黑收腰一体长裙已延至鞋尖上方，白襪/踝/鞋口和鞋面均遮住，只两枚短黑圆头鞋尖及薄底缘露出；白前围裙下方高于连续黑裙边，与锁定正面一致。白头箍、大黑領结、闭合白领、黑泡泡肩袖接长袖、宽白袖口各2扣均明确。后腰白蝴蝶结从側面局部可见，存在两条侧投影尾带；完整背结形态由背图/细节核验。
+      wearing_occlusion:
+        status: PASS
+        evidence: 白胸兜接腰带和宽前裙片，肩带荷叶边位于黑泡泡袖上；前围裙不覆盖后侧黑裙主体，裙长保持正常垂落，袜腿全遮，没有掀裙动作。长发在背侧遮住部分腰结属既定穿法。
+      cross_view:
+        status: PASS
+        scope: locked_front_and_current_original_references
+        evidence: 与获准 front-44e5537f 对照，长黑裙覆盖程度、前白围裙/黑裙下缘比例、领结/头箍和袖口2扣相容。当前右斜侧没有恢复成露白袜短裙。背面和三细节图未完成，不能由本项推出整包一致。
+      image_quality:
+        status: PASS
+        evidence: 1024×1536原尺寸完整全身含头箍和短鞋尖入画，白背景干净、肩袖/围裙/发丝线稿清楚，无教程字样或重复肢体。
+    deferred_requirements:
+    - 完整背部X肩带和后腰大蝴蝶结恰好2尾由背面/衣物背部细节核验
+    - 白腰带4白吊带、两不透明白長襪和小夹由无人体平铺图核验
+    - 约2厘米低跟和完整鞋型由平铺图核验
+    - 最终六图必须独立整包检查
+    independent_report_path: output\maid-outfit-20261005\agent-reviews\right-three-quarter-9e6ce1eb.json
+    independent_report_sha256: 88d8e2ea186cceea70d2b8effa5d5652a8b2d02b8ba1757dd06d88f224117185
+    acceptance_mode: user_delegated_independent_agent_review
+    status: PASS
+    user_accepted: false
+  user_accepted: false
+  invalidated: false
+- candidate_id: back-fd1bafae
+  view_id: back
+  path: D:\learn\Arco\calibration\preparations\prep-20261004T165937Z-a1f765\candidates\back-fd1bafae.png
+  sha256: 9536784f9de547ac0e188be9010ea3bd2f09b3fe79f368870683fa27278c37fc
+  plan_sha256: 98c194d2e092ca635eb500d71b3612b2316511dd3f6ec65b66537b528e49880e
+  attempt_id: fd1bafaeeb9b439a8b5202542549a528
+  repair_number: 1
+  actual_prompt_sha256: 378c0b91c215a75318be8f6715fdd79c86f926e8df2807128c90bf13ecd0debb
+  main_sha256: 7b7a3c14c6216c2c8a38e0cc91af29fafe0c2ad148d8d80bebe0de5516d400b2
+  review:
+    candidate_id: back-fd1bafae
+    view_id: back
+    output_path: D:/learn/Arco/calibration/preparations/prep-20261004T165937Z-a1f765/candidates/back-fd1bafae.png
+    output_sha256: 9536784f9de547ac0e188be9010ea3bd2f09b3fe79f368870683fa27278c37fc
+    plan_sha256: 98c194d2e092ca635eb500d71b3612b2316511dd3f6ec65b66537b528e49880e
+    main_sha256: 7b7a3c14c6216c2c8a38e0cc91af29fafe0c2ad148d8d80bebe0de5516d400b2
+    inspected_original_size: true
+    inspected_dimensions:
+    - 841
+    - 1870
+    reviewer: maid_visual_reviewer
+    decision: PASS
+    decision_scope: 背面可见穿着结构通过；鞋跟的精确结构和高度须鞋平铺图补证，尚非完整参考包验收
+    restore_design_parts: []
+    checks:
+      identity:
+        status: PASS
+        evidence: 严格背面、未出现前面脸/脚尖或膝盖；冰银浅蓝披散后脑发束与粉色发尾符合正式背面Identity，发尾自然遮住肩带和部分腰结，无改短或扎发。
+      parts:
+        status: PASS
+        evidence: 黑泡泡长袖、宽白袖口各2扣、白头箍、白肩褶边保留；后腰居中大白蝴蝶结恰好2宽尾可辨，前围裙边仅两侧可见，后裙主体全黑，错误U形白横桥已消失。黑裙遮住所有白袜踝部及绝大多数鞋后帮，仅约40像素黑鞋后方小块露出。
+      wearing_occlusion:
+        status: PASS
+        evidence: 黑裙正常近地垂落、后方可见黑裙连续完整，无横跨后裙白围裙底边。披散长发遮挡X带和腰结中心符合计划；2尾下垂在黑裙上。脚向严格后方，不能要求背图露前鞋尖。袜/踝完全被长裙遮住。
+      cross_view:
+        status: PASS
+        scope: locked_front_formal_back_identity_and_original_tutorial
+        evidence: 与锁定front及获准斜侧皆同样遮袜腿与大部分鞋面，长裙和白前围裙层叠相容；当前背面仅露两侧白前裙边、背黑裙主体与教程背视相容。未生成三细节图，完整肩带与鞋袜结构尚无最终证明。
+      image_quality:
+        status: PASS
+        evidence: 841×1870原尺寸完整头箍至脚底、浅背景与黑裙褶裥清楚，无多余肢体、字样或红圈。可清楚数出2尾和各2袖口扣。
+    deferred_requirements:
+    - X形背带被长发大幅遮挡，需无人体/无头发的背部衣物细节图验证肩带从前胸兜绕肩后交叉至腰带，不能因本图遮挡推断已经合格。
+    - 鞋后部现在大幅遮挡，仅小黑色后鞋区域可见，无法区分全部露出部分中鞋后帮与真正鞋跟界线，也无尺度；不再具备首版整个鞋后帮+显著独立高块的明确中跟证据，但本图不能证明约2cm鞋跟。平铺鞋图必须显示完整低跟结构，最终整包仍要比对背面残留鞋后轮廓；若平铺为中高跟必须FAIL。
+    - 白腰带4白吊带与两不透明白长袜小夹连接由无人体平铺图核验。
+    - 最终六图必须独立整包验收。
+    independent_report_path: output\maid-outfit-20261005\agent-reviews\back-fd1bafae.json
+    independent_report_sha256: 65133d7d244244a285b2c7f33e1879c356b0e7412a9e1910e607bcfd7983c412
+    acceptance_mode: user_delegated_independent_agent_review
+    status: PASS
+    user_accepted: false
+  user_accepted: false
+  invalidated: false
+- candidate_id: detail-back-apron-42449613
+  view_id: detail-back-apron
+  path: D:\learn\Arco\calibration\preparations\prep-20261004T165937Z-a1f765\candidates\detail-back-apron-42449613.png
+  sha256: 3ded9dced2c4ad9d002f1acc9d82bd84996196b03c41dd53bf4cd2e1a148b381
+  plan_sha256: 0569d0259e9e55c13d97b5840afe961707205d9bd0126dce8a2ba26b85eac400
+  attempt_id: 42449613f9cf437c88272343702718af
+  repair_number: 0
+  actual_prompt_sha256: 76a20a7255c9cfc18b631d0d4bc5955cb5c433d8cad8301ad04ca13691b9e5e8
+  main_sha256: 7b7a3c14c6216c2c8a38e0cc91af29fafe0c2ad148d8d80bebe0de5516d400b2
+  review:
+    candidate_id: detail-back-apron-42449613
+    view_id: detail-back-apron
+    output_path: D:/learn/Arco/calibration/preparations/prep-20261004T165937Z-a1f765/candidates/detail-back-apron-42449613.png
+    output_sha256: 3ded9dced2c4ad9d002f1acc9d82bd84996196b03c41dd53bf4cd2e1a148b381
+    plan_sha256: 0569d0259e9e55c13d97b5840afe961707205d9bd0126dce8a2ba26b85eac400
+    main_sha256: 7b7a3c14c6216c2c8a38e0cc91af29fafe0c2ad148d8d80bebe0de5516d400b2
+    inspected_original_size: true
+    inspected_dimensions:
+    - 1536
+    - 1024
+    reviewer: maid_visual_reviewer
+    decision: PASS
+    decision_scope: 服装背部与已有前/侧/背图结构检查通过；不替代袜鞋与全部参考包验收
+    restore_design_parts: []
+    checks:
+      identity:
+        status: PASS
+        scope: garment_only_no_person_identity
+        evidence: 全页只有无人体衣物，无头、头发、脸或肢体，没有误继承教程人物身份；线稿与柔和赛璐璐衣料明暗延续锁定主图。该图不用于证明人物身体身份。
+      parts:
+        status: PASS
+        evidence: 中心背衣和右上特写清楚显示2条白肩带在背部交叉成X，上端绕肩，下端连续抵后腰白腰带；肩带外侧大白荷叶边、后腰居中大白蝴蝶结与恰好2条宽垂尾明确。背裙中间保持纯黑，白前围裙侧缘只在两边，无U形后横桥。左右袖口各2扣及右下特写一致。
+      wearing_occlusion:
+        status: PASS
+        evidence: 没有头发遮挡，能读清肩带X交叉上下一层和腰带/系结衔接；前白胸兜及前裙片在黑连衣裙外，肩荷叶边在泡泡袖上。背白围裙边只来自前裙片绕侧可见。
+      cross_view:
+        status: PASS
+        scope: locked_front_accepted_right_back_and_original_tutorial
+        evidence: 与front-44e5537f、right-three-quarter-9e6ce1eb、back-fd1bafae的白胸兜、宽腰带、后大结2尾、黑泡泡长袖/白袖口2扣、前裙荷叶边和连续黑裙边相容；完整背部X结构吻合原教程。额外正面全衣和已批袖口/肩褶特写只补充同款信息，没有未批新配件。
+      image_quality:
+        status: PASS
+        evidence: 1536×1024原尺寸，后衣、X带、腰结和袖口特写线条清晰、干净浅背景，分栏边框不遮构造；无正文文字或人物。构图比原计划上身特写范围宽，但右上与中部已足够清晰呈现关键结构，没有影响可用性。
+    deferred_requirements:
+    - 白袜腰带恰好4白吊带/两白长袜/小夹连接仍需平铺图
+    - 完整约2cm低跟鞋型仍需平铺图
+    - 头箍领结专门细节图和最终六图整包审核尚待完成
+    independent_report_path: output\maid-outfit-20261005\agent-reviews\detail-back-apron-42449613.json
+    independent_report_sha256: ec45c776776f503fc30f3b5976c63d111d0ca4f1a7ad372b287c41a191266598
+    acceptance_mode: user_delegated_independent_agent_review
+    status: PASS
+    user_accepted: false
+  user_accepted: false
+  invalidated: false
+- candidate_id: detail-trims-2e08c54d
+  view_id: detail-trims
+  path: D:\learn\Arco\calibration\preparations\prep-20261004T165937Z-a1f765\candidates\detail-trims-2e08c54d.png
+  sha256: 8bc5cb511b346a72cdc4e98045d0f27ffbf5b91009f30398608807c16972a7e8
+  plan_sha256: db3cd27e11a8bf3fcdc1b842b79aa84968165377eef48631e2bc1036893fb793
+  attempt_id: 2e08c54dd3494b91a18b2895a6c4d2b2
+  repair_number: 0
+  actual_prompt_sha256: aa0f9c4b3ef0296a0d569ae4d548f358ba43dabb0b349d815166cee33e555104
+  main_sha256: 7b7a3c14c6216c2c8a38e0cc91af29fafe0c2ad148d8d80bebe0de5516d400b2
+  review:
+    candidate_id: detail-trims-2e08c54d
+    view_id: detail-trims
+    output_path: D:/learn/Arco/calibration/preparations/prep-20261004T165937Z-a1f765/candidates/detail-trims-2e08c54d.png
+    output_sha256: 8bc5cb511b346a72cdc4e98045d0f27ffbf5b91009f30398608807c16972a7e8
+    plan_sha256: db3cd27e11a8bf3fcdc1b842b79aa84968165377eef48631e2bc1036893fb793
+    main_sha256: 7b7a3c14c6216c2c8a38e0cc91af29fafe0c2ad148d8d80bebe0de5516d400b2
+    inspected_original_size: true
+    inspected_dimensions:
+    - 1536
+    - 1024
+    reviewer: maid_visual_reviewer
+    decision: PASS
+    decision_scope: 配件与已存在服装视图的可见固定设计相容，袜鞋与最终整包仍待验收
+    restore_design_parts: []
+    checks:
+      identity:
+        status: PASS
+        scope: garment_only_no_person_identity
+        evidence: 全图只有衣物和配件，没有头、头发、脸、手或人体；与基线相容的清晰线稿和柔和衣料明暗。该项只检查无身份污染，不声称衣物页证明人体比例。
+      parts:
+        status: PASS
+        evidence: 右上前/侧两视角为开放下端的弧形白荷叶边头箍，明确不是后脑罩；领口特写为白翻领下大黑蝴蝶结，左右蝶翼/中央结/两垂角明确，没有椭圆胸针领巾。袖口特写恰好2扣、宽白卷边，左全衣领口闭合中央小扣可见。全衣和后结补充同一黑长裙/白前围裙/X带/大白腰结2尾，没有新增物品。
+      wearing_occlusion:
+        status: PASS
+        evidence: 无人体与头发遮挡，头箍弧形开口、领结在白领下胸兜上沿、宽白袖口接黑长袖、肩褶在黑泡泡袖上均直接可读；后结2尾覆盖黑后裙，白围裙两侧边而非后白U桥。
+      cross_view:
+        status: PASS
+        scope: locked_front_accepted_right_back_detail_back_and_selected_original_regions
+        evidence: 头箍对应补图上右的弧形荷叶边选择，领结对应左侧大蝴蝶结。与front44e5537f/斜侧9e6ce1eb/背fd1bafae/背细节42449613对照，白头箍、大黑领结、2扣袖口、X带和腰结2尾保持同款，重复前/背衣片没有直接结构矛盾。
+      image_quality:
+        status: PASS
+        evidence: 1536×1024原尺寸，各特写足够清楚，图框与中文名词标签只在分栏处，没有遮住头箍、结或扣。标签仅是展示说明，不作为设计命令、来源证据或独立事实。无人体或水印。
+    deferred_requirements:
+    - 白襪腰带4吊带/两袜/夹子和完整约2cm低跟鞋仍需袜鞋平铺图
+    - 最后六图必须整体独立对照，当前不宣布整包入库条件完成
+    independent_report_path: output\maid-outfit-20261005\agent-reviews\detail-trims-2e08c54d.json
+    independent_report_sha256: 9d41f7d9275646f16fb4622b4c28ad49a81ad78a4c71eba62e8016ec7ce6e294
+    acceptance_mode: user_delegated_independent_agent_review
+    status: PASS
+    user_accepted: false
+  user_accepted: false
+  invalidated: false
+- candidate_id: detail-hosiery-footwear-115e1455
+  view_id: detail-hosiery-footwear
+  path: D:\learn\Arco\calibration\preparations\prep-20261004T165937Z-a1f765\candidates\detail-hosiery-footwear-115e1455.png
+  sha256: f7e2fe264e2d340b0cc4f8e9de298a636829c80fb30e15aa0879d2e7bab6d18b
+  plan_sha256: 04069a9096ede1e53a9c2026ace083cb8881de7c5732f90fe7b320cc07d0e504
+  attempt_id: 115e14551497462f805ccfaa53b979f6
+  repair_number: 0
+  actual_prompt_sha256: 8c5dc6752bfd39e54a1fcc037d04b24253b9dea7a50394b8ddfb55eac22aa250
+  main_sha256: 7b7a3c14c6216c2c8a38e0cc91af29fafe0c2ad148d8d80bebe0de5516d400b2
+  review:
+    candidate_id: detail-hosiery-footwear-115e1455
+    view_id: detail-hosiery-footwear
+    output_path: D:/learn/Arco/calibration/preparations/prep-20261004T165937Z-a1f765/candidates/detail-hosiery-footwear-115e1455.png
+    output_sha256: f7e2fe264e2d340b0cc4f8e9de298a636829c80fb30e15aa0879d2e7bab6d18b
+    plan_sha256: 04069a9096ede1e53a9c2026ace083cb8881de7c5732f90fe7b320cc07d0e504
+    main_sha256: 7b7a3c14c6216c2c8a38e0cc91af29fafe0c2ad148d8d80bebe0de5516d400b2
+    inspected_original_size: true
+    inspected_dimensions:
+    - 1536
+    - 1024
+    reviewer: maid_visual_reviewer
+    decision: FAIL
+    restore_design_parts:
+    - hosiery
+    - footwear
+    - lower
+    checks:
+      identity:
+        status: FAIL
+        scope: garment_only_no_person_identity
+        evidence: 袜口小特写上半部出现桃肤色柱状腿部，不是纯白空袜布料或浅灰内阴影；计划要求无人体平铺连接图，该局部已含人体样片。其余大部分为衣物没有人物头发脸。
+      parts:
+        status: FAIL
+        evidence: 白腰带图能数4白吊带和4夹；两只白长袜的前/背视图存在。但夹子全悬空、袜口另列，没有任何腰带→吊带→袜口实接，无法证明每腿前后各1夹/共4条的穿着关系。袜口特写没有吊带夹连接。黑素面圆头闭口鞋有完整侧图，但鞋后独立块跟相对鞋长显著偏高（侧图鞋长约225px，后跟块约30px），近中低跟而非约2cm薄低跟；标签“低跟”不是证据。额外背衣黑裙底部新增横向收褶/荷叶边带，获批主图和背图均是连续黑裙边，无此黑裙下层装饰。
+      wearing_occlusion:
+        status: FAIL
+        evidence: 腰带和袜分离展示不能验收原计划连接，4夹都没有咬合到袜口；局部还用腿部展示袜口，违背无人体。完整鞋低跟未还原。
+      cross_view:
+        status: FAIL
+        scope: approved_design_and_accepted_existing_views
+        evidence: 当前页新增背黑裙下层荷叶边与back-fd1bafae/detail-back-apron42449613中连续简洁黑后裙不一致；鞋型在本页明确偏高，不能补证背图此前延迟验收的约2cm跟。白长袜颜色不透明和素面袜口相容，但连接关系未展示。
+      image_quality:
+        status: PASS
+        evidence: 1536×1024原尺寸各分栏清楚，4条带和独立鞋侧图可看见，没有图像糊坏或文字遮住关键部件；质量可读并不代表服装设计合格。名词标签只展示，不作设计指令或正确性证据。
+    repair_recommendation: 恢复 hosiery 的真正无人体平铺装配：一白腰带4白吊带，清楚把每只白不透明大腿长襪前/后各1夹接住其平整袜口，可用前后装配分栏和夹咬合近景，避免把悬空夹与散放襪称作连接；删除所有肤色人体样片。恢复
+      footwear 为薄低跟约2cm，完整侧鞋让鞋跟相对鞋长度明显低矮，维持黑素面圆头闭口。此页仅需袜鞋，避免重复全套衣服；如果保留黑裙重复图，恢复 lower
+      连续黑裙原下缘并移除新增黑荷叶边。
+    deferred_requirements:
+    - 真实4夹连接必须在合格修正图可见
+    - 约2cm跟须修正侧图与背面残余后鞋结构最终比对
+    - 六图完整包尚未通过
+    independent_report_path: output\maid-outfit-20261005\agent-reviews\detail-hosiery-footwear-115e1455.json
+    independent_report_sha256: fa7138b0d15ae14527baadc95ae1e9e9bb6285cdc9e7e5b0e7fc743204282446
+    acceptance_mode: user_delegated_independent_agent_review
+    status: FAIL
+    user_accepted: false
+  user_accepted: false
+  invalidated: false
+- candidate_id: detail-hosiery-footwear-fc2f1220
+  view_id: detail-hosiery-footwear
+  path: D:\learn\Arco\calibration\preparations\prep-20261004T165937Z-a1f765\candidates\detail-hosiery-footwear-fc2f1220.png
+  sha256: 5840d851b1abd00a9593d461d6c8d9aca505353e0f4e353d85d74776338020e3
+  plan_sha256: 04069a9096ede1e53a9c2026ace083cb8881de7c5732f90fe7b320cc07d0e504
+  attempt_id: fc2f1220df45486a8f20151dce8212fc
+  repair_number: 1
+  actual_prompt_sha256: 306c36d97491aa11e470bd93b3554b55132b58c1eb61f5e52cbdfd2c2dbcbddd
+  main_sha256: 7b7a3c14c6216c2c8a38e0cc91af29fafe0c2ad148d8d80bebe0de5516d400b2
+  review:
+    candidate_id: detail-hosiery-footwear-fc2f1220
+    view_id: detail-hosiery-footwear
+    output_path: D:/learn/Arco/calibration/preparations/prep-20261004T165937Z-a1f765/candidates/detail-hosiery-footwear-fc2f1220.png
+    output_sha256: 5840d851b1abd00a9593d461d6c8d9aca505353e0f4e353d85d74776338020e3
+    plan_sha256: 04069a9096ede1e53a9c2026ace083cb8881de7c5732f90fe7b320cc07d0e504
+    main_sha256: 7b7a3c14c6216c2c8a38e0cc91af29fafe0c2ad148d8d80bebe0de5516d400b2
+    inspected_original_size: true
+    inspected_dimensions:
+    - 1145
+    - 1374
+    reviewer: maid_visual_reviewer
+    decision: PASS
+    decision_scope: 袜鞋固定设计与连接结构可视证据通过，完整六图包仍需一次整体交叉验收
+    restore_design_parts: []
+    checks:
+      identity:
+        status: PASS
+        scope: garment_only_no_person_identity
+        evidence: 纯白袜和腰带配件、黑鞋及接头特写页，没有肤色腿、脸、手、头发或其他人体。袜子外形为无人体衣物轮廓与布料阴影，前版桃肤色袜口样片已消失。
+      parts:
+        status: PASS
+        evidence: 左为平滑前腰带面和袜前方，右为中心后扣闭合腰带及袜后踵面，可据后扣与袜足前/后造型识别同一套前后示意。每个示意恰好4条白吊带/4小夹，左右袜各一个正向完整夹和一个侧后夹接到同一平整袜口；全部连接而非悬空。白袜身不透明，素面宽袜口。黑鞋圆头闭口素面，无蝶结/金属；独立完整侧图呈低矮块跟和薄前鞋底，显著比初版中跟形态低，视觉相容约2cm低跟，无法从无标尺插画证明精确厘米值。
+      wearing_occlusion:
+        status: PASS
+        evidence: 四吊带从同一腰带下沿分别连续到两个袜口，每袜前/后位置由正夹+侧后夹展示；中右夹口特写直接咬合袜口，不是散放挂钩。袜足和鞋分开提供完整结构，无掀裙姿势或人体。
+      cross_view:
+        status: PASS
+        scope: approved_hosiery_footwear_and_accepted_wearing_views
+        evidence: 本页白腰带4白带/白不透明长襪完全对应批准补全；黑短圆鞋尖对应front44e5537f/侧9e6ce1eb，鞋低跟结构与backfd1bafae小黑后鞋残余相容，没有明确跟型矛盾。前后两组重复是同物不同朝向，腰带前平滑/后扣与袜前足/后踵共同表明视图关系，并非增加第二套袜具。已删除前版重复全衣和新增黑裙荷叶边。
+      image_quality:
+        status: PASS
+        evidence: 1145×1374原尺寸，袜口各连接、侧夹、腰带后扣、夹咬合近景及鞋侧轮廓清楚。浅背景无文字指令，无配件悬空误接；四带数目可直接数而无需标签说明。
+    deferred_requirements:
+    - 必须对当前6个获准候选整体检查身份、长裙覆盖、领结/头箍/袖口、X背带2尾和袜鞋互相相容，单图PASS不代替最终包验收。
+    limitations:
+    - 约2厘米为已批准设计值；无尺插画仅能验证视觉低跟类别与相对轮廓，不能据像素计算绝对厘米。
+    - 前后两组为同物示意，来源同一生成记录，不增加独立原始证据数量。
+    independent_report_path: output\maid-outfit-20261005\agent-reviews\detail-hosiery-footwear-fc2f1220.json
+    independent_report_sha256: 172638a2b67655296715594dc349a139f30fa3ec98db96afd62cf0bd1edc7c47
+    acceptance_mode: user_delegated_independent_agent_review
+    status: PASS
+    user_accepted: false
+  user_accepted: false
+  invalidated: false
+approvals:
+  design:
+    user_confirmed: true
+    preview_sha256: ad3618dde4bfc71f8424bdb4239dd9704050b1599ea8cb06a1db1b8047471f4d
+    user_message: 接受
+  main_and_views:
+    user_confirmed: true
+    preview_sha256: 775ab90d1eb080ac0b65ba13a64dbaf71da26196b4fe2968caf54c08975a3aad
+    user_message: 给你全部权限，你自主生成图片并且调用一个AGENT来判断图片是否合适，直到完成这套服装的录入
+    acceptance_mode: user_delegated_independent_agent_review
+    review_agent: /root/maid_visual_reviewer
+    main_candidate_id: front-44e5537f
+    independent_review_path: D:\learn\Arco\output\maid-outfit-20261005\agent-reviews\front-44e5537f.json
+    independent_review_sha256: 434db9bc11a0a1bd623d3f6064ceb5bdb83c121145207cdbf0541aea5f9f7112
+    delegation_authorization_path: D:\learn\Arco\output\maid-outfit-20261005\autonomous-acceptance-authorization.json
+pack_review:
+  preview:
+    schema_version: 1
+    purpose: outfit_preparation
+    phase: pack_visual_inspection
+    preparation_id: prep-20261004T165937Z-a1f765
+    selection:
+      front: front-44e5537f
+      right-three-quarter: right-three-quarter-9e6ce1eb
+      back: back-fd1bafae
+      detail-back-apron: detail-back-apron-42449613
+      detail-trims: detail-trims-2e08c54d
+      detail-hosiery-footwear: detail-hosiery-footwear-fc2f1220
+    images:
+      front:
+        candidate_id: front-44e5537f
+        view_id: front
+        path: D:\learn\Arco\calibration\preparations\prep-20261004T165937Z-a1f765\candidates\front-44e5537f.png
+        sha256: 7b7a3c14c6216c2c8a38e0cc91af29fafe0c2ad148d8d80bebe0de5516d400b2
+        plan_sha256: b64d04ffe423df5762ff4e6ce7c09de4d034ac731edf6d0537e35b515257cd13
+        attempt_id: 44e5537f2b22485884023ea14353840f
+        repair_number: 2
+        actual_prompt_sha256: be57c8402b08281ce91ea7485b409d23cd7d7948b794b122984e7f97545fd31e
+        main_sha256: null
+        review:
+          output_sha256: 7b7a3c14c6216c2c8a38e0cc91af29fafe0c2ad148d8d80bebe0de5516d400b2
+          plan_sha256: b64d04ffe423df5762ff4e6ce7c09de4d034ac731edf6d0537e35b515257cd13
+          inspected_original_size: true
+          checks:
+            identity:
+              status: PASS
+              evidence: 银蓝白基色长发、厚刘海、两側长发束和明确粉色发梢保留；脸无五官，窄肩细腰与修长手臂符合正式着装身份。裙装遮挡腿长，不从衣裙轮廓推断新的身体比例。
+            parts:
+              status: PASS
+              evidence: 黑色连衣裙收腰，泡泡肩袖接窄长袖，闭合白翻领，宽白袖口各2颗扣，白胸兜长围裙、肩部大荷叶边、白弧形荷叶边头箍、大黑领结均清楚。黑裙下摆覆盖袜腿和鞋口，只露双圆头鞋尖与少量薄鞋底；白围裙褶边高于黑裙且形成连续黑色下缘，已恢复近足踝原款长度。
+            wearing_occlusion:
+              status: PASS
+              evidence: 白围裙胸兜→腰带→前裙片连续，肩部白褶边在黑泡泡袖上，领结在白领下；无白袜/小腿暴露、没有抬裙行为。后腰蝴蝶结翼在两侧可部分见但不能由正面数清尾条；内衬裙及吊袜结构被正常遮挡，必须交由后续细节图补证。
+            cross_view:
+              status: PASS
+              scope: current_original_references
+              evidence: 当前可见身份与正式正面/斜侧 Identity 相容，黑裙与白围裙长度和层叠符合原款教程前视，头箍和领结选择符合补充取用图；未观察到当前来源之间的可见结构矛盾。此项只验证现有来源相容，不证明尚未生成的套装多视图一致性。
+            image_quality:
+              status: PASS
+              evidence: 1024×1536原尺寸完整头箍至鞋尖均入画，白色背景、线稿和柔和赛璐璐层次清楚；无文字、水印、红圈、断裂裙摆或重复四肢。双手中立交叠仍可读。
+          reviewer: maid_visual_reviewer
+          independent_agent_review_path: D:\learn\Arco\output\maid-outfit-20261005\agent-reviews\front-44e5537f.json
+          independent_agent_review_sha256: 434db9bc11a0a1bd623d3f6064ceb5bdb83c121145207cdbf0541aea5f9f7112
+          deferred_requirements:
+          - 右斜侧和背面候选必须逐一与锁定主图比对，最终整包独立检查跨视图长度、配色和部件一致性。
+          - 背面X肩带、后腰大蝴蝶结及恰好两条垂尾通过背面及衣物背部细节图验证，长发自然遮挡不能算失败或算已证实。
+          - 白吊袜腰带、恰好4条白吊带、左右两只不透明白长袜、平整袜口和小夹连接通过无人体平铺图验证。
+          - 黑色圆头闭口素面约2cm低跟鞋完整鞋型由平铺图验收，主图仅证明鞋尖颜色与形状。
+          - 白内衬裙当前遮挡，不声称直接见到其内部层叠结构。
+          cross_view_scope: current_original_references
+          status: PASS
+          user_accepted: false
+        user_accepted: true
+        invalidated: false
+      right-three-quarter:
+        candidate_id: right-three-quarter-9e6ce1eb
+        view_id: right-three-quarter
+        path: D:\learn\Arco\calibration\preparations\prep-20261004T165937Z-a1f765\candidates\right-three-quarter-9e6ce1eb.png
+        sha256: 83a3b5bd42fb6dc7c605e09ccf323464092013e88a5645fd69a59fd70a760315
+        plan_sha256: 599d402850d6953c2970c5735215462967fdee882815696973477d59be173fb9
+        attempt_id: 9e6ce1eb59584800b588c92339e76454
+        repair_number: 1
+        actual_prompt_sha256: e7ec016750588a9d218f9c6315ff21c68109810f1c11d3c59f3eba0dad72fea7
+        main_sha256: 7b7a3c14c6216c2c8a38e0cc91af29fafe0c2ad148d8d80bebe0de5516d400b2
+        review:
+          candidate_id: right-three-quarter-9e6ce1eb
+          view_id: right-three-quarter
+          output_path: D:/learn/Arco/calibration/preparations/prep-20261004T165937Z-a1f765/candidates/right-three-quarter-9e6ce1eb.png
+          output_sha256: 83a3b5bd42fb6dc7c605e09ccf323464092013e88a5645fd69a59fd70a760315
+          plan_sha256: 599d402850d6953c2970c5735215462967fdee882815696973477d59be173fb9
+          main_sha256: 7b7a3c14c6216c2c8a38e0cc91af29fafe0c2ad148d8d80bebe0de5516d400b2
+          inspected_original_size: true
+          inspected_dimensions:
+          - 1024
+          - 1536
+          reviewer: maid_visual_reviewer
+          decision: PASS
+          decision_scope: 右斜侧可见范围及已有锁定主图一致性；尚非完整参考包验收
+          restore_design_parts: []
+          checks:
+            identity:
+              status: PASS
+              evidence: 相机为右斜侧三分之四、面朝画面左侧，与正式斜侧身份方向相容；无五官小下巴、厚银蓝刘海、长发粉色发梢、窄肩细腰修长手臂保持。
+            parts:
+              status: PASS
+              evidence: 黑收腰一体长裙已延至鞋尖上方，白襪/踝/鞋口和鞋面均遮住，只两枚短黑圆头鞋尖及薄底缘露出；白前围裙下方高于连续黑裙边，与锁定正面一致。白头箍、大黑領结、闭合白领、黑泡泡肩袖接长袖、宽白袖口各2扣均明确。后腰白蝴蝶结从側面局部可见，存在两条侧投影尾带；完整背结形态由背图/细节核验。
+            wearing_occlusion:
+              status: PASS
+              evidence: 白胸兜接腰带和宽前裙片，肩带荷叶边位于黑泡泡袖上；前围裙不覆盖后侧黑裙主体，裙长保持正常垂落，袜腿全遮，没有掀裙动作。长发在背侧遮住部分腰结属既定穿法。
+            cross_view:
+              status: PASS
+              scope: locked_front_and_current_original_references
+              evidence: 与获准 front-44e5537f 对照，长黑裙覆盖程度、前白围裙/黑裙下缘比例、领结/头箍和袖口2扣相容。当前右斜侧没有恢复成露白袜短裙。背面和三细节图未完成，不能由本项推出整包一致。
+            image_quality:
+              status: PASS
+              evidence: 1024×1536原尺寸完整全身含头箍和短鞋尖入画，白背景干净、肩袖/围裙/发丝线稿清楚，无教程字样或重复肢体。
+          deferred_requirements:
+          - 完整背部X肩带和后腰大蝴蝶结恰好2尾由背面/衣物背部细节核验
+          - 白腰带4白吊带、两不透明白長襪和小夹由无人体平铺图核验
+          - 约2厘米低跟和完整鞋型由平铺图核验
+          - 最终六图必须独立整包检查
+          independent_report_path: output\maid-outfit-20261005\agent-reviews\right-three-quarter-9e6ce1eb.json
+          independent_report_sha256: 88d8e2ea186cceea70d2b8effa5d5652a8b2d02b8ba1757dd06d88f224117185
+          acceptance_mode: user_delegated_independent_agent_review
+          status: PASS
+          user_accepted: false
+        user_accepted: false
+        invalidated: false
+      back:
+        candidate_id: back-fd1bafae
+        view_id: back
+        path: D:\learn\Arco\calibration\preparations\prep-20261004T165937Z-a1f765\candidates\back-fd1bafae.png
+        sha256: 9536784f9de547ac0e188be9010ea3bd2f09b3fe79f368870683fa27278c37fc
+        plan_sha256: 98c194d2e092ca635eb500d71b3612b2316511dd3f6ec65b66537b528e49880e
+        attempt_id: fd1bafaeeb9b439a8b5202542549a528
+        repair_number: 1
+        actual_prompt_sha256: 378c0b91c215a75318be8f6715fdd79c86f926e8df2807128c90bf13ecd0debb
+        main_sha256: 7b7a3c14c6216c2c8a38e0cc91af29fafe0c2ad148d8d80bebe0de5516d400b2
+        review:
+          candidate_id: back-fd1bafae
+          view_id: back
+          output_path: D:/learn/Arco/calibration/preparations/prep-20261004T165937Z-a1f765/candidates/back-fd1bafae.png
+          output_sha256: 9536784f9de547ac0e188be9010ea3bd2f09b3fe79f368870683fa27278c37fc
+          plan_sha256: 98c194d2e092ca635eb500d71b3612b2316511dd3f6ec65b66537b528e49880e
+          main_sha256: 7b7a3c14c6216c2c8a38e0cc91af29fafe0c2ad148d8d80bebe0de5516d400b2
+          inspected_original_size: true
+          inspected_dimensions:
+          - 841
+          - 1870
+          reviewer: maid_visual_reviewer
+          decision: PASS
+          decision_scope: 背面可见穿着结构通过；鞋跟的精确结构和高度须鞋平铺图补证，尚非完整参考包验收
+          restore_design_parts: []
+          checks:
+            identity:
+              status: PASS
+              evidence: 严格背面、未出现前面脸/脚尖或膝盖；冰银浅蓝披散后脑发束与粉色发尾符合正式背面Identity，发尾自然遮住肩带和部分腰结，无改短或扎发。
+            parts:
+              status: PASS
+              evidence: 黑泡泡长袖、宽白袖口各2扣、白头箍、白肩褶边保留；后腰居中大白蝴蝶结恰好2宽尾可辨，前围裙边仅两侧可见，后裙主体全黑，错误U形白横桥已消失。黑裙遮住所有白袜踝部及绝大多数鞋后帮，仅约40像素黑鞋后方小块露出。
+            wearing_occlusion:
+              status: PASS
+              evidence: 黑裙正常近地垂落、后方可见黑裙连续完整，无横跨后裙白围裙底边。披散长发遮挡X带和腰结中心符合计划；2尾下垂在黑裙上。脚向严格后方，不能要求背图露前鞋尖。袜/踝完全被长裙遮住。
+            cross_view:
+              status: PASS
+              scope: locked_front_formal_back_identity_and_original_tutorial
+              evidence: 与锁定front及获准斜侧皆同样遮袜腿与大部分鞋面，长裙和白前围裙层叠相容；当前背面仅露两侧白前裙边、背黑裙主体与教程背视相容。未生成三细节图，完整肩带与鞋袜结构尚无最终证明。
+            image_quality:
+              status: PASS
+              evidence: 841×1870原尺寸完整头箍至脚底、浅背景与黑裙褶裥清楚，无多余肢体、字样或红圈。可清楚数出2尾和各2袖口扣。
+          deferred_requirements:
+          - X形背带被长发大幅遮挡，需无人体/无头发的背部衣物细节图验证肩带从前胸兜绕肩后交叉至腰带，不能因本图遮挡推断已经合格。
+          - 鞋后部现在大幅遮挡，仅小黑色后鞋区域可见，无法区分全部露出部分中鞋后帮与真正鞋跟界线，也无尺度；不再具备首版整个鞋后帮+显著独立高块的明确中跟证据，但本图不能证明约2cm鞋跟。平铺鞋图必须显示完整低跟结构，最终整包仍要比对背面残留鞋后轮廓；若平铺为中高跟必须FAIL。
+          - 白腰带4白吊带与两不透明白长袜小夹连接由无人体平铺图核验。
+          - 最终六图必须独立整包验收。
+          independent_report_path: output\maid-outfit-20261005\agent-reviews\back-fd1bafae.json
+          independent_report_sha256: 65133d7d244244a285b2c7f33e1879c356b0e7412a9e1910e607bcfd7983c412
+          acceptance_mode: user_delegated_independent_agent_review
+          status: PASS
+          user_accepted: false
+        user_accepted: false
+        invalidated: false
+      detail-back-apron:
+        candidate_id: detail-back-apron-42449613
+        view_id: detail-back-apron
+        path: D:\learn\Arco\calibration\preparations\prep-20261004T165937Z-a1f765\candidates\detail-back-apron-42449613.png
+        sha256: 3ded9dced2c4ad9d002f1acc9d82bd84996196b03c41dd53bf4cd2e1a148b381
+        plan_sha256: 0569d0259e9e55c13d97b5840afe961707205d9bd0126dce8a2ba26b85eac400
+        attempt_id: 42449613f9cf437c88272343702718af
+        repair_number: 0
+        actual_prompt_sha256: 76a20a7255c9cfc18b631d0d4bc5955cb5c433d8cad8301ad04ca13691b9e5e8
+        main_sha256: 7b7a3c14c6216c2c8a38e0cc91af29fafe0c2ad148d8d80bebe0de5516d400b2
+        review:
+          candidate_id: detail-back-apron-42449613
+          view_id: detail-back-apron
+          output_path: D:/learn/Arco/calibration/preparations/prep-20261004T165937Z-a1f765/candidates/detail-back-apron-42449613.png
+          output_sha256: 3ded9dced2c4ad9d002f1acc9d82bd84996196b03c41dd53bf4cd2e1a148b381
+          plan_sha256: 0569d0259e9e55c13d97b5840afe961707205d9bd0126dce8a2ba26b85eac400
+          main_sha256: 7b7a3c14c6216c2c8a38e0cc91af29fafe0c2ad148d8d80bebe0de5516d400b2
+          inspected_original_size: true
+          inspected_dimensions:
+          - 1536
+          - 1024
+          reviewer: maid_visual_reviewer
+          decision: PASS
+          decision_scope: 服装背部与已有前/侧/背图结构检查通过；不替代袜鞋与全部参考包验收
+          restore_design_parts: []
+          checks:
+            identity:
+              status: PASS
+              scope: garment_only_no_person_identity
+              evidence: 全页只有无人体衣物，无头、头发、脸或肢体，没有误继承教程人物身份；线稿与柔和赛璐璐衣料明暗延续锁定主图。该图不用于证明人物身体身份。
+            parts:
+              status: PASS
+              evidence: 中心背衣和右上特写清楚显示2条白肩带在背部交叉成X，上端绕肩，下端连续抵后腰白腰带；肩带外侧大白荷叶边、后腰居中大白蝴蝶结与恰好2条宽垂尾明确。背裙中间保持纯黑，白前围裙侧缘只在两边，无U形后横桥。左右袖口各2扣及右下特写一致。
+            wearing_occlusion:
+              status: PASS
+              evidence: 没有头发遮挡，能读清肩带X交叉上下一层和腰带/系结衔接；前白胸兜及前裙片在黑连衣裙外，肩荷叶边在泡泡袖上。背白围裙边只来自前裙片绕侧可见。
+            cross_view:
+              status: PASS
+              scope: locked_front_accepted_right_back_and_original_tutorial
+              evidence: 与front-44e5537f、right-three-quarter-9e6ce1eb、back-fd1bafae的白胸兜、宽腰带、后大结2尾、黑泡泡长袖/白袖口2扣、前裙荷叶边和连续黑裙边相容；完整背部X结构吻合原教程。额外正面全衣和已批袖口/肩褶特写只补充同款信息，没有未批新配件。
+            image_quality:
+              status: PASS
+              evidence: 1536×1024原尺寸，后衣、X带、腰结和袖口特写线条清晰、干净浅背景，分栏边框不遮构造；无正文文字或人物。构图比原计划上身特写范围宽，但右上与中部已足够清晰呈现关键结构，没有影响可用性。
+          deferred_requirements:
+          - 白袜腰带恰好4白吊带/两白长袜/小夹连接仍需平铺图
+          - 完整约2cm低跟鞋型仍需平铺图
+          - 头箍领结专门细节图和最终六图整包审核尚待完成
+          independent_report_path: output\maid-outfit-20261005\agent-reviews\detail-back-apron-42449613.json
+          independent_report_sha256: ec45c776776f503fc30f3b5976c63d111d0ca4f1a7ad372b287c41a191266598
+          acceptance_mode: user_delegated_independent_agent_review
+          status: PASS
+          user_accepted: false
+        user_accepted: false
+        invalidated: false
+      detail-trims:
+        candidate_id: detail-trims-2e08c54d
+        view_id: detail-trims
+        path: D:\learn\Arco\calibration\preparations\prep-20261004T165937Z-a1f765\candidates\detail-trims-2e08c54d.png
+        sha256: 8bc5cb511b346a72cdc4e98045d0f27ffbf5b91009f30398608807c16972a7e8
+        plan_sha256: db3cd27e11a8bf3fcdc1b842b79aa84968165377eef48631e2bc1036893fb793
+        attempt_id: 2e08c54dd3494b91a18b2895a6c4d2b2
+        repair_number: 0
+        actual_prompt_sha256: aa0f9c4b3ef0296a0d569ae4d548f358ba43dabb0b349d815166cee33e555104
+        main_sha256: 7b7a3c14c6216c2c8a38e0cc91af29fafe0c2ad148d8d80bebe0de5516d400b2
+        review:
+          candidate_id: detail-trims-2e08c54d
+          view_id: detail-trims
+          output_path: D:/learn/Arco/calibration/preparations/prep-20261004T165937Z-a1f765/candidates/detail-trims-2e08c54d.png
+          output_sha256: 8bc5cb511b346a72cdc4e98045d0f27ffbf5b91009f30398608807c16972a7e8
+          plan_sha256: db3cd27e11a8bf3fcdc1b842b79aa84968165377eef48631e2bc1036893fb793
+          main_sha256: 7b7a3c14c6216c2c8a38e0cc91af29fafe0c2ad148d8d80bebe0de5516d400b2
+          inspected_original_size: true
+          inspected_dimensions:
+          - 1536
+          - 1024
+          reviewer: maid_visual_reviewer
+          decision: PASS
+          decision_scope: 配件与已存在服装视图的可见固定设计相容，袜鞋与最终整包仍待验收
+          restore_design_parts: []
+          checks:
+            identity:
+              status: PASS
+              scope: garment_only_no_person_identity
+              evidence: 全图只有衣物和配件，没有头、头发、脸、手或人体；与基线相容的清晰线稿和柔和衣料明暗。该项只检查无身份污染，不声称衣物页证明人体比例。
+            parts:
+              status: PASS
+              evidence: 右上前/侧两视角为开放下端的弧形白荷叶边头箍，明确不是后脑罩；领口特写为白翻领下大黑蝴蝶结，左右蝶翼/中央结/两垂角明确，没有椭圆胸针领巾。袖口特写恰好2扣、宽白卷边，左全衣领口闭合中央小扣可见。全衣和后结补充同一黑长裙/白前围裙/X带/大白腰结2尾，没有新增物品。
+            wearing_occlusion:
+              status: PASS
+              evidence: 无人体与头发遮挡，头箍弧形开口、领结在白领下胸兜上沿、宽白袖口接黑长袖、肩褶在黑泡泡袖上均直接可读；后结2尾覆盖黑后裙，白围裙两侧边而非后白U桥。
+            cross_view:
+              status: PASS
+              scope: locked_front_accepted_right_back_detail_back_and_selected_original_regions
+              evidence: 头箍对应补图上右的弧形荷叶边选择，领结对应左侧大蝴蝶结。与front44e5537f/斜侧9e6ce1eb/背fd1bafae/背细节42449613对照，白头箍、大黑领结、2扣袖口、X带和腰结2尾保持同款，重复前/背衣片没有直接结构矛盾。
+            image_quality:
+              status: PASS
+              evidence: 1536×1024原尺寸，各特写足够清楚，图框与中文名词标签只在分栏处，没有遮住头箍、结或扣。标签仅是展示说明，不作为设计命令、来源证据或独立事实。无人体或水印。
+          deferred_requirements:
+          - 白襪腰带4吊带/两袜/夹子和完整约2cm低跟鞋仍需袜鞋平铺图
+          - 最后六图必须整体独立对照，当前不宣布整包入库条件完成
+          independent_report_path: output\maid-outfit-20261005\agent-reviews\detail-trims-2e08c54d.json
+          independent_report_sha256: 9d41f7d9275646f16fb4622b4c28ad49a81ad78a4c71eba62e8016ec7ce6e294
+          acceptance_mode: user_delegated_independent_agent_review
+          status: PASS
+          user_accepted: false
+        user_accepted: false
+        invalidated: false
+      detail-hosiery-footwear:
+        candidate_id: detail-hosiery-footwear-fc2f1220
+        view_id: detail-hosiery-footwear
+        path: D:\learn\Arco\calibration\preparations\prep-20261004T165937Z-a1f765\candidates\detail-hosiery-footwear-fc2f1220.png
+        sha256: 5840d851b1abd00a9593d461d6c8d9aca505353e0f4e353d85d74776338020e3
+        plan_sha256: 04069a9096ede1e53a9c2026ace083cb8881de7c5732f90fe7b320cc07d0e504
+        attempt_id: fc2f1220df45486a8f20151dce8212fc
+        repair_number: 1
+        actual_prompt_sha256: 306c36d97491aa11e470bd93b3554b55132b58c1eb61f5e52cbdfd2c2dbcbddd
+        main_sha256: 7b7a3c14c6216c2c8a38e0cc91af29fafe0c2ad148d8d80bebe0de5516d400b2
+        review:
+          candidate_id: detail-hosiery-footwear-fc2f1220
+          view_id: detail-hosiery-footwear
+          output_path: D:/learn/Arco/calibration/preparations/prep-20261004T165937Z-a1f765/candidates/detail-hosiery-footwear-fc2f1220.png
+          output_sha256: 5840d851b1abd00a9593d461d6c8d9aca505353e0f4e353d85d74776338020e3
+          plan_sha256: 04069a9096ede1e53a9c2026ace083cb8881de7c5732f90fe7b320cc07d0e504
+          main_sha256: 7b7a3c14c6216c2c8a38e0cc91af29fafe0c2ad148d8d80bebe0de5516d400b2
+          inspected_original_size: true
+          inspected_dimensions:
+          - 1145
+          - 1374
+          reviewer: maid_visual_reviewer
+          decision: PASS
+          decision_scope: 袜鞋固定设计与连接结构可视证据通过，完整六图包仍需一次整体交叉验收
+          restore_design_parts: []
+          checks:
+            identity:
+              status: PASS
+              scope: garment_only_no_person_identity
+              evidence: 纯白袜和腰带配件、黑鞋及接头特写页，没有肤色腿、脸、手、头发或其他人体。袜子外形为无人体衣物轮廓与布料阴影，前版桃肤色袜口样片已消失。
+            parts:
+              status: PASS
+              evidence: 左为平滑前腰带面和袜前方，右为中心后扣闭合腰带及袜后踵面，可据后扣与袜足前/后造型识别同一套前后示意。每个示意恰好4条白吊带/4小夹，左右袜各一个正向完整夹和一个侧后夹接到同一平整袜口；全部连接而非悬空。白袜身不透明，素面宽袜口。黑鞋圆头闭口素面，无蝶结/金属；独立完整侧图呈低矮块跟和薄前鞋底，显著比初版中跟形态低，视觉相容约2cm低跟，无法从无标尺插画证明精确厘米值。
+            wearing_occlusion:
+              status: PASS
+              evidence: 四吊带从同一腰带下沿分别连续到两个袜口，每袜前/后位置由正夹+侧后夹展示；中右夹口特写直接咬合袜口，不是散放挂钩。袜足和鞋分开提供完整结构，无掀裙姿势或人体。
+            cross_view:
+              status: PASS
+              scope: approved_hosiery_footwear_and_accepted_wearing_views
+              evidence: 本页白腰带4白带/白不透明长襪完全对应批准补全；黑短圆鞋尖对应front44e5537f/侧9e6ce1eb，鞋低跟结构与backfd1bafae小黑后鞋残余相容，没有明确跟型矛盾。前后两组重复是同物不同朝向，腰带前平滑/后扣与袜前足/后踵共同表明视图关系，并非增加第二套袜具。已删除前版重复全衣和新增黑裙荷叶边。
+            image_quality:
+              status: PASS
+              evidence: 1145×1374原尺寸，袜口各连接、侧夹、腰带后扣、夹咬合近景及鞋侧轮廓清楚。浅背景无文字指令，无配件悬空误接；四带数目可直接数而无需标签说明。
+          deferred_requirements:
+          - 必须对当前6个获准候选整体检查身份、长裙覆盖、领结/头箍/袖口、X背带2尾和袜鞋互相相容，单图PASS不代替最终包验收。
+          limitations:
+          - 约2厘米为已批准设计值；无尺插画仅能验证视觉低跟类别与相对轮廓，不能据像素计算绝对厘米。
+          - 前后两组为同物示意，来源同一生成记录，不增加独立原始证据数量。
+          independent_report_path: output\maid-outfit-20261005\agent-reviews\detail-hosiery-footwear-fc2f1220.json
+          independent_report_sha256: 172638a2b67655296715594dc349a139f30fa3ec98db96afd62cf0bd1edc7c47
+          acceptance_mode: user_delegated_independent_agent_review
+          status: PASS
+          user_accepted: false
+        user_accepted: false
+        invalidated: false
+    bindings:
+      D:\learn\Arco\calibration\preparations\prep-20261004T165937Z-a1f765\candidates\front-44e5537f.png: 7b7a3c14c6216c2c8a38e0cc91af29fafe0c2ad148d8d80bebe0de5516d400b2
+      D:\learn\Arco\calibration\preparations\prep-20261004T165937Z-a1f765\candidates\right-three-quarter-9e6ce1eb.png: 83a3b5bd42fb6dc7c605e09ccf323464092013e88a5645fd69a59fd70a760315
+      D:\learn\Arco\calibration\preparations\prep-20261004T165937Z-a1f765\candidates\back-fd1bafae.png: 9536784f9de547ac0e188be9010ea3bd2f09b3fe79f368870683fa27278c37fc
+      D:\learn\Arco\calibration\preparations\prep-20261004T165937Z-a1f765\candidates\detail-back-apron-42449613.png: 3ded9dced2c4ad9d002f1acc9d82bd84996196b03c41dd53bf4cd2e1a148b381
+      D:\learn\Arco\calibration\preparations\prep-20261004T165937Z-a1f765\candidates\detail-trims-2e08c54d.png: 8bc5cb511b346a72cdc4e98045d0f27ffbf5b91009f30398608807c16972a7e8
+      D:\learn\Arco\calibration\preparations\prep-20261004T165937Z-a1f765\candidates\detail-hosiery-footwear-fc2f1220.png: 5840d851b1abd00a9593d461d6c8d9aca505353e0f4e353d85d74776338020e3
+    preview_sha256: a9ea7829519200bb381a00789ec0a65a24c25c5b6d57020d282b502a9dfe8d7e
+  review:
+    schema_version: 1
+    reviewer: maid_visual_reviewer
+    purpose: outfit_reference_pack_visual_acceptance
+    preparation_id: prep-20261004T165937Z-a1f765
+    preview_path: D:/learn/Arco/output/maid-outfit-20261005/outfit-reference-pack-preview.json
+    preview_sha256: a9ea7829519200bb381a00789ec0a65a24c25c5b6d57020d282b502a9dfe8d7e
+    inspected_original_size: true
+    independent_reinspection: true
+    all_six_bindings_verified: true
+    decision: PASS
+    decision_scope: 本次冻结的全部六图参考包整体视觉验收，不是沿用逐张PASS
+    six_image_hashes:
+      front: 7b7a3c14c6216c2c8a38e0cc91af29fafe0c2ad148d8d80bebe0de5516d400b2
+      right-three-quarter: 83a3b5bd42fb6dc7c605e09ccf323464092013e88a5645fd69a59fd70a760315
+      back: 9536784f9de547ac0e188be9010ea3bd2f09b3fe79f368870683fa27278c37fc
+      detail-back-apron: 3ded9dced2c4ad9d002f1acc9d82bd84996196b03c41dd53bf4cd2e1a148b381
+      detail-trims: 8bc5cb511b346a72cdc4e98045d0f27ffbf5b91009f30398608807c16972a7e8
+      detail-hosiery-footwear: 5840d851b1abd00a9593d461d6c8d9aca505353e0f4e353d85d74776338020e3
+    inspected_dimensions:
+      front:
+      - 1024
+      - 1536
+      right-three-quarter:
+      - 1024
+      - 1536
+      back:
+      - 841
+      - 1870
+      detail-back-apron:
+      - 1536
+      - 1024
+      detail-trims:
+      - 1536
+      - 1024
+      detail-hosiery-footwear:
+      - 1145
+      - 1374
+    checks:
+      identity:
+        status: PASS
+        evidence: 重新依次原尺寸查看六图并比对正式前/斜侧/背Identity：三穿着图保持冰银浅蓝厚刘海披散长发和粉色发梢、窄肩细腰与长臂比例；前斜无五官，背视无前向脸/膝盖/鞋尖。未带入教程黑发原人物身份或灰阶画风。三个细节页全部无人体、无头发、无皮肤；衣物页只提供结构，未作为人体身份依据。
+      parts:
+        status: PASS
+        evidence: 六图共同固定黑收腰近足踝一体长裙、泡泡肩袖接窄长袖、闭合白翻领、宽白袖口恰好2扣；白胸兜长围裙和肩大褶边、白弧形荷叶边头箍、大黑蝶结均在主图与细节同款。背面和背细节显示居中大白腰结恰好2尾，细节完整X带衔接，后裙主体黑且无新增U形白桥/黑荷叶边。袜鞋页直接显示白腰带4白带4小夹分别连接左右不透明白大腿袜的前后位置，素面平袜口、白袜足；黑圆头闭口素面鞋完整侧图为低矮块跟，视觉与批准约2cm低跟相容。无外套/额外未批配件。
+      wearing_occlusion:
+        status: PASS
+        evidence: 三穿着图黑裙一律遮住所有白袜踝部和鞋口，前与斜侧仅短黑鞋尖/薄底，背仅小黑后鞋区域；保持正常完整垂裙、不掀裙。白围裙前胸兜→腰带→前裙片连续，白肩褶在黑泡泡袖之上，背中间无整片围裙，2尾盖黑裙。背面长发正常遮X带上端，背细节无头发后完成补证。袜具在穿着图隐藏，由平铺装配和咬合近景证明4夹真实连接，避免用悬空挂钩或肤色腿样片代替。
+      cross_view:
+        status: PASS
+        scope: all_six_selected_candidates_and_original_approved_references
+        evidence: 整体重查六图重复部件：白头箍弧形开放外缘对应选定上右款，领结为左款大黑蝶结非胸针领巾，各袖口含2扣；前裙白下缘均高于连续黑裙边，背黑裙没有白U桥或新黑褶边，穿着三视长裙覆盖一致。背细节和饰物细节的X肩带、后结2尾与穿着背图被遮部分相容。袜鞋页两套位置为同物前/后朝向（前腰平滑、后腰扣，前足/后踵清楚），不是新增袜具；低跟鞋侧与前/斜鞋尖和背后鞋残余相容。未发现要求修改设计或重生图的跨视图矛盾。
+      image_quality:
+        status: PASS
+        evidence: 六图均已在其原尺寸重看，完整穿着视图头箍至脚部没有裁切，清晰浅背景；细节关键X带、结翼2尾、2扣、头箍弧型、袜夹咬合和低跟鞋侧轮廓可读，无模糊关键结构/多余四肢/肤色样片。饰物页中文标签为普通名词说明，不是新指令或独立事实证据；范围更宽的前后全衣重复图不造成矛盾。
+    resolved_deferred_requirements:
+    - requirement: 背面长发遮住的X带全连接
+      evidence_view: detail-back-apron
+      result: PASS
+      evidence: 两白肩带从绕肩上端在背交叉并连续达后腰带，外侧白大褶边清楚。
+    - requirement: 后腰大蝴蝶结恰好2尾
+      evidence_views:
+      - back
+      - detail-back-apron
+      - detail-trims
+      result: PASS
+      evidence: 所有完整后腰视图为同一个大白结、恰好2条宽尾，无第三尾。
+    - requirement: 白腰带4白吊带每袜前后各1夹
+      evidence_view: detail-hosiery-footwear
+      result: PASS
+      evidence: 每朝向视图可数4带4夹，每只袜1正面夹+1侧后夹，近景直接咬合袜口。
+    - requirement: 黑素面圆头闭口约2cm低跟完整鞋型
+      evidence_view: detail-hosiery-footwear
+      result: PASS
+      evidence: 斜侧完整鞋和独立侧轮廓展示低矮跟、薄底、圆头与素面，和三穿着图外露小鞋部相容。
+    - requirement: 三穿着视图和三细节之间同套设计
+      evidence_views:
+      - front
+      - right-three-quarter
+      - back
+      - detail-back-apron
+      - detail-trims
+      - detail-hosiery-footwear
+      result: PASS
+      evidence: 整体重复构造核查未见固定结构、配色、长裙覆盖或身份矛盾。
+    remaining_issues: []
+    unresolved_required_visual_checks: []
+    requires_additional_generation: false
+    limitations:
+    - 约2厘米保留为批准设计值；无标尺动漫参考能验证低跟类别与可见结构，不能以像素测量证明绝对厘米。
+    - 内穿白层叠衬裙来自已取用原教程衬裙区域和批准lower定义，穿着及这次六图中按正常层叠隐藏；本报告只证明外裙自然饱满且没有露出矛盾，不声称直接看见其内部每层。既定三细节图计划没有单独衬裙视图要求，因此不把正常隐藏作为未完成的必需图。
+    - 所有生成图及重复图属于同一批准设计的派生包，不提升原教程独立证据数量，也不升级原始事实状态。
+    independent_report_path: D:\learn\Arco\output\maid-outfit-20261005\agent-reviews\full-reference-pack.json
+    independent_report_sha256: 215eeb54716beef02b8cca0f67ff0a6381bc2695156c9e205e7b4bc0ececc8bf
+    acceptance_mode: user_delegated_independent_agent_review
+  user_accepted: false
+  status: PASS
+plan_history: []
+pack_review_history: []
+events: []
+selected_pack:
+  front: front-44e5537f
+  right-three-quarter: right-three-quarter-9e6ce1eb
+  back: back-fd1bafae
+  detail-back-apron: detail-back-apron-42449613
+  detail-trims: detail-trims-2e08c54d
+  detail-hosiery-footwear: detail-hosiery-footwear-fc2f1220

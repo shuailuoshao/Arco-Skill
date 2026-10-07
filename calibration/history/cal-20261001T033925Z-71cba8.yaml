@@ -1,0 +1,516 @@
+schema_version: 1
+calibration_id: cal-20261001T033925Z-71cba8
+timestamp: '2026-10-01T03:41:19.117284+00:00'
+operation: add_variant
+user_confirmed: true
+confirmed_at: '2026-10-01T03:41:19.117284+00:00'
+authorization_source: 用户对完整新增预览回复：可以
+reason: 用户批准新增泳装及原图服装参考权限；不改变身份、常服或表情资料。
+evidence_ids:
+- swimsuit-primary
+observations:
+- observation_id: swimsuit-outfit-silhouette
+  field_ref: outfit.silhouette
+  evidence_ids:
+  - swimsuit-primary
+  observation: 蓝色格纹两件式泳装，由挂颈式上装与带短荷叶边的泳裤组成
+  intrinsic_interpretation: 蓝色格纹两件式泳装，由挂颈式上装与带短荷叶边的泳裤组成
+  rendering_factors:
+    lighting_sensitive: false
+    pose_sensitive: true
+    perspective_sensitive: false
+    occlusion: 背面与另一侧系带结构不可见；仅登记可见部分
+    other:
+    - 单图来源；不构成独立跨图共识
+  confidence: high
+  comparison:
+    corroborating_evidence_ids: []
+    conflicting_evidence_ids: []
+  proposed_status: UNCERTAIN
+- observation_id: swimsuit-outfit-upper-garment-base-color
+  field_ref: outfit.upper_garment.base_color
+  evidence_ids:
+  - swimsuit-primary
+  observation: 蓝色为主，深浅蓝色交错；荷叶边和局部边饰为白色
+  intrinsic_interpretation: 蓝色为主，深浅蓝色交错；荷叶边和局部边饰为白色
+  rendering_factors:
+    lighting_sensitive: true
+    pose_sensitive: false
+    perspective_sensitive: false
+    occlusion: 背面与另一侧系带结构不可见；仅登记可见部分
+    other:
+    - 单图来源；不构成独立跨图共识
+  confidence: high
+  comparison:
+    corroborating_evidence_ids: []
+    conflicting_evidence_ids: []
+  proposed_status: UNCERTAIN
+- observation_id: swimsuit-outfit-pattern
+  field_ref: outfit.pattern
+  evidence_ids:
+  - swimsuit-primary
+  observation: 上下装采用同款深浅蓝色格纹，叠加白色与黄色细线；具体线条方向受透视影响
+  intrinsic_interpretation: 上下装采用同款深浅蓝色格纹，叠加白色与黄色细线；具体线条方向受透视影响
+  rendering_factors:
+    lighting_sensitive: false
+    pose_sensitive: false
+    perspective_sensitive: false
+    occlusion: 背面与另一侧系带结构不可见；仅登记可见部分
+    other:
+    - 单图来源；不构成独立跨图共识
+  confidence: high
+  comparison:
+    corroborating_evidence_ids: []
+    conflicting_evidence_ids: []
+  proposed_status: UNCERTAIN
+- observation_id: swimsuit-outfit-upper-garment-structure
+  field_ref: outfit.upper_garment.structure
+  evidence_ids:
+  - swimsuit-primary
+  observation: 独立两件式泳装上装，前部蓝色格纹，下缘中央略收拢；不推定背部扣合方式
+  intrinsic_interpretation: 独立两件式泳装上装，前部蓝色格纹，下缘中央略收拢；不推定背部扣合方式
+  rendering_factors:
+    lighting_sensitive: false
+    pose_sensitive: false
+    perspective_sensitive: false
+    occlusion: 背面与另一侧系带结构不可见；仅登记可见部分
+    other:
+    - 单图来源；不构成独立跨图共识
+  confidence: high
+  comparison:
+    corroborating_evidence_ids: []
+    conflicting_evidence_ids: []
+  proposed_status: UNCERTAIN
+- observation_id: swimsuit-outfit-upper-garment-straps
+  field_ref: outfit.upper_garment.straps
+  evidence_ids:
+  - swimsuit-primary
+  observation: 蓝色细带从上装两侧向颈后延伸，形成挂颈式结构；后部细节被头发遮挡
+  intrinsic_interpretation: 蓝色细带从上装两侧向颈后延伸，形成挂颈式结构；后部细节被头发遮挡
+  rendering_factors:
+    lighting_sensitive: false
+    pose_sensitive: false
+    perspective_sensitive: false
+    occlusion: 背面与另一侧系带结构不可见；仅登记可见部分
+    other:
+    - 单图来源；不构成独立跨图共识
+  confidence: high
+  comparison:
+    corroborating_evidence_ids: []
+    conflicting_evidence_ids: []
+  proposed_status: UNCERTAIN
+- observation_id: swimsuit-outfit-upper-garment-trim
+  field_ref: outfit.upper_garment.trim
+  evidence_ids:
+  - swimsuit-primary
+  observation: 上装上缘带白色短荷叶边
+  intrinsic_interpretation: 上装上缘带白色短荷叶边
+  rendering_factors:
+    lighting_sensitive: false
+    pose_sensitive: false
+    perspective_sensitive: false
+    occlusion: 背面与另一侧系带结构不可见；仅登记可见部分
+    other:
+    - 单图来源；不构成独立跨图共识
+  confidence: high
+  comparison:
+    corroborating_evidence_ids: []
+    conflicting_evidence_ids: []
+  proposed_status: UNCERTAIN
+- observation_id: swimsuit-outfit-chest-detail
+  field_ref: outfit.chest_detail
+  evidence_ids:
+  - swimsuit-primary
+  observation: 上装中央有浅色竖条，竖条上可见两枚圆形扣饰
+  intrinsic_interpretation: 上装中央有浅色竖条，竖条上可见两枚圆形扣饰
+  rendering_factors:
+    lighting_sensitive: false
+    pose_sensitive: false
+    perspective_sensitive: false
+    occlusion: 背面与另一侧系带结构不可见；仅登记可见部分
+    other:
+    - 单图来源；不构成独立跨图共识
+  confidence: high
+  comparison:
+    corroborating_evidence_ids: []
+    conflicting_evidence_ids: []
+  proposed_status: UNCERTAIN
+- observation_id: swimsuit-outfit-lower-garment
+  field_ref: outfit.lower_garment
+  evidence_ids:
+  - swimsuit-primary
+  observation: 同款蓝色格纹泳裤，腰缘带短荷叶边；不是独立长裙
+  intrinsic_interpretation: 同款蓝色格纹泳裤，腰缘带短荷叶边；不是独立长裙
+  rendering_factors:
+    lighting_sensitive: false
+    pose_sensitive: true
+    perspective_sensitive: true
+    occlusion: 背面与另一侧系带结构不可见；仅登记可见部分
+    other:
+    - 单图来源；不构成独立跨图共识
+  confidence: high
+  comparison:
+    corroborating_evidence_ids: []
+    conflicting_evidence_ids: []
+  proposed_status: UNCERTAIN
+- observation_id: swimsuit-outfit-lower-garment-side-ties
+  field_ref: outfit.lower_garment.side_ties
+  evidence_ids:
+  - swimsuit-primary
+  observation: 画面右侧髋部可见蓝色系带和白色边饰；不推定另一侧也有相同结构
+  intrinsic_interpretation: 画面右侧髋部可见蓝色系带和白色边饰；不推定另一侧也有相同结构
+  rendering_factors:
+    lighting_sensitive: false
+    pose_sensitive: false
+    perspective_sensitive: false
+    occlusion: 背面与另一侧系带结构不可见；仅登记可见部分
+    other:
+    - 单图来源；不构成独立跨图共识
+  confidence: high
+  comparison:
+    corroborating_evidence_ids: []
+    conflicting_evidence_ids: []
+  proposed_status: UNCERTAIN
+- observation_id: swimsuit-outfit-legwear
+  field_ref: outfit.legwear
+  evidence_ids:
+  - swimsuit-primary
+  observation: 当前泳装搭配无袜
+  intrinsic_interpretation: 当前泳装搭配无袜
+  rendering_factors:
+    lighting_sensitive: false
+    pose_sensitive: false
+    perspective_sensitive: false
+    occlusion: 背面与另一侧系带结构不可见；仅登记可见部分
+    other:
+    - 单图来源；不构成独立跨图共识
+  confidence: high
+  comparison:
+    corroborating_evidence_ids: []
+    conflicting_evidence_ids: []
+  proposed_status: UNCERTAIN
+- observation_id: swimsuit-outfit-footwear
+  field_ref: outfit.footwear
+  evidence_ids:
+  - swimsuit-primary
+  observation: 当前泳装搭配赤足，无鞋履
+  intrinsic_interpretation: 当前泳装搭配赤足，无鞋履
+  rendering_factors:
+    lighting_sensitive: false
+    pose_sensitive: false
+    perspective_sensitive: true
+    occlusion: 背面与另一侧系带结构不可见；仅登记可见部分
+    other:
+    - 单图来源；不构成独立跨图共识
+  confidence: high
+  comparison:
+    corroborating_evidence_ids: []
+    conflicting_evidence_ids: []
+  proposed_status: UNCERTAIN
+- observation_id: swimsuit-horns-overlay
+  field_ref: overlay.horns
+  evidence_ids:
+  - swimsuit-primary
+  observation: 图中头部两侧可见深色分节角体，角尖为红色，左右角因透视呈不同大小。
+  intrinsic_interpretation: 可分离附加外观观察；不归入泳装事实，不修改 Identity，不新增 State。
+  rendering_factors:
+    lighting_sensitive: true
+    pose_sensitive: false
+    perspective_sensitive: true
+    occlusion: 角根部分被头发遮挡
+    other: []
+  confidence: high
+  comparison:
+    corroborating_evidence_ids: []
+    conflicting_evidence_ids: []
+  proposed_status: UNCERTAIN
+  note: 未授权任何持久化 State；服装参考明确排除角。
+targets:
+- entity_ref: character.assets
+  target_type: asset_registry
+  target_id: swimsuit-registration
+  revision_before: 7
+  revision_after: 8
+  changed_fields:
+  - revision
+  - last_calibration_id
+  - assets
+  before:
+    revision: 7
+    last_calibration_id: cal-20261001T031544Z-8df760
+  after:
+    revision: 8
+    last_calibration_id: cal-20261001T033925Z-71cba8
+- entity_ref: variants.index
+  target_type: variant_index
+  target_id: swimsuit-registration
+  revision_before: 2
+  revision_after: 3
+  changed_fields:
+  - revision
+  - last_calibration_id
+  - variants
+  before:
+    revision: 2
+    last_calibration_id: cal-20261001T031544Z-8df760
+  after:
+    revision: 3
+    last_calibration_id: cal-20261001T033925Z-71cba8
+- entity_ref: variants.swimsuit
+  target_type: variant
+  target_id: swimsuit
+  revision_before: 0
+  revision_after: 1
+  changed_fields:
+  - schema_version
+  - entity_type
+  - entity_ref
+  - variant_id
+  - display_name_zh
+  - display_name_en
+  - lifecycle_status
+  - revision
+  - last_calibration_id
+  - facts
+  - reference_asset_ids
+  - state_mutable_fields
+  - must_keep_fields
+  - state_groups
+  - state_files
+  - known_generation_risks
+  - coverage
+  before: {}
+  after:
+    schema_version: 1
+    entity_type: variant
+    entity_ref: variants.swimsuit
+    variant_id: swimsuit
+    display_name_zh: 泳装
+    display_name_en: Swimsuit
+    lifecycle_status: published
+    revision: 1
+    last_calibration_id: cal-20261001T033925Z-71cba8
+    facts:
+    - field_id: outfit.silhouette
+      display_name_zh: 泳装整体结构
+      value: 蓝色格纹两件式泳装，由挂颈式上装与带短荷叶边的泳裤组成
+      status: UNCERTAIN
+      evidence_ids:
+      - swimsuit-primary
+      conflicts: []
+      note_zh: '单张用户提供立绘；visual confidence: high。用户确认不构成官方定义或独立跨图共识。'
+      required_global: true
+      required_for:
+      - upper_body
+      - full_body
+    - field_id: outfit.upper_garment.base_color
+      display_name_zh: 泳装基础配色
+      value: 蓝色为主，深浅蓝色交错；荷叶边和局部边饰为白色
+      status: UNCERTAIN
+      evidence_ids:
+      - swimsuit-primary
+      conflicts: []
+      note_zh: '单张用户提供立绘；visual confidence: high。用户确认不构成官方定义或独立跨图共识。'
+      required_global: true
+      required_for:
+      - upper_body
+      - full_body
+    - field_id: outfit.pattern
+      display_name_zh: 泳装格纹
+      value: 上下装采用同款深浅蓝色格纹，叠加白色与黄色细线；具体线条方向受透视影响
+      status: UNCERTAIN
+      evidence_ids:
+      - swimsuit-primary
+      conflicts: []
+      note_zh: '单张用户提供立绘；visual confidence: high。用户确认不构成官方定义或独立跨图共识。'
+      required_global: true
+      required_for:
+      - upper_body
+      - full_body
+    - field_id: outfit.upper_garment.structure
+      display_name_zh: 泳装上装结构
+      value: 独立两件式泳装上装，前部蓝色格纹，下缘中央略收拢；不推定背部扣合方式
+      status: UNCERTAIN
+      evidence_ids:
+      - swimsuit-primary
+      conflicts: []
+      note_zh: '单张用户提供立绘；visual confidence: high。用户确认不构成官方定义或独立跨图共识。'
+      required_global: true
+      required_for:
+      - upper_body
+      - full_body
+    - field_id: outfit.upper_garment.straps
+      display_name_zh: 上装系带
+      value: 蓝色细带从上装两侧向颈后延伸，形成挂颈式结构；后部细节被头发遮挡
+      status: UNCERTAIN
+      evidence_ids:
+      - swimsuit-primary
+      conflicts: []
+      note_zh: '单张用户提供立绘；visual confidence: high。用户确认不构成官方定义或独立跨图共识。'
+      required_global: true
+      required_for:
+      - portrait
+      - upper_body
+      - full_body
+    - field_id: outfit.upper_garment.trim
+      display_name_zh: 上装边饰
+      value: 上装上缘带白色短荷叶边
+      status: UNCERTAIN
+      evidence_ids:
+      - swimsuit-primary
+      conflicts: []
+      note_zh: '单张用户提供立绘；visual confidence: high。用户确认不构成官方定义或独立跨图共识。'
+      required_global: true
+      required_for:
+      - upper_body
+      - full_body
+    - field_id: outfit.chest_detail
+      display_name_zh: 上装中央饰片
+      value: 上装中央有浅色竖条，竖条上可见两枚圆形扣饰
+      status: UNCERTAIN
+      evidence_ids:
+      - swimsuit-primary
+      conflicts: []
+      note_zh: '单张用户提供立绘；visual confidence: high。用户确认不构成官方定义或独立跨图共识。'
+      required_global: true
+      required_for:
+      - upper_body
+      - full_body
+    - field_id: outfit.lower_garment
+      display_name_zh: 泳装下装
+      value: 同款蓝色格纹泳裤，腰缘带短荷叶边；不是独立长裙
+      status: UNCERTAIN
+      evidence_ids:
+      - swimsuit-primary
+      conflicts: []
+      note_zh: '单张用户提供立绘；visual confidence: high。用户确认不构成官方定义或独立跨图共识。'
+      required_global: true
+      required_for:
+      - full_body
+    - field_id: outfit.lower_garment.side_ties
+      display_name_zh: 下装侧边细节
+      value: 画面右侧髋部可见蓝色系带和白色边饰；不推定另一侧也有相同结构
+      status: UNCERTAIN
+      evidence_ids:
+      - swimsuit-primary
+      conflicts: []
+      note_zh: '单张用户提供立绘；visual confidence: high。用户确认不构成官方定义或独立跨图共识。'
+      required_global: true
+      required_for:
+      - full_body
+    - field_id: outfit.legwear
+      display_name_zh: 腿部服装
+      value: 当前泳装搭配无袜
+      status: UNCERTAIN
+      evidence_ids:
+      - swimsuit-primary
+      conflicts: []
+      note_zh: '单张用户提供立绘；visual confidence: high。用户确认不构成官方定义或独立跨图共识。'
+      required_global: true
+      required_for:
+      - full_body
+    - field_id: outfit.footwear
+      display_name_zh: 鞋履
+      value: 当前泳装搭配赤足，无鞋履
+      status: UNCERTAIN
+      evidence_ids:
+      - swimsuit-primary
+      conflicts: []
+      note_zh: '单张用户提供立绘；visual confidence: high。用户确认不构成官方定义或独立跨图共识。'
+      required_global: true
+      required_for:
+      - full_body
+    - field_id: outfit.back_structure
+      display_name_zh: 背面结构
+      value: null
+      status: TODO_CALIBRATION
+      evidence_ids: []
+      conflicts: []
+      note_zh: 当前无背面参考；不推定上装背部扣合、后部系带和格纹接续。
+      required_global: false
+      required_for:
+      - back_view
+    - field_id: outfit.opposite_side_ties
+      display_name_zh: 另一侧系带结构
+      value: null
+      status: TODO_CALIBRATION
+      evidence_ids: []
+      conflicts: []
+      note_zh: 仅画面右侧系带可见，不推定另一侧结构。
+      required_global: false
+      required_for: []
+    reference_asset_ids:
+      primary:
+      - swimsuit-primary
+      secondary: []
+      detail: []
+    state_mutable_fields: []
+    must_keep_fields:
+    - outfit.silhouette
+    - outfit.upper_garment.base_color
+    - outfit.pattern
+    - outfit.upper_garment.structure
+    - outfit.upper_garment.straps
+    - outfit.upper_garment.trim
+    - outfit.chest_detail
+    - outfit.lower_garment
+    - outfit.lower_garment.side_ties
+    - outfit.legwear
+    - outfit.footwear
+    state_groups: {}
+    state_files: []
+    known_generation_risks:
+    - Primary 仅继承服装，不继承身份、发型、五官、姿势、表情或画风。
+    - 背面结构缺少证据，不支持 back_view。
+    - 原图红黑色角仅作附加外观观察，不是泳装事实或 Must Keep；参考不继承角。
+    - 单图工作事实均为 UNCERTAIN；须显式允许工作事实或使用已批准图像参考。
+    - 官方出处未核实；格纹方向和荷叶边展开程度受透视与姿势影响。
+    coverage:
+      upper_body: READY
+      lower_body: READY
+      full_body: READY
+      footwear: READY
+      back_view: INCOMPLETE
+      overall: PARTIAL
+  fact_status_transitions:
+  - field_id: outfit.silhouette
+    before: TODO_CALIBRATION
+    after: UNCERTAIN
+  - field_id: outfit.upper_garment.base_color
+    before: TODO_CALIBRATION
+    after: UNCERTAIN
+  - field_id: outfit.pattern
+    before: TODO_CALIBRATION
+    after: UNCERTAIN
+  - field_id: outfit.upper_garment.structure
+    before: TODO_CALIBRATION
+    after: UNCERTAIN
+  - field_id: outfit.upper_garment.straps
+    before: TODO_CALIBRATION
+    after: UNCERTAIN
+  - field_id: outfit.upper_garment.trim
+    before: TODO_CALIBRATION
+    after: UNCERTAIN
+  - field_id: outfit.chest_detail
+    before: TODO_CALIBRATION
+    after: UNCERTAIN
+  - field_id: outfit.lower_garment
+    before: TODO_CALIBRATION
+    after: UNCERTAIN
+  - field_id: outfit.lower_garment.side_ties
+    before: TODO_CALIBRATION
+    after: UNCERTAIN
+  - field_id: outfit.legwear
+    before: TODO_CALIBRATION
+    after: UNCERTAIN
+  - field_id: outfit.footwear
+    before: TODO_CALIBRATION
+    after: UNCERTAIN
+  - field_id: outfit.back_structure
+    before: TODO_CALIBRATION
+    after: TODO_CALIBRATION
+  - field_id: outfit.opposite_side_ties
+    before: TODO_CALIBRATION
+    after: TODO_CALIBRATION
+validation_result:
+  structure: PASS

@@ -265,10 +265,11 @@ def validate_assets(ctx: Context) -> None:
                     ctx.error("invalid-generation-inheritance", where, "inheritance must be a non-empty mapping.")
                 elif any(value not in VALID_INHERITANCE_DECISIONS for value in inheritance.values()):
                     ctx.error("invalid-generation-inheritance", where, "inheritance values must be inherit or do_not_inherit.")
-                if asset.get("derived_from_asset_id") is not None and asset.get("evidence_independence") != "none":
+                if (asset.get("derived_from_asset_id") is not None or asset.get("derived_from_asset_ids") is not None) and asset.get("evidence_independence") != "none":
                     ctx.error("derived-evidence-independence", where, "Derived generation references require evidence_independence: none.")
-            if "expression_evidence" in (roles or []) or asset.get("asset_type") in {"body_base", "faceless_composite"}:
-                ctx.error("generation-layer-forbidden", where, "Expression, Body Base, and Faceless assets cannot be generation inputs in this runtime policy.")
+                from reference_runtime import generation_permission_valid
+                if not generation_permission_valid(asset):
+                    ctx.error("invalid-generation-layer-role", where, "Published layer permissions must match their structural reference duties.")
         elif metadata is not None:
             ctx.error("unexpected-generation-reference", where, "Disabled generation permission must omit generation_reference or set it to null.")
         asset_path = relative_path(ctx, asset.get("path"), path)
@@ -285,6 +286,9 @@ def validate_assets(ctx: Context) -> None:
         parent = asset.get("derived_from_asset_id")
         if parent is not None and parent not in ctx.assets:
             ctx.error("missing-derived-parent", path, f"{asset_id} derives from unknown asset {parent}.")
+        from outfit_design import lineage_errors
+        for error in lineage_errors(asset, ctx.assets):
+            ctx.error("invalid-derivation-lineage", path, f"{asset_id}: {error}")
 
 
 def validate_runtime_config(ctx: Context) -> None:
@@ -345,7 +349,7 @@ def validate_fact(ctx: Context, fact: Any, owner: Path, seen: set[str]) -> None:
         groups = {
             ctx.assets[item].get("source_group_id")
             for item in evidence
-            if item in ctx.assets
+            if item in ctx.assets and ctx.assets[item].get("evidence_independence") != "none" and ctx.assets[item].get("source_kind") != "derivative"
         }
         groups.discard(None)
         if len(groups) < 2:
@@ -428,6 +432,27 @@ def validate_identity(ctx: Context) -> dict[str, Any] | None:
     seen: set[str] = set()
     for fact in facts:
         validate_fact(ctx, fact, path, seen)
+    from outfit_design import validate_back_identity
+    from reference_runtime import ReferenceRuntimeError
+    view_designs = data.get("approved_view_designs", {})
+    if not isinstance(view_designs, dict):
+        ctx.error("invalid-identity-view-design", path, "approved_view_designs must be a mapping.")
+    elif "back" in view_designs:
+        try:
+            entry = view_designs["back"]
+            validate_back_identity(entry)
+            ids = entry.get("reference_asset_ids")
+            if not isinstance(ids, list) or not ids:
+                raise ReferenceRuntimeError("IDENTITY_BACK_REFERENCE_REQUIRED", "Back design requires published identity references.")
+            for aid in ids:
+                asset = ctx.assets.get(aid, {})
+                metadata = asset.get("generation_reference") or {}
+                coverage = metadata.get("coverage") or {}
+                visible = set(coverage.get("visible_fields") or []) - set(coverage.get("occluded_fields") or [])
+                if "identity_reference" not in metadata.get("supported_roles", []) or not {"identity", "hair.back", "body.back"} <= visible or not set(coverage.get("view_angles") or []) & {"back", "back_three_quarter"}:
+                    raise ReferenceRuntimeError("IDENTITY_BACK_REFERENCE_REQUIRED", "Back identity cannot use front-only or outfit-only coverage.")
+        except ReferenceRuntimeError as exc:
+            ctx.error("invalid-identity-view-design", path, f"{exc.code}: {exc}")
     validate_markdown(ctx, ctx.root / "character" / "identity.md", data.get("entity_ref", ""), data.get("revision", -1))
     return data
 
@@ -482,6 +507,13 @@ def validate_variants(ctx: Context, index: dict[str, Any] | None) -> None:
         register_entity(ctx, data, variant_path)
         if data.get("variant_id") != variant_id:
             ctx.error("variant-id-mismatch", variant_path, f"Expected variant_id {variant_id}.")
+        if data.get("design_definition") is not None:
+            from outfit_design import validate_approved_design
+            from reference_runtime import ReferenceRuntimeError
+            try:
+                validate_approved_design(data)
+            except ReferenceRuntimeError as exc:
+                ctx.error("invalid-approved-design", variant_path, f"{exc.code}: {exc}")
         facts = data.get("facts", [])
         fact_seen: set[str] = set()
         if not isinstance(facts, list):
@@ -596,7 +628,7 @@ def validate_variants(ctx: Context, index: dict[str, Any] | None) -> None:
                 groups_for_state = {
                     ctx.assets[asset_id].get("source_group_id")
                     for asset_id in evidence
-                    if asset_id in ctx.assets
+                    if asset_id in ctx.assets and ctx.assets[asset_id].get("evidence_independence") != "none" and ctx.assets[asset_id].get("source_kind") != "derivative"
                 }
                 groups_for_state.discard(None)
                 if len(groups_for_state) < 2:
@@ -676,7 +708,7 @@ def validate_asset_references(ctx: Context) -> None:
                 ctx.error("derived-kind-mismatch", ctx.root / "character" / "assets.yaml", f"{asset_id} has a derived parent but source_kind is not derivative.")
             if parent and parent.get("source_group_id") != asset.get("source_group_id"):
                 ctx.error("derived-source-group-mismatch", ctx.root / "character" / "assets.yaml", f"{asset_id} and its parent must share source_group_id.")
-        elif asset.get("source_kind") == "derivative":
+        elif asset.get("source_kind") == "derivative" and asset.get("derived_from_asset_ids") is None:
             ctx.error("derivative-without-parent", ctx.root / "character" / "assets.yaml", f"{asset_id} is derivative but has no derived_from_asset_id.")
         if asset.get("source_authority") in {"primary_official", "secondary_official"} and asset.get("source_kind") != "official":
             ctx.error("official-authority-kind-mismatch", ctx.root / "character" / "assets.yaml", f"{asset_id} has official authority but source_kind is not official.")

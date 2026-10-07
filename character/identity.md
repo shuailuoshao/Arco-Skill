@@ -1,6 +1,6 @@
 ---
 source_entity: character.identity
-source_revision: 2
+source_revision: 3
 ---
 
 # 阿尔可 Identity 工作级证据说明

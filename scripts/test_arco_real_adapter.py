@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import copy
 import hashlib
+import shutil
 import sys
 import tempfile
 import unittest
@@ -13,6 +14,8 @@ SCRIPT_DIR = Path(__file__).resolve().parent
 ROOT = SCRIPT_DIR.parent
 if str(SCRIPT_DIR) not in sys.path:
     sys.path.insert(0, str(SCRIPT_DIR))
+
+from legacy_generation_fixture import legacy_generation_root
 
 from arco_real_adapter import ArcoRealAdapter, ArcoRealAdapterError  # noqa: E402
 from reference_runtime import (  # noqa: E402
@@ -98,6 +101,41 @@ class ArcoRealAdapterTests(unittest.TestCase):
         with self.assertRaises(ArcoRealAdapterError) as raised:
             callback()
         self.assertEqual(raised.exception.code, code)
+
+    def test_body_base_old_contracts_and_disguised_copies_never_call_provider(self):
+        assets = yaml.safe_load((ROOT / "character/assets.yaml").read_text(encoding="utf-8"))["assets"]
+        bodies = [asset for asset in assets if asset.get("asset_type") == "body_base"]
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            for body in bodies:
+                for disguise in ("old_contract", "request_copy", "external_copy"):
+                    with self.subTest(body=body["asset_id"], disguise=disguise):
+                        contract = make_contract(root)
+                        shutil.copy2(ROOT / body["path"], contract["path"])
+                        if disguise == "old_contract":
+                            contract.update(asset_id=body["asset_id"], asset_type="body_base",
+                                source_scope="managed_arco", authority="published_asset", persistent=True,
+                                can_be_generation_reference=True, supported_roles=["identity_reference"])
+                        elif disguise == "external_copy":
+                            contract.update(source_scope="external_how", role="pose_reference",
+                                authority="user_request_external", inherit=["pose"], do_not_inherit=["identity"])
+                        provider = FakeBuiltinImageGen(root / "generated.png")
+                        self.assertCode("BODY_BASE_NOT_ALLOWED", lambda: ArcoRealAdapter(provider).generate(
+                            invocation_plan=make_raw_plan(contract), reference_contracts=[contract],
+                            reference_image_paths=[contract["path"]]))
+                        self.assertEqual(provider.calls, [])
+
+    def test_body_base_supplied_path_is_checked_before_frozen_plan_binding(self):
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            contract = make_contract(root)
+            plan = make_plan([contract])
+            blocked = root / "disguised.png"
+            shutil.copy2(ROOT / "assets/arco/identity/body-evidence/identity-body-c07.png", blocked)
+            provider = FakeBuiltinImageGen(root / "generated.png")
+            self.assertCode("BODY_BASE_NOT_ALLOWED", lambda: ArcoRealAdapter(provider).generate(
+                invocation_plan=plan, reference_contracts=[contract], reference_image_paths=[str(blocked)]))
+            self.assertEqual(provider.calls, [])
 
     def test_valid_request_calls_builtin_with_exact_args_and_returns_path(self):
         with tempfile.TemporaryDirectory() as td:
@@ -378,6 +416,7 @@ class ArcoRealAdapterTests(unittest.TestCase):
             
 
     def test_published_selector_contracts_reach_adapter_read_only(self):
+        ROOT = legacy_generation_root()
         assets = yaml.safe_load((ROOT / "character" / "assets.yaml").read_text(encoding="utf-8"))
         config = yaml.safe_load((ROOT / "runtime" / "generation.yaml").read_text(encoding="utf-8"))
         protected = [
@@ -425,6 +464,7 @@ class ArcoRealAdapterTests(unittest.TestCase):
         )
 
     def test_published_selector_excludes_profile_for_upper_body(self):
+        ROOT = legacy_generation_root()
         assets = yaml.safe_load((ROOT / "character" / "assets.yaml").read_text(encoding="utf-8"))
         config = yaml.safe_load((ROOT / "runtime" / "generation.yaml").read_text(encoding="utf-8"))
 

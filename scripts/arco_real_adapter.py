@@ -5,7 +5,8 @@ The adapter is deliberately small and side-effect limited.  It validates the
 already-selected Invocation Plan, Reference Contracts, and image paths, then
 passes only the documented built-in image-generation arguments to an injected
 ``builtin_image_gen`` callable.  It never discovers assets, copies outputs,
-uploads files, registers evidence, or mutates the Arco library.
+uploads files, registers evidence, or mutates the Arco library. It reads the
+published Body Base fingerprints solely to enforce the local-only input rule.
 
 The host application owns the concrete provider binding.  A binding can wrap
 the host's ``builtin_image_gen`` tool as a keyword-callable with the signature
@@ -24,13 +25,14 @@ from reference_runtime import (
     build_builtin_imagegen_args,
     validate_reference_contract,
     validate_reference_instructions,
+    validate_generation_reference_input,
 )
 
 
 BUILTIN_PROVIDER = "builtin_image_gen"
 BUILTIN_CAPABILITY = "reference_conditioned_image_generation"
 REFERENCE_CONDITIONED_MODE = "reference_conditioned"
-MAX_TOTAL_IMAGE_INPUTS = 4
+MAX_TOTAL_IMAGE_INPUTS = 5
 OUTPUT_PATH_KEYS = (
     "path",
     "file_path",
@@ -107,8 +109,8 @@ def _as_path_list(value: Any, *, field_name: str) -> list[str]:
 
 def _validate_input_path(path: str) -> None:
     normalized = path.replace("\\", "/").casefold()
-    if "calibration/staging" in normalized:
-        _error("UNPUBLISHED_ASSET", "Staging paths cannot be generation inputs.")
+    if any(area in normalized for area in ("calibration/staging", "calibration/preparations")):
+        _error("UNPUBLISHED_ASSET", "Staging and preparation paths cannot be ordinary generation inputs.")
     if not Path(path).is_file():
         _error("REFERENCE_PATH_NOT_FOUND", path)
 
@@ -121,12 +123,15 @@ def _validate_managed_contract(contract: Mapping[str, Any]) -> None:
             "UNPUBLISHED_ASSET",
             f"Managed reference is not a published persistent contract: {contract.get('reference_id')}",
         )
-    if contract.get("can_be_generation_reference") is False:
+    if contract.get("can_be_generation_reference") is not True:
         _error(
             "ASSET_NOT_ALLOWED_FOR_GENERATION",
             str(contract.get("asset_id") or contract.get("reference_id")),
         )
-    if contract.get("asset_type") in {"body_base", "faceless_composite"}:
+    if contract.get("asset_type") in {"body_base", "faceless_composite", "expression_layer"} and (
+        contract.get("can_be_generation_reference") is not True
+        or contract.get("role") not in contract.get("supported_roles", [])
+    ):
         _error(
             "ASSET_NOT_ALLOWED_FOR_GENERATION",
             str(contract.get("asset_id") or contract.get("reference_id")),
@@ -200,8 +205,12 @@ def _validate_plan_and_contracts(
             )
         if contract.get("source_scope") == "managed_arco":
             _validate_managed_contract(contract)
+            if contract.get("sha256") is not None:
+                from reference_analysis import file_hash
+                if file_hash(path) != contract["sha256"]:
+                    _error("ASSET_HASH_MISMATCH", str(reference_id))
             local_count += 1
-        elif contract.get("source_scope") == "request_scoped_arco":
+        elif contract.get("source_scope") == "request_scoped_arco" and not contract.get("generated_output_role"):
             local_count += 1
         elif contract.get("source_scope") == "external_how":
             external_count += 1
@@ -300,11 +309,21 @@ class ArcoRealAdapter:
         """Generate exactly one image and return its verified local path."""
 
         contracts = _as_contract_list(reference_contracts)
+        for contract in contracts:
+            _adapterize(lambda contract=contract: validate_generation_reference_input(contract))
+        for path in _as_path_list(reference_image_paths, field_name="reference_image_paths"):
+            _adapterize(lambda path=path: validate_generation_reference_input({"path": path}))
+        from reference_analysis import validate_plan_binding
+        _adapterize(lambda: validate_plan_binding(invocation_plan, contracts))
         args = _validate_plan_and_contracts(
             invocation_plan,
             contracts,
             reference_image_paths,
         )
+        if any(contract.get("asset_type") in {"body_base", "faceless_composite"}
+               or (contract.get("source_scope") == "managed_arco" and contract.get("role") == "face_reference")
+               for contract in contracts) and not invocation_plan.get("analysis_preview"):
+            _error("ANALYSIS_CONFIRMATION_REQUIRED", "Split reference generation requires the human-confirmed frozen analysis.")
         input_paths = [str(path) for path in args["referenced_image_paths"]]
         try:
             result = self._builtin_image_gen(**args)
@@ -316,6 +335,42 @@ class ArcoRealAdapter:
                 "builtin_image_gen invocation failed.",
             ) from exc
         return _validate_output_path(result, input_paths)
+
+    def _generate_prepared(self, *, invocation_plan: Mapping[str, Any], root: Path,
+                           preparation_id: str, purpose: str) -> Path:
+        """Controlled candidate lane; ordinary generate keeps published rules."""
+        from preparation_support import load, validate_invocation, workspace
+        record = load(workspace(root, preparation_id) / "preparation.yaml")
+        if record.get("purpose") != purpose or invocation_plan.get("purpose") != purpose:
+            _error("PREPARATION_PURPOSE_MISMATCH", "Use the separately approved purpose-specific adapter path.")
+        args = _adapterize(lambda: validate_invocation(dict(invocation_plan), root=root, record=record))
+        try:
+            result = self._builtin_image_gen(**args)
+        except Exception as exc:
+            raise ArcoRealAdapterError("BUILTIN_IMAGE_GEN_FAILED", "builtin_image_gen preparation invocation failed.") from exc
+        return _validate_output_path(result, args["referenced_image_paths"])
+
+    def generate_preparation(self, *, invocation_plan: Mapping[str, Any], root: Path,
+                             preparation_id: str) -> Path:
+        return self._generate_prepared(invocation_plan=invocation_plan, root=root,
+            preparation_id=preparation_id, purpose="outfit_preparation")
+
+    def generate_identity_calibration(self, *, invocation_plan: Mapping[str, Any], root: Path,
+                                      preparation_id: str) -> Path:
+        return self._generate_prepared(invocation_plan=invocation_plan, root=root,
+            preparation_id=preparation_id, purpose="identity_calibration")
+
+    def generate_reference_correction(self, *, invocation_plan: Mapping[str, Any], root: Path,
+                                      preview_path: Path) -> Path:
+        """Explicit calibration edit of a published reference; no formal writes."""
+        from reference_correction import validate_reference_correction
+        args = _adapterize(lambda: validate_reference_correction(dict(invocation_plan),
+            root=root, preview_path=preview_path))
+        try:
+            result = self._builtin_image_gen(**args)
+        except Exception as exc:
+            raise ArcoRealAdapterError("BUILTIN_IMAGE_GEN_FAILED", "Reference correction invocation failed.") from exc
+        return _validate_output_path(result, args['referenced_image_paths'])
 
     def invoke(
         self,

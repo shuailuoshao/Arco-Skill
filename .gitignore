@@ -6,3 +6,32 @@ evaluation/style-regression/outputs/
 evaluation/style-regression/pilot/outputs/
 evaluation/style-regression/host-smoke/outputs/
 evaluation/style-regression/blind-map.private.json
+evaluation/revision-regression/private-assets/**
+evaluation/revision-regression/baseline/outputs/**
+!evaluation/revision-regression/private-assets/
+!evaluation/revision-regression/baseline/outputs/
+!evaluation/revision-regression/private-assets/.gitkeep
+!evaluation/revision-regression/baseline/outputs/.gitkeep
+
+# Preserve the original privacy/output exclusions after historical relocation.
+archive/实验/evaluation/style-regression/private-assets/
+archive/实验/evaluation/style-regression/outputs/
+archive/实验/evaluation/style-regression/pilot/outputs/
+archive/实验/evaluation/style-regression/host-smoke/outputs/
+archive/实验/evaluation/style-regression/blind-map.private.json
+archive/实验/evaluation/revision-regression/private-assets/**
+archive/实验/evaluation/revision-regression/baseline/outputs/**
+!archive/实验/evaluation/revision-regression/private-assets/
+!archive/实验/evaluation/revision-regression/baseline/outputs/
+!archive/实验/evaluation/revision-regression/private-assets/.gitkeep
+!archive/实验/evaluation/revision-regression/baseline/outputs/.gitkeep
+作品/.archive-lock/
+*.json.tmp
+
+# Local artwork, historical archives, runtime output, and calibration snapshots.
+/作品/
+/archive/
+/output/
+/calibration/staging/
+/calibration/preparations/
+/calibration/transactions/

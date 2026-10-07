@@ -2,6 +2,8 @@
 
 Calibration 是唯一允许改变 Character Bible 的路径。
 
+新增、补全或混搭服装先按 [服装准备流程](outfit-preparation.md) 收集素材、确认设计并试穿；最终参考包及发布预览获用户认可后，才进入本文件的正式 staging 与事务规则。独立背面身份标定也采用专属预览和确认。
+
 普通只读 Prompt 不扫描 staging。新 Calibration、正式写入、publication 与 recovery 才检查目标级 `calibration-lock.yaml`。manifest 保存 base revision 与所有发布/保护文件的 base hash；publication preflight 若发现漂移，进入 `STALE_STAGING` 且不得写入。Windows 多文件发布使用 rollback snapshot 与逐文件 after-hash，任一中途失败进入 `RECOVERY_REQUIRED`。
 
 ## 1. 显式进入

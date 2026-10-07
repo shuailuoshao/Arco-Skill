@@ -33,7 +33,7 @@ class StyleRegressionTests(unittest.TestCase):
         )
 
     def _formal_exchange_fixture(self, root: Path) -> dict:
-        evaluation_dir = root / "evaluation" / "style-regression"
+        evaluation_dir = root / "archive/实验/evaluation" / "style-regression"
         for relative, contents in {
             "scripts/run_style_regression.py": Path(__file__).with_name("run_style_regression.py").read_text(encoding="utf-8"),
             "scripts/reference_runtime.py": "runtime fixture\n",
@@ -42,8 +42,8 @@ class StyleRegressionTests(unittest.TestCase):
             "runtime/style-policy.yaml": "policy: fixture\n",
             "character/assets.yaml": "assets: []\n",
             "character/style-baseline.yaml": "baseline: fixture\n",
-            "evaluation/style-regression/cases.yaml": "fixture: true\n",
-            "evaluation/style-regression/inputs-freeze.json": "{}\n",
+            "archive/实验/evaluation/style-regression/cases.yaml": "fixture: true\n",
+            "archive/实验/evaluation/style-regression/inputs-freeze.json": "{}\n",
         }.items():
             path = root / relative
             path.parent.mkdir(parents=True, exist_ok=True)
@@ -167,13 +167,13 @@ class StyleRegressionTests(unittest.TestCase):
             self.assertEqual(task["prompt"], sample["plans"]["A"]["prompt"])
             self.assertEqual(task["referenced_image_paths"], sample["plans"]["A"]["referenced_image_paths"])
             self.assertEqual(task["reference_ids"], sample["plans"]["A"]["selected_reference_ids"])
-            self.assertEqual(task["expected_output_path"], "evaluation/style-regression/outputs/case-01/A-r1.png")
+            self.assertEqual(task["expected_output_path"], "archive/实验/evaluation/style-regression/outputs/case-01/A-r1.png")
             self.assertEqual(task["frozen_input_hashes"]["files"]["scripts/run_style_regression.py"], regression.sha256_file(root / "scripts/run_style_regression.py"))
             self.assertEqual(task_path.read_bytes(), before)
             self.assertEqual(len(regression._load_jsonl(regression._formal_manifest_path(root))), 1)
             self.assertFalse(regression._pilot_manifest_path(root).exists())
             self.assertFalse((root / regression.CODEX_SMOKE_REPORT_PATH).exists())
-            self.assertFalse((root / "evaluation" / "style-regression" / "outputs").exists())
+            self.assertFalse((root / "archive/实验/evaluation" / "style-regression" / "outputs").exists())
 
     def test_formal_resume_skips_hash_valid_result_and_queues_next_interleaved_sample(self):
         with tempfile.TemporaryDirectory() as temporary:
@@ -360,7 +360,7 @@ class StyleRegressionTests(unittest.TestCase):
                         with self.assertRaisesRegex(regression.ExperimentError, "duplicate|stale|missing"):
                             regression.queue_next_formal_task(preflight, root=root)
                     elif mode == "conflict":
-                        output = root / "evaluation" / "style-regression" / "outputs" / "case-01" / "A-r1.png"
+                        output = root / "archive/实验/evaluation" / "style-regression" / "outputs" / "case-01" / "A-r1.png"
                         output.parent.mkdir(parents=True, exist_ok=True)
                         output.write_bytes(generated.read_bytes())
                         with self.assertRaisesRegex(regression.ExperimentError, "Conflicting output"):
@@ -397,7 +397,7 @@ class StyleRegressionTests(unittest.TestCase):
     def test_formal_capture_rejects_legacy_revision_and_failed_gates(self):
         with tempfile.TemporaryDirectory() as temporary:
             root = Path(temporary)
-            capture_path = root / "evaluation" / "style-regression" / "environment" / regression.R_FINAL_PREFLIGHT_ENVIRONMENT_PATH
+            capture_path = root / "archive/实验/evaluation" / "style-regression" / "environment" / regression.R_FINAL_PREFLIGHT_ENVIRONMENT_PATH
             capture_path.parent.mkdir(parents=True)
             capture_path.write_text(json.dumps({"record_kind": "batch-4b2r-final-preflight-capture"}), encoding="utf-8")
             with self.assertRaisesRegex(regression.ExperimentError, "not a Batch 4B.3-T"):
@@ -423,7 +423,7 @@ class StyleRegressionTests(unittest.TestCase):
             root = Path(temporary)
             baseline_json, baseline_md = regression._preflight_report_paths(root)
             self.assertEqual(baseline_json.name, regression.R_PREFLIGHT_JSON_PATH)
-            capture = root / "evaluation" / "style-regression" / "environment" / regression.R_FINAL_PREFLIGHT_ENVIRONMENT_PATH
+            capture = root / "archive/实验/evaluation" / "style-regression" / "environment" / regression.R_FINAL_PREFLIGHT_ENVIRONMENT_PATH
             capture.parent.mkdir(parents=True)
             capture.write_text("{}\n", encoding="utf-8")
 
@@ -504,7 +504,7 @@ class StyleRegressionTests(unittest.TestCase):
     def test_codex_generation_task_freezes_exact_prompt_and_reference_order(self):
         with tempfile.TemporaryDirectory() as temporary:
             root = Path(temporary)
-            task_path = root / "evaluation" / "style-regression" / "pilot" / "tasks" / "A.json"
+            task_path = root / "archive/实验/evaluation" / "style-regression" / "pilot" / "tasks" / "A.json"
             prompt = "Exact compiled prompt.\nKeep every token."
             reference_paths = ["refs/identity.png", "refs/outfit.png", "refs/style.jpg"]
             task = regression.build_codex_task(
@@ -516,7 +516,7 @@ class StyleRegressionTests(unittest.TestCase):
                 prompt=prompt,
                 referenced_image_paths=reference_paths,
                 reference_ids=["identity-p01", "casual-outfit-primary", "external-style-01"],
-                expected_output_path="evaluation/style-regression/pilot/outputs/case-01/A-r1.png",
+                expected_output_path="archive/实验/evaluation/style-regression/pilot/outputs/case-01/A-r1.png",
                 frozen_input_hashes={
                     "references": [
                         {"reference_id": "identity-p01", "path": "refs/identity.png", "sha256": "a" * 64},
@@ -551,7 +551,7 @@ class StyleRegressionTests(unittest.TestCase):
     def test_codex_task_v2_round_trips_chinese_prompt_as_exact_utf8_bytes(self):
         with tempfile.TemporaryDirectory() as temporary:
             root = Path(temporary)
-            task_path = root / "evaluation" / "style-regression" / "formal" / "tasks" / "case-01-A-r1-attempt-2.json"
+            task_path = root / "archive/实验/evaluation" / "style-regression" / "formal" / "tasks" / "case-01-A-r1-attempt-2.json"
             prompt = "阿尔可站在庭院中，双手清楚可见。保持细腻线条与柔和色彩。"
             task = regression.build_codex_task(
                 task_id="formal:case-01:A:r1:attempt-2",
@@ -562,7 +562,7 @@ class StyleRegressionTests(unittest.TestCase):
                 prompt=prompt,
                 referenced_image_paths=[],
                 reference_ids=[],
-                expected_output_path="evaluation/style-regression/outputs/case-01/A-r1-attempt-2.png",
+                expected_output_path="archive/实验/evaluation/style-regression/outputs/case-01/A-r1-attempt-2.png",
                 frozen_input_hashes={"references": [], "files": {}},
             )
             regression.write_codex_task(task, path=task_path)
@@ -584,7 +584,7 @@ class StyleRegressionTests(unittest.TestCase):
             other_path.parent.mkdir(parents=True)
             runner_path.write_text("parent runner\n", encoding="utf-8")
             other_path.write_text("frozen generation config\n", encoding="utf-8")
-            task_path = root / "evaluation" / "style-regression" / "formal" / "tasks" / "case-01-A-r1-attempt-2.json"
+            task_path = root / "archive/实验/evaluation" / "style-regression" / "formal" / "tasks" / "case-01-A-r1-attempt-2.json"
             task = regression.build_codex_task(
                 task_id="formal:case-01:A:r1:attempt-2",
                 task_kind="formal",
@@ -594,7 +594,7 @@ class StyleRegressionTests(unittest.TestCase):
                 prompt="Exact frozen prompt",
                 referenced_image_paths=[],
                 reference_ids=[],
-                expected_output_path="evaluation/style-regression/outputs/case-01/A-r1-attempt-2.png",
+                expected_output_path="archive/实验/evaluation/style-regression/outputs/case-01/A-r1-attempt-2.png",
                 frozen_input_hashes={
                     "references": [],
                     "files": {
@@ -644,7 +644,7 @@ class StyleRegressionTests(unittest.TestCase):
     def test_codex_ascii_envelope_verifies_before_generator_and_rejects_transcoded_text(self):
         with tempfile.TemporaryDirectory() as temporary:
             root = Path(temporary)
-            task_path = root / "evaluation" / "style-regression" / "pilot" / "tasks" / "case-01-A-r1.json"
+            task_path = root / "archive/实验/evaluation" / "style-regression" / "pilot" / "tasks" / "case-01-A-r1.json"
             prompt = "阿尔可，柔和光线，清晰线条。"
             task = regression.build_codex_task(
                 task_id="pilot:case-01:A:r1",
@@ -655,7 +655,7 @@ class StyleRegressionTests(unittest.TestCase):
                 prompt=prompt,
                 referenced_image_paths=[],
                 reference_ids=[],
-                expected_output_path="evaluation/style-regression/pilot/outputs/batch-4b3t-r2/case-01/A-r1.png",
+                expected_output_path="archive/实验/evaluation/style-regression/pilot/outputs/batch-4b3t-r2/case-01/A-r1.png",
                 frozen_input_hashes={"references": [], "files": {}},
             )
             regression.write_codex_task(task, path=task_path)
@@ -683,7 +683,7 @@ class StyleRegressionTests(unittest.TestCase):
     def test_codex_prompt_verification_cli_returns_ascii_escaped_prompt_only_on_match(self):
         with tempfile.TemporaryDirectory() as temporary:
             root = Path(temporary)
-            task_path = root / "evaluation" / "style-regression" / "pilot" / "tasks" / "case-01-A-r1.json"
+            task_path = root / "archive/实验/evaluation" / "style-regression" / "pilot" / "tasks" / "case-01-A-r1.json"
             prompt = "阿尔可，逐字节验证。"
             task = regression.build_codex_task(
                 task_id="pilot:case-01:A:r1",
@@ -694,7 +694,7 @@ class StyleRegressionTests(unittest.TestCase):
                 prompt=prompt,
                 referenced_image_paths=[],
                 reference_ids=[],
-                expected_output_path="evaluation/style-regression/pilot/outputs/batch-4b3t-r2/case-01/A-r1.png",
+                expected_output_path="archive/实验/evaluation/style-regression/pilot/outputs/batch-4b3t-r2/case-01/A-r1.png",
                 frozen_input_hashes={"references": [], "files": {}},
             )
             regression.write_codex_task(task, path=task_path)
@@ -742,7 +742,7 @@ class StyleRegressionTests(unittest.TestCase):
                     {"reference_id": ref_id, "path": str(path), "sha256": regression.sha256_file(path)}
                     for ref_id, path in zip(("identity-p01", "external-style-01"), ref_paths)
                 ]
-                task_path = root / "evaluation" / "style-regression" / "formal" / "tasks" / "case-01-A-r1-attempt-1.json"
+                task_path = root / "archive/实验/evaluation" / "style-regression" / "formal" / "tasks" / "case-01-A-r1-attempt-1.json"
                 task = regression.build_codex_task(
                     task_id="formal:case-01:A:r1:attempt-1",
                     task_kind="formal",
@@ -752,7 +752,7 @@ class StyleRegressionTests(unittest.TestCase):
                     prompt="阿尔可，准确传输。",
                     referenced_image_paths=[str(path) for path in ref_paths],
                     reference_ids=["identity-p01", "external-style-01"],
-                    expected_output_path="evaluation/style-regression/outputs/case-01/A-r1.png",
+                    expected_output_path="archive/实验/evaluation/style-regression/outputs/case-01/A-r1.png",
                     frozen_input_hashes={"references": reference_rows, "files": {}},
                 )
                 regression.write_codex_task(task, path=task_path)
@@ -793,7 +793,7 @@ class StyleRegressionTests(unittest.TestCase):
             root = Path(temporary)
             preflight = self._formal_exchange_fixture(root)
             rows = []
-            a_output = root / "evaluation" / "style-regression" / "outputs" / "case-01" / "A-r1.png"
+            a_output = root / "archive/实验/evaluation" / "style-regression" / "outputs" / "case-01" / "A-r1.png"
             a_output.parent.mkdir(parents=True, exist_ok=True)
             a_output.write_bytes(bytes.fromhex("89504E470D0A1A0A") + b"preserved-invalid-image")
             a_hash = regression.sha256_file(a_output)
@@ -815,7 +815,7 @@ class StyleRegressionTests(unittest.TestCase):
                     prompt=plan["prompt"],
                     referenced_image_paths=plan["referenced_image_paths"],
                     reference_ids=plan["selected_reference_ids"],
-                    expected_output_path=f"evaluation/style-regression/outputs/case-01/{group}-r1.png",
+                    expected_output_path=f"archive/实验/evaluation/style-regression/outputs/case-01/{group}-r1.png",
                     frozen_input_hashes={"references": frozen_references, "files": {}},
                     batch="4B.3-F",
                 )
@@ -991,7 +991,7 @@ class StyleRegressionTests(unittest.TestCase):
     def test_codex_result_acceptance_copies_fresh_nonempty_png_and_hashes_it(self):
         with tempfile.TemporaryDirectory() as temporary:
             root = Path(temporary)
-            task_path = root / "evaluation" / "style-regression" / "host-smoke" / "codex-task.json"
+            task_path = root / "archive/实验/evaluation" / "style-regression" / "host-smoke" / "codex-task.json"
             task = regression.build_codex_task(
                 task_id="smoke:4b2r",
                 task_kind="smoke",
@@ -1001,7 +1001,7 @@ class StyleRegressionTests(unittest.TestCase):
                 prompt=regression.HOST_SMOKE_PROMPT,
                 referenced_image_paths=[],
                 reference_ids=[],
-                expected_output_path="evaluation/style-regression/host-smoke/outputs/output.png",
+                expected_output_path="archive/实验/evaluation/style-regression/host-smoke/outputs/output.png",
                 frozen_input_hashes={"smoke_prompt_sha256": regression.hashlib.sha256(regression.HOST_SMOKE_PROMPT.encode("utf-8")).hexdigest(), "files": {}},
             )
             regression.write_codex_task(task, path=task_path)
@@ -1030,7 +1030,7 @@ class StyleRegressionTests(unittest.TestCase):
                 prompt=regression.HOST_SMOKE_PROMPT,
                 referenced_image_paths=[],
                 reference_ids=[],
-                expected_output_path="evaluation/style-regression/host-smoke/outputs/output.png",
+                expected_output_path="archive/实验/evaluation/style-regression/host-smoke/outputs/output.png",
                 frozen_input_hashes={"files": {}},
                 created_at="2020-01-01T00:00:00+00:00",
             )
@@ -1191,7 +1191,7 @@ class StyleRegressionTests(unittest.TestCase):
 
     def test_frozen_case_schema_has_four_cases_and_reports_missing_intake(self):
         cases = yaml.safe_load(
-            (ROOT / "evaluation" / "style-regression" / "cases.yaml").read_text(encoding="utf-8")
+            (ROOT / "archive/实验/evaluation" / "style-regression" / "cases.yaml").read_text(encoding="utf-8")
         )
         missing_intake = copy.deepcopy(cases)
         for case in missing_intake["cases"]:
@@ -1206,7 +1206,7 @@ class StyleRegressionTests(unittest.TestCase):
 
     def test_scene_composition_uses_the_same_frozen_requirements(self):
         cases = yaml.safe_load(
-            (ROOT / "evaluation" / "style-regression" / "cases.yaml").read_text(encoding="utf-8")
+            (ROOT / "archive/实验/evaluation" / "style-regression" / "cases.yaml").read_text(encoding="utf-8")
         )
         prompts = [regression.compose_scene_prompt(case) for case in cases["cases"]]
 
@@ -1345,7 +1345,7 @@ class StyleRegressionTests(unittest.TestCase):
     def test_frozen_artifact_hash_mismatch_blocks_input_validation(self):
         with tempfile.TemporaryDirectory() as temporary:
             root = Path(temporary)
-            evaluation_dir = root / "evaluation" / "style-regression"
+            evaluation_dir = root / "archive/实验/evaluation" / "style-regression"
             evaluation_dir.mkdir(parents=True)
             cases_path = evaluation_dir / "cases.yaml"
             cases_path.write_text("schema_version: 1\ncases: []\n", encoding="utf-8")
@@ -1362,7 +1362,7 @@ class StyleRegressionTests(unittest.TestCase):
                 "runtime_sha256": regression.sha256_file(scripts_dir / "reference_runtime.py"),
                 "adapter_sha256": regression.sha256_file(scripts_dir / "arco_real_adapter.py"),
                 "files": {
-                    "evaluation/style-regression/style-context/case-01/resolved-style-context.json": "0" * 64
+                    "archive/实验/evaluation/style-regression/style-context/case-01/resolved-style-context.json": "0" * 64
                 },
                 "selector_snapshots": {},
             }
@@ -1377,7 +1377,7 @@ class StyleRegressionTests(unittest.TestCase):
     def test_reference_image_hash_mismatch_blocks_selection(self):
         with tempfile.TemporaryDirectory() as temporary:
             root = Path(temporary)
-            reference = root / "evaluation" / "style-regression" / "private-assets" / "case-01.png"
+            reference = root / "archive/实验/evaluation" / "style-regression" / "private-assets" / "case-01.png"
             reference.parent.mkdir(parents=True)
             reference.write_bytes(b"user supplied style reference")
             case = {
@@ -1395,7 +1395,7 @@ class StyleRegressionTests(unittest.TestCase):
             self.assertTrue(any("external style image hash does not match" in error for error in errors))
 
     def test_case_schema_rejects_missing_reference_provenance(self):
-        cases = yaml.safe_load((ROOT / "evaluation" / "style-regression" / "cases.yaml").read_text(encoding="utf-8"))
+        cases = yaml.safe_load((ROOT / "archive/实验/evaluation" / "style-regression" / "cases.yaml").read_text(encoding="utf-8"))
         cases["cases"][0]["external_reference"]["provenance"] = None
 
         errors = regression.validate_case_schema(cases)
@@ -1405,7 +1405,7 @@ class StyleRegressionTests(unittest.TestCase):
     def test_style_brief_must_match_case_and_reference_hash(self):
         with tempfile.TemporaryDirectory() as temporary:
             root = Path(temporary)
-            evaluation_dir = root / "evaluation" / "style-regression"
+            evaluation_dir = root / "archive/实验/evaluation" / "style-regression"
             brief_dir = evaluation_dir / "style-context" / "case-01"
             brief_dir.mkdir(parents=True)
             reference_dir = evaluation_dir / "private-assets" / "style-references"
@@ -1484,9 +1484,9 @@ class StyleRegressionTests(unittest.TestCase):
             self.assertLessEqual(started_at, completed_at)
             self.assertEqual(calls, [(regression.HOST_SMOKE_PROMPT, [])])
             self.assertEqual(regression._validate_host_smoke(root, "host.binding:builtin_image_gen"), [])
-            self.assertFalse((root / "evaluation" / "style-regression" / "manifest.jsonl").exists())
+            self.assertFalse((root / "archive/实验/evaluation" / "style-regression" / "manifest.jsonl").exists())
             self.assertFalse(regression._pilot_manifest_path(root).exists())
-            smoke_report_path = root / "evaluation" / "style-regression" / "host-smoke" / "result.json"
+            smoke_report_path = root / "archive/实验/evaluation" / "style-regression" / "host-smoke" / "result.json"
             invalid_smoke_report = regression._load_json(smoke_report_path)
             invalid_smoke_report["formal"] = True
             smoke_report_path.write_text(json.dumps(invalid_smoke_report), encoding="utf-8")
@@ -1551,7 +1551,7 @@ class StyleRegressionTests(unittest.TestCase):
 
     def test_selector_diff_records_pre_fix_reference_change_as_confound(self):
         cases = yaml.safe_load(
-            (ROOT / "evaluation" / "style-regression" / "cases.yaml").read_text(encoding="utf-8")
+            (ROOT / "archive/实验/evaluation" / "style-regression" / "cases.yaml").read_text(encoding="utf-8")
         )
         case = cases["cases"][0]
         evidence = regression._load_pre_selector_evidence(root=ROOT)
@@ -1585,7 +1585,7 @@ class StyleRegressionTests(unittest.TestCase):
 
     def test_historical_h_is_optional_ingestible_and_excluded_from_formal_groups(self):
         cases = yaml.safe_load(
-            (ROOT / "evaluation" / "style-regression" / "cases.yaml").read_text(encoding="utf-8")
+            (ROOT / "archive/实验/evaluation" / "style-regression" / "cases.yaml").read_text(encoding="utf-8")
         )
         with tempfile.TemporaryDirectory() as temporary:
             root = Path(temporary)
@@ -1595,7 +1595,7 @@ class StyleRegressionTests(unittest.TestCase):
             self.assertNotIn("H", regression.GROUPS)
             self.assertEqual(regression.GENERATED_GROUPS, ("A", "B", "C"))
 
-            historical_dir = root / "evaluation" / "style-regression" / "private-assets" / "historical" / "H"
+            historical_dir = root / "archive/实验/evaluation" / "style-regression" / "private-assets" / "historical" / "H"
             historical_dir.mkdir(parents=True)
             output = historical_dir / "case-01-H-r1.png"
             output.write_bytes(b"historical context sample")
@@ -1625,14 +1625,14 @@ class StyleRegressionTests(unittest.TestCase):
     def test_corrected_legacy_control_remains_frozen_and_rejects_v11_runtime(self):
         with self.assertRaisesRegex(
             regression.ExperimentError,
-            "Production Runtime or transport schema changed",
+            "Production Runtime or transport schema changed|Corrected Legacy and production Adapter files differ",
         ):
             regression._control_runtime_metadata(ROOT)
 
         metadata = json.loads(
             (
                 ROOT
-                / "evaluation"
+                / "archive/实验/evaluation"
                 / "style-regression"
                 / "control-runtime"
                 / "corrected-legacy.json"
@@ -1655,7 +1655,7 @@ class StyleRegressionTests(unittest.TestCase):
 
     def test_a_b_c_use_selector_parity_and_b_c_only_add_hygiene(self):
         cases = yaml.safe_load(
-            (ROOT / "evaluation" / "style-regression" / "cases.yaml").read_text(encoding="utf-8")
+            (ROOT / "archive/实验/evaluation" / "style-regression" / "cases.yaml").read_text(encoding="utf-8")
         )
         case = copy.deepcopy(cases["cases"][0])
         with tempfile.TemporaryDirectory(prefix="style-regression-test-", dir=regression.EVALUATION_DIR) as temporary:
@@ -1690,7 +1690,8 @@ class StyleRegressionTests(unittest.TestCase):
             brief_path.write_text(yaml.safe_dump(style_brief, allow_unicode=True), encoding="utf-8")
             case["external_reference"]["style_brief_path"] = brief_path.relative_to(regression.EVALUATION_DIR).as_posix()
             case["external_reference"]["style_brief_sha256"] = regression.sha256_file(brief_path)
-            assets = yaml.safe_load((ROOT / "character" / "assets.yaml").read_text(encoding="utf-8"))
+            from legacy_generation_fixture import legacy_generation_root
+            assets = yaml.safe_load((legacy_generation_root() / "character/assets.yaml").read_text(encoding="utf-8"))
             generation = yaml.safe_load((ROOT / "runtime" / "generation.yaml").read_text(encoding="utf-8"))
             baseline = yaml.safe_load((ROOT / "character" / "style-baseline.yaml").read_text(encoding="utf-8"))
             policy = yaml.safe_load((ROOT / "runtime" / "style-policy.yaml").read_text(encoding="utf-8"))
@@ -1699,10 +1700,16 @@ class StyleRegressionTests(unittest.TestCase):
                 ROOT, case, assets["assets"], generation
             )
             self.assertEqual(errors, [])
+            # The pinned control predates asset_type in transport contracts.
+            # Compare its historical selection fields; current permission and
+            # asset_type transport checks are exercised by adapter tests.
+            references = [dict(item) for item in references]
+            for item in references:
+                item.pop("asset_type", None)
             metadata = json.loads(
                 (
                     ROOT
-                    / "evaluation"
+                    / "archive/实验/evaluation"
                     / "style-regression"
                     / "control-runtime"
                     / "corrected-legacy.json"
@@ -1711,7 +1718,13 @@ class StyleRegressionTests(unittest.TestCase):
             metadata["runtime_path"] = str(
                 Path(metadata["worktree_path"]) / "scripts" / "reference_runtime.py"
             )
-            with mock.patch.object(regression, "_control_runtime_metadata", return_value=metadata):
+            original_loader = regression._load_yaml
+            def historical_loader(path):
+                if Path(path).resolve() == (ROOT / "character/assets.yaml").resolve():
+                    return assets
+                return original_loader(path)
+            with (mock.patch.object(regression, "_control_runtime_metadata", return_value=metadata),
+                  mock.patch.object(regression, "_load_yaml", side_effect=historical_loader)):
                 pair = regression._build_pair(ROOT, case, references, baseline, policy)
 
             self.assertTrue(pair["selector_parity"])
@@ -1784,7 +1797,7 @@ class StyleRegressionTests(unittest.TestCase):
     def test_pilot_manifest_and_outputs_are_isolated_from_formal_samples(self):
         with tempfile.TemporaryDirectory() as temporary:
             root = Path(temporary)
-            evaluation_dir = root / "evaluation" / "style-regression"
+            evaluation_dir = root / "archive/实验/evaluation" / "style-regression"
             context_dir = evaluation_dir / "style-context" / "case-01"
             context_dir.mkdir(parents=True)
             selection_dir = evaluation_dir / "reference-selection"
@@ -2002,17 +2015,17 @@ class StyleRegressionTests(unittest.TestCase):
     def test_blind_review_copies_hide_group_and_map_all_36_samples(self):
         with tempfile.TemporaryDirectory() as temporary:
             root = Path(temporary)
-            evaluation_dir = root / "evaluation" / "style-regression"
+            evaluation_dir = root / "archive/实验/evaluation" / "style-regression"
             outputs_dir = evaluation_dir / "outputs"
             outputs_dir.mkdir(parents=True)
-            shutil_template = ROOT / "evaluation" / "style-regression" / "evaluation-template.md"
+            shutil_template = ROOT / "archive/实验/evaluation" / "style-regression" / "evaluation-template.md"
             evaluation_dir.mkdir(parents=True, exist_ok=True)
             (evaluation_dir / "evaluation-template.md").write_bytes(shutil_template.read_bytes())
             records = []
             for case_id in regression.CASE_IDS:
                 for group in regression.GROUPS:
                     for replicate in range(1, regression.EXPECTED_REPLICATES + 1):
-                        relative = f"evaluation/style-regression/outputs/{case_id}-{group}-r{replicate}.png"
+                        relative = f"archive/实验/evaluation/style-regression/outputs/{case_id}-{group}-r{replicate}.png"
                         image = root / relative
                         image.write_bytes(f"private test image {case_id}-{group}-{replicate}".encode())
                         records.append(

@@ -1,8 +1,8 @@
 schema_version: 3
 entity_type: asset_registry
 entity_ref: character.assets
-revision: 5
-last_calibration_id: cal-20260914T100205Z-77878a
+revision: 11
+last_calibration_id: cal-20261006T151156Z-de80be
 assets:
 - asset_id: arco-expr-oblique-001
   expression_id: expr-oblique-proud-confident-01
@@ -28,6 +28,40 @@ assets:
   sha256: d03ebd27ea08ba3dd22e4f1b6885a7437d50f9b802ac97523eb8e5720002532b
   variant_id: null
   state_ids: []
+  can_be_generation_reference: true
+  generation_reference:
+    priority: primary
+    supported_roles:
+    - face_reference
+    preferred_for:
+    - portrait
+    - upper_body
+    - full_body
+    excluded_for:
+    - back_view
+    coverage:
+      profiles:
+      - portrait
+      - upper_body
+      - full_body
+      visible_fields:
+      - eyes
+      - face
+      view_angles:
+      - front_three_quarter
+      occluded_fields: []
+    inheritance:
+      face: inherit
+      eyes: inherit
+      hair: do_not_inherit
+      body_proportions: do_not_inherit
+      outfit: do_not_inherit
+      pose: do_not_inherit
+      lighting: do_not_inherit
+      scene: do_not_inherit
+      style: do_not_inherit
+      expression: do_not_inherit
+  purpose_note_zh: 获准作为分离生成参考；仅继承合同指定职责，不继承原图姿势、表情或渲染。
 - asset_id: arco-expr-oblique-002
   expression_id: expr-oblique-neutral-serious-01
   path: assets/arco/expressions/oblique/arco-expr-oblique-002.png
@@ -52,6 +86,40 @@ assets:
   sha256: d0c4a0bef6f260aca4ae9312a6ad9929d2e2c5447d0bdc4f6b75a8d4cac5a398
   variant_id: null
   state_ids: []
+  can_be_generation_reference: true
+  generation_reference:
+    priority: primary
+    supported_roles:
+    - face_reference
+    preferred_for:
+    - portrait
+    - upper_body
+    - full_body
+    excluded_for:
+    - back_view
+    coverage:
+      profiles:
+      - portrait
+      - upper_body
+      - full_body
+      visible_fields:
+      - eyes
+      - face
+      view_angles:
+      - front_three_quarter
+      occluded_fields: []
+    inheritance:
+      face: inherit
+      eyes: inherit
+      hair: do_not_inherit
+      body_proportions: do_not_inherit
+      outfit: do_not_inherit
+      pose: do_not_inherit
+      lighting: do_not_inherit
+      scene: do_not_inherit
+      style: do_not_inherit
+      expression: do_not_inherit
+  purpose_note_zh: 获准作为分离生成参考；仅继承合同指定职责，不继承原图姿势、表情或渲染。
 - asset_id: arco-expr-oblique-003
   expression_id: expr-oblique-closed-neutral-01
   path: assets/arco/expressions/oblique/arco-expr-oblique-003.png
@@ -76,6 +144,40 @@ assets:
   sha256: 0425d957385cf790598b992ef085837a73c18ee438f0117d8ba87f51f5166fc1
   variant_id: null
   state_ids: []
+  can_be_generation_reference: true
+  generation_reference:
+    priority: primary
+    supported_roles:
+    - face_reference
+    preferred_for:
+    - portrait
+    - upper_body
+    - full_body
+    excluded_for:
+    - back_view
+    coverage:
+      profiles:
+      - portrait
+      - upper_body
+      - full_body
+      visible_fields:
+      - eyes
+      - face
+      view_angles:
+      - front_three_quarter
+      occluded_fields: []
+    inheritance:
+      face: inherit
+      eyes: inherit
+      hair: do_not_inherit
+      body_proportions: do_not_inherit
+      outfit: do_not_inherit
+      pose: do_not_inherit
+      lighting: do_not_inherit
+      scene: do_not_inherit
+      style: do_not_inherit
+      expression: do_not_inherit
+  purpose_note_zh: 获准作为分离生成参考；仅继承合同指定职责，不继承原图姿势、表情或渲染。
 - asset_id: arco-expr-oblique-004
   expression_id: expr-oblique-cheerful-smile-01
   path: assets/arco/expressions/oblique/arco-expr-oblique-004.png
@@ -100,6 +202,40 @@ assets:
   sha256: 6cde93f0af3fb9aa82c3cec8273e18e69e6d735563ca6bf6029fe6fed48770db
   variant_id: null
   state_ids: []
+  can_be_generation_reference: true
+  generation_reference:
+    priority: primary
+    supported_roles:
+    - face_reference
+    preferred_for:
+    - portrait
+    - upper_body
+    - full_body
+    excluded_for:
+    - back_view
+    coverage:
+      profiles:
+      - portrait
+      - upper_body
+      - full_body
+      visible_fields:
+      - eyes
+      - face
+      view_angles:
+      - front_three_quarter
+      occluded_fields: []
+    inheritance:
+      face: inherit
+      eyes: inherit
+      hair: do_not_inherit
+      body_proportions: do_not_inherit
+      outfit: do_not_inherit
+      pose: do_not_inherit
+      lighting: do_not_inherit
+      scene: do_not_inherit
+      style: do_not_inherit
+      expression: do_not_inherit
+  purpose_note_zh: 获准作为分离生成参考；仅继承合同指定职责，不继承原图姿势、表情或渲染。
 - asset_id: arco-expr-oblique-005
   expression_id: expr-oblique-cheerful-laugh-01
   path: assets/arco/expressions/oblique/arco-expr-oblique-005.png
@@ -124,6 +260,40 @@ assets:
   sha256: 282ba8b4b97d2af28eef0fc8b68c114af8fa7fea73f392911019966fc28e5b58
   variant_id: null
   state_ids: []
+  can_be_generation_reference: true
+  generation_reference:
+    priority: primary
+    supported_roles:
+    - face_reference
+    preferred_for:
+    - portrait
+    - upper_body
+    - full_body
+    excluded_for:
+    - back_view
+    coverage:
+      profiles:
+      - portrait
+      - upper_body
+      - full_body
+      visible_fields:
+      - eyes
+      - face
+      view_angles:
+      - front_three_quarter
+      occluded_fields: []
+    inheritance:
+      face: inherit
+      eyes: inherit
+      hair: do_not_inherit
+      body_proportions: do_not_inherit
+      outfit: do_not_inherit
+      pose: do_not_inherit
+      lighting: do_not_inherit
+      scene: do_not_inherit
+      style: do_not_inherit
+      expression: do_not_inherit
+  purpose_note_zh: 获准作为分离生成参考；仅继承合同指定职责，不继承原图姿势、表情或渲染。
 - asset_id: arco-expr-oblique-006
   expression_id: expr-oblique-closed-eye-smile-01
   path: assets/arco/expressions/oblique/arco-expr-oblique-006.png
@@ -148,6 +318,40 @@ assets:
   sha256: 72357eb15a2f9736932eb5a4329fabafb5b14f52a48356977ecf8cf37c45cacf
   variant_id: null
   state_ids: []
+  can_be_generation_reference: true
+  generation_reference:
+    priority: primary
+    supported_roles:
+    - face_reference
+    preferred_for:
+    - portrait
+    - upper_body
+    - full_body
+    excluded_for:
+    - back_view
+    coverage:
+      profiles:
+      - portrait
+      - upper_body
+      - full_body
+      visible_fields:
+      - eyes
+      - face
+      view_angles:
+      - front_three_quarter
+      occluded_fields: []
+    inheritance:
+      face: inherit
+      eyes: inherit
+      hair: do_not_inherit
+      body_proportions: do_not_inherit
+      outfit: do_not_inherit
+      pose: do_not_inherit
+      lighting: do_not_inherit
+      scene: do_not_inherit
+      style: do_not_inherit
+      expression: do_not_inherit
+  purpose_note_zh: 获准作为分离生成参考；仅继承合同指定职责，不继承原图姿势、表情或渲染。
 - asset_id: arco-expr-oblique-007
   expression_id: expr-oblique-closed-eye-laugh-01
   path: assets/arco/expressions/oblique/arco-expr-oblique-007.png
@@ -172,6 +376,40 @@ assets:
   sha256: cd5bc627f3a11b6e076c501b1a46690a80c4267b0f9955bcb31eb194990598cf
   variant_id: null
   state_ids: []
+  can_be_generation_reference: true
+  generation_reference:
+    priority: primary
+    supported_roles:
+    - face_reference
+    preferred_for:
+    - portrait
+    - upper_body
+    - full_body
+    excluded_for:
+    - back_view
+    coverage:
+      profiles:
+      - portrait
+      - upper_body
+      - full_body
+      visible_fields:
+      - eyes
+      - face
+      view_angles:
+      - front_three_quarter
+      occluded_fields: []
+    inheritance:
+      face: inherit
+      eyes: inherit
+      hair: do_not_inherit
+      body_proportions: do_not_inherit
+      outfit: do_not_inherit
+      pose: do_not_inherit
+      lighting: do_not_inherit
+      scene: do_not_inherit
+      style: do_not_inherit
+      expression: do_not_inherit
+  purpose_note_zh: 获准作为分离生成参考；仅继承合同指定职责，不继承原图姿势、表情或渲染。
 - asset_id: arco-expr-oblique-008
   expression_id: expr-oblique-concerned-01
   path: assets/arco/expressions/oblique/arco-expr-oblique-008.png
@@ -196,6 +434,40 @@ assets:
   sha256: dd7ad32900de00b18dc420752a654507285b1dd9592468f2613673470184f01a
   variant_id: null
   state_ids: []
+  can_be_generation_reference: true
+  generation_reference:
+    priority: primary
+    supported_roles:
+    - face_reference
+    preferred_for:
+    - portrait
+    - upper_body
+    - full_body
+    excluded_for:
+    - back_view
+    coverage:
+      profiles:
+      - portrait
+      - upper_body
+      - full_body
+      visible_fields:
+      - eyes
+      - face
+      view_angles:
+      - front_three_quarter
+      occluded_fields: []
+    inheritance:
+      face: inherit
+      eyes: inherit
+      hair: do_not_inherit
+      body_proportions: do_not_inherit
+      outfit: do_not_inherit
+      pose: do_not_inherit
+      lighting: do_not_inherit
+      scene: do_not_inherit
+      style: do_not_inherit
+      expression: do_not_inherit
+  purpose_note_zh: 获准作为分离生成参考；仅继承合同指定职责，不继承原图姿势、表情或渲染。
 - asset_id: arco-expr-oblique-009
   expression_id: expr-oblique-angry-complaint-01
   path: assets/arco/expressions/oblique/arco-expr-oblique-009.png
@@ -220,6 +492,40 @@ assets:
   sha256: 3dd10fc5e8e21ac4b01c3915efb448b5bee5cae27a9e13c5bba83e32ffca754a
   variant_id: null
   state_ids: []
+  can_be_generation_reference: true
+  generation_reference:
+    priority: primary
+    supported_roles:
+    - face_reference
+    preferred_for:
+    - portrait
+    - upper_body
+    - full_body
+    excluded_for:
+    - back_view
+    coverage:
+      profiles:
+      - portrait
+      - upper_body
+      - full_body
+      visible_fields:
+      - eyes
+      - face
+      view_angles:
+      - front_three_quarter
+      occluded_fields: []
+    inheritance:
+      face: inherit
+      eyes: inherit
+      hair: do_not_inherit
+      body_proportions: do_not_inherit
+      outfit: do_not_inherit
+      pose: do_not_inherit
+      lighting: do_not_inherit
+      scene: do_not_inherit
+      style: do_not_inherit
+      expression: do_not_inherit
+  purpose_note_zh: 获准作为分离生成参考；仅继承合同指定职责，不继承原图姿势、表情或渲染。
 - asset_id: arco-expr-oblique-010
   expression_id: expr-oblique-closed-eye-displeased-01
   path: assets/arco/expressions/oblique/arco-expr-oblique-010.png
@@ -244,6 +550,40 @@ assets:
   sha256: e917a36cc6d0ec0370479877baa355eab3cd182bb55d2b84d625e7a7ca04d55c
   variant_id: null
   state_ids: []
+  can_be_generation_reference: true
+  generation_reference:
+    priority: primary
+    supported_roles:
+    - face_reference
+    preferred_for:
+    - portrait
+    - upper_body
+    - full_body
+    excluded_for:
+    - back_view
+    coverage:
+      profiles:
+      - portrait
+      - upper_body
+      - full_body
+      visible_fields:
+      - eyes
+      - face
+      view_angles:
+      - front_three_quarter
+      occluded_fields: []
+    inheritance:
+      face: inherit
+      eyes: inherit
+      hair: do_not_inherit
+      body_proportions: do_not_inherit
+      outfit: do_not_inherit
+      pose: do_not_inherit
+      lighting: do_not_inherit
+      scene: do_not_inherit
+      style: do_not_inherit
+      expression: do_not_inherit
+  purpose_note_zh: 获准作为分离生成参考；仅继承合同指定职责，不继承原图姿势、表情或渲染。
 - asset_id: arco-expr-oblique-011
   expression_id: expr-oblique-angry-eyes-closed-01
   path: assets/arco/expressions/oblique/arco-expr-oblique-011.png
@@ -268,6 +608,40 @@ assets:
   sha256: f9fd789dd0695ef10f9d49d87c5f782f9bfea93123a0c29c470374db2edd5c94
   variant_id: null
   state_ids: []
+  can_be_generation_reference: true
+  generation_reference:
+    priority: primary
+    supported_roles:
+    - face_reference
+    preferred_for:
+    - portrait
+    - upper_body
+    - full_body
+    excluded_for:
+    - back_view
+    coverage:
+      profiles:
+      - portrait
+      - upper_body
+      - full_body
+      visible_fields:
+      - eyes
+      - face
+      view_angles:
+      - front_three_quarter
+      occluded_fields: []
+    inheritance:
+      face: inherit
+      eyes: inherit
+      hair: do_not_inherit
+      body_proportions: do_not_inherit
+      outfit: do_not_inherit
+      pose: do_not_inherit
+      lighting: do_not_inherit
+      scene: do_not_inherit
+      style: do_not_inherit
+      expression: do_not_inherit
+  purpose_note_zh: 获准作为分离生成参考；仅继承合同指定职责，不继承原图姿势、表情或渲染。
 - asset_id: arco-expr-oblique-012
   expression_id: expr-oblique-displeased-01
   path: assets/arco/expressions/oblique/arco-expr-oblique-012.png
@@ -292,6 +666,40 @@ assets:
   sha256: 3b5bb564842fe81b38f7aa93f04b2df22e3e5fc017a9474f641773edde90bf30
   variant_id: null
   state_ids: []
+  can_be_generation_reference: true
+  generation_reference:
+    priority: primary
+    supported_roles:
+    - face_reference
+    preferred_for:
+    - portrait
+    - upper_body
+    - full_body
+    excluded_for:
+    - back_view
+    coverage:
+      profiles:
+      - portrait
+      - upper_body
+      - full_body
+      visible_fields:
+      - eyes
+      - face
+      view_angles:
+      - front_three_quarter
+      occluded_fields: []
+    inheritance:
+      face: inherit
+      eyes: inherit
+      hair: do_not_inherit
+      body_proportions: do_not_inherit
+      outfit: do_not_inherit
+      pose: do_not_inherit
+      lighting: do_not_inherit
+      scene: do_not_inherit
+      style: do_not_inherit
+      expression: do_not_inherit
+  purpose_note_zh: 获准作为分离生成参考；仅继承合同指定职责，不继承原图姿势、表情或渲染。
 - asset_id: arco-expr-oblique-013
   expression_id: expr-oblique-concerned-questioning-01
   path: assets/arco/expressions/oblique/arco-expr-oblique-013.png
@@ -316,6 +724,40 @@ assets:
   sha256: a67145fc6a207df371e37e34e0de031ff897ec665f21fe4875a88b7a69bd3efe
   variant_id: null
   state_ids: []
+  can_be_generation_reference: true
+  generation_reference:
+    priority: primary
+    supported_roles:
+    - face_reference
+    preferred_for:
+    - portrait
+    - upper_body
+    - full_body
+    excluded_for:
+    - back_view
+    coverage:
+      profiles:
+      - portrait
+      - upper_body
+      - full_body
+      visible_fields:
+      - eyes
+      - face
+      view_angles:
+      - front_three_quarter
+      occluded_fields: []
+    inheritance:
+      face: inherit
+      eyes: inherit
+      hair: do_not_inherit
+      body_proportions: do_not_inherit
+      outfit: do_not_inherit
+      pose: do_not_inherit
+      lighting: do_not_inherit
+      scene: do_not_inherit
+      style: do_not_inherit
+      expression: do_not_inherit
+  purpose_note_zh: 获准作为分离生成参考；仅继承合同指定职责，不继承原图姿势、表情或渲染。
 - asset_id: arco-expr-oblique-014
   expression_id: expr-oblique-closed-eye-weary-01
   path: assets/arco/expressions/oblique/arco-expr-oblique-014.png
@@ -340,6 +782,40 @@ assets:
   sha256: e172ec7ad9ac2d3cd0363fd6565533944c83a8d9553e3e2c46dae90cf3a2fa06
   variant_id: null
   state_ids: []
+  can_be_generation_reference: true
+  generation_reference:
+    priority: primary
+    supported_roles:
+    - face_reference
+    preferred_for:
+    - portrait
+    - upper_body
+    - full_body
+    excluded_for:
+    - back_view
+    coverage:
+      profiles:
+      - portrait
+      - upper_body
+      - full_body
+      visible_fields:
+      - eyes
+      - face
+      view_angles:
+      - front_three_quarter
+      occluded_fields: []
+    inheritance:
+      face: inherit
+      eyes: inherit
+      hair: do_not_inherit
+      body_proportions: do_not_inherit
+      outfit: do_not_inherit
+      pose: do_not_inherit
+      lighting: do_not_inherit
+      scene: do_not_inherit
+      style: do_not_inherit
+      expression: do_not_inherit
+  purpose_note_zh: 获准作为分离生成参考；仅继承合同指定职责，不继承原图姿势、表情或渲染。
 - asset_id: arco-expr-oblique-015
   expression_id: expr-oblique-resigned-drained-01
   path: assets/arco/expressions/oblique/arco-expr-oblique-015.png
@@ -364,6 +840,40 @@ assets:
   sha256: fd70abae2e6a3d4ca8e600287913afefd7b52e013bd7ceaab3d57756212eced3
   variant_id: null
   state_ids: []
+  can_be_generation_reference: true
+  generation_reference:
+    priority: primary
+    supported_roles:
+    - face_reference
+    preferred_for:
+    - portrait
+    - upper_body
+    - full_body
+    excluded_for:
+    - back_view
+    coverage:
+      profiles:
+      - portrait
+      - upper_body
+      - full_body
+      visible_fields:
+      - eyes
+      - face
+      view_angles:
+      - front_three_quarter
+      occluded_fields: []
+    inheritance:
+      face: inherit
+      eyes: inherit
+      hair: do_not_inherit
+      body_proportions: do_not_inherit
+      outfit: do_not_inherit
+      pose: do_not_inherit
+      lighting: do_not_inherit
+      scene: do_not_inherit
+      style: do_not_inherit
+      expression: do_not_inherit
+  purpose_note_zh: 获准作为分离生成参考；仅继承合同指定职责，不继承原图姿势、表情或渲染。
 - asset_id: arco-expr-oblique-016
   expression_id: expr-oblique-obvious-surprise-01
   path: assets/arco/expressions/oblique/arco-expr-oblique-016.png
@@ -388,6 +898,40 @@ assets:
   sha256: dbad2a2a95ce9c8098c6e041612a6765a645ff59496a5c39bf489677a2f2b637
   variant_id: null
   state_ids: []
+  can_be_generation_reference: true
+  generation_reference:
+    priority: primary
+    supported_roles:
+    - face_reference
+    preferred_for:
+    - portrait
+    - upper_body
+    - full_body
+    excluded_for:
+    - back_view
+    coverage:
+      profiles:
+      - portrait
+      - upper_body
+      - full_body
+      visible_fields:
+      - eyes
+      - face
+      view_angles:
+      - front_three_quarter
+      occluded_fields: []
+    inheritance:
+      face: inherit
+      eyes: inherit
+      hair: do_not_inherit
+      body_proportions: do_not_inherit
+      outfit: do_not_inherit
+      pose: do_not_inherit
+      lighting: do_not_inherit
+      scene: do_not_inherit
+      style: do_not_inherit
+      expression: do_not_inherit
+  purpose_note_zh: 获准作为分离生成参考；仅继承合同指定职责，不继承原图姿势、表情或渲染。
 - asset_id: arco-expr-oblique-017
   expression_id: expr-oblique-gentle-smile-01
   path: assets/arco/expressions/oblique/arco-expr-oblique-017.png
@@ -412,6 +956,40 @@ assets:
   sha256: 62f8c93d9a4a53940ab0d5c92b3bb130af78b95aeae6848ab0445cb28553e9cd
   variant_id: null
   state_ids: []
+  can_be_generation_reference: true
+  generation_reference:
+    priority: primary
+    supported_roles:
+    - face_reference
+    preferred_for:
+    - portrait
+    - upper_body
+    - full_body
+    excluded_for:
+    - back_view
+    coverage:
+      profiles:
+      - portrait
+      - upper_body
+      - full_body
+      visible_fields:
+      - eyes
+      - face
+      view_angles:
+      - front_three_quarter
+      occluded_fields: []
+    inheritance:
+      face: inherit
+      eyes: inherit
+      hair: do_not_inherit
+      body_proportions: do_not_inherit
+      outfit: do_not_inherit
+      pose: do_not_inherit
+      lighting: do_not_inherit
+      scene: do_not_inherit
+      style: do_not_inherit
+      expression: do_not_inherit
+  purpose_note_zh: 获准作为分离生成参考；仅继承合同指定职责，不继承原图姿势、表情或渲染。
 - asset_id: arco-expr-oblique-018
   expression_id: expr-oblique-cold-displeased-01
   path: assets/arco/expressions/oblique/arco-expr-oblique-018.png
@@ -436,6 +1014,40 @@ assets:
   sha256: da7fe1c1dd23514a839f1f21bfa76adc5082954d1625d52185123eeb2c2ffcbe
   variant_id: null
   state_ids: []
+  can_be_generation_reference: true
+  generation_reference:
+    priority: primary
+    supported_roles:
+    - face_reference
+    preferred_for:
+    - portrait
+    - upper_body
+    - full_body
+    excluded_for:
+    - back_view
+    coverage:
+      profiles:
+      - portrait
+      - upper_body
+      - full_body
+      visible_fields:
+      - eyes
+      - face
+      view_angles:
+      - front_three_quarter
+      occluded_fields: []
+    inheritance:
+      face: inherit
+      eyes: inherit
+      hair: do_not_inherit
+      body_proportions: do_not_inherit
+      outfit: do_not_inherit
+      pose: do_not_inherit
+      lighting: do_not_inherit
+      scene: do_not_inherit
+      style: do_not_inherit
+      expression: do_not_inherit
+  purpose_note_zh: 获准作为分离生成参考；仅继承合同指定职责，不继承原图姿势、表情或渲染。
 - asset_id: arco-expr-oblique-019
   expression_id: expr-oblique-reproachful-resigned-01
   path: assets/arco/expressions/oblique/arco-expr-oblique-019.png
@@ -460,6 +1072,40 @@ assets:
   sha256: 9cc2aa31d4498eaf8437c2f81594f190517b984f702d636719bfbb5d8fade16b
   variant_id: null
   state_ids: []
+  can_be_generation_reference: true
+  generation_reference:
+    priority: primary
+    supported_roles:
+    - face_reference
+    preferred_for:
+    - portrait
+    - upper_body
+    - full_body
+    excluded_for:
+    - back_view
+    coverage:
+      profiles:
+      - portrait
+      - upper_body
+      - full_body
+      visible_fields:
+      - eyes
+      - face
+      view_angles:
+      - front_three_quarter
+      occluded_fields: []
+    inheritance:
+      face: inherit
+      eyes: inherit
+      hair: do_not_inherit
+      body_proportions: do_not_inherit
+      outfit: do_not_inherit
+      pose: do_not_inherit
+      lighting: do_not_inherit
+      scene: do_not_inherit
+      style: do_not_inherit
+      expression: do_not_inherit
+  purpose_note_zh: 获准作为分离生成参考；仅继承合同指定职责，不继承原图姿势、表情或渲染。
 - asset_id: arco-expr-oblique-020
   expression_id: expr-oblique-low-gaze-contemplation-01
   path: assets/arco/expressions/oblique/arco-expr-oblique-020.png
@@ -484,6 +1130,40 @@ assets:
   sha256: 3923ec69c898ec60da4859cb1a34c16f473f3dcfde0132776db9cd1bee722fcf
   variant_id: null
   state_ids: []
+  can_be_generation_reference: true
+  generation_reference:
+    priority: primary
+    supported_roles:
+    - face_reference
+    preferred_for:
+    - portrait
+    - upper_body
+    - full_body
+    excluded_for:
+    - back_view
+    coverage:
+      profiles:
+      - portrait
+      - upper_body
+      - full_body
+      visible_fields:
+      - eyes
+      - face
+      view_angles:
+      - front_three_quarter
+      occluded_fields: []
+    inheritance:
+      face: inherit
+      eyes: inherit
+      hair: do_not_inherit
+      body_proportions: do_not_inherit
+      outfit: do_not_inherit
+      pose: do_not_inherit
+      lighting: do_not_inherit
+      scene: do_not_inherit
+      style: do_not_inherit
+      expression: do_not_inherit
+  purpose_note_zh: 获准作为分离生成参考；仅继承合同指定职责，不继承原图姿势、表情或渲染。
 - asset_id: arco-expr-oblique-021
   expression_id: expr-oblique-dejected-complaint-01
   path: assets/arco/expressions/oblique/arco-expr-oblique-021.png
@@ -508,6 +1188,40 @@ assets:
   sha256: c955932bf4c47a09a8cf22e3b0b4b4d5e1eee305e2862ad292c2ca4167c24bcf
   variant_id: null
   state_ids: []
+  can_be_generation_reference: true
+  generation_reference:
+    priority: primary
+    supported_roles:
+    - face_reference
+    preferred_for:
+    - portrait
+    - upper_body
+    - full_body
+    excluded_for:
+    - back_view
+    coverage:
+      profiles:
+      - portrait
+      - upper_body
+      - full_body
+      visible_fields:
+      - eyes
+      - face
+      view_angles:
+      - front_three_quarter
+      occluded_fields: []
+    inheritance:
+      face: inherit
+      eyes: inherit
+      hair: do_not_inherit
+      body_proportions: do_not_inherit
+      outfit: do_not_inherit
+      pose: do_not_inherit
+      lighting: do_not_inherit
+      scene: do_not_inherit
+      style: do_not_inherit
+      expression: do_not_inherit
+  purpose_note_zh: 获准作为分离生成参考；仅继承合同指定职责，不继承原图姿势、表情或渲染。
 - asset_id: arco-expr-frontal-001
   expression_id: expr-frontal-attentive-neutral-01
   path: assets/arco/expressions/frontal/arco-expr-frontal-001.png
@@ -532,6 +1246,40 @@ assets:
   sha256: 386cea17af789627dd06070002fd02261025ad5447e0c451f194bb401080d240
   variant_id: null
   state_ids: []
+  can_be_generation_reference: true
+  generation_reference:
+    priority: primary
+    supported_roles:
+    - face_reference
+    preferred_for:
+    - portrait
+    - upper_body
+    - full_body
+    excluded_for:
+    - back_view
+    coverage:
+      profiles:
+      - portrait
+      - upper_body
+      - full_body
+      visible_fields:
+      - eyes
+      - face
+      view_angles:
+      - front
+      occluded_fields: []
+    inheritance:
+      face: inherit
+      eyes: inherit
+      hair: do_not_inherit
+      body_proportions: do_not_inherit
+      outfit: do_not_inherit
+      pose: do_not_inherit
+      lighting: do_not_inherit
+      scene: do_not_inherit
+      style: do_not_inherit
+      expression: do_not_inherit
+  purpose_note_zh: 获准作为分离生成参考；仅继承合同指定职责，不继承原图姿势、表情或渲染。
 - asset_id: arco-expr-frontal-002
   expression_id: expr-frontal-closed-neutral-01
   path: assets/arco/expressions/frontal/arco-expr-frontal-002.png
@@ -556,6 +1304,40 @@ assets:
   sha256: c9ec738943c2a535e277d86569397f4207658dec1dd1a4b3476c87de1e345c1c
   variant_id: null
   state_ids: []
+  can_be_generation_reference: true
+  generation_reference:
+    priority: primary
+    supported_roles:
+    - face_reference
+    preferred_for:
+    - portrait
+    - upper_body
+    - full_body
+    excluded_for:
+    - back_view
+    coverage:
+      profiles:
+      - portrait
+      - upper_body
+      - full_body
+      visible_fields:
+      - eyes
+      - face
+      view_angles:
+      - front
+      occluded_fields: []
+    inheritance:
+      face: inherit
+      eyes: inherit
+      hair: do_not_inherit
+      body_proportions: do_not_inherit
+      outfit: do_not_inherit
+      pose: do_not_inherit
+      lighting: do_not_inherit
+      scene: do_not_inherit
+      style: do_not_inherit
+      expression: do_not_inherit
+  purpose_note_zh: 获准作为分离生成参考；仅继承合同指定职责，不继承原图姿势、表情或渲染。
 - asset_id: arco-expr-frontal-003
   expression_id: expr-frontal-cheerful-smile-01
   path: assets/arco/expressions/frontal/arco-expr-frontal-003.png
@@ -580,6 +1362,40 @@ assets:
   sha256: 827a18fd067fe4844c0f7cf45dd51b3ccb18a8ebcbd3a6132b038858bb1f2e1c
   variant_id: null
   state_ids: []
+  can_be_generation_reference: true
+  generation_reference:
+    priority: primary
+    supported_roles:
+    - face_reference
+    preferred_for:
+    - portrait
+    - upper_body
+    - full_body
+    excluded_for:
+    - back_view
+    coverage:
+      profiles:
+      - portrait
+      - upper_body
+      - full_body
+      visible_fields:
+      - eyes
+      - face
+      view_angles:
+      - front
+      occluded_fields: []
+    inheritance:
+      face: inherit
+      eyes: inherit
+      hair: do_not_inherit
+      body_proportions: do_not_inherit
+      outfit: do_not_inherit
+      pose: do_not_inherit
+      lighting: do_not_inherit
+      scene: do_not_inherit
+      style: do_not_inherit
+      expression: do_not_inherit
+  purpose_note_zh: 获准作为分离生成参考；仅继承合同指定职责，不继承原图姿势、表情或渲染。
 - asset_id: arco-expr-frontal-004
   expression_id: expr-frontal-excited-shout-01
   path: assets/arco/expressions/frontal/arco-expr-frontal-004.png
@@ -604,6 +1420,40 @@ assets:
   sha256: 82b7eb2e3da5b6053676633c766057e56a587778170a503dd217bc3f4212c649
   variant_id: null
   state_ids: []
+  can_be_generation_reference: true
+  generation_reference:
+    priority: primary
+    supported_roles:
+    - face_reference
+    preferred_for:
+    - portrait
+    - upper_body
+    - full_body
+    excluded_for:
+    - back_view
+    coverage:
+      profiles:
+      - portrait
+      - upper_body
+      - full_body
+      visible_fields:
+      - eyes
+      - face
+      view_angles:
+      - front
+      occluded_fields: []
+    inheritance:
+      face: inherit
+      eyes: inherit
+      hair: do_not_inherit
+      body_proportions: do_not_inherit
+      outfit: do_not_inherit
+      pose: do_not_inherit
+      lighting: do_not_inherit
+      scene: do_not_inherit
+      style: do_not_inherit
+      expression: do_not_inherit
+  purpose_note_zh: 获准作为分离生成参考；仅继承合同指定职责，不继承原图姿势、表情或渲染。
 - asset_id: arco-expr-frontal-005
   expression_id: expr-frontal-closed-eye-smile-01
   path: assets/arco/expressions/frontal/arco-expr-frontal-005.png
@@ -628,6 +1478,40 @@ assets:
   sha256: b1dd2a686220170fa0b30971797f3a0f36dd5c108d2ab2c2c530b360937da3f3
   variant_id: null
   state_ids: []
+  can_be_generation_reference: true
+  generation_reference:
+    priority: primary
+    supported_roles:
+    - face_reference
+    preferred_for:
+    - portrait
+    - upper_body
+    - full_body
+    excluded_for:
+    - back_view
+    coverage:
+      profiles:
+      - portrait
+      - upper_body
+      - full_body
+      visible_fields:
+      - eyes
+      - face
+      view_angles:
+      - front
+      occluded_fields: []
+    inheritance:
+      face: inherit
+      eyes: inherit
+      hair: do_not_inherit
+      body_proportions: do_not_inherit
+      outfit: do_not_inherit
+      pose: do_not_inherit
+      lighting: do_not_inherit
+      scene: do_not_inherit
+      style: do_not_inherit
+      expression: do_not_inherit
+  purpose_note_zh: 获准作为分离生成参考；仅继承合同指定职责，不继承原图姿势、表情或渲染。
 - asset_id: arco-expr-frontal-006
   expression_id: expr-frontal-closed-eye-laugh-01
   path: assets/arco/expressions/frontal/arco-expr-frontal-006.png
@@ -652,6 +1536,40 @@ assets:
   sha256: 4abad161afc32fd2cf021f5425172165ac80f8e620064b3c6cd9aaaf7c59b40b
   variant_id: null
   state_ids: []
+  can_be_generation_reference: true
+  generation_reference:
+    priority: primary
+    supported_roles:
+    - face_reference
+    preferred_for:
+    - portrait
+    - upper_body
+    - full_body
+    excluded_for:
+    - back_view
+    coverage:
+      profiles:
+      - portrait
+      - upper_body
+      - full_body
+      visible_fields:
+      - eyes
+      - face
+      view_angles:
+      - front
+      occluded_fields: []
+    inheritance:
+      face: inherit
+      eyes: inherit
+      hair: do_not_inherit
+      body_proportions: do_not_inherit
+      outfit: do_not_inherit
+      pose: do_not_inherit
+      lighting: do_not_inherit
+      scene: do_not_inherit
+      style: do_not_inherit
+      expression: do_not_inherit
+  purpose_note_zh: 获准作为分离生成参考；仅继承合同指定职责，不继承原图姿势、表情或渲染。
 - asset_id: arco-expr-frontal-007
   expression_id: expr-frontal-concerned-01
   path: assets/arco/expressions/frontal/arco-expr-frontal-007.png
@@ -676,6 +1594,40 @@ assets:
   sha256: 5d371637d020129bb1b606d6ae691a546874501b2c5047e74be4743a9b96963a
   variant_id: null
   state_ids: []
+  can_be_generation_reference: true
+  generation_reference:
+    priority: primary
+    supported_roles:
+    - face_reference
+    preferred_for:
+    - portrait
+    - upper_body
+    - full_body
+    excluded_for:
+    - back_view
+    coverage:
+      profiles:
+      - portrait
+      - upper_body
+      - full_body
+      visible_fields:
+      - eyes
+      - face
+      view_angles:
+      - front
+      occluded_fields: []
+    inheritance:
+      face: inherit
+      eyes: inherit
+      hair: do_not_inherit
+      body_proportions: do_not_inherit
+      outfit: do_not_inherit
+      pose: do_not_inherit
+      lighting: do_not_inherit
+      scene: do_not_inherit
+      style: do_not_inherit
+      expression: do_not_inherit
+  purpose_note_zh: 获准作为分离生成参考；仅继承合同指定职责，不继承原图姿势、表情或渲染。
 - asset_id: arco-expr-frontal-008
   expression_id: expr-frontal-frightened-exclamation-01
   path: assets/arco/expressions/frontal/arco-expr-frontal-008.png
@@ -700,6 +1652,40 @@ assets:
   sha256: 6921335c51c30d5dabf20f6e36612395af690e690841862bb17ea42e28186774
   variant_id: null
   state_ids: []
+  can_be_generation_reference: true
+  generation_reference:
+    priority: primary
+    supported_roles:
+    - face_reference
+    preferred_for:
+    - portrait
+    - upper_body
+    - full_body
+    excluded_for:
+    - back_view
+    coverage:
+      profiles:
+      - portrait
+      - upper_body
+      - full_body
+      visible_fields:
+      - eyes
+      - face
+      view_angles:
+      - front
+      occluded_fields: []
+    inheritance:
+      face: inherit
+      eyes: inherit
+      hair: do_not_inherit
+      body_proportions: do_not_inherit
+      outfit: do_not_inherit
+      pose: do_not_inherit
+      lighting: do_not_inherit
+      scene: do_not_inherit
+      style: do_not_inherit
+      expression: do_not_inherit
+  purpose_note_zh: 获准作为分离生成参考；仅继承合同指定职责，不继承原图姿势、表情或渲染。
 - asset_id: arco-expr-frontal-009
   expression_id: expr-frontal-difficult-deliberation-01
   path: assets/arco/expressions/frontal/arco-expr-frontal-009.png
@@ -724,6 +1710,40 @@ assets:
   sha256: b9a8d36116dd85207a275840eb3bc3c7a56c2987a2e7020dd401ab0004c514ce
   variant_id: null
   state_ids: []
+  can_be_generation_reference: true
+  generation_reference:
+    priority: primary
+    supported_roles:
+    - face_reference
+    preferred_for:
+    - portrait
+    - upper_body
+    - full_body
+    excluded_for:
+    - back_view
+    coverage:
+      profiles:
+      - portrait
+      - upper_body
+      - full_body
+      visible_fields:
+      - eyes
+      - face
+      view_angles:
+      - front
+      occluded_fields: []
+    inheritance:
+      face: inherit
+      eyes: inherit
+      hair: do_not_inherit
+      body_proportions: do_not_inherit
+      outfit: do_not_inherit
+      pose: do_not_inherit
+      lighting: do_not_inherit
+      scene: do_not_inherit
+      style: do_not_inherit
+      expression: do_not_inherit
+  purpose_note_zh: 获准作为分离生成参考；仅继承合同指定职责，不继承原图姿势、表情或渲染。
 - asset_id: arco-expr-frontal-010
   expression_id: expr-frontal-resigned-deliberative-speech-01
   path: assets/arco/expressions/frontal/arco-expr-frontal-010.png
@@ -748,6 +1768,40 @@ assets:
   sha256: 2664839ae5ddd668cc34b8a85ddd9557510c97aea169f3f5603fa5e4d70842f4
   variant_id: null
   state_ids: []
+  can_be_generation_reference: true
+  generation_reference:
+    priority: primary
+    supported_roles:
+    - face_reference
+    preferred_for:
+    - portrait
+    - upper_body
+    - full_body
+    excluded_for:
+    - back_view
+    coverage:
+      profiles:
+      - portrait
+      - upper_body
+      - full_body
+      visible_fields:
+      - eyes
+      - face
+      view_angles:
+      - front
+      occluded_fields: []
+    inheritance:
+      face: inherit
+      eyes: inherit
+      hair: do_not_inherit
+      body_proportions: do_not_inherit
+      outfit: do_not_inherit
+      pose: do_not_inherit
+      lighting: do_not_inherit
+      scene: do_not_inherit
+      style: do_not_inherit
+      expression: do_not_inherit
+  purpose_note_zh: 获准作为分离生成参考；仅继承合同指定职责，不继承原图姿势、表情或渲染。
 - asset_id: arco-expr-frontal-011
   expression_id: expr-frontal-neutral-serious-01
   path: assets/arco/expressions/frontal/arco-expr-frontal-011.png
@@ -772,6 +1826,40 @@ assets:
   sha256: 9fc37446350ddc2b9fa118bdb80c715134f6ebc1e343f5a33632e1f141bbf0bc
   variant_id: null
   state_ids: []
+  can_be_generation_reference: true
+  generation_reference:
+    priority: primary
+    supported_roles:
+    - face_reference
+    preferred_for:
+    - portrait
+    - upper_body
+    - full_body
+    excluded_for:
+    - back_view
+    coverage:
+      profiles:
+      - portrait
+      - upper_body
+      - full_body
+      visible_fields:
+      - eyes
+      - face
+      view_angles:
+      - front
+      occluded_fields: []
+    inheritance:
+      face: inherit
+      eyes: inherit
+      hair: do_not_inherit
+      body_proportions: do_not_inherit
+      outfit: do_not_inherit
+      pose: do_not_inherit
+      lighting: do_not_inherit
+      scene: do_not_inherit
+      style: do_not_inherit
+      expression: do_not_inherit
+  purpose_note_zh: 获准作为分离生成参考；仅继承合同指定职责，不继承原图姿势、表情或渲染。
 - asset_id: arco-expr-frontal-012
   expression_id: expr-frontal-surprised-saddened-01
   path: assets/arco/expressions/frontal/arco-expr-frontal-012.png
@@ -796,6 +1884,40 @@ assets:
   sha256: 40851a46b362f8b3ef01ec1c18e4d428119409d36e7fdd484a5cd902babcc0b6
   variant_id: null
   state_ids: []
+  can_be_generation_reference: true
+  generation_reference:
+    priority: primary
+    supported_roles:
+    - face_reference
+    preferred_for:
+    - portrait
+    - upper_body
+    - full_body
+    excluded_for:
+    - back_view
+    coverage:
+      profiles:
+      - portrait
+      - upper_body
+      - full_body
+      visible_fields:
+      - eyes
+      - face
+      view_angles:
+      - front
+      occluded_fields: []
+    inheritance:
+      face: inherit
+      eyes: inherit
+      hair: do_not_inherit
+      body_proportions: do_not_inherit
+      outfit: do_not_inherit
+      pose: do_not_inherit
+      lighting: do_not_inherit
+      scene: do_not_inherit
+      style: do_not_inherit
+      expression: do_not_inherit
+  purpose_note_zh: 获准作为分离生成参考；仅继承合同指定职责，不继承原图姿势、表情或渲染。
 - asset_id: arco-expr-frontal-013
   expression_id: expr-frontal-eyes-closed-composed-01
   path: assets/arco/expressions/frontal/arco-expr-frontal-013.png
@@ -820,6 +1942,40 @@ assets:
   sha256: 2c7f054e717dba98511742b20047ccda6d3460b3c82c5bf37111d5d103aab1a1
   variant_id: null
   state_ids: []
+  can_be_generation_reference: true
+  generation_reference:
+    priority: primary
+    supported_roles:
+    - face_reference
+    preferred_for:
+    - portrait
+    - upper_body
+    - full_body
+    excluded_for:
+    - back_view
+    coverage:
+      profiles:
+      - portrait
+      - upper_body
+      - full_body
+      visible_fields:
+      - eyes
+      - face
+      view_angles:
+      - front
+      occluded_fields: []
+    inheritance:
+      face: inherit
+      eyes: inherit
+      hair: do_not_inherit
+      body_proportions: do_not_inherit
+      outfit: do_not_inherit
+      pose: do_not_inherit
+      lighting: do_not_inherit
+      scene: do_not_inherit
+      style: do_not_inherit
+      expression: do_not_inherit
+  purpose_note_zh: 获准作为分离生成参考；仅继承合同指定职责，不继承原图姿势、表情或渲染。
 - asset_id: arco-expr-frontal-014
   expression_id: expr-frontal-eyes-closed-sigh-01
   path: assets/arco/expressions/frontal/arco-expr-frontal-014.png
@@ -844,6 +2000,40 @@ assets:
   sha256: 61b7504125b13a7fad6bbf1d43fcdab9472a9b08175798a20f0802bb21baa81c
   variant_id: null
   state_ids: []
+  can_be_generation_reference: true
+  generation_reference:
+    priority: primary
+    supported_roles:
+    - face_reference
+    preferred_for:
+    - portrait
+    - upper_body
+    - full_body
+    excluded_for:
+    - back_view
+    coverage:
+      profiles:
+      - portrait
+      - upper_body
+      - full_body
+      visible_fields:
+      - eyes
+      - face
+      view_angles:
+      - front
+      occluded_fields: []
+    inheritance:
+      face: inherit
+      eyes: inherit
+      hair: do_not_inherit
+      body_proportions: do_not_inherit
+      outfit: do_not_inherit
+      pose: do_not_inherit
+      lighting: do_not_inherit
+      scene: do_not_inherit
+      style: do_not_inherit
+      expression: do_not_inherit
+  purpose_note_zh: 获准作为分离生成参考；仅继承合同指定职责，不继承原图姿势、表情或渲染。
 - asset_id: arco-expr-frontal-015
   expression_id: expr-frontal-obvious-surprise-01
   path: assets/arco/expressions/frontal/arco-expr-frontal-015.png
@@ -868,6 +2058,40 @@ assets:
   sha256: 98d2f4e2979157e4f3fda372e8f7d21a59dd3c1ebaa60f25dd78275f352022d0
   variant_id: null
   state_ids: []
+  can_be_generation_reference: true
+  generation_reference:
+    priority: primary
+    supported_roles:
+    - face_reference
+    preferred_for:
+    - portrait
+    - upper_body
+    - full_body
+    excluded_for:
+    - back_view
+    coverage:
+      profiles:
+      - portrait
+      - upper_body
+      - full_body
+      visible_fields:
+      - eyes
+      - face
+      view_angles:
+      - front
+      occluded_fields: []
+    inheritance:
+      face: inherit
+      eyes: inherit
+      hair: do_not_inherit
+      body_proportions: do_not_inherit
+      outfit: do_not_inherit
+      pose: do_not_inherit
+      lighting: do_not_inherit
+      scene: do_not_inherit
+      style: do_not_inherit
+      expression: do_not_inherit
+  purpose_note_zh: 获准作为分离生成参考；仅继承合同指定职责，不继承原图姿势、表情或渲染。
 - asset_id: arco-expr-frontal-016
   expression_id: expr-frontal-neutral-serious-01
   path: assets/arco/expressions/frontal/arco-expr-frontal-016.png
@@ -892,6 +2116,40 @@ assets:
   sha256: 9fc37446350ddc2b9fa118bdb80c715134f6ebc1e343f5a33632e1f141bbf0bc
   variant_id: null
   state_ids: []
+  can_be_generation_reference: true
+  generation_reference:
+    priority: primary
+    supported_roles:
+    - face_reference
+    preferred_for:
+    - portrait
+    - upper_body
+    - full_body
+    excluded_for:
+    - back_view
+    coverage:
+      profiles:
+      - portrait
+      - upper_body
+      - full_body
+      visible_fields:
+      - eyes
+      - face
+      view_angles:
+      - front
+      occluded_fields: []
+    inheritance:
+      face: inherit
+      eyes: inherit
+      hair: do_not_inherit
+      body_proportions: do_not_inherit
+      outfit: do_not_inherit
+      pose: do_not_inherit
+      lighting: do_not_inherit
+      scene: do_not_inherit
+      style: do_not_inherit
+      expression: do_not_inherit
+  purpose_note_zh: 获准作为分离生成参考；仅继承合同指定职责，不继承原图姿势、表情或渲染。
 - asset_id: arco-expr-frontal-017
   expression_id: expr-frontal-excited-toothy-grin-01
   path: assets/arco/expressions/frontal/arco-expr-frontal-017.png
@@ -916,6 +2174,40 @@ assets:
   sha256: 765d3944e47fddd8653d26be4f2078e90c0bf93be0d8139c4032fd46caa116e1
   variant_id: null
   state_ids: []
+  can_be_generation_reference: true
+  generation_reference:
+    priority: primary
+    supported_roles:
+    - face_reference
+    preferred_for:
+    - portrait
+    - upper_body
+    - full_body
+    excluded_for:
+    - back_view
+    coverage:
+      profiles:
+      - portrait
+      - upper_body
+      - full_body
+      visible_fields:
+      - eyes
+      - face
+      view_angles:
+      - front
+      occluded_fields: []
+    inheritance:
+      face: inherit
+      eyes: inherit
+      hair: do_not_inherit
+      body_proportions: do_not_inherit
+      outfit: do_not_inherit
+      pose: do_not_inherit
+      lighting: do_not_inherit
+      scene: do_not_inherit
+      style: do_not_inherit
+      expression: do_not_inherit
+  purpose_note_zh: 获准作为分离生成参考；仅继承合同指定职责，不继承原图姿势、表情或渲染。
 - asset_id: arco-expr-frontal-018
   expression_id: expr-frontal-extreme-excited-toothy-grin-01
   path: assets/arco/expressions/frontal/arco-expr-frontal-018.png
@@ -940,6 +2232,40 @@ assets:
   sha256: a827d4bf789b1c22d08c8b853db909675f562ea6195744789cb85a12452dbbbc
   variant_id: null
   state_ids: []
+  can_be_generation_reference: true
+  generation_reference:
+    priority: primary
+    supported_roles:
+    - face_reference
+    preferred_for:
+    - portrait
+    - upper_body
+    - full_body
+    excluded_for:
+    - back_view
+    coverage:
+      profiles:
+      - portrait
+      - upper_body
+      - full_body
+      visible_fields:
+      - eyes
+      - face
+      view_angles:
+      - front
+      occluded_fields: []
+    inheritance:
+      face: inherit
+      eyes: inherit
+      hair: do_not_inherit
+      body_proportions: do_not_inherit
+      outfit: do_not_inherit
+      pose: do_not_inherit
+      lighting: do_not_inherit
+      scene: do_not_inherit
+      style: do_not_inherit
+      expression: do_not_inherit
+  purpose_note_zh: 获准作为分离生成参考；仅继承合同指定职责，不继承原图姿势、表情或渲染。
 - asset_id: arco-expr-frontal-019
   expression_id: expr-frontal-displeased-01
   path: assets/arco/expressions/frontal/arco-expr-frontal-019.png
@@ -964,6 +2290,40 @@ assets:
   sha256: f908928f438185fa99a202d9629164e78eea7ae6ac35f0d1ab8bb7ed8d584d38
   variant_id: null
   state_ids: []
+  can_be_generation_reference: true
+  generation_reference:
+    priority: primary
+    supported_roles:
+    - face_reference
+    preferred_for:
+    - portrait
+    - upper_body
+    - full_body
+    excluded_for:
+    - back_view
+    coverage:
+      profiles:
+      - portrait
+      - upper_body
+      - full_body
+      visible_fields:
+      - eyes
+      - face
+      view_angles:
+      - front
+      occluded_fields: []
+    inheritance:
+      face: inherit
+      eyes: inherit
+      hair: do_not_inherit
+      body_proportions: do_not_inherit
+      outfit: do_not_inherit
+      pose: do_not_inherit
+      lighting: do_not_inherit
+      scene: do_not_inherit
+      style: do_not_inherit
+      expression: do_not_inherit
+  purpose_note_zh: 获准作为分离生成参考；仅继承合同指定职责，不继承原图姿势、表情或渲染。
 - asset_id: arco-expr-frontal-020
   expression_id: expr-frontal-impatient-speaking-01
   path: assets/arco/expressions/frontal/arco-expr-frontal-020.png
@@ -988,6 +2348,40 @@ assets:
   sha256: 860e6405b0c628c9796202d4d1f2d0a922f21cf49657749801ccb6aef2286c47
   variant_id: null
   state_ids: []
+  can_be_generation_reference: true
+  generation_reference:
+    priority: primary
+    supported_roles:
+    - face_reference
+    preferred_for:
+    - portrait
+    - upper_body
+    - full_body
+    excluded_for:
+    - back_view
+    coverage:
+      profiles:
+      - portrait
+      - upper_body
+      - full_body
+      visible_fields:
+      - eyes
+      - face
+      view_angles:
+      - front
+      occluded_fields: []
+    inheritance:
+      face: inherit
+      eyes: inherit
+      hair: do_not_inherit
+      body_proportions: do_not_inherit
+      outfit: do_not_inherit
+      pose: do_not_inherit
+      lighting: do_not_inherit
+      scene: do_not_inherit
+      style: do_not_inherit
+      expression: do_not_inherit
+  purpose_note_zh: 获准作为分离生成参考；仅继承合同指定职责，不继承原图姿势、表情或渲染。
 - asset_id: arco-expr-frontal-021
   expression_id: expr-frontal-attentive-speaking-01
   path: assets/arco/expressions/frontal/arco-expr-frontal-021.png
@@ -1012,6 +2406,40 @@ assets:
   sha256: 8a68a121e14eda387d0165772a9ef51404588e95d1ce7d5f647c4f328b2c8f83
   variant_id: null
   state_ids: []
+  can_be_generation_reference: true
+  generation_reference:
+    priority: primary
+    supported_roles:
+    - face_reference
+    preferred_for:
+    - portrait
+    - upper_body
+    - full_body
+    excluded_for:
+    - back_view
+    coverage:
+      profiles:
+      - portrait
+      - upper_body
+      - full_body
+      visible_fields:
+      - eyes
+      - face
+      view_angles:
+      - front
+      occluded_fields: []
+    inheritance:
+      face: inherit
+      eyes: inherit
+      hair: do_not_inherit
+      body_proportions: do_not_inherit
+      outfit: do_not_inherit
+      pose: do_not_inherit
+      lighting: do_not_inherit
+      scene: do_not_inherit
+      style: do_not_inherit
+      expression: do_not_inherit
+  purpose_note_zh: 获准作为分离生成参考；仅继承合同指定职责，不继承原图姿势、表情或渲染。
 - asset_id: arco-expr-frontal-022
   expression_id: expr-frontal-casual-speaking-01
   path: assets/arco/expressions/frontal/arco-expr-frontal-022.png
@@ -1036,6 +2464,40 @@ assets:
   sha256: 06abd18bcddd7ca2e0f88e094af949e80ce50d32d3f5c5c8818004f199ce8549
   variant_id: null
   state_ids: []
+  can_be_generation_reference: true
+  generation_reference:
+    priority: primary
+    supported_roles:
+    - face_reference
+    preferred_for:
+    - portrait
+    - upper_body
+    - full_body
+    excluded_for:
+    - back_view
+    coverage:
+      profiles:
+      - portrait
+      - upper_body
+      - full_body
+      visible_fields:
+      - eyes
+      - face
+      view_angles:
+      - front
+      occluded_fields: []
+    inheritance:
+      face: inherit
+      eyes: inherit
+      hair: do_not_inherit
+      body_proportions: do_not_inherit
+      outfit: do_not_inherit
+      pose: do_not_inherit
+      lighting: do_not_inherit
+      scene: do_not_inherit
+      style: do_not_inherit
+      expression: do_not_inherit
+  purpose_note_zh: 获准作为分离生成参考；仅继承合同指定职责，不继承原图姿势、表情或渲染。
 - asset_id: identity-p01
   path: assets/arco/identity/p01-full.png
   asset_status: VERIFIED
@@ -1153,7 +2615,7 @@ assets:
   reference_level: primary
   roles:
   - identity_evidence
-  purpose_note_zh: Identity Calibration candidate
+  purpose_note_zh: 保留官方完整立绘证据；默认生成改用已批准的分离图层。
   source_kind: derivative
   source_authority: user_approved
   source_group_id: arco-standing-open-arms-oblique-01
@@ -1170,35 +2632,7 @@ assets:
     source_note: 用户确认的官方 standing-art；未虚构 URL、资源包路径或发布日期。
     ingest_calibration_id: cal-20260911T031117Z-849ec7
   sha256: 386f95c28441a1adf4900cfc3ce52e1c52f0ce7435376bd4576dd9cc32976414
-  can_be_generation_reference: true
-  generation_reference:
-    priority: primary
-    supported_roles:
-    - identity_reference
-    preferred_for:
-    - portrait
-    excluded_for:
-    - upper_body
-    - full_body
-    - back_view
-    coverage:
-      visible_fields:
-      - identity
-      - hair
-      - eyes
-      - face
-      view_angles:
-      - three_quarter_right
-      profiles:
-      - portrait
-    inheritance:
-      identity: inherit
-      face: inherit
-      hair: inherit
-      eyes: inherit
-      outfit: do_not_inherit
-      pose: do_not_inherit
-      expression: do_not_inherit
+  can_be_generation_reference: false
   operation:
     kind: deterministic_lossless_crop
     crop_box_px:
@@ -1231,7 +2665,7 @@ assets:
   reference_level: primary
   roles:
   - variant_evidence
-  purpose_note_zh: 常服全身结构与生成用 OUTFIT Primary；与 identity-p01 内容相同但合同独立。
+  purpose_note_zh: 保留官方完整立绘证据；默认生成改用已批准的分离图层。
   asset_type: full_composite
   source_kind: official
   source_authority: user_approved
@@ -1249,42 +2683,9 @@ assets:
     source_note: 用户确认的官方 standing-art；来源关系沿用已批准 Design Preview，未虚构 URL 或发布日期。
     ingest_calibration_id: cal-20260914T070842Z-68b810
   sha256: bddba1d7b1bed2c21572892003ac50dc6c2340d53e8262a56b6db69b16cf1f86
-  can_be_generation_reference: true
+  can_be_generation_reference: false
   evidence_independence: none
   content_equivalent_to_asset_id: identity-p01
-  generation_reference:
-    priority: primary
-    supported_roles:
-    - outfit_reference
-    preferred_for:
-    - portrait
-    - upper_body
-    - full_body
-    excluded_for:
-    - back_view
-    coverage:
-      profiles:
-      - portrait
-      - upper_body
-      - full_body
-      visible_fields:
-      - variant.visible_headwear_accessories
-      - variant.upper_body_outfit
-      - variant.full_outfit
-      - variant.footwear
-      view_angles:
-      - three_quarter_right
-      occluded_fields:
-      - variant.back_outfit
-    inheritance:
-      outfit: inherit
-      identity: do_not_inherit
-      face: do_not_inherit
-      hair: do_not_inherit
-      eyes: do_not_inherit
-      body_proportions: do_not_inherit
-      pose: do_not_inherit
-      expression: do_not_inherit
 - asset_id: casual-outfit-open-arms-no-horns-evidence
   path: assets/arco/variants/casual-outfit/evidence/open-arms-no-horns.png
   asset_status: VERIFIED
@@ -1294,7 +2695,7 @@ assets:
   reference_level: detail
   roles:
   - variant_evidence
-  purpose_note_zh: 无角 open-arms 常服结构证据；禁止生成输入。
+  purpose_note_zh: 获准作为分离生成参考；仅继承合同指定职责，不继承原图姿势、表情或渲染。
   asset_type: faceless_composite
   source_kind: official
   source_authority: user_approved
@@ -1312,7 +2713,47 @@ assets:
     source_note: 用户确认的官方 standing-art；来源关系沿用已批准 Design Preview，未虚构 URL 或发布日期。
     ingest_calibration_id: cal-20260914T070842Z-68b810
   sha256: 06c61729cdd23ede65e7376beabe50c7f32da8276709730a750452819c367f3d
-  can_be_generation_reference: false
+  can_be_generation_reference: true
+  generation_reference:
+    priority: primary
+    supported_roles:
+    - identity_reference
+    - outfit_reference
+    preferred_for:
+    - portrait
+    - upper_body
+    - full_body
+    excluded_for:
+    - back_view
+    coverage:
+      profiles:
+      - portrait
+      - upper_body
+      - full_body
+      visible_fields:
+      - identity
+      - hair
+      - face
+      - body.upper
+      - body.full
+      - variant.visible_headwear_accessories
+      - variant.upper_body_outfit
+      - variant.full_outfit
+      - variant.footwear
+      view_angles:
+      - front_three_quarter
+      occluded_fields: []
+    inheritance:
+      identity: inherit
+      hair: inherit
+      face: inherit
+      outfit: inherit
+      eyes: do_not_inherit
+      expression: do_not_inherit
+      pose: do_not_inherit
+      scene: do_not_inherit
+      lighting: do_not_inherit
+      style: do_not_inherit
 - asset_id: casual-outfit-open-arms-horns-evidence
   path: assets/arco/variants/casual-outfit/evidence/open-arms-horns.png
   asset_status: VERIFIED
@@ -1350,7 +2791,7 @@ assets:
   reference_level: detail
   roles:
   - variant_evidence
-  purpose_note_zh: crossed-arms 跨姿势常服证据；禁止生成输入。
+  purpose_note_zh: 获准作为分离生成参考；仅继承合同指定职责，不继承原图姿势、表情或渲染。
   asset_type: faceless_composite
   source_kind: official
   source_authority: user_approved
@@ -1368,7 +2809,47 @@ assets:
     source_note: 用户确认的官方 standing-art；来源关系沿用已批准 Design Preview，未虚构 URL 或发布日期。
     ingest_calibration_id: cal-20260914T070842Z-68b810
   sha256: 4eff91bea4e535e646ad406a5e8aae5e402c337cee635feb1e6339f0eaa8d974
-  can_be_generation_reference: false
+  can_be_generation_reference: true
+  generation_reference:
+    priority: secondary
+    supported_roles:
+    - identity_reference
+    - outfit_reference
+    preferred_for:
+    - portrait
+    - upper_body
+    - full_body
+    excluded_for:
+    - back_view
+    coverage:
+      profiles:
+      - portrait
+      - upper_body
+      - full_body
+      visible_fields:
+      - identity
+      - hair
+      - face
+      - body.upper
+      - body.full
+      - variant.visible_headwear_accessories
+      - variant.upper_body_outfit
+      - variant.full_outfit
+      - variant.footwear
+      view_angles:
+      - front
+      occluded_fields: []
+    inheritance:
+      identity: inherit
+      hair: inherit
+      face: inherit
+      outfit: inherit
+      eyes: do_not_inherit
+      expression: do_not_inherit
+      pose: do_not_inherit
+      scene: do_not_inherit
+      lighting: do_not_inherit
+      style: do_not_inherit
 - asset_id: casual-outfit-raised-fists-evidence
   path: assets/arco/variants/casual-outfit/evidence/raised-fists.png
   asset_status: VERIFIED
@@ -1378,7 +2859,7 @@ assets:
   reference_level: detail
   roles:
   - variant_evidence
-  purpose_note_zh: raised-fists frontal 常服结构证据；禁止生成输入。
+  purpose_note_zh: 获准作为分离生成参考；仅继承合同指定职责，不继承原图姿势、表情或渲染。
   asset_type: faceless_composite
   source_kind: official
   source_authority: user_approved
@@ -1396,7 +2877,47 @@ assets:
     source_note: 用户确认的官方 standing-art；来源关系沿用已批准 Design Preview，未虚构 URL 或发布日期。
     ingest_calibration_id: cal-20260914T070842Z-68b810
   sha256: f8d8b38fe4ddaa3eee2d0f3d6a8e659ba25b5926a35a9fcf57f5247ed3172270
-  can_be_generation_reference: false
+  can_be_generation_reference: true
+  generation_reference:
+    priority: secondary
+    supported_roles:
+    - identity_reference
+    - outfit_reference
+    preferred_for:
+    - portrait
+    - upper_body
+    - full_body
+    excluded_for:
+    - back_view
+    coverage:
+      profiles:
+      - portrait
+      - upper_body
+      - full_body
+      visible_fields:
+      - identity
+      - hair
+      - face
+      - body.upper
+      - body.full
+      - variant.visible_headwear_accessories
+      - variant.upper_body_outfit
+      - variant.full_outfit
+      - variant.footwear
+      view_angles:
+      - front
+      occluded_fields: []
+    inheritance:
+      identity: inherit
+      hair: inherit
+      face: inherit
+      outfit: inherit
+      eyes: do_not_inherit
+      expression: do_not_inherit
+      pose: do_not_inherit
+      scene: do_not_inherit
+      lighting: do_not_inherit
+      style: do_not_inherit
 - asset_id: identity-body-c07
   path: assets/arco/identity/body-evidence/identity-body-c07.png
   asset_status: VERIFIED
@@ -1406,7 +2927,7 @@ assets:
   reference_level: detail
   roles:
   - body_evidence
-  purpose_note_zh: 官方 Body Base 身体比例证据；禁止生成输入。
+  purpose_note_zh: 获准作为分离生成参考；仅继承合同指定职责，不继承原图姿势、表情或渲染。
   asset_type: body_base
   source_kind: official
   source_authority: primary_official
@@ -1424,7 +2945,41 @@ assets:
     source_note: 用户批准的官方 Body Base evidence-only registration。
     ingest_calibration_id: cal-20260914T100205Z-77878a
   sha256: a744236d80759906bc77f35c3a531a4a58b4829a6dd83a47fbb13af1894aa089
-  can_be_generation_reference: false
+  can_be_generation_reference: true
+  generation_reference:
+    priority: secondary
+    supported_roles:
+    - identity_reference
+    preferred_for:
+    - upper_body
+    - full_body
+    excluded_for:
+    - portrait
+    - back_view
+    coverage:
+      profiles:
+      - upper_body
+      - full_body
+      visible_fields:
+      - identity
+      - hair
+      - face
+      - body.upper
+      - body.full
+      view_angles:
+      - front_three_quarter
+      occluded_fields: []
+    inheritance:
+      identity: inherit
+      hair: inherit
+      body_proportions: inherit
+      eyes: do_not_inherit
+      outfit: do_not_inherit
+      expression: do_not_inherit
+      pose: do_not_inherit
+      scene: do_not_inherit
+      lighting: do_not_inherit
+      style: do_not_inherit
 - asset_id: identity-body-c13
   path: assets/arco/identity/body-evidence/identity-body-c13.png
   asset_status: VERIFIED
@@ -1434,7 +2989,7 @@ assets:
   reference_level: detail
   roles:
   - body_evidence
-  purpose_note_zh: 官方 Body Base 身体比例证据；禁止生成输入。
+  purpose_note_zh: 获准作为分离生成参考；仅继承合同指定职责，不继承原图姿势、表情或渲染。
   asset_type: body_base
   source_kind: official
   source_authority: primary_official
@@ -1452,7 +3007,41 @@ assets:
     source_note: 用户批准的官方 Body Base evidence-only registration。
     ingest_calibration_id: cal-20260914T100205Z-77878a
   sha256: 93a52a59f468bca0c4bc8e2908ee448ca922692f30d728b67f0a50c8297dc7df
-  can_be_generation_reference: false
+  can_be_generation_reference: true
+  generation_reference:
+    priority: secondary
+    supported_roles:
+    - identity_reference
+    preferred_for:
+    - upper_body
+    - full_body
+    excluded_for:
+    - portrait
+    - back_view
+    coverage:
+      profiles:
+      - upper_body
+      - full_body
+      visible_fields:
+      - identity
+      - hair
+      - face
+      - body.upper
+      - body.full
+      view_angles:
+      - front
+      occluded_fields: []
+    inheritance:
+      identity: inherit
+      hair: inherit
+      body_proportions: inherit
+      eyes: do_not_inherit
+      outfit: do_not_inherit
+      expression: do_not_inherit
+      pose: do_not_inherit
+      scene: do_not_inherit
+      lighting: do_not_inherit
+      style: do_not_inherit
 - asset_id: identity-body-c14
   path: assets/arco/identity/body-evidence/identity-body-c14.png
   asset_status: VERIFIED
@@ -1462,7 +3051,7 @@ assets:
   reference_level: detail
   roles:
   - body_evidence
-  purpose_note_zh: 官方 Body Base 身体比例证据；禁止生成输入。
+  purpose_note_zh: 获准作为分离生成参考；仅继承合同指定职责，不继承原图姿势、表情或渲染。
   asset_type: body_base
   source_kind: official
   source_authority: primary_official
@@ -1480,4 +3069,1376 @@ assets:
     source_note: 用户批准的官方 Body Base evidence-only registration。
     ingest_calibration_id: cal-20260914T100205Z-77878a
   sha256: e2ebb9ecf28ae0aed9a3cfd0b464cbe3a786a19dc9550719927b5e5dc7abd3db
+  can_be_generation_reference: true
+  generation_reference:
+    priority: secondary
+    supported_roles:
+    - identity_reference
+    preferred_for:
+    - upper_body
+    - full_body
+    excluded_for:
+    - portrait
+    - back_view
+    coverage:
+      profiles:
+      - upper_body
+      - full_body
+      visible_fields:
+      - identity
+      - hair
+      - face
+      - body.upper
+      - body.full
+      view_angles:
+      - front
+      occluded_fields: []
+    inheritance:
+      identity: inherit
+      hair: inherit
+      body_proportions: inherit
+      eyes: do_not_inherit
+      outfit: do_not_inherit
+      expression: do_not_inherit
+      pose: do_not_inherit
+      scene: do_not_inherit
+      lighting: do_not_inherit
+      style: do_not_inherit
+- asset_id: school-uniform-primary
+  path: assets/arco/variants/school-uniform/primary/school-uniform-primary.png
+  asset_status: VERIFIED
+  expression_id: null
+  variant_id: school-uniform
+  state_ids: []
+  reference_level: primary
+  roles:
+  - variant_evidence
+  purpose_note_zh: 用户确认的校服主参考；仅继承服装，不作为身份、发型或五官证据。
+  asset_type: faceless_composite
+  source_kind: user_provided
+  source_authority: user_approved
+  source_group_id: arco-school-uniform-a-l-6602
+  source_family_id: arco-user-provided-standing-art
+  face_slot_id: null
+  face_slot_membership: null
+  expression_set_id: null
+  view_class: three_quarter_right
+  view_angle: front_three_quarter
+  derived_from_asset_id: null
+  source_note: 用户提供的本地立绘；官方出处未核实，未虚构 URL 或发布日期。
+  provenance:
+    original_filename: アルコ_a_l_6602.png
+    source_path: D:\阿尔可\阿尔可立绘\アルコ\アルコ_a_l_6602.png
+    ingest_calibration_id: cal-20261001T031544Z-8df760
+    user_confirmation: 可以
+  sha256: cfe8c93a96f5f49f20ecc2fac548905c1914373c6ce2682184e773a3362f53e0
+  can_be_generation_reference: true
+  generation_reference:
+    priority: primary
+    supported_roles:
+    - outfit_reference
+    preferred_for:
+    - portrait
+    - upper_body
+    - full_body
+    excluded_for:
+    - back_view
+    coverage:
+      profiles:
+      - portrait
+      - upper_body
+      - full_body
+      visible_fields:
+      - variant.visible_headwear_accessories
+      - variant.upper_body_outfit
+      - variant.full_outfit
+      - variant.footwear
+      view_angles:
+      - front_three_quarter
+      occluded_fields:
+      - outfit.back_structure
+    inheritance:
+      outfit: inherit
+      identity: do_not_inherit
+      hair: do_not_inherit
+      face: do_not_inherit
+      eyes: do_not_inherit
+      body_proportions: do_not_inherit
+      pose: do_not_inherit
+      expression: do_not_inherit
+      scene: do_not_inherit
+      lighting: do_not_inherit
+      style: do_not_inherit
+- asset_id: swimsuit-primary
+  path: assets/arco/variants/swimsuit/primary/swimsuit-primary.png
+  asset_status: VERIFIED
+  expression_id: null
+  variant_id: swimsuit
+  state_ids: []
+  reference_level: primary
+  roles:
+  - variant_evidence
+  purpose_note_zh: 用户确认的泳装主参考；仅继承服装，不作为身份、发型或五官证据。
+  asset_type: faceless_composite
+  source_kind: user_provided
+  source_authority: user_approved
+  source_group_id: arco-swimsuit-a-l-5816
+  source_family_id: arco-user-provided-standing-art
+  face_slot_id: null
+  face_slot_membership: null
+  expression_set_id: null
+  view_class: three_quarter_right
+  view_angle: front_three_quarter
+  derived_from_asset_id: null
+  source_note: 用户提供的本地立绘；官方出处未核实，未虚构 URL 或发布日期。
+  provenance:
+    original_filename: アルコ_a_l_5816.png
+    source_path: D:\阿尔可\阿尔可立绘\アルコ\アルコ_a_l_5816.png
+    ingest_calibration_id: cal-20261001T033925Z-71cba8
+    user_confirmation: 可以
+  sha256: fa2b1cc3477d15b7e95ff630ec8fb820b284b2d148b4b7f11e75c3acc2882bce
+  can_be_generation_reference: true
+  generation_reference:
+    priority: primary
+    supported_roles:
+    - outfit_reference
+    preferred_for:
+    - portrait
+    - upper_body
+    - full_body
+    excluded_for:
+    - back_view
+    coverage:
+      profiles:
+      - portrait
+      - upper_body
+      - full_body
+      visible_fields:
+      - variant.visible_headwear_accessories
+      - variant.upper_body_outfit
+      - variant.full_outfit
+      - variant.footwear
+      view_angles:
+      - front_three_quarter
+      occluded_fields:
+      - outfit.back_structure
+    inheritance:
+      outfit: inherit
+      identity: do_not_inherit
+      hair: do_not_inherit
+      face: do_not_inherit
+      eyes: do_not_inherit
+      body_proportions: do_not_inherit
+      pose: do_not_inherit
+      expression: do_not_inherit
+      scene: do_not_inherit
+      lighting: do_not_inherit
+      style: do_not_inherit
+      horns: do_not_inherit
+      overlay.horns: do_not_inherit
+- asset_id: arco-identity-back-b23d33
+  path: assets/arco/identity/back/arco-identity-back-b23d33.png
+  sha256: a9570d82af09d82316fac9a43aec0dd908664183454341f95aea00c990f68f8e
+  asset_status: VERIFIED
+  asset_type: faceless_composite
+  variant_id: null
+  state_ids: []
+  reference_level: identity
+  roles:
+  - identity_evidence
+  - hair_evidence
+  - body_evidence
+  view_angle: back
+  view_class: back
+  source_kind: derivative
+  source_authority: user_approved
+  source_group_id: preparation-identity-20261004T160958Z-b23d33
+  can_be_generation_reference: true
+  provenance:
+    source_note: Approved preparation; observation evidence and authored design remain
+      separate.
+  derived_from_asset_ids:
+  - casual-outfit-crossed-arms-evidence
+  - casual-outfit-open-arms-no-horns-evidence
+  derivation_sources:
+  - asset_id: casual-outfit-crossed-arms-evidence
+    sha256: 4eff91bea4e535e646ad406a5e8aae5e402c337cee635feb1e6339f0eaa8d974
+    usage: identity
+  - asset_id: casual-outfit-open-arms-no-horns-evidence
+    sha256: 06c61729cdd23ede65e7376beabe50c7f32da8276709730a750452819c367f3d
+    usage: identity
+  evidence_independence: none
+  generation_reference:
+    priority: primary
+    supported_roles:
+    - identity_reference
+    preferred_for:
+    - back_view
+    excluded_for:
+    - portrait
+    - upper_body
+    - full_body
+    coverage:
+      profiles:
+      - back_view
+      visible_fields:
+      - identity
+      - hair.back
+      - body.back
+      view_angles:
+      - back
+      occluded_fields: []
+    inheritance:
+      identity: inherit
+      hair: inherit
+      body_proportions: inherit
+      outfit: do_not_inherit
+      expression: do_not_inherit
+      pose: do_not_inherit
+      style: do_not_inherit
+      scene: do_not_inherit
+  generation_record:
+    preparation_id: identity-20261004T160958Z-b23d33
+    candidate_id: identity-back-e22b5c9e
+    plan_sha256: 438819ae706370ab7682e1e4e8194690a7787d64d117031388047a23a3879c83
+    output_sha256: a9570d82af09d82316fac9a43aec0dd908664183454341f95aea00c990f68f8e
+    attempt_id: e22b5c9ee4584fcdb56bd47e6572d240
+    repair_number: 1
+    actual_prompt_sha256: 1675a5af3e2e0fd7a63df35b5673d635a566425eb3eaa9e32f84e7219f601f08
+    repair_source_candidate_id: identity-back-18f4f68b
+    correction_code: back-knee-orientation
+    repair_input_bindings:
+    - reference_id: identity-front
+      asset_id: casual-outfit-crossed-arms-evidence
+      path: D:\learn\Arco\assets\arco\variants\casual-outfit\evidence\crossed-arms.png
+      sha256: 4eff91bea4e535e646ad406a5e8aae5e402c337cee635feb1e6339f0eaa8d974
+      usage: identity
+      view_class: front
+      inherit:
+      - identity
+      - hair
+      - body_proportions
+      - official_arco_style
+      exclude:
+      - outfit
+      - pose
+      - expression
+      - scene
+    - reference_id: identity-right-three-quarter
+      asset_id: casual-outfit-open-arms-no-horns-evidence
+      path: D:\learn\Arco\assets\arco\variants\casual-outfit\evidence\open-arms-no-horns.png
+      sha256: 06c61729cdd23ede65e7376beabe50c7f32da8276709730a750452819c367f3d
+      usage: identity
+      view_class: three_quarter_right
+      inherit:
+      - identity
+      - hair
+      - body_proportions
+      - official_arco_style
+      exclude:
+      - outfit
+      - pose
+      - expression
+      - scene
+    - reference_id: edit-target-identity-back-18f4f68b
+      usage: edit_target
+      candidate_id: identity-back-18f4f68b
+      view_id: identity-back
+      path: D:\learn\Arco\calibration\preparations\identity-20261004T160958Z-b23d33\candidates\identity-back-18f4f68b.png
+      sha256: 690cc15e9977b30641f872e86a54bdd928e36ecf46144a24d7b7583d7a7563b0
+- asset_id: maid-outfit-source-dress-structure
+  path: assets/arco/variants/maid-outfit/sources/dress-structure.png
+  sha256: c646d5cc89a1b04cd202b8ba06e487a2b430ffcd0b36143dc4da101f3c6ca943
+  asset_status: VERIFIED
+  asset_type: source_material
+  variant_id: maid-outfit
+  state_ids: []
+  reference_level: detail
+  roles:
+  - variant_evidence
+  view_angle: unknown
+  view_class: unknown
+  source_kind: user_provided
+  source_authority: unverified
+  source_group_id: user-maid-tutorial-family-20261004
   can_be_generation_reference: false
+  provenance:
+    source_note: 原图1：取独立衣服图；同一教程来源，不能因多图而增加独立证据。
+    source_path: C:\Users\shuai\AppData\Local\Temp\codex-clipboard-c9648c88-f4ca-4087-ba12-7a9062a917a5.png
+    preparation_id: prep-20261004T165937Z-a1f765
+- asset_id: maid-outfit-source-apron-structure
+  path: assets/arco/variants/maid-outfit/sources/apron-structure.png
+  sha256: a6b815c622ff7d0b231f7187ba1d5530175867b8b3dcc4f19d99e0fb018d82b5
+  asset_status: VERIFIED
+  asset_type: source_material
+  variant_id: maid-outfit
+  state_ids: []
+  reference_level: detail
+  roles:
+  - variant_evidence
+  view_angle: unknown
+  view_class: unknown
+  source_kind: user_provided
+  source_authority: unverified
+  source_group_id: user-maid-tutorial-family-20261004
+  can_be_generation_reference: false
+  provenance:
+    source_note: 原图2：选左上前后围裙和与原穿着图一致的肩带结构。
+    source_path: C:\Users\shuai\AppData\Local\Temp\codex-clipboard-e92f9270-2ea7-43a3-a787-ab81f3cd6602.png
+    preparation_id: prep-20261004T165937Z-a1f765
+- asset_id: maid-outfit-source-assembled-structure
+  path: assets/arco/variants/maid-outfit/sources/assembled-structure.png
+  sha256: 194cf708758ef20841e2bd304c671e417dfc57b41628b21a9bef6f40a0d98618
+  asset_status: VERIFIED
+  asset_type: source_material
+  variant_id: maid-outfit
+  state_ids: []
+  reference_level: detail
+  roles:
+  - variant_evidence
+  view_angle: unknown
+  view_class: unknown
+  source_kind: user_provided
+  source_authority: unverified
+  source_group_id: user-maid-tutorial-family-20261004
+  can_be_generation_reference: false
+  provenance:
+    source_note: 原图3：取左侧完整套装前后结构；补图是同页局部放大，按同源记录。
+    source_path: C:\Users\shuai\AppData\Local\Temp\codex-clipboard-46517500-ad87-4808-96d3-f057610d2df7.png
+    preparation_id: prep-20261004T165937Z-a1f765
+- asset_id: maid-outfit-source-worn-front
+  path: assets/arco/variants/maid-outfit/sources/worn-front.png
+  sha256: a62233b7084e8af117cc33ed8f20a2bcee55826dd720d4729b7df24b4fcbe5d3
+  asset_status: VERIFIED
+  asset_type: source_material
+  variant_id: maid-outfit
+  state_ids: []
+  reference_level: detail
+  roles:
+  - variant_evidence
+  view_angle: unknown
+  view_class: unknown
+  source_kind: user_provided
+  source_authority: unverified
+  source_group_id: user-maid-tutorial-family-20261004
+  can_be_generation_reference: false
+  provenance:
+    source_note: 原图4：整套轮廓主依据。原人物的发型、脸、比例、姿势和黑白画风排除；领饰改用用户选定的大蝴蝶结。
+    source_path: C:\Users\shuai\AppData\Local\Temp\codex-clipboard-aab89fd6-62e9-47b9-8f5c-dea8011d8cce.png
+    preparation_id: prep-20261004T165937Z-a1f765
+- asset_id: maid-outfit-source-petticoat-detail
+  path: assets/arco/variants/maid-outfit/sources/petticoat-detail.png
+  sha256: 3b52fe07dfba2a0e7b86c7da02874b4d9eb27b79ff88a3ebbc8299525202828d
+  asset_status: VERIFIED
+  asset_type: source_material
+  variant_id: maid-outfit
+  state_ids: []
+  reference_level: detail
+  roles:
+  - variant_evidence
+  view_angle: unknown
+  view_class: unknown
+  source_kind: user_provided
+  source_authority: unverified
+  source_group_id: user-maid-tutorial-family-20261004
+  can_be_generation_reference: false
+  provenance:
+    source_note: 补图1：仅取左中层叠衬裙结构；白色吊带袜品类与颜色来自用户明确文字要求。
+    source_path: C:\Users\shuai\AppData\Local\Temp\codex-clipboard-4956dc55-1d99-4f38-8e83-d3dd3bba0fac.png
+    preparation_id: prep-20261004T165937Z-a1f765
+- asset_id: maid-outfit-source-headdress-detail
+  path: assets/arco/variants/maid-outfit/sources/headdress-detail.png
+  sha256: c77c59b7b09e0e9fef93321d171559becb8762542a345f0e995880432283e77e
+  asset_status: VERIFIED
+  asset_type: source_material
+  variant_id: maid-outfit
+  state_ids: []
+  reference_level: detail
+  roles:
+  - variant_evidence
+  view_angle: unknown
+  view_class: unknown
+  source_kind: user_provided
+  source_authority: unverified
+  source_group_id: user-maid-tutorial-family-20261004
+  can_be_generation_reference: false
+  provenance:
+    source_note: 补图2：用户已选荷叶边头箍。只取头箍和白色褶边；图中人物的头发与脸不继承。
+    source_path: C:\Users\shuai\AppData\Local\Temp\codex-clipboard-4b1f3ea8-def8-4ded-9892-df297e38d41d.png
+    preparation_id: prep-20261004T165937Z-a1f765
+- asset_id: maid-outfit-source-shoulder-frill-detail
+  path: assets/arco/variants/maid-outfit/sources/shoulder-frill-detail.png
+  sha256: 84278bc249f5317a2491bce65c89280a4e2cbaf8250c575420cde1e03f76f68b
+  asset_status: VERIFIED
+  asset_type: source_material
+  variant_id: maid-outfit
+  state_ids: []
+  reference_level: detail
+  roles:
+  - variant_evidence
+  view_angle: unknown
+  view_class: unknown
+  source_kind: user_provided
+  source_authority: unverified
+  source_group_id: user-maid-tutorial-family-20261004
+  can_be_generation_reference: false
+  provenance:
+    source_note: 补图3：同页细节放大；取肩带荷叶边与固定结构，不另计来源。
+    source_path: C:\Users\shuai\AppData\Local\Temp\codex-clipboard-8b27f2da-6db1-4eec-97b2-8c5687ae13fa.png
+    preparation_id: prep-20261004T165937Z-a1f765
+- asset_id: maid-outfit-source-neckwear-detail
+  path: assets/arco/variants/maid-outfit/sources/neckwear-detail.png
+  sha256: fa0611211e86ce7a42faa0bcd69533df729afe9c9afd7d9771d185c69fd0d32c
+  asset_status: VERIFIED
+  asset_type: source_material
+  variant_id: maid-outfit
+  state_ids: []
+  reference_level: detail
+  roles:
+  - variant_evidence
+  view_angle: unknown
+  view_class: unknown
+  source_kind: user_provided
+  source_authority: unverified
+  source_group_id: user-maid-tutorial-family-20261004
+  can_be_generation_reference: false
+  provenance:
+    source_note: 补图4：只取左侧大蝴蝶结，作为用户选定设计。边缘和颜色采用黑色布面效果。
+    source_path: C:\Users\shuai\AppData\Local\Temp\codex-clipboard-2473ece3-2364-4d85-94da-33bdb475d279.png
+    preparation_id: prep-20261004T165937Z-a1f765
+- asset_id: maid-outfit-front
+  path: assets/arco/variants/maid-outfit/references/front.png
+  sha256: 7b7a3c14c6216c2c8a38e0cc91af29fafe0c2ad148d8d80bebe0de5516d400b2
+  asset_status: VERIFIED
+  asset_type: faceless_composite
+  variant_id: maid-outfit
+  state_ids: []
+  reference_level: primary
+  roles:
+  - variant_evidence
+  view_angle: front
+  view_class: front
+  source_kind: derivative
+  source_authority: user_approved
+  source_group_id: preparation-prep-20261004T165937Z-a1f765
+  can_be_generation_reference: false
+  provenance:
+    source_note: Approved preparation; observation evidence and authored design remain
+      separate.
+    superseded_by_asset_id: maid-outfit-front-r2
+  derived_from_asset_ids:
+  - casual-outfit-crossed-arms-evidence
+  - maid-outfit-source-worn-front
+  - maid-outfit-source-headdress-detail
+  - maid-outfit-source-shoulder-frill-detail
+  - maid-outfit-source-neckwear-detail
+  derivation_sources:
+  - asset_id: casual-outfit-crossed-arms-evidence
+    sha256: 4eff91bea4e535e646ad406a5e8aae5e402c337cee635feb1e6339f0eaa8d974
+    usage: identity
+  - asset_id: maid-outfit-source-worn-front
+    sha256: a62233b7084e8af117cc33ed8f20a2bcee55826dd720d4729b7df24b4fcbe5d3
+    usage: garment
+    parts:
+    - part_id: worn-bodice
+      slot: upper
+      observations: 深色收腰连衣裙上身，泡泡肩袖接窄长袖，白色闭合翻领和宽白袖口。
+      evidence_status: UNCERTAIN
+      region:
+        kind: box
+        xyxy:
+        - 0.377
+        - 0.166
+        - 0.841
+        - 0.469
+    - part_id: worn-skirt
+      slot: lower
+      observations: 深色裙身长至足踝附近，白围裙下摆高于黑裙下摆，黑色下缘形成一圈连续裙边。
+      evidence_status: UNCERTAIN
+      region:
+        kind: box
+        xyxy:
+        - 0.11
+        - 0.348
+        - 0.97
+        - 0.994
+    - part_id: worn-apron
+      slot: accessories
+      observations: 白色围裙胸兜、宽腰带、大前裙片和下摆荷叶边，肩部褶边清晰。
+      evidence_status: UNCERTAIN
+      region:
+        kind: box
+        xyxy:
+        - 0.278
+        - 0.195
+        - 0.922
+        - 0.921
+  - asset_id: maid-outfit-source-headdress-detail
+    sha256: c77c59b7b09e0e9fef93321d171559becb8762542a345f0e995880432283e77e
+    usage: garment
+    parts:
+    - part_id: ruffled-headband
+      slot: accessories
+      observations: 上右弧形头箍沿顶部及两侧外缘加白色荷叶边，前额和大部分头发保持露出。
+      evidence_status: UNCERTAIN
+      region:
+        kind: box
+        xyxy:
+        - 0.664
+        - 0
+        - 0.984
+        - 0.319
+  - asset_id: maid-outfit-source-shoulder-frill-detail
+    sha256: 84278bc249f5317a2491bce65c89280a4e2cbaf8250c575420cde1e03f76f68b
+    usage: garment
+    parts:
+    - part_id: apron-shoulder-frill
+      slot: accessories
+      observations: 窄围裙肩带外侧缝有大幅白色褶边，肩带和褶边连续，带固定扣/纽扣结构。
+      evidence_status: UNCERTAIN
+      region:
+        kind: box
+        xyxy:
+        - 0.181
+        - 0.028
+        - 0.77
+        - 0.493
+  - asset_id: maid-outfit-source-neckwear-detail
+    sha256: fa0611211e86ce7a42faa0bcd69533df729afe9c9afd7d9771d185c69fd0d32c
+    usage: garment
+    parts:
+    - part_id: large-neck-bow
+      slot: accessories
+      observations: 左侧白领下面是一只宽大蝴蝶结，双侧蝶翼和中央结明确。
+      evidence_status: UNCERTAIN
+      region:
+        kind: box
+        xyxy:
+        - 0.066
+        - 0.219
+        - 0.396
+        - 0.869
+  evidence_independence: none
+  generation_record:
+    preparation_id: prep-20261004T165937Z-a1f765
+    candidate_id: front-44e5537f
+    plan_sha256: b64d04ffe423df5762ff4e6ce7c09de4d034ac731edf6d0537e35b515257cd13
+    output_sha256: 7b7a3c14c6216c2c8a38e0cc91af29fafe0c2ad148d8d80bebe0de5516d400b2
+    attempt_id: 44e5537f2b22485884023ea14353840f
+    repair_number: 2
+    actual_prompt_sha256: be57c8402b08281ce91ea7485b409d23cd7d7948b794b122984e7f97545fd31e
+- asset_id: maid-outfit-right-three-quarter
+  path: assets/arco/variants/maid-outfit/references/right-three-quarter.png
+  sha256: 83a3b5bd42fb6dc7c605e09ccf323464092013e88a5645fd69a59fd70a760315
+  asset_status: VERIFIED
+  asset_type: faceless_composite
+  variant_id: maid-outfit
+  state_ids: []
+  reference_level: secondary
+  roles:
+  - variant_evidence
+  view_angle: front_three_quarter
+  view_class: three_quarter_right
+  source_kind: derivative
+  source_authority: user_approved
+  source_group_id: preparation-prep-20261004T165937Z-a1f765
+  can_be_generation_reference: false
+  provenance:
+    source_note: Approved preparation; observation evidence and authored design remain
+      separate.
+    superseded_by_asset_id: maid-outfit-right-three-quarter-r2
+  derived_from_asset_ids:
+  - casual-outfit-open-arms-no-horns-evidence
+  - maid-outfit-front
+  - maid-outfit-source-worn-front
+  - maid-outfit-source-headdress-detail
+  - maid-outfit-source-shoulder-frill-detail
+  derivation_sources:
+  - asset_id: casual-outfit-open-arms-no-horns-evidence
+    sha256: 06c61729cdd23ede65e7376beabe50c7f32da8276709730a750452819c367f3d
+    usage: identity
+  - asset_id: maid-outfit-front
+    sha256: 7b7a3c14c6216c2c8a38e0cc91af29fafe0c2ad148d8d80bebe0de5516d400b2
+    usage: accepted_primary
+  - asset_id: maid-outfit-source-worn-front
+    sha256: a62233b7084e8af117cc33ed8f20a2bcee55826dd720d4729b7df24b4fcbe5d3
+    usage: garment
+    parts:
+    - part_id: worn-bodice
+      slot: upper
+      observations: 深色收腰连衣裙上身，泡泡肩袖接窄长袖，白色闭合翻领和宽白袖口。
+      evidence_status: UNCERTAIN
+      region:
+        kind: box
+        xyxy:
+        - 0.377
+        - 0.166
+        - 0.841
+        - 0.469
+    - part_id: worn-skirt
+      slot: lower
+      observations: 深色裙身长至足踝附近，白围裙下摆高于黑裙下摆，黑色下缘形成一圈连续裙边。
+      evidence_status: UNCERTAIN
+      region:
+        kind: box
+        xyxy:
+        - 0.11
+        - 0.348
+        - 0.97
+        - 0.994
+    - part_id: worn-apron
+      slot: accessories
+      observations: 白色围裙胸兜、宽腰带、大前裙片和下摆荷叶边，肩部褶边清晰。
+      evidence_status: UNCERTAIN
+      region:
+        kind: box
+        xyxy:
+        - 0.278
+        - 0.195
+        - 0.922
+        - 0.921
+  - asset_id: maid-outfit-source-headdress-detail
+    sha256: c77c59b7b09e0e9fef93321d171559becb8762542a345f0e995880432283e77e
+    usage: garment
+    parts:
+    - part_id: ruffled-headband
+      slot: accessories
+      observations: 上右弧形头箍沿顶部及两侧外缘加白色荷叶边，前额和大部分头发保持露出。
+      evidence_status: UNCERTAIN
+      region:
+        kind: box
+        xyxy:
+        - 0.664
+        - 0
+        - 0.984
+        - 0.319
+  - asset_id: maid-outfit-source-shoulder-frill-detail
+    sha256: 84278bc249f5317a2491bce65c89280a4e2cbaf8250c575420cde1e03f76f68b
+    usage: garment
+    parts:
+    - part_id: apron-shoulder-frill
+      slot: accessories
+      observations: 窄围裙肩带外侧缝有大幅白色褶边，肩带和褶边连续，带固定扣/纽扣结构。
+      evidence_status: UNCERTAIN
+      region:
+        kind: box
+        xyxy:
+        - 0.181
+        - 0.028
+        - 0.77
+        - 0.493
+  evidence_independence: none
+  generation_record:
+    preparation_id: prep-20261004T165937Z-a1f765
+    candidate_id: right-three-quarter-9e6ce1eb
+    plan_sha256: 599d402850d6953c2970c5735215462967fdee882815696973477d59be173fb9
+    output_sha256: 83a3b5bd42fb6dc7c605e09ccf323464092013e88a5645fd69a59fd70a760315
+    attempt_id: 9e6ce1eb59584800b588c92339e76454
+    repair_number: 1
+    actual_prompt_sha256: e7ec016750588a9d218f9c6315ff21c68109810f1c11d3c59f3eba0dad72fea7
+- asset_id: maid-outfit-back
+  path: assets/arco/variants/maid-outfit/references/back.png
+  sha256: 9536784f9de547ac0e188be9010ea3bd2f09b3fe79f368870683fa27278c37fc
+  asset_status: VERIFIED
+  asset_type: faceless_composite
+  variant_id: maid-outfit
+  state_ids: []
+  reference_level: secondary
+  roles:
+  - variant_evidence
+  view_angle: back
+  view_class: back
+  source_kind: derivative
+  source_authority: user_approved
+  source_group_id: preparation-prep-20261004T165937Z-a1f765
+  can_be_generation_reference: true
+  provenance:
+    source_note: Approved preparation; observation evidence and authored design remain
+      separate.
+  derived_from_asset_ids:
+  - arco-identity-back-b23d33
+  - maid-outfit-front
+  - maid-outfit-source-dress-structure
+  - maid-outfit-source-apron-structure
+  - maid-outfit-source-shoulder-frill-detail
+  derivation_sources:
+  - asset_id: arco-identity-back-b23d33
+    sha256: a9570d82af09d82316fac9a43aec0dd908664183454341f95aea00c990f68f8e
+    usage: identity
+  - asset_id: maid-outfit-front
+    sha256: 7b7a3c14c6216c2c8a38e0cc91af29fafe0c2ad148d8d80bebe0de5516d400b2
+    usage: accepted_primary
+  - asset_id: maid-outfit-source-dress-structure
+    sha256: c646d5cc89a1b04cd202b8ba06e487a2b430ffcd0b36143dc4da101f3c6ca943
+    usage: garment
+    parts:
+    - part_id: dress-front-upper
+      slot: upper
+      observations: 连衣裙前上身收腰，鼓起的短泡泡袖接窄长袖，闭合白翻领和宽白袖口。
+      evidence_status: UNCERTAIN
+      region:
+        kind: box
+        xyxy:
+        - 0.424
+        - 0.16
+        - 0.612
+        - 0.464
+    - part_id: dress-back-upper
+      slot: upper
+      observations: 独立后视连衣裙图显示闭合后背和收腰接缝。
+      evidence_status: UNCERTAIN
+      region:
+        kind: box
+        xyxy:
+        - 0.626
+        - 0.154
+        - 0.858
+        - 0.455
+    - part_id: dress-front-skirt
+      slot: lower
+      observations: 黑白图中的深色长裙从腰部褶裥展开，裙身宽大、自然垂落。
+      evidence_status: UNCERTAIN
+      region:
+        kind: box
+        xyxy:
+        - 0.382
+        - 0.407
+        - 0.624
+        - 0.702
+    - part_id: dress-back-skirt
+      slot: lower
+      observations: 独立后视长裙从腰缝起褶，下摆连续。
+      evidence_status: UNCERTAIN
+      region:
+        kind: box
+        xyxy:
+        - 0.6
+        - 0.398
+        - 0.862
+        - 0.718
+    - part_id: cuff-construction
+      slot: upper
+      observations: 独立白袖口和纽扣结构，保留宽袖口及两颗扣的外观。
+      evidence_status: UNCERTAIN
+      region:
+        kind: box
+        xyxy:
+        - 0.441
+        - 0.718
+        - 0.626
+        - 0.965
+  - asset_id: maid-outfit-source-apron-structure
+    sha256: a6b815c622ff7d0b231f7187ba1d5530175867b8b3dcc4f19d99e0fb018d82b5
+    usage: garment
+    parts:
+    - part_id: apron-front
+      slot: accessories
+      observations: 白色胸兜式长围裙，腰带清楚，前裙片宽大，下摆有荷叶边。
+      evidence_status: UNCERTAIN
+      region:
+        kind: box
+        xyxy:
+        - 0.055
+        - 0.119
+        - 0.243
+        - 0.655
+    - part_id: apron-back
+      slot: accessories
+      observations: 围裙肩带在背部交叉，后腰系大蝴蝶结和两条垂尾。
+      evidence_status: UNCERTAIN
+      region:
+        kind: box
+        xyxy:
+        - 0.226
+        - 0.128
+        - 0.395
+        - 0.671
+  - asset_id: maid-outfit-source-shoulder-frill-detail
+    sha256: 84278bc249f5317a2491bce65c89280a4e2cbaf8250c575420cde1e03f76f68b
+    usage: garment
+    parts:
+    - part_id: apron-shoulder-frill
+      slot: accessories
+      observations: 窄围裙肩带外侧缝有大幅白色褶边，肩带和褶边连续，带固定扣/纽扣结构。
+      evidence_status: UNCERTAIN
+      region:
+        kind: box
+        xyxy:
+        - 0.181
+        - 0.028
+        - 0.77
+        - 0.493
+  evidence_independence: none
+  generation_reference:
+    priority: secondary
+    supported_roles:
+    - outfit_reference
+    preferred_for:
+    - back_view
+    excluded_for:
+    - portrait
+    - upper_body
+    - full_body
+    coverage:
+      profiles:
+      - back_view
+      visible_fields:
+      - variant.back_outfit
+      view_angles:
+      - back
+      occluded_fields: []
+    inheritance:
+      identity: do_not_inherit
+      hair: do_not_inherit
+      body_proportions: do_not_inherit
+      outfit: inherit
+      expression: do_not_inherit
+      pose: do_not_inherit
+      style: do_not_inherit
+      scene: do_not_inherit
+  generation_record:
+    preparation_id: prep-20261004T165937Z-a1f765
+    candidate_id: back-fd1bafae
+    plan_sha256: 98c194d2e092ca635eb500d71b3612b2316511dd3f6ec65b66537b528e49880e
+    output_sha256: 9536784f9de547ac0e188be9010ea3bd2f09b3fe79f368870683fa27278c37fc
+    attempt_id: fd1bafaeeb9b439a8b5202542549a528
+    repair_number: 1
+    actual_prompt_sha256: 378c0b91c215a75318be8f6715fdd79c86f926e8df2807128c90bf13ecd0debb
+- asset_id: maid-outfit-detail-back-apron
+  path: assets/arco/variants/maid-outfit/references/detail-back-apron.png
+  sha256: 3ded9dced2c4ad9d002f1acc9d82bd84996196b03c41dd53bf4cd2e1a148b381
+  asset_status: VERIFIED
+  asset_type: outfit_detail
+  variant_id: maid-outfit
+  state_ids: []
+  reference_level: detail
+  roles:
+  - outfit_detail_evidence
+  view_angle: detail
+  view_class: detail
+  source_kind: derivative
+  source_authority: user_approved
+  source_group_id: preparation-prep-20261004T165937Z-a1f765
+  can_be_generation_reference: false
+  provenance:
+    source_note: Approved preparation; observation evidence and authored design remain
+      separate.
+    superseded_by_asset_id: maid-outfit-detail-back-apron-r2
+  derived_from_asset_ids:
+  - casual-outfit-crossed-arms-evidence
+  - maid-outfit-front
+  - maid-outfit-source-dress-structure
+  - maid-outfit-source-apron-structure
+  - maid-outfit-source-shoulder-frill-detail
+  derivation_sources:
+  - asset_id: casual-outfit-crossed-arms-evidence
+    sha256: 4eff91bea4e535e646ad406a5e8aae5e402c337cee635feb1e6339f0eaa8d974
+    usage: identity
+  - asset_id: maid-outfit-front
+    sha256: 7b7a3c14c6216c2c8a38e0cc91af29fafe0c2ad148d8d80bebe0de5516d400b2
+    usage: accepted_primary
+  - asset_id: maid-outfit-source-dress-structure
+    sha256: c646d5cc89a1b04cd202b8ba06e487a2b430ffcd0b36143dc4da101f3c6ca943
+    usage: garment
+    parts:
+    - part_id: dress-front-upper
+      slot: upper
+      observations: 连衣裙前上身收腰，鼓起的短泡泡袖接窄长袖，闭合白翻领和宽白袖口。
+      evidence_status: UNCERTAIN
+      region:
+        kind: box
+        xyxy:
+        - 0.424
+        - 0.16
+        - 0.612
+        - 0.464
+    - part_id: dress-back-upper
+      slot: upper
+      observations: 独立后视连衣裙图显示闭合后背和收腰接缝。
+      evidence_status: UNCERTAIN
+      region:
+        kind: box
+        xyxy:
+        - 0.626
+        - 0.154
+        - 0.858
+        - 0.455
+    - part_id: dress-front-skirt
+      slot: lower
+      observations: 黑白图中的深色长裙从腰部褶裥展开，裙身宽大、自然垂落。
+      evidence_status: UNCERTAIN
+      region:
+        kind: box
+        xyxy:
+        - 0.382
+        - 0.407
+        - 0.624
+        - 0.702
+    - part_id: dress-back-skirt
+      slot: lower
+      observations: 独立后视长裙从腰缝起褶，下摆连续。
+      evidence_status: UNCERTAIN
+      region:
+        kind: box
+        xyxy:
+        - 0.6
+        - 0.398
+        - 0.862
+        - 0.718
+    - part_id: cuff-construction
+      slot: upper
+      observations: 独立白袖口和纽扣结构，保留宽袖口及两颗扣的外观。
+      evidence_status: UNCERTAIN
+      region:
+        kind: box
+        xyxy:
+        - 0.441
+        - 0.718
+        - 0.626
+        - 0.965
+  - asset_id: maid-outfit-source-apron-structure
+    sha256: a6b815c622ff7d0b231f7187ba1d5530175867b8b3dcc4f19d99e0fb018d82b5
+    usage: garment
+    parts:
+    - part_id: apron-front
+      slot: accessories
+      observations: 白色胸兜式长围裙，腰带清楚，前裙片宽大，下摆有荷叶边。
+      evidence_status: UNCERTAIN
+      region:
+        kind: box
+        xyxy:
+        - 0.055
+        - 0.119
+        - 0.243
+        - 0.655
+    - part_id: apron-back
+      slot: accessories
+      observations: 围裙肩带在背部交叉，后腰系大蝴蝶结和两条垂尾。
+      evidence_status: UNCERTAIN
+      region:
+        kind: box
+        xyxy:
+        - 0.226
+        - 0.128
+        - 0.395
+        - 0.671
+  - asset_id: maid-outfit-source-shoulder-frill-detail
+    sha256: 84278bc249f5317a2491bce65c89280a4e2cbaf8250c575420cde1e03f76f68b
+    usage: garment
+    parts:
+    - part_id: apron-shoulder-frill
+      slot: accessories
+      observations: 窄围裙肩带外侧缝有大幅白色褶边，肩带和褶边连续，带固定扣/纽扣结构。
+      evidence_status: UNCERTAIN
+      region:
+        kind: box
+        xyxy:
+        - 0.181
+        - 0.028
+        - 0.77
+        - 0.493
+  evidence_independence: none
+  generation_record:
+    preparation_id: prep-20261004T165937Z-a1f765
+    candidate_id: detail-back-apron-42449613
+    plan_sha256: 0569d0259e9e55c13d97b5840afe961707205d9bd0126dce8a2ba26b85eac400
+    output_sha256: 3ded9dced2c4ad9d002f1acc9d82bd84996196b03c41dd53bf4cd2e1a148b381
+    attempt_id: 42449613f9cf437c88272343702718af
+    repair_number: 0
+    actual_prompt_sha256: 76a20a7255c9cfc18b631d0d4bc5955cb5c433d8cad8301ad04ca13691b9e5e8
+- asset_id: maid-outfit-detail-trims
+  path: assets/arco/variants/maid-outfit/references/detail-trims.png
+  sha256: 8bc5cb511b346a72cdc4e98045d0f27ffbf5b91009f30398608807c16972a7e8
+  asset_status: VERIFIED
+  asset_type: outfit_detail
+  variant_id: maid-outfit
+  state_ids: []
+  reference_level: detail
+  roles:
+  - outfit_detail_evidence
+  view_angle: detail
+  view_class: detail
+  source_kind: derivative
+  source_authority: user_approved
+  source_group_id: preparation-prep-20261004T165937Z-a1f765
+  can_be_generation_reference: false
+  provenance:
+    source_note: Approved preparation; observation evidence and authored design remain
+      separate.
+    superseded_by_asset_id: maid-outfit-detail-trims-r2
+  derived_from_asset_ids:
+  - casual-outfit-crossed-arms-evidence
+  - maid-outfit-front
+  - maid-outfit-source-headdress-detail
+  - maid-outfit-source-shoulder-frill-detail
+  - maid-outfit-source-neckwear-detail
+  derivation_sources:
+  - asset_id: casual-outfit-crossed-arms-evidence
+    sha256: 4eff91bea4e535e646ad406a5e8aae5e402c337cee635feb1e6339f0eaa8d974
+    usage: identity
+  - asset_id: maid-outfit-front
+    sha256: 7b7a3c14c6216c2c8a38e0cc91af29fafe0c2ad148d8d80bebe0de5516d400b2
+    usage: accepted_primary
+  - asset_id: maid-outfit-source-headdress-detail
+    sha256: c77c59b7b09e0e9fef93321d171559becb8762542a345f0e995880432283e77e
+    usage: garment
+    parts:
+    - part_id: ruffled-headband
+      slot: accessories
+      observations: 上右弧形头箍沿顶部及两侧外缘加白色荷叶边，前额和大部分头发保持露出。
+      evidence_status: UNCERTAIN
+      region:
+        kind: box
+        xyxy:
+        - 0.664
+        - 0
+        - 0.984
+        - 0.319
+  - asset_id: maid-outfit-source-shoulder-frill-detail
+    sha256: 84278bc249f5317a2491bce65c89280a4e2cbaf8250c575420cde1e03f76f68b
+    usage: garment
+    parts:
+    - part_id: apron-shoulder-frill
+      slot: accessories
+      observations: 窄围裙肩带外侧缝有大幅白色褶边，肩带和褶边连续，带固定扣/纽扣结构。
+      evidence_status: UNCERTAIN
+      region:
+        kind: box
+        xyxy:
+        - 0.181
+        - 0.028
+        - 0.77
+        - 0.493
+  - asset_id: maid-outfit-source-neckwear-detail
+    sha256: fa0611211e86ce7a42faa0bcd69533df729afe9c9afd7d9771d185c69fd0d32c
+    usage: garment
+    parts:
+    - part_id: large-neck-bow
+      slot: accessories
+      observations: 左侧白领下面是一只宽大蝴蝶结，双侧蝶翼和中央结明确。
+      evidence_status: UNCERTAIN
+      region:
+        kind: box
+        xyxy:
+        - 0.066
+        - 0.219
+        - 0.396
+        - 0.869
+  evidence_independence: none
+  generation_record:
+    preparation_id: prep-20261004T165937Z-a1f765
+    candidate_id: detail-trims-2e08c54d
+    plan_sha256: db3cd27e11a8bf3fcdc1b842b79aa84968165377eef48631e2bc1036893fb793
+    output_sha256: 8bc5cb511b346a72cdc4e98045d0f27ffbf5b91009f30398608807c16972a7e8
+    attempt_id: 2e08c54dd3494b91a18b2895a6c4d2b2
+    repair_number: 0
+    actual_prompt_sha256: aa0f9c4b3ef0296a0d569ae4d548f358ba43dabb0b349d815166cee33e555104
+- asset_id: maid-outfit-detail-hosiery-footwear
+  path: assets/arco/variants/maid-outfit/references/detail-hosiery-footwear.png
+  sha256: 5840d851b1abd00a9593d461d6c8d9aca505353e0f4e353d85d74776338020e3
+  asset_status: VERIFIED
+  asset_type: outfit_detail
+  variant_id: maid-outfit
+  state_ids: []
+  reference_level: detail
+  roles:
+  - outfit_detail_evidence
+  view_angle: detail
+  view_class: detail
+  source_kind: derivative
+  source_authority: user_approved
+  source_group_id: preparation-prep-20261004T165937Z-a1f765
+  can_be_generation_reference: true
+  provenance:
+    source_note: Approved preparation; observation evidence and authored design remain
+      separate.
+  derived_from_asset_ids:
+  - casual-outfit-crossed-arms-evidence
+  - maid-outfit-front
+  derivation_sources:
+  - asset_id: casual-outfit-crossed-arms-evidence
+    sha256: 4eff91bea4e535e646ad406a5e8aae5e402c337cee635feb1e6339f0eaa8d974
+    usage: identity
+  - asset_id: maid-outfit-front
+    sha256: 7b7a3c14c6216c2c8a38e0cc91af29fafe0c2ad148d8d80bebe0de5516d400b2
+    usage: accepted_primary
+  evidence_independence: none
+  generation_reference:
+    priority: supplemental
+    supported_roles:
+    - detail_reference
+    preferred_for: []
+    excluded_for: []
+    coverage:
+      profiles: []
+      visible_fields: []
+      view_angles:
+      - detail
+      occluded_fields: []
+    inheritance:
+      outfit_detail: inherit
+      identity: do_not_inherit
+      pose: do_not_inherit
+  generation_record:
+    preparation_id: prep-20261004T165937Z-a1f765
+    candidate_id: detail-hosiery-footwear-fc2f1220
+    plan_sha256: 04069a9096ede1e53a9c2026ace083cb8881de7c5732f90fe7b320cc07d0e504
+    output_sha256: 5840d851b1abd00a9593d461d6c8d9aca505353e0f4e353d85d74776338020e3
+    attempt_id: fc2f1220df45486a8f20151dce8212fc
+    repair_number: 1
+    actual_prompt_sha256: 306c36d97491aa11e470bd93b3554b55132b58c1eb61f5e52cbdfd2c2dbcbddd
+- asset_id: maid-outfit-front-r2
+  path: assets/arco/variants/maid-outfit/references/r2/front.png
+  sha256: 52b01c12a5e16b6464008c696b730af22a9f03694b5d1cfb8685ea05bb9546c4
+  asset_status: VERIFIED
+  asset_type: faceless_composite
+  variant_id: maid-outfit
+  state_ids: []
+  reference_level: primary
+  roles:
+  - variant_evidence
+  view_angle: front
+  view_class: front
+  source_kind: derivative
+  source_authority: user_approved
+  source_group_id: preparation-prep-20261004T165937Z-a1f765
+  can_be_generation_reference: true
+  provenance:
+    source_note: User-requested chest proportion correction; all original images and
+      independent evidence states retained.
+    calibration_id: cal-20261006T151156Z-de80be
+    correction_record: variants/maid-outfit/reference-corrections/20261006.json
+  derived_from_asset_ids:
+  - maid-outfit-front
+  - casual-outfit-open-arms-no-horns-evidence
+  derivation_sources:
+  - asset_id: maid-outfit-front
+    path: D:\learn\Arco\assets\arco\variants\maid-outfit\references\front.png
+    sha256: 7b7a3c14c6216c2c8a38e0cc91af29fafe0c2ad148d8d80bebe0de5516d400b2
+    usage: same_view_edit_target
+  - asset_id: casual-outfit-open-arms-no-horns-evidence
+    path: D:\learn\Arco\assets\arco\variants\casual-outfit\evidence\open-arms-no-horns.png
+    sha256: 06c61729cdd23ede65e7376beabe50c7f32da8276709730a750452819c367f3d
+    usage: clothed_identity_chest_proportion
+  evidence_independence: none
+  generation_reference:
+    priority: primary
+    supported_roles:
+    - outfit_reference
+    preferred_for:
+    - portrait
+    - upper_body
+    - full_body
+    excluded_for:
+    - back_view
+    coverage:
+      profiles:
+      - portrait
+      - upper_body
+      - full_body
+      visible_fields:
+      - variant.visible_headwear_accessories
+      - variant.upper_body_outfit
+      - variant.full_outfit
+      - variant.footwear
+      view_angles:
+      - front
+      occluded_fields: []
+    inheritance:
+      identity: do_not_inherit
+      hair: do_not_inherit
+      body_proportions: do_not_inherit
+      outfit: inherit
+      expression: do_not_inherit
+      pose: do_not_inherit
+      style: do_not_inherit
+      scene: do_not_inherit
+  generation_record:
+    provider: builtin_image_gen
+    purpose: published_reference_correction
+    plan_sha256: d2f91016391cc4b53b20c2afacdde6867384e8ab2091b7391b15ca0160c6777b
+    prompt_sha256: f19feda53f211531de882db90b7333b48cbf73cb4f2bceaf42bcf2f0e6de96fb
+    output_sha256: 52b01c12a5e16b6464008c696b730af22a9f03694b5d1cfb8685ea05bb9546c4
+    repair_number: 0
+- asset_id: maid-outfit-right-three-quarter-r2
+  path: assets/arco/variants/maid-outfit/references/r2/right-three-quarter.png
+  sha256: 4b61c85cdad97957ebc9dd5fd70799cda1827c1ab1280225b751c9b1aa51931d
+  asset_status: VERIFIED
+  asset_type: faceless_composite
+  variant_id: maid-outfit
+  state_ids: []
+  reference_level: secondary
+  roles:
+  - variant_evidence
+  view_angle: front_three_quarter
+  view_class: three_quarter_right
+  source_kind: derivative
+  source_authority: user_approved
+  source_group_id: preparation-prep-20261004T165937Z-a1f765
+  can_be_generation_reference: true
+  provenance:
+    source_note: User-requested chest proportion correction; all original images and
+      independent evidence states retained.
+    calibration_id: cal-20261006T151156Z-de80be
+    correction_record: variants/maid-outfit/reference-corrections/20261006.json
+  derived_from_asset_ids:
+  - maid-outfit-right-three-quarter
+  - casual-outfit-open-arms-no-horns-evidence
+  - maid-outfit-front-r2
+  derivation_sources:
+  - asset_id: maid-outfit-right-three-quarter
+    path: D:\learn\Arco\assets\arco\variants\maid-outfit\references\right-three-quarter.png
+    sha256: 83a3b5bd42fb6dc7c605e09ccf323464092013e88a5645fd69a59fd70a760315
+    usage: same_view_edit_target
+  - asset_id: casual-outfit-open-arms-no-horns-evidence
+    path: D:\learn\Arco\assets\arco\variants\casual-outfit\evidence\open-arms-no-horns.png
+    sha256: 06c61729cdd23ede65e7376beabe50c7f32da8276709730a750452819c367f3d
+    usage: clothed_identity_chest_proportion
+  - asset_id: maid-outfit-front-r2
+    path: D:/learn/Arco/output/maid-chest-correction-20261006/candidates/front-0.png
+    sha256: 52b01c12a5e16b6464008c696b730af22a9f03694b5d1cfb8685ea05bb9546c4
+    usage: accepted_corrected_primary
+  evidence_independence: none
+  generation_reference:
+    priority: secondary
+    supported_roles:
+    - outfit_reference
+    preferred_for:
+    - portrait
+    - upper_body
+    - full_body
+    excluded_for:
+    - back_view
+    coverage:
+      profiles:
+      - portrait
+      - upper_body
+      - full_body
+      visible_fields:
+      - variant.visible_headwear_accessories
+      - variant.upper_body_outfit
+      - variant.full_outfit
+      - variant.footwear
+      view_angles:
+      - front_three_quarter
+      occluded_fields: []
+    inheritance:
+      identity: do_not_inherit
+      hair: do_not_inherit
+      body_proportions: do_not_inherit
+      outfit: inherit
+      expression: do_not_inherit
+      pose: do_not_inherit
+      style: do_not_inherit
+      scene: do_not_inherit
+  generation_record:
+    provider: builtin_image_gen
+    purpose: published_reference_correction
+    plan_sha256: c716f5404980f79e1a660ec8748d13aa73810c1d725ddc14603729ccb432b299
+    prompt_sha256: d4fd6f6439e359cd4a5b1acc417931ea6fcfb9a177069ad4ce0ce4798bfbb91f
+    output_sha256: 4b61c85cdad97957ebc9dd5fd70799cda1827c1ab1280225b751c9b1aa51931d
+    repair_number: 0
+- asset_id: maid-outfit-detail-back-apron-r2
+  path: assets/arco/variants/maid-outfit/references/r2/detail-back-apron.png
+  sha256: c2b1d1f5d19a6e6486a1a2766c7725d9ebf835cad717c94c05829b592bcaab89
+  asset_status: VERIFIED
+  asset_type: outfit_detail
+  variant_id: maid-outfit
+  state_ids: []
+  reference_level: detail
+  roles:
+  - outfit_detail_evidence
+  view_angle: detail
+  view_class: detail
+  source_kind: derivative
+  source_authority: user_approved
+  source_group_id: preparation-prep-20261004T165937Z-a1f765
+  can_be_generation_reference: true
+  provenance:
+    source_note: User-requested chest proportion correction; all original images and
+      independent evidence states retained.
+    calibration_id: cal-20261006T151156Z-de80be
+    correction_record: variants/maid-outfit/reference-corrections/20261006.json
+  derived_from_asset_ids:
+  - maid-outfit-detail-back-apron
+  derivation_sources:
+  - asset_id: maid-outfit-detail-back-apron
+    path: D:\learn\Arco\assets\arco\variants\maid-outfit\references\detail-back-apron.png
+    sha256: 3ded9dced2c4ad9d002f1acc9d82bd84996196b03c41dd53bf4cd2e1a148b381
+    usage: same_view_edit_target
+  evidence_independence: none
+  generation_reference:
+    priority: supplemental
+    supported_roles:
+    - detail_reference
+    preferred_for: []
+    excluded_for: []
+    coverage:
+      profiles: []
+      visible_fields: []
+      view_angles:
+      - detail
+      occluded_fields: []
+    inheritance:
+      outfit_detail: inherit
+      identity: do_not_inherit
+      pose: do_not_inherit
+  generation_record:
+    provider: builtin_image_gen
+    purpose: published_reference_correction
+    plan_sha256: 25741349d2d6cf0cb70d5f6d4751754f4a3bb898b90b2b5bc86905ec75d6e83e
+    prompt_sha256: ebd84b9c3a47ddd220a70a5cc5949b2bb345df372a9f3af5e9dc3465cceeefa5
+    output_sha256: c2b1d1f5d19a6e6486a1a2766c7725d9ebf835cad717c94c05829b592bcaab89
+    repair_number: 2
+- asset_id: maid-outfit-detail-trims-r2
+  path: assets/arco/variants/maid-outfit/references/r2/detail-trims.png
+  sha256: df050b15ccef86537cd6264da38d62e1208ca2c4dbd579e9c33eaef2ca4d3243
+  asset_status: VERIFIED
+  asset_type: outfit_detail
+  variant_id: maid-outfit
+  state_ids: []
+  reference_level: detail
+  roles:
+  - outfit_detail_evidence
+  view_angle: detail
+  view_class: detail
+  source_kind: derivative
+  source_authority: user_approved
+  source_group_id: preparation-prep-20261004T165937Z-a1f765
+  can_be_generation_reference: true
+  provenance:
+    source_note: User-requested chest proportion correction; all original images and
+      independent evidence states retained.
+    calibration_id: cal-20261006T151156Z-de80be
+    correction_record: variants/maid-outfit/reference-corrections/20261006.json
+  derived_from_asset_ids:
+  - maid-outfit-detail-trims
+  derivation_sources:
+  - asset_id: maid-outfit-detail-trims
+    path: D:\learn\Arco\assets\arco\variants\maid-outfit\references\detail-trims.png
+    sha256: 8bc5cb511b346a72cdc4e98045d0f27ffbf5b91009f30398608807c16972a7e8
+    usage: same_view_edit_target
+  evidence_independence: none
+  generation_reference:
+    priority: supplemental
+    supported_roles:
+    - detail_reference
+    preferred_for: []
+    excluded_for: []
+    coverage:
+      profiles: []
+      visible_fields: []
+      view_angles:
+      - detail
+      occluded_fields: []
+    inheritance:
+      outfit_detail: inherit
+      identity: do_not_inherit
+      pose: do_not_inherit
+  generation_record:
+    provider: builtin_image_gen
+    purpose: published_reference_correction
+    plan_sha256: 7a83fa44269e4311a504c5d2fb4fe0bfed1ed23f962b314681260367806339f0
+    prompt_sha256: ebd84b9c3a47ddd220a70a5cc5949b2bb345df372a9f3af5e9dc3465cceeefa5
+    output_sha256: df050b15ccef86537cd6264da38d62e1208ca2c4dbd579e9c33eaef2ca4d3243
+    repair_number: 0

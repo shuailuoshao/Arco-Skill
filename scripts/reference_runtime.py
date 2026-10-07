@@ -9,6 +9,7 @@ from __future__ import annotations
 
 import hashlib
 import re
+from functools import lru_cache
 from pathlib import Path
 from typing import Any, Mapping, Sequence
 
@@ -180,16 +181,69 @@ def _sha256(path: Path) -> str:
     return digest.hexdigest()
 
 
-def generation_allowed(asset: Mapping[str, Any]) -> bool:
-    """Missing permission is a deny; excluded calibration layers remain denied."""
-    roles = set(asset.get("roles") or [])
-    kind = asset.get("asset_type")
-    if "expression_evidence" in roles or kind in {"body_base", "faceless_composite"}:
-        return False
+@lru_cache(maxsize=32)
+def _body_base_fingerprints(registry_path: str, modified_ns: int, size: int):
+    """Cache the published evidence inventory, invalidated by registry changes."""
+    import yaml
+
+    registry = Path(registry_path)
+    document = yaml.safe_load(registry.read_text(encoding="utf-8"))
+    assets = document.get("assets") if isinstance(document, Mapping) else None
+    if not isinstance(assets, list):
+        _error("REFERENCE_POLICY_INVALID", "Published asset inventory is unavailable.")
+    bodies = [asset for asset in assets if asset.get("asset_type") == "body_base"]
+    root = registry.parent.parent
+    return (frozenset(asset["asset_id"] for asset in bodies),
+            frozenset(asset["sha256"].lower() for asset in bodies),
+            frozenset(str((root / asset["path"]).resolve()).casefold() for asset in bodies))
+
+
+def validate_generation_reference_input(reference: Mapping[str, Any], *, root: Path | None = None) -> None:
+    """Exclude Body Base evidence, including renamed copies and old contracts."""
+    if reference.get("asset_type") == "body_base":
+        _error("BODY_BASE_NOT_ALLOWED", "Use approved clothed identity references.")
+    roots = {Path(__file__).resolve().parents[1]}
+    if root is not None and (root / "character/assets.yaml").is_file():
+        roots.add(root.resolve())
+    ids, hashes, paths = set(), set(), set()
+    for published_root in roots:
+        registry = published_root / "character/assets.yaml"
+        stat = registry.stat()
+        blocked_ids, blocked_hashes, blocked_paths = _body_base_fingerprints(
+            str(registry), stat.st_mtime_ns, stat.st_size)
+        ids.update(blocked_ids)
+        hashes.update(blocked_hashes)
+        paths.update(blocked_paths)
+    if (reference.get("asset_id") in ids or reference.get("reference_id") in ids
+            or str(reference.get("sha256", "")).lower() in hashes):
+        _error("BODY_BASE_NOT_ALLOWED", "Body Base evidence is local-only.")
+    raw_path = reference.get("path")
+    if isinstance(raw_path, (str, Path)) and raw_path:
+        path = Path(raw_path).resolve()
+        if str(path).casefold() in paths or (path.is_file() and _sha256(path) in hashes):
+            _error("BODY_BASE_NOT_ALLOWED", "Body Base images and identical copies cannot be sent.")
+
+
+def generation_permission_valid(asset: Mapping[str, Any]) -> bool:
+    """Validate recorded permission structure independently of upload policy."""
     if asset.get("can_be_generation_reference") is not True:
         return False
     metadata = asset.get("generation_reference")
-    return isinstance(metadata, Mapping) and bool(metadata.get("supported_roles"))
+    if not isinstance(metadata, Mapping) or not metadata.get("supported_roles"):
+        return False
+    supported = set(metadata["supported_roles"])
+    if "expression_evidence" in (asset.get("roles") or []) and supported != {"face_reference"}:
+        return False
+    if asset.get("asset_type") == "body_base" and supported != {"identity_reference"}:
+        return False
+    if asset.get("asset_type") == "faceless_composite" and not supported <= {"identity_reference", "outfit_reference", "state_reference"}:
+        return False
+    return True
+
+
+def generation_allowed(asset: Mapping[str, Any]) -> bool:
+    """Published permission plus the current clothed-only upload policy."""
+    return asset.get("asset_type") != "body_base" and generation_permission_valid(asset)
 
 
 def _coverage_fields(value: Mapping[str, Any]) -> set[str]:
@@ -363,6 +417,18 @@ def compute_request_reference_readiness(
     for ref in arco:
         coverage = ref.get("coverage") or {}
         visible = set(coverage.get("visible_fields") or []) - set(coverage.get("occluded_fields") or [])
+        if exposure_profile == "back_view":
+            # A rear outfit cannot supply rear identity, and a front image
+            # cannot acquire rear coverage by merely listing those fields.
+            if not set(coverage.get("view_angles") or []) & {"back", "back_three_quarter"}:
+                continue
+            duties = set(ref.get("duties") or [ref.get("role")])
+            allowed = set()
+            if "identity_reference" in duties:
+                allowed.update({"identity", "hair.back", "body.back"})
+            if "outfit_reference" in duties:
+                allowed.add("variant.back_outfit")
+            visible &= allowed
         covered.update(visible)
         has_back_view = has_back_view or bool(set(coverage.get("view_angles") or []) & {"back", "back_three_quarter"})
         basis.append(str(ref.get("reference_id") or ref.get("asset_id") or ref.get("request_reference_id") or "unknown"))
@@ -424,6 +490,8 @@ def _style_axes(reference: Mapping[str, Any], duties: Sequence[str]) -> list[str
 
 
 def validate_reference_contract(reference: Mapping[str, Any]) -> None:
+    if reference.get("asset_type") == "body_base":
+        _error("BODY_BASE_NOT_ALLOWED", "Use approved clothed identity references.")
     scope = reference.get("source_scope")
     if scope not in SCOPES:
         _error("INVALID_REFERENCE_SCOPE", str(scope))
@@ -433,11 +501,19 @@ def validate_reference_contract(reference: Mapping[str, Any]) -> None:
     duties = _reference_duties(reference)
     inherit = set(reference.get("inherit") or [])
     excluded = set(reference.get("do_not_inherit") or [])
+    output_role = reference.get("generated_output_role")
+    if output_role is not None:
+        if output_role not in {"primary_edit_source", "composition_anchor"}:
+            _error("INVALID_GENERATED_OUTPUT_ROLE", str(output_role))
+        if scope != "request_scoped_arco" or role != "composition_reference" or reference.get("authority") != "previous_output_continuity":
+            _error("GENERATED_OUTPUT_AUTHORITY", "Previous output must be continuity-only.")
+        if inherit & WHO_FIELDS or not WHO_FIELDS <= excluded:
+            _error("GENERATED_OUTPUT_AUTHORITY", "Previous output cannot own WHO or Variant.")
     if inherit & excluded:
         _error("REFERENCE_INHERIT_CONFLICT", f"Conflicting fields: {sorted(inherit & excluded)}")
     raw_path = reference.get("path")
-    if raw_path and "calibration/staging" in str(raw_path).replace("\\", "/").lower():
-        _error("UNPUBLISHED_ASSET", "Staging paths cannot be generation inputs.")
+    if raw_path and any(area in str(raw_path).replace("\\", "/").lower() for area in ("calibration/staging", "calibration/preparations")):
+        _error("UNPUBLISHED_ASSET", "Staging and preparation paths cannot be ordinary generation inputs.")
     if scope == "managed_arco" and not reference.get("asset_id"):
         _error("MISSING_ASSET_ID", "Managed references require asset_id.")
     if scope == "request_scoped_arco":
@@ -875,6 +951,7 @@ def resolve_style_context(
 
 
 def _managed_contract(asset: Mapping[str, Any], role: str, root: Path) -> dict[str, Any]:
+    validate_generation_reference_input(dict(asset, path=str(root / asset.get("path", ""))), root=root)
     if not generation_allowed(asset):
         _error("ASSET_NOT_ALLOWED_FOR_GENERATION", str(asset.get("asset_id")))
     if asset.get("asset_status") != "VERIFIED":
@@ -888,7 +965,7 @@ def _managed_contract(asset: Mapping[str, Any], role: str, root: Path) -> dict[s
         absolute.relative_to(root.resolve())
     except ValueError:
         _error("UNPUBLISHED_ASSET", "Managed asset path escapes the published root.")
-    if "calibration/staging" in absolute.as_posix().lower() or not absolute.is_file():
+    if any(area in absolute.as_posix().lower() for area in ("calibration/staging", "calibration/preparations")) or not absolute.is_file():
         _error("UNPUBLISHED_ASSET", str(relative))
     if _sha256(absolute) != str(asset.get("sha256", "")).lower():
         _error("ASSET_HASH_MISMATCH", str(asset.get("asset_id")))
@@ -904,6 +981,10 @@ def _managed_contract(asset: Mapping[str, Any], role: str, root: Path) -> dict[s
         "inherit": inherit,
         "do_not_inherit": do_not_inherit,
         "coverage": asset.get("generation_reference", {}).get("coverage", {}),
+        "asset_type": asset.get("asset_type"),
+        "sha256": asset.get("sha256"),
+        "can_be_generation_reference": True,
+        "supported_roles": list(asset["generation_reference"].get("supported_roles", [])),
     }
     if asset.get("variant_id") is not None:
         contract["variant_id"] = str(asset["variant_id"])
@@ -977,6 +1058,7 @@ def select_references(
     selected.extend(dict(ref) for ref in request_scoped_references)
     selected.extend(dict(ref) for ref in external_references)
     for ref in selected:
+        validate_generation_reference_input(ref, root=root)
         validate_reference_contract(ref)
     selected.sort(key=lambda ref: (
         ROLE_ORDER[str(ref["role"])],
@@ -984,7 +1066,29 @@ def select_references(
         str(ref.get("reference_id", "")),
     ))
     generation = config.get("generation", config)
-    local_count = sum(ref["source_scope"] in {"managed_arco", "request_scoped_arco"} for ref in selected)
+    # Multiple contracts for one physical image share one transport input.
+    unique: dict[str, dict[str, Any]] = {}
+    for ref in selected:
+        key = str(Path(ref["path"]).resolve()).casefold() if ref.get("path") else str(ref["reference_id"])
+        if key not in unique:
+            unique[key] = dict(ref)
+            continue
+        kept = unique[key]
+        if kept["source_scope"] != ref["source_scope"] or kept.get("asset_id") != ref.get("asset_id"):
+            _error("REFERENCE_DUPLICATE_CONFLICT", "One image cannot have conflicting source authorities.")
+        inherit = set(kept.get("inherit", [])) | set(ref.get("inherit", []))
+        excluded = set(kept.get("do_not_inherit", [])) | set(ref.get("do_not_inherit", []))
+        if inherit & excluded:
+            _error("REFERENCE_INHERIT_CONFLICT", "Duplicated image contracts disagree on inheritance.")
+        kept["duties"] = sorted(set(_reference_duties(kept)) | set(_reference_duties(ref)), key=ROLE_ORDER.get)
+        kept["inherit"] = sorted(inherit)
+        kept["do_not_inherit"] = sorted(excluded)
+        coverage = dict(kept.get("coverage") or {})
+        for field in ("profiles", "visible_fields", "view_angles", "occluded_fields"):
+            coverage[field] = sorted(set(coverage.get(field, [])) | set((ref.get("coverage") or {}).get(field, [])))
+        kept["coverage"] = coverage
+    selected = list(unique.values())
+    local_count = sum(ref["source_scope"] in {"managed_arco", "request_scoped_arco"} and not ref.get("generated_output_role") for ref in selected)
     external_count = sum(ref["source_scope"] == "external_how" for ref in selected)
     if local_count > int(generation["max_local_arco_references"]) or external_count > int(generation["max_external_references"]) or len(selected) > int(generation["max_total_image_inputs"]):
         _error("REFERENCE_LIMIT_EXCEEDED", "Selected references exceed runtime limits.")
@@ -1514,6 +1618,8 @@ def compile_prompt(
     allow_uncertain_working: bool = False,
     style_context: Mapping[str, Any] | None = None,
     rendering_hygiene_policy: Mapping[str, Any] | None = None,
+    revision_stability_guard: Any = None,
+    composition_readability_plan: Any = None,
 ) -> str:
     """Compile Identity facts, resolved Style, reference duties, and the scene.
 
@@ -1557,16 +1663,32 @@ def compile_prompt(
             )
 
     reference_text = compile_reference_instructions(references)
+    stability_text = ""
+    if revision_stability_guard is not None:
+        from revision_stability import compile_revision_stability
+        stability_text = compile_revision_stability(revision_stability_guard)
+    readability_text = ""
+    if composition_readability_plan is not None:
+        from composition_readability import compile_readability
+        readability_text = compile_readability(composition_readability_plan)
 
     if style_context is None:
         # Keep the legacy no-Style call byte-for-byte stable.
         pieces = identity_parts + ([reference_text] if reference_text else []) + [base_prompt.strip()]
+        if readability_text:
+            pieces.append(readability_text)
+        if stability_text:
+            pieces.append(stability_text)
         if constraints:
             pieces.append(" ".join(constraints))
         prompt = " ".join(piece for piece in pieces if piece).strip()
     else:
         pieces = identity_parts + ([style_text] if style_text else [])
         pieces += ([reference_text] if reference_text else []) + [base_prompt.strip()]
+        if readability_text:
+            pieces.append(readability_text)
+        if stability_text:
+            pieces.append(stability_text)
         if rendering_hygiene_text:
             pieces.append(rendering_hygiene_text)
         if constraints:
@@ -1618,6 +1740,8 @@ def build_invocation_plan(
     for ref in selected_references:
         validate_reference_contract(ref)
     paths = [ref.get("path") for ref in selected_references]
+    if all(isinstance(path, str) and path for path in paths) and len({str(Path(path).resolve()).casefold() for path in paths}) != len(paths):
+        _error("REFERENCE_DUPLICATE_CONFLICT", "Deduplicate physical images before building an invocation.")
     plan = {"provider": "builtin_image_gen", "capability": "reference_conditioned_image_generation", "mode": mode, "prompt": prompt, "selected_reference_ids": [str(ref.get("reference_id")) for ref in selected_references]}
     if all(isinstance(path, str) and path for path in paths):
         if num_last_images_to_include is not None:
@@ -1631,7 +1755,7 @@ def build_invocation_plan(
 
 
 def build_builtin_imagegen_args(invocation_plan: Mapping[str, Any]) -> dict[str, Any]:
-    """Pure serialization boundary for the documented built-in tool schema."""
+    """Serialize the built-in tool schema after excluding local-only evidence."""
     if invocation_plan.get("provider") != "builtin_image_gen":
         _error("INVALID_PROVIDER", str(invocation_plan.get("provider")))
     prompt = invocation_plan.get("prompt")
@@ -1645,6 +1769,8 @@ def build_builtin_imagegen_args(invocation_plan: Mapping[str, Any]) -> dict[str,
     if paths is not None and recent is not None:
         _error("IMAGE_INPUT_BUILD_FAILED", "Built-in image transports are mutually exclusive.")
     if isinstance(paths, list) and paths and all(isinstance(path, str) and path for path in paths):
+        for path in paths:
+            validate_generation_reference_input({"path": path})
         result["referenced_image_paths"] = list(paths)
     elif isinstance(recent, int) and recent > 0:
         result["num_last_images_to_include"] = recent

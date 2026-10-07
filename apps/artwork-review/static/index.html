@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>Arco · 图片审阅</title>
+  <link rel="stylesheet" href="/style.css">
+  <script src="/app.js" defer></script>
+</head>
+<body>
+  <header class="app-header">
+    <a class="brand" href="#quick" aria-label="Arco 图片审阅首页"><span class="brand-mark">A<span>·</span></span><span>ARCO<small>图片审阅工作室</small></span></a>
+    <nav aria-label="主要视图"><button data-view="quick" class="nav-button active">快速筛选</button><button data-view="gallery" class="nav-button">作品图库</button><button data-view="workbench" class="nav-button">审阅工作台</button><button data-view="analysis" class="nav-button">高分参考分析</button></nav>
+    <div class="header-actions"><span class="local-badge"><span></span> 本机保存</span><button id="refresh" class="button subtle">刷新归档</button><details class="export-menu"><summary class="button">导出与备份 <span aria-hidden="true">⌄</span></summary><div class="menu-content"><strong>后续修改清单</strong><button data-export="modifications:md">导出 Markdown</button><button data-export="modifications:json">导出 JSON</button><strong>参考分析资料</strong><button data-export="analysis:md">导出 Markdown</button><button data-export="analysis:json">导出 JSON</button><strong>人评备份</strong><button data-export="backup:json">备份全部人评 JSON</button><button id="restore">从 JSON 恢复人评…</button></div></details></div>
+  </header>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="sidebar-heading">归档范围 <button id="reset-filters" class="text-button">重置</button></div>
+      <label>查找作品<input id="search" type="search" placeholder="主题或云盘编号"></label>
+      <div class="scope-toggle"><button id="recent" class="selected">近期归档</button><button id="all-dates">全部归档</button></div>
+      <label>归档起始日期<input id="start" type="date" value="2026-10-03"></label><label>归档结束日期<input id="end" type="date"></label>
+      <p class="hint">以归档时间筛选，修订稿可能沿用旧批次。</p>
+      <div class="divider"></div>
+      <label>服装<select id="variant"><option value="">全部服装</option></select></label>
+      <label>归档状态<select id="status"><option value="">全部状态</option></select></label>
+      <label>人工审阅<select id="review-state"><option value="">全部人评</option><option value="pending">待评</option><option value="reviewed">已评</option><option value="deferred">暂缓</option></select></label>
+      <label>总体满意度<select id="score"><option value="">全部分数</option><option value="unscored">未填总分</option><option value="5">5 · 非常满意</option><option value="4">4 · 满意</option><option value="3">3 · 可用但需改</option><option value="2">2 · 较差</option><option value="1">1 · 很差</option></select></label>
+      <label>版本展示<select id="versions"><option value="latest">最新非失败版优先</option><option value="all">展开全部版本</option></select></label>
+      <div class="progress-panel"><span>当前日期范围的审阅</span><strong id="progress-text">正在读取…</strong><progress id="progress" max="1" value="0"></progress><small id="progress-meta"></small></div>
+      <p class="sidebar-foot">评分仅由你决定。<br>机器检查状态与人评分别保存。<br><span id="refresh-time"></span><br><button id="stop-service" class="text-button">保存并停止本机服务</button></p>
+    </aside>
+    <main id="main" tabindex="-1"><div class="loading">正在读取作品归档…</div></main>
+  </div>
+  <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+  <dialog id="zoom-dialog"><div class="zoom-toolbar"><strong id="zoom-title">原图</strong><label>缩放 <input id="zoom-range" type="range" min="25" max="300" step="25" value="100"><span id="zoom-value">100%</span></label><button id="zoom-close" class="button">关闭</button></div><div class="zoom-viewport"><img id="zoom-image" alt="原图预览"></div></dialog>
+  <dialog id="compare-dialog"><div class="zoom-toolbar"><strong>版本对比</strong><span>点击任一图片可放大</span><button id="compare-close" class="button">关闭</button></div><div id="compare-body" class="compare-body"></div></dialog>
+  <dialog id="restore-dialog"><form method="dialog"><h2>恢复人评备份</h2><p id="restore-summary"></p><p class="hint">未知版本或哈希已变化的条目会跳过。请选择已有记录发生冲突时的处理方式。</p><div class="dialog-actions"><button value="cancel" class="button">取消</button><button value="preserve" class="button">保留本机已有记录</button><button value="overwrite" class="button primary">以备份覆盖冲突记录</button></div></form></dialog>
+  <input id="restore-file" type="file" accept=".json,application/json" hidden>
+  <noscript>请启用浏览器 JavaScript 来使用本机审阅软件。</noscript>
+</body>
+</html>

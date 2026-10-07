@@ -36,7 +36,7 @@ import yaml
 
 SCRIPT_DIR = Path(__file__).resolve().parent
 ROOT = SCRIPT_DIR.parent
-EVALUATION_DIR = ROOT / "evaluation" / "style-regression"
+EVALUATION_DIR = ROOT / "archive/实验/evaluation" / "style-regression"
 CASES_PATH = EVALUATION_DIR / "cases.yaml"
 MANIFEST_PATH = EVALUATION_DIR / "manifest.jsonl"
 ENVIRONMENT_PATH = EVALUATION_DIR / "environment.json"
@@ -61,9 +61,9 @@ HOST_SMOKE_MTIME_SKEW_NS = 2_000_000_000
 LEGACY_CODEX_TASK_SCHEMA_VERSION = 1
 CODEX_TASK_SCHEMA_VERSION = 2
 CODEX_ENVELOPE_SCHEMA_VERSION = 1
-CODEX_SMOKE_TASK_PATH = "evaluation/style-regression/host-smoke/codex-task.json"
-CODEX_SMOKE_REPORT_PATH = "evaluation/style-regression/host-smoke/result.json"
-CODEX_PILOT_TASK_DIR = "evaluation/style-regression/pilot/runs/batch-4b3t-r2/tasks"
+CODEX_SMOKE_TASK_PATH = "archive/实验/evaluation/style-regression/host-smoke/codex-task.json"
+CODEX_SMOKE_REPORT_PATH = "archive/实验/evaluation/style-regression/host-smoke/result.json"
+CODEX_PILOT_TASK_DIR = "archive/实验/evaluation/style-regression/pilot/runs/batch-4b3t-r2/tasks"
 R_R2_PARENT_FINAL_PREFLIGHT_ENVIRONMENT_PATH = "batch-4b3t-final-preflight-r2.json"
 R_PARENT_FINAL_PREFLIGHT_ENVIRONMENT_PATH = "batch-4b3t-formal-continuation-r3.json"
 R_FINAL_PREFLIGHT_ENVIRONMENT_PATH = "batch-4b3t-formal-continuation-r4.json"
@@ -75,18 +75,18 @@ R_PROTOCOL_REVISION_R9_CAPTURE_PATH = "batch-4b3t-formal-continuation-r9.json"
 R_FORMAL_CONTINUATION_R10_CAPTURE_PATH = "batch-4b3t-formal-continuation-r10.json"
 R_FORMAL_CONTINUATION_R14_CAPTURE_PATH = "batch-4b3t-formal-continuation-r14.json"
 R_PROTOCOL_REVISION_PATHS = {
-    "case-04:B:r2": "evaluation/style-regression/protocol-revisions/r6/protocol.json",
-    "case-04:C:r2": "evaluation/style-regression/protocol-revisions/r7/protocol.json",
-    "case-04:A:r3": "evaluation/style-regression/protocol-revisions/r11/protocol.json",
-    "case-04:B:r3": "evaluation/style-regression/protocol-revisions/r12/protocol.json",
-    "case-04:C:r3": "evaluation/style-regression/protocol-revisions/r13/protocol.json",
+    "case-04:B:r2": "archive/实验/evaluation/style-regression/protocol-revisions/r6/protocol.json",
+    "case-04:C:r2": "archive/实验/evaluation/style-regression/protocol-revisions/r7/protocol.json",
+    "case-04:A:r3": "archive/实验/evaluation/style-regression/protocol-revisions/r11/protocol.json",
+    "case-04:B:r3": "archive/实验/evaluation/style-regression/protocol-revisions/r12/protocol.json",
+    "case-04:C:r3": "archive/实验/evaluation/style-regression/protocol-revisions/r13/protocol.json",
 }
 R_COMPLETION_REPORT_PATH = "batch-4b.3t-r2-completion.md"
 R_PREFLIGHT_JSON_PATH = "preflight-report-batch-4b3t-r4.json"
 R_PREFLIGHT_MARKDOWN_PATH = "preflight-report-batch-4b3t-r4.md"
 R_PREFLIGHT_LIVE_JSON_PATH = "preflight-report-batch-4b3t-live-r4.json"
 R_PREFLIGHT_LIVE_MARKDOWN_PATH = "preflight-report-batch-4b3t-live-r4.md"
-FORMAL_TASK_DIR = "evaluation/style-regression/formal/tasks"
+FORMAL_TASK_DIR = "archive/实验/evaluation/style-regression/formal/tasks"
 TECHNICAL_FAILURE_KINDS = {
     "provider_tool_failure",
     "no_output",
@@ -421,6 +421,8 @@ def load_codex_task(
     Schema 1 is readable for audit and migration only. Dispatch, receipt, and
     acceptance paths request the version 2 UTF-8 transport fields explicitly.
     """
+    from archive_paths import relocate
+    path = relocate(path, root=root)
     try:
         task = json.loads(path.read_text(encoding="utf-8"))
     except (OSError, json.JSONDecodeError) as exc:
@@ -606,15 +608,18 @@ def dispatch_codex_task(
 
 
 def _verify_task_reference_files(task: Mapping[str, Any]) -> list[dict[str, str]]:
+    from archive_paths import relocate
     references = _task_references_ordered(task)
     for reference in references:
-        path = Path(reference["path"]).expanduser().resolve(strict=False)
+        path = relocate(Path(reference["path"]).expanduser().resolve(strict=False))
         if not path.is_file() or sha256_file(path) != reference["sha256"]:
             raise ExperimentError(f"Codex task ordered reference hash mismatch: {reference['reference_id']}")
     return references
 
 
 def _codex_execution_receipt_path(task_path: Path, *, root: Path = ROOT) -> Path:
+    from archive_paths import relocate
+    task_path = relocate(task_path, root=root)
     if not task_path.is_absolute():
         task_path = root / task_path
     if task_path.parent.name == "tasks":
@@ -647,7 +652,8 @@ def write_codex_execution_receipt(
     task = load_codex_task(task_path, root=root, require_utf8_schema=True)
     sent_digest = verify_codex_task_prompt(task, sent_prompt)
     references = _verify_task_reference_files(task)
-    source_path = Path(generated_path).expanduser().resolve(strict=False)
+    from archive_paths import relocate
+    source_path = relocate(Path(generated_path).expanduser().resolve(strict=False), root=root)
     if not source_path.is_file() or source_path.stat().st_size == 0:
         raise ExperimentError("Codex receipt requires a non-empty generated output file.")
     with source_path.open("rb") as handle:
@@ -806,6 +812,8 @@ def accept_codex_task_output(
 
 
 def sha256_file(path: Path) -> str:
+    from archive_paths import relocate
+    path = relocate(path)
     digest = hashlib.sha256()
     with path.open("rb") as handle:
         for block in iter(lambda: handle.read(1024 * 1024), b""):
@@ -901,7 +909,8 @@ def _repo_path(value: str | Path, *, root: Path = ROOT) -> Path:
     candidate = Path(value)
     if not candidate.is_absolute():
         candidate = root / candidate
-    resolved = candidate.resolve(strict=False)
+    from archive_paths import relocate
+    resolved = relocate(candidate, root=root).resolve(strict=False)
     try:
         resolved.relative_to(root.resolve())
     except ValueError as exc:
@@ -914,9 +923,11 @@ def _evaluation_path(value: str | Path, *, root: Path = ROOT) -> Path:
     if candidate.is_absolute():
         resolved = candidate.resolve(strict=False)
     else:
-        resolved = (root / "evaluation" / "style-regression" / candidate).resolve(strict=False)
+        resolved = (root / "archive/实验/evaluation" / "style-regression" / candidate).resolve(strict=False)
+    from archive_paths import relocate
+    resolved = relocate(resolved, root=root)
     try:
-        resolved.relative_to((root / "evaluation" / "style-regression").resolve())
+        resolved.relative_to((root / "archive/实验/evaluation" / "style-regression").resolve())
     except ValueError as exc:
         raise ExperimentError(f"Experiment path must stay inside evaluation/style-regression: {value}") from exc
     return resolved
@@ -1124,7 +1135,7 @@ def _case_by_id(cases_document: Mapping[str, Any]) -> dict[str, Mapping[str, Any
 
 
 def _control_runtime_metadata(root: Path = ROOT) -> dict[str, Any]:
-    metadata_path = root / "evaluation" / "style-regression" / "control-runtime" / "corrected-legacy.json"
+    metadata_path = root / "archive/实验/evaluation" / "style-regression" / "control-runtime" / "corrected-legacy.json"
     if not metadata_path.is_file():
         raise ExperimentError("Corrected Legacy control runtime metadata is missing.")
     metadata = _load_json(metadata_path)
@@ -1471,15 +1482,15 @@ def _write_yaml_atomic(path: Path, value: Mapping[str, Any]) -> None:
 
 
 def _selection_path(case_id: str, *, root: Path = ROOT) -> Path:
-    return root / "evaluation" / "style-regression" / "reference-selection" / f"{case_id}.json"
+    return root / "archive/实验/evaluation" / "style-regression" / "reference-selection" / f"{case_id}.json"
 
 
 def _context_dir(case_id: str, *, root: Path = ROOT) -> Path:
-    return root / "evaluation" / "style-regression" / "style-context" / case_id
+    return root / "archive/实验/evaluation" / "style-regression" / "style-context" / case_id
 
 
 def _style_regression_dir(root: Path = ROOT) -> Path:
-    return root / "evaluation" / "style-regression"
+    return root / "archive/实验/evaluation" / "style-regression"
 
 
 def _input_freeze_path(root: Path = ROOT) -> Path:
@@ -2050,7 +2061,7 @@ def _selection_parity_errors(snapshots: Mapping[str, Mapping[str, Any]]) -> list
 def _load_pre_selector_evidence(*, root: Path = ROOT) -> dict[str, Any]:
     evidence_path = (
         root
-        / "evaluation"
+        / "archive/实验/evaluation"
         / "style-regression"
         / "reference-selection"
         / "pre-selector-fix-evidence.json"
@@ -2114,7 +2125,7 @@ def _populate_case_hashes(
         case_id = case.get("case_id", "unknown")
         try:
             image_path = _evaluation_path(external.get("path", ""), root=root)
-            private_root = (root / "evaluation" / "style-regression" / "private-assets").resolve()
+            private_root = (root / "archive/实验/evaluation" / "style-regression" / "private-assets").resolve()
             image_path.relative_to(private_root)
         except (ExperimentError, ValueError) as exc:
             errors.append(f"{case_id} Style Reference path is invalid: {exc}")
@@ -2133,7 +2144,7 @@ def _populate_case_hashes(
             continue
         try:
             brief_path = _evaluation_path(brief_relative, root=root)
-            brief_path.relative_to((root / "evaluation" / "style-regression" / "style-context" / case_id).resolve())
+            brief_path.relative_to((root / "archive/实验/evaluation" / "style-regression" / "style-context" / case_id).resolve())
         except (ExperimentError, ValueError) as exc:
             errors.append(f"{case_id} Style Brief must be stored under its style-context directory: {exc}")
             continue
@@ -2204,7 +2215,7 @@ def freeze_experiment_inputs(root: Path = ROOT) -> dict[str, Any]:
     input_freeze_path = _input_freeze_path(root)
     if input_freeze_path.exists():
         raise ExperimentError("Experiment inputs are already frozen; create a new revision to replace them.")
-    cases_path = root / "evaluation" / "style-regression" / "cases.yaml"
+    cases_path = root / "archive/实验/evaluation" / "style-regression" / "cases.yaml"
     cases_document = _load_yaml(cases_path)
     if not isinstance(cases_document, dict):
         raise ExperimentError("cases.yaml must contain a mapping.")
@@ -2229,7 +2240,7 @@ def freeze_experiment_inputs(root: Path = ROOT) -> dict[str, Any]:
     selectors: dict[str, Any] = {}
     diff_cases: list[dict[str, Any]] = []
     frozen_files: dict[str, str] = {}
-    pre_selector_path = root / "evaluation" / "style-regression" / "reference-selection" / "pre-selector-fix-evidence.json"
+    pre_selector_path = root / "archive/实验/evaluation" / "style-regression" / "reference-selection" / "pre-selector-fix-evidence.json"
     frozen_files[_relative_path(pre_selector_path, root=root)] = sha256_file(pre_selector_path)
     reference_manifest: dict[str, Any] = {"schema_version": 1, "references": []}
     for case in cases_document["cases"]:
@@ -2290,7 +2301,7 @@ def freeze_experiment_inputs(root: Path = ROOT) -> dict[str, Any]:
         for group in GROUPS:
             prompt_path = context_dir / f"prompt-{group}.txt"
             frozen_files[_relative_path(prompt_path, root=root)] = sha256_file(prompt_path)
-        diff_dir = root / "evaluation" / "style-regression" / "prompt-diffs"
+        diff_dir = root / "archive/实验/evaluation" / "style-regression" / "prompt-diffs"
         diff_dir.mkdir(parents=True, exist_ok=True)
         for left, right in (("A", "B"), ("B", "C")):
             diff_path = diff_dir / f"{case_id}-{left}-vs-{right}.diff"
@@ -2304,7 +2315,7 @@ def freeze_experiment_inputs(root: Path = ROOT) -> dict[str, Any]:
             _write_frozen_text(diff_path, "\n".join(diff_lines))
             frozen_files[_relative_path(diff_path, root=root)] = sha256_file(diff_path)
 
-    reference_manifest_path = root / "evaluation" / "style-regression" / "reference-selection" / "style-reference-manifest.json"
+    reference_manifest_path = root / "archive/实验/evaluation" / "style-regression" / "reference-selection" / "style-reference-manifest.json"
     _write_frozen_json(reference_manifest_path, reference_manifest)
     frozen_files[_relative_path(reference_manifest_path, root=root)] = sha256_file(reference_manifest_path)
 
@@ -2314,10 +2325,10 @@ def freeze_experiment_inputs(root: Path = ROOT) -> dict[str, Any]:
         "source_record": _load_pre_selector_evidence(root=root)["source_record"],
         "cases": diff_cases,
     }
-    diff_path = root / "evaluation" / "style-regression" / "reference-selection" / "selector-diff.json"
+    diff_path = root / "archive/实验/evaluation" / "style-regression" / "reference-selection" / "selector-diff.json"
     _write_frozen_json(diff_path, diff_document)
     frozen_files[_relative_path(diff_path, root=root)] = sha256_file(diff_path)
-    base_scene = root / "evaluation" / "style-regression" / "prompts" / "base-scene.txt"
+    base_scene = root / "archive/实验/evaluation" / "style-regression" / "prompts" / "base-scene.txt"
     _write_frozen_text(base_scene, compose_scene_prompt(cases_document["cases"][0]))
     frozen_files[_relative_path(base_scene, root=root)] = sha256_file(base_scene)
     freeze_document = {
@@ -2330,7 +2341,7 @@ def freeze_experiment_inputs(root: Path = ROOT) -> dict[str, Any]:
         "runner_sha256": sha256_file(root / "scripts" / "run_style_regression.py"),
         "corrected_legacy": corrected_legacy,
         "corrected_legacy_metadata_sha256": sha256_file(
-            root / "evaluation" / "style-regression" / "control-runtime" / "corrected-legacy.json"
+            root / "archive/实验/evaluation" / "style-regression" / "control-runtime" / "corrected-legacy.json"
         ),
         "style_policy_sha256": sha256_file(root / "runtime" / "style-policy.yaml"),
         "cases_sha256": sha256_file(cases_path),
@@ -2401,7 +2412,7 @@ def _historical_group_h_summary(
         output_value = row.get("output_path")
         try:
             output_path = _repo_path(str(output_value), root=root)
-            output_path.relative_to((root / "evaluation" / "style-regression" / "private-assets").resolve())
+            output_path.relative_to((root / "archive/实验/evaluation" / "style-regression" / "private-assets").resolve())
             if not output_path.is_file() or row.get("output_sha256") != sha256_file(output_path):
                 raise ExperimentError("output is missing or its hash does not match")
         except (ExperimentError, OSError, ValueError) as exc:
@@ -2445,7 +2456,7 @@ def _validate_frozen_inputs(
         return [str(exc)]
     if freeze.get("schema_version") != 1:
         errors.append("inputs-freeze.json schema_version must be 1.")
-    cases_path = root / "evaluation" / "style-regression" / "cases.yaml"
+    cases_path = root / "archive/实验/evaluation" / "style-regression" / "cases.yaml"
     if not cases_path.is_file() or freeze.get("cases_sha256") != sha256_file(cases_path):
         errors.append("cases.yaml changed after inputs were frozen.")
     expected_runtime_hash = freeze.get("runtime_sha256")
@@ -2455,7 +2466,7 @@ def _validate_frozen_inputs(
     adapter_path = root / "scripts" / "arco_real_adapter.py"
     if not adapter_path.is_file() or freeze.get("adapter_sha256") != sha256_file(adapter_path):
         errors.append("ArcoRealAdapter changed after inputs were frozen.")
-    control_metadata_path = root / "evaluation" / "style-regression" / "control-runtime" / "corrected-legacy.json"
+    control_metadata_path = root / "archive/实验/evaluation" / "style-regression" / "control-runtime" / "corrected-legacy.json"
     if (
         not control_metadata_path.is_file()
         or freeze.get("corrected_legacy_metadata_sha256") != sha256_file(control_metadata_path)
@@ -2487,9 +2498,9 @@ def _validate_frozen_inputs(
         errors.append("inputs-freeze.json selector_snapshots must be a mapping.")
         selectors = {}
     required_frozen_paths = {
-        "evaluation/style-regression/prompts/base-scene.txt",
-        "evaluation/style-regression/reference-selection/pre-selector-fix-evidence.json",
-        "evaluation/style-regression/reference-selection/style-reference-manifest.json",
+        "archive/实验/evaluation/style-regression/prompts/base-scene.txt",
+        "archive/实验/evaluation/style-regression/reference-selection/pre-selector-fix-evidence.json",
+        "archive/实验/evaluation/style-regression/reference-selection/style-reference-manifest.json",
     }
     for case in cases_document.get("cases", []):
         external = case.get("external_reference") or {}
@@ -2506,12 +2517,12 @@ def _validate_frozen_inputs(
         required_frozen_paths.update(
             {
                 *normalized_reference_paths,
-                f"evaluation/style-regression/style-context/{case_id}/resolved-style-context.json",
-                f"evaluation/style-regression/style-context/{case_id}/prompt-A.txt",
-                f"evaluation/style-regression/style-context/{case_id}/prompt-B.txt",
-                f"evaluation/style-regression/style-context/{case_id}/prompt-C.txt",
-                f"evaluation/style-regression/prompt-diffs/{case_id}-A-vs-B.diff",
-                f"evaluation/style-regression/prompt-diffs/{case_id}-B-vs-C.diff",
+                f"archive/实验/evaluation/style-regression/style-context/{case_id}/resolved-style-context.json",
+                f"archive/实验/evaluation/style-regression/style-context/{case_id}/prompt-A.txt",
+                f"archive/实验/evaluation/style-regression/style-context/{case_id}/prompt-B.txt",
+                f"archive/实验/evaluation/style-regression/style-context/{case_id}/prompt-C.txt",
+                f"archive/实验/evaluation/style-regression/prompt-diffs/{case_id}-A-vs-B.diff",
+                f"archive/实验/evaluation/style-regression/prompt-diffs/{case_id}-B-vs-C.diff",
                 str(selector_record.get("path", "")),
             }
         )
@@ -2650,11 +2661,11 @@ def collect_preflight(
     except OSError:
         ignore_text = ""
     for required_ignore in (
-        "evaluation/style-regression/private-assets/",
-        "evaluation/style-regression/outputs/",
-        "evaluation/style-regression/pilot/outputs/",
-        "evaluation/style-regression/host-smoke/outputs/",
-        "evaluation/style-regression/blind-map.private.json",
+        "archive/实验/evaluation/style-regression/private-assets/",
+        "archive/实验/evaluation/style-regression/outputs/",
+        "archive/实验/evaluation/style-regression/pilot/outputs/",
+        "archive/实验/evaluation/style-regression/host-smoke/outputs/",
+        "archive/实验/evaluation/style-regression/blind-map.private.json",
     ):
         if required_ignore not in ignore_text.splitlines():
             global_blockers.append(f".gitignore is missing {required_ignore}")
@@ -2837,12 +2848,12 @@ def collect_preflight(
         for case_id in CASE_IDS
     }
     try:
-        selector_diff_path = root / "evaluation" / "style-regression" / "reference-selection" / "selector-diff.json"
+        selector_diff_path = root / "archive/实验/evaluation" / "style-regression" / "reference-selection" / "selector-diff.json"
         selector_evidence_path = selector_diff_path
         if not selector_evidence_path.is_file():
             selector_evidence_path = (
                 root
-                / "evaluation"
+                / "archive/实验/evaluation"
                 / "style-regression"
                 / "reference-selection"
                 / "managed-selector-comparison.json"
@@ -2938,7 +2949,8 @@ def write_preflight_report(preflight: Mapping[str, Any], *, root: Path = ROOT) -
 
 
 def _relative_path(path: Path, *, root: Path = ROOT) -> str:
-    return path.resolve(strict=False).relative_to(root.resolve()).as_posix()
+    from archive_paths import historical_locator
+    return historical_locator(path, root=root)
 
 
 def _sample_key(case_id: str, group: str, replicate: int) -> str:
@@ -3099,8 +3111,8 @@ def run_host_smoke(
     root: Path = ROOT,
 ) -> dict[str, Any]:
     """Run one standalone transport check with no Arco or Style inputs."""
-    report_path = root / "evaluation" / "style-regression" / "host-smoke" / "result.json"
-    output_path = root / "evaluation" / "style-regression" / "host-smoke" / "outputs" / "output.png"
+    report_path = root / "archive/实验/evaluation" / "style-regression" / "host-smoke" / "result.json"
+    output_path = root / "archive/实验/evaluation" / "style-regression" / "host-smoke" / "outputs" / "output.png"
     if report_path.exists() or output_path.exists():
         raise ExperimentError("Host smoke artifacts already exist; replacement and retry are forbidden.")
     started = time.perf_counter()
@@ -3162,7 +3174,7 @@ def run_host_smoke(
 def export_codex_smoke_task(*, root: Path = ROOT) -> dict[str, Any]:
     task_path = root / CODEX_SMOKE_TASK_PATH
     report_path = root / CODEX_SMOKE_REPORT_PATH
-    output_path = root / "evaluation" / "style-regression" / "host-smoke" / "outputs" / "output.png"
+    output_path = root / "archive/实验/evaluation" / "style-regression" / "host-smoke" / "outputs" / "output.png"
     if task_path.exists() or report_path.exists() or output_path.exists():
         raise ExperimentError("Codex smoke artifacts already exist; replacement and retry are forbidden.")
     task = build_codex_task(
@@ -3296,7 +3308,7 @@ def _validate_codex_smoke(root: Path) -> list[str]:
 
 
 def _validate_host_smoke(root: Path, binding: str | None) -> list[str]:
-    report_path = root / "evaluation" / "style-regression" / "host-smoke" / "result.json"
+    report_path = root / "archive/实验/evaluation" / "style-regression" / "host-smoke" / "result.json"
     if not report_path.is_file():
         return ["Host smoke test is missing."]
     try:
@@ -3328,7 +3340,7 @@ def _validate_host_smoke(root: Path, binding: str | None) -> list[str]:
     output_value = report.get("output_path")
     try:
         output_path = _repo_path(str(output_value), root=root)
-        expected_dir = (root / "evaluation" / "style-regression" / "host-smoke" / "outputs").resolve()
+        expected_dir = (root / "archive/实验/evaluation" / "style-regression" / "host-smoke" / "outputs").resolve()
         output_path.relative_to(expected_dir)
         if not output_path.is_file() or output_path.stat().st_size == 0:
             errors.append("Host smoke output is missing or empty.")
@@ -3657,7 +3669,7 @@ def run_pilot(
             frozen_file_candidates = [
                 prompt_path,
                 selector_snapshot_path,
-                root / "evaluation" / "style-regression" / "cases.yaml",
+                root / "archive/实验/evaluation" / "style-regression" / "cases.yaml",
                 _input_freeze_path(root),
                 root / "scripts" / "reference_runtime.py",
                 root / "scripts" / "arco_real_adapter.py",
@@ -3939,7 +3951,7 @@ def _formal_continuation_legacy_runner_allowlist(
         raise ExperimentError("The r4 checkpoint does not pin its formal task files.")
 
     r2_link = parent_capture.get("parent_capture")
-    r2_relative = f"evaluation/style-regression/environment/{R_R2_PARENT_FINAL_PREFLIGHT_ENVIRONMENT_PATH}"
+    r2_relative = f"archive/实验/evaluation/style-regression/environment/{R_R2_PARENT_FINAL_PREFLIGHT_ENVIRONMENT_PATH}"
     if not isinstance(r2_link, Mapping) or r2_link.get("path") != r2_relative:
         raise ExperimentError("The r3 parent capture is not linked to the immutable r2 capture.")
     r2_path = _repo_path(r2_relative, root=root)
@@ -3978,7 +3990,7 @@ def _formal_continuation_legacy_runner_allowlist(
             raise ExperimentError("The r3 A-r1 compatibility entry no longer matches its immutable task and r2 parent.")
         allowlist[entry["task_sha256"]] = entry
 
-    parent_relative = f"evaluation/style-regression/environment/{R_PARENT_FINAL_PREFLIGHT_ENVIRONMENT_PATH}"
+    parent_relative = f"archive/实验/evaluation/style-regression/environment/{R_PARENT_FINAL_PREFLIGHT_ENVIRONMENT_PATH}"
     discovered_legacy_tasks: set[str] = set()
     for relative_path in sorted(path for path in checkpoint_files if "/tasks/" in str(path)):
         task_path = _repo_path(str(relative_path), root=root)
@@ -4092,7 +4104,7 @@ def _validate_formal_continuation_checkpoint(
             raise ExperimentError("The r4 checkpoint Codex-generated source image is missing or changed.")
     if legacy_runner_hash_allowlist != _formal_continuation_legacy_runner_allowlist(
         root,
-        _load_json(root / "evaluation" / "style-regression" / "environment" / R_PARENT_FINAL_PREFLIGHT_ENVIRONMENT_PATH),
+        _load_json(root / "archive/实验/evaluation" / "style-regression" / "environment" / R_PARENT_FINAL_PREFLIGHT_ENVIRONMENT_PATH),
         str((capture.get("parent_capture") or {}).get("sha256", "")),
         checkpoint,
     ):
@@ -4101,7 +4113,7 @@ def _validate_formal_continuation_checkpoint(
 
 def _validate_r4_formal_capture(root: Path = ROOT) -> dict[str, Any]:
     """Require the current 4B.3-T continuation capture and recheck live readiness gates."""
-    capture_path = root / "evaluation" / "style-regression" / "environment" / R_FINAL_PREFLIGHT_ENVIRONMENT_PATH
+    capture_path = root / "archive/实验/evaluation" / "style-regression" / "environment" / R_FINAL_PREFLIGHT_ENVIRONMENT_PATH
     if not capture_path.is_file():
         raise ExperimentError("Formal Codex task export requires the new Batch 4B.3-T final preflight capture.")
     capture = _load_json(capture_path)
@@ -4116,7 +4128,7 @@ def _validate_r4_formal_capture(root: Path = ROOT) -> dict[str, Any]:
     if capture.get("blocking_inputs") != []:
         raise ExperimentError("The Batch 4B.3-T capture contains blocking inputs.")
     parent = capture.get("parent_capture")
-    parent_relative = f"evaluation/style-regression/environment/{R_PARENT_FINAL_PREFLIGHT_ENVIRONMENT_PATH}"
+    parent_relative = f"archive/实验/evaluation/style-regression/environment/{R_PARENT_FINAL_PREFLIGHT_ENVIRONMENT_PATH}"
     if not isinstance(parent, Mapping) or parent.get("path") != parent_relative:
         raise ExperimentError("The r4 continuation capture is not linked to the immutable r3 parent capture.")
     parent_path = _repo_path(parent_relative, root=root)
@@ -4136,7 +4148,7 @@ def _validate_r4_formal_capture(root: Path = ROOT) -> dict[str, Any]:
         or parent_baseline.get("next_pending_sample") != "case-01:B:r1 attempt 2"
     ):
         raise ExperimentError("The r3 parent does not preserve the verified one-of-36 checkpoint.")
-    cases_document = _load_yaml(root / "evaluation" / "style-regression" / "cases.yaml")
+    cases_document = _load_yaml(root / "archive/实验/evaluation" / "style-regression" / "cases.yaml")
     captured_hashes = capture.get("hashes")
     if not isinstance(captured_hashes, Mapping):
         raise ExperimentError("The Batch 4B.3-T capture is missing its immutable hash set.")
@@ -4181,10 +4193,10 @@ def _validate_r4_formal_capture(root: Path = ROOT) -> dict[str, Any]:
     preflight_capture = capture.get("preflight_report")
     if not isinstance(preflight_capture, Mapping):
         raise ExperimentError("The Batch 4B.3-T capture is missing its preflight report hash.")
-    preflight_path = root / "evaluation" / "style-regression" / R_PREFLIGHT_JSON_PATH
+    preflight_path = root / "archive/实验/evaluation" / "style-regression" / R_PREFLIGHT_JSON_PATH
     if (
         not preflight_path.is_file()
-        or preflight_capture.get("path") != f"evaluation/style-regression/{R_PREFLIGHT_JSON_PATH}"
+        or preflight_capture.get("path") != f"archive/实验/evaluation/style-regression/{R_PREFLIGHT_JSON_PATH}"
         or preflight_capture.get("sha256") != sha256_file(preflight_path)
     ):
         raise ExperimentError("The captured Batch 4B.3-T preflight report is missing or has changed.")
@@ -4225,15 +4237,15 @@ def _validate_r4_formal_capture(root: Path = ROOT) -> dict[str, Any]:
 
 def create_formal_continuation_capture(root: Path = ROOT) -> dict[str, Any]:
     """Create one immutable r4 continuation capture for the validated 2/36 checkpoint."""
-    capture_path = root / "evaluation" / "style-regression" / "environment" / R_FINAL_PREFLIGHT_ENVIRONMENT_PATH
-    parent_path = root / "evaluation" / "style-regression" / "environment" / R_PARENT_FINAL_PREFLIGHT_ENVIRONMENT_PATH
+    capture_path = root / "archive/实验/evaluation" / "style-regression" / "environment" / R_FINAL_PREFLIGHT_ENVIRONMENT_PATH
+    parent_path = root / "archive/实验/evaluation" / "style-regression" / "environment" / R_PARENT_FINAL_PREFLIGHT_ENVIRONMENT_PATH
     if capture_path.exists():
         raise ExperimentError("The r4 formal continuation capture already exists; captured history is write-once.")
     if not parent_path.is_file():
         raise ExperimentError("The immutable r3 parent capture is missing.")
     parent_capture = _load_json(parent_path)
     parent_sha256 = sha256_file(parent_path)
-    cases_document = _load_yaml(root / "evaluation" / "style-regression" / "cases.yaml")
+    cases_document = _load_yaml(root / "archive/实验/evaluation" / "style-regression" / "cases.yaml")
     current_hashes = _runtime_hashes(root, cases_document)
     parent_hashes = parent_capture.get("hashes")
     if not isinstance(parent_hashes, Mapping) or set(parent_hashes) != set(current_hashes):
@@ -4510,8 +4522,8 @@ def _retry_fix_checkpoint(root: Path) -> dict[str, Any]:
 
 def create_formal_retry_fix_capture(root: Path = ROOT) -> dict[str, Any]:
     """Create the append-only r5 capture for the existing 31/36 terminal checkpoint."""
-    capture_path = root / "evaluation" / "style-regression" / "environment" / R_RETRY_FIX_FINAL_CAPTURE_PATH
-    parent_path = root / "evaluation" / "style-regression" / "environment" / R_FINAL_PREFLIGHT_ENVIRONMENT_PATH
+    capture_path = root / "archive/实验/evaluation" / "style-regression" / "environment" / R_RETRY_FIX_FINAL_CAPTURE_PATH
+    parent_path = root / "archive/实验/evaluation" / "style-regression" / "environment" / R_FINAL_PREFLIGHT_ENVIRONMENT_PATH
     if capture_path.exists():
         raise ExperimentError("The r5 retry-fix capture already exists; captured history is write-once.")
     if not parent_path.is_file():
@@ -4537,7 +4549,7 @@ def create_formal_retry_fix_capture(root: Path = ROOT) -> dict[str, Any]:
     preflight = checkpoint.pop("preflight")
     if preflight.get("global_status") != "READY" or preflight.get("errors"):
         raise ExperimentError("Current hard preflight is not READY for r5 capture.")
-    cases_document = _load_yaml(root / "evaluation" / "style-regression" / "cases.yaml")
+    cases_document = _load_yaml(root / "archive/实验/evaluation" / "style-regression" / "cases.yaml")
     parent_capture = _load_json(parent_path)
     current_hashes = _runtime_hashes(root, cases_document)
     parent_hashes = parent_capture.get("hashes") or {}
@@ -4582,7 +4594,7 @@ def create_formal_retry_fix_capture(root: Path = ROOT) -> dict[str, Any]:
 
 def _validate_r5_formal_capture(root: Path = ROOT) -> dict[str, Any]:
     """Validate the immutable r5 retry-fix capture and its exact 31/36 checkpoint."""
-    capture_path = root / "evaluation" / "style-regression" / "environment" / R_RETRY_FIX_FINAL_CAPTURE_PATH
+    capture_path = root / "archive/实验/evaluation" / "style-regression" / "environment" / R_RETRY_FIX_FINAL_CAPTURE_PATH
     if not capture_path.is_file():
         raise ExperimentError("Formal execution requires the Batch 4B.3-T r5 retry-fix capture.")
     capture = _load_json(capture_path)
@@ -4592,7 +4604,7 @@ def _validate_r5_formal_capture(root: Path = ROOT) -> dict[str, Any]:
     parent_path = _repo_path(str(parent.get("path", "")), root=root)
     if not parent_path.is_file() or parent.get("sha256") != sha256_file(parent_path):
         raise ExperimentError("The immutable r4 parent capture is missing or changed.")
-    cases_document = _load_yaml(root / "evaluation" / "style-regression" / "cases.yaml")
+    cases_document = _load_yaml(root / "archive/实验/evaluation" / "style-regression" / "cases.yaml")
     if capture.get("hashes") != _runtime_hashes(root, cases_document):
         raise ExperimentError("The r5 capture is stale; frozen runtime or test hashes changed.")
     if capture.get("failure_policy") != {
@@ -4644,8 +4656,8 @@ def _validate_r5_formal_capture(root: Path = ROOT) -> dict[str, Any]:
 
 def create_protocol_revision_capture(root: Path = ROOT) -> dict[str, Any]:
     """Freeze the authorized r6 prompt revision against the exact r5 checkpoint."""
-    path = root / "evaluation" / "style-regression" / "environment" / R_PROTOCOL_REVISION_CAPTURE_PATH
-    parent_path = root / "evaluation" / "style-regression" / "environment" / R_RETRY_FIX_FINAL_CAPTURE_PATH
+    path = root / "archive/实验/evaluation" / "style-regression" / "environment" / R_PROTOCOL_REVISION_CAPTURE_PATH
+    parent_path = root / "archive/实验/evaluation" / "style-regression" / "environment" / R_RETRY_FIX_FINAL_CAPTURE_PATH
     if path.exists():
         raise ExperimentError("The r6 protocol capture already exists; refusing replacement.")
     revision = _formal_protocol_revision("case-04:B:r2", root=root)
@@ -4658,7 +4670,7 @@ def create_protocol_revision_capture(root: Path = ROOT) -> dict[str, Any]:
     if sha256_file(manifest_path) != checkpoint.get("manifest_sha256"):
         raise ExperimentError("The r5 manifest changed before the r6 protocol capture.")
     compatibility = _retry_fix_compatibility(rows, root=root)
-    cases_document = _load_yaml(root / "evaluation" / "style-regression" / "cases.yaml")
+    cases_document = _load_yaml(root / "archive/实验/evaluation" / "style-regression" / "cases.yaml")
     capture = {
         "schema_version": 1,
         "record_kind": "batch-4b3t-formal-protocol-revision-capture",
@@ -4686,7 +4698,7 @@ def create_protocol_revision_capture(root: Path = ROOT) -> dict[str, Any]:
 
 def _validate_r6_formal_capture(root: Path = ROOT) -> dict[str, Any]:
     """Validate r6 when present; otherwise retain the exact r5 terminal checkpoint."""
-    path = root / "evaluation" / "style-regression" / "environment" / R_PROTOCOL_REVISION_CAPTURE_PATH
+    path = root / "archive/实验/evaluation" / "style-regression" / "environment" / R_PROTOCOL_REVISION_CAPTURE_PATH
     if not path.is_file():
         return _validate_r5_formal_capture(root)
     capture = _load_json(path)
@@ -4699,7 +4711,7 @@ def _validate_r6_formal_capture(root: Path = ROOT) -> dict[str, Any]:
     revision = _formal_protocol_revision("case-04:B:r2", root=root)
     if revision is None or sha256_file(revision["path"]) != (capture.get("protocol_revision") or {}).get("sha256"):
         raise ExperimentError("The authorized r6 protocol revision changed after capture.")
-    cases_document = _load_yaml(root / "evaluation" / "style-regression" / "cases.yaml")
+    cases_document = _load_yaml(root / "archive/实验/evaluation" / "style-regression" / "cases.yaml")
     if capture.get("hashes") != _runtime_hashes(root, cases_document):
         raise ExperimentError("The r6 capture is stale; frozen runtime or tests changed.")
     baseline_rows = capture.get("baseline_manifest_rows")
@@ -4743,8 +4755,8 @@ def _validate_r6_formal_capture(root: Path = ROOT) -> dict[str, Any]:
 
 
 def create_r7_protocol_capture(root: Path = ROOT) -> dict[str, Any]:
-    path = root / "evaluation" / "style-regression" / "environment" / R_PROTOCOL_REVISION_R7_CAPTURE_PATH
-    parent_path = root / "evaluation" / "style-regression" / "environment" / R_PROTOCOL_REVISION_CAPTURE_PATH
+    path = root / "archive/实验/evaluation" / "style-regression" / "environment" / R_PROTOCOL_REVISION_R7_CAPTURE_PATH
+    parent_path = root / "archive/实验/evaluation" / "style-regression" / "environment" / R_PROTOCOL_REVISION_CAPTURE_PATH
     if path.exists():
         raise ExperimentError("The r7 protocol capture already exists; refusing replacement.")
     if not parent_path.is_file():
@@ -4760,8 +4772,8 @@ def create_r7_protocol_capture(root: Path = ROOT) -> dict[str, Any]:
             raise ExperimentError(f"Missing authorized protocol revision for {key}.")
         revisions[key] = {"path": _relative_path(revision["path"], root=root), "sha256": sha256_file(revision["path"])}
     compatibility = _retry_fix_compatibility(rows, root=root)
-    r5 = _load_json(root / "evaluation" / "style-regression" / "environment" / R_RETRY_FIX_FINAL_CAPTURE_PATH)
-    cases_document = _load_yaml(root / "evaluation" / "style-regression" / "cases.yaml")
+    r5 = _load_json(root / "archive/实验/evaluation" / "style-regression" / "environment" / R_RETRY_FIX_FINAL_CAPTURE_PATH)
+    cases_document = _load_yaml(root / "archive/实验/evaluation" / "style-regression" / "cases.yaml")
     capture = {
         "schema_version": 1,
         "record_kind": "batch-4b3t-formal-protocol-revision-capture",
@@ -4786,7 +4798,7 @@ def create_r7_protocol_capture(root: Path = ROOT) -> dict[str, Any]:
 
 
 def _validate_r7_formal_capture(root: Path = ROOT) -> dict[str, Any]:
-    path = root / "evaluation" / "style-regression" / "environment" / R_PROTOCOL_REVISION_R7_CAPTURE_PATH
+    path = root / "archive/实验/evaluation" / "style-regression" / "environment" / R_PROTOCOL_REVISION_R7_CAPTURE_PATH
     if not path.is_file():
         return _validate_r6_formal_capture(root)
     capture = _load_json(path)
@@ -4800,7 +4812,7 @@ def _validate_r7_formal_capture(root: Path = ROOT) -> dict[str, Any]:
         revision = _formal_protocol_revision(str(key), root=root)
         if revision is None or sha256_file(revision["path"]) != pin.get("sha256"):
             raise ExperimentError(f"The authorized protocol revision changed: {key}.")
-    cases_document = _load_yaml(root / "evaluation" / "style-regression" / "cases.yaml")
+    cases_document = _load_yaml(root / "archive/实验/evaluation" / "style-regression" / "cases.yaml")
     if capture.get("hashes") != _runtime_hashes(root, cases_document):
         raise ExperimentError("The r7 capture is stale; frozen runtime or tests changed.")
     baseline = capture.get("baseline_manifest_rows") or []
@@ -4831,8 +4843,8 @@ def _validate_r7_formal_capture(root: Path = ROOT) -> dict[str, Any]:
 
 
 def create_r8_protocol_capture(root: Path = ROOT) -> dict[str, Any]:
-    path = root / "evaluation" / "style-regression" / "environment" / R_PROTOCOL_REVISION_R8_CAPTURE_PATH
-    parent_path = root / "evaluation" / "style-regression" / "environment" / R_PROTOCOL_REVISION_R7_CAPTURE_PATH
+    path = root / "archive/实验/evaluation" / "style-regression" / "environment" / R_PROTOCOL_REVISION_R8_CAPTURE_PATH
+    parent_path = root / "archive/实验/evaluation" / "style-regression" / "environment" / R_PROTOCOL_REVISION_R7_CAPTURE_PATH
     if path.exists():
         raise ExperimentError("The r8 protocol capture already exists; refusing replacement.")
     rows = _load_jsonl(_formal_manifest_path(root))
@@ -4840,7 +4852,7 @@ def create_r8_protocol_capture(root: Path = ROOT) -> dict[str, Any]:
     if row.get("status") != "queued" or (row.get("attempts") or [])[-1].get("attempt") != 2:
         raise ExperimentError("The r8 capture requires queued case-04:C:r2 attempt 2.")
     compatibility = _retry_fix_compatibility(rows, root=root)
-    r5 = _load_json(root / "evaluation" / "style-regression" / "environment" / R_RETRY_FIX_FINAL_CAPTURE_PATH)
+    r5 = _load_json(root / "archive/实验/evaluation" / "style-regression" / "environment" / R_RETRY_FIX_FINAL_CAPTURE_PATH)
     revisions = {}
     for key in R_PROTOCOL_REVISION_PATHS:
         revision = _formal_protocol_revision(key, root=root)
@@ -4852,7 +4864,7 @@ def create_r8_protocol_capture(root: Path = ROOT) -> dict[str, Any]:
         "captured_at_utc": datetime.now(timezone.utc).isoformat(),
         "parent_capture": {"path": _relative_path(parent_path, root=root), "sha256": sha256_file(parent_path)},
         "protocol_revisions": revisions,
-        "hashes": _runtime_hashes(root, _load_yaml(root / "evaluation" / "style-regression" / "cases.yaml")),
+        "hashes": _runtime_hashes(root, _load_yaml(root / "archive/实验/evaluation" / "style-regression" / "cases.yaml")),
         "baseline_manifest_rows": rows, "baseline_manifest_rows_sha256": sha256_json(rows),
         "legacy_task_compatibility": sorted(compatibility.values(), key=lambda item: item["task_path"]),
         "legacy_failure_policy_attempt_sha256": r5.get("legacy_failure_policy_attempt_sha256"),
@@ -4865,7 +4877,7 @@ def create_r8_protocol_capture(root: Path = ROOT) -> dict[str, Any]:
 
 
 def _validate_r8_formal_capture(root: Path = ROOT) -> dict[str, Any]:
-    path = root / "evaluation" / "style-regression" / "environment" / R_PROTOCOL_REVISION_R8_CAPTURE_PATH
+    path = root / "archive/实验/evaluation" / "style-regression" / "environment" / R_PROTOCOL_REVISION_R8_CAPTURE_PATH
     if not path.is_file():
         return _validate_r7_formal_capture(root)
     capture = _load_json(path)
@@ -4874,7 +4886,7 @@ def _validate_r8_formal_capture(root: Path = ROOT) -> dict[str, Any]:
     parent = capture.get("parent_capture") or {}; parent_path = _repo_path(str(parent.get("path", "")), root=root)
     if not parent_path.is_file() or sha256_file(parent_path) != parent.get("sha256"):
         raise ExperimentError("The immutable r7 parent capture changed.")
-    if capture.get("hashes") != _runtime_hashes(root, _load_yaml(root / "evaluation" / "style-regression" / "cases.yaml")):
+    if capture.get("hashes") != _runtime_hashes(root, _load_yaml(root / "archive/实验/evaluation" / "style-regression" / "cases.yaml")):
         raise ExperimentError("The r8 capture is stale.")
     for key, pin in (capture.get("protocol_revisions") or {}).items():
         revision = _formal_protocol_revision(str(key), root=root)
@@ -4905,12 +4917,12 @@ def _validate_r8_formal_capture(root: Path = ROOT) -> dict[str, Any]:
 
 
 def create_r9_protocol_capture(root: Path = ROOT) -> dict[str, Any]:
-    path = root / "evaluation" / "style-regression" / "environment" / R_PROTOCOL_REVISION_R9_CAPTURE_PATH
-    parent_path = root / "evaluation" / "style-regression" / "environment" / R_PROTOCOL_REVISION_R8_CAPTURE_PATH
+    path = root / "archive/实验/evaluation" / "style-regression" / "environment" / R_PROTOCOL_REVISION_R9_CAPTURE_PATH
+    parent_path = root / "archive/实验/evaluation" / "style-regression" / "environment" / R_PROTOCOL_REVISION_R8_CAPTURE_PATH
     if path.exists():
         raise ExperimentError("The r9 protocol capture already exists; refusing replacement.")
     rows = _load_jsonl(_formal_manifest_path(root)); compatibility = _retry_fix_compatibility(rows, root=root)
-    r5 = _load_json(root / "evaluation" / "style-regression" / "environment" / R_RETRY_FIX_FINAL_CAPTURE_PATH)
+    r5 = _load_json(root / "archive/实验/evaluation" / "style-regression" / "environment" / R_RETRY_FIX_FINAL_CAPTURE_PATH)
     revisions = {}
     for key in R_PROTOCOL_REVISION_PATHS:
         revision = _formal_protocol_revision(key, root=root)
@@ -4921,7 +4933,7 @@ def create_r9_protocol_capture(root: Path = ROOT) -> dict[str, Any]:
         "captured_at_utc": datetime.now(timezone.utc).isoformat(),
         "parent_capture": {"path": _relative_path(parent_path, root=root), "sha256": sha256_file(parent_path)},
         "protocol_revisions": revisions,
-        "hashes": _runtime_hashes(root, _load_yaml(root / "evaluation" / "style-regression" / "cases.yaml")),
+        "hashes": _runtime_hashes(root, _load_yaml(root / "archive/实验/evaluation" / "style-regression" / "cases.yaml")),
         "baseline_manifest_rows": rows, "baseline_manifest_rows_sha256": sha256_json(rows),
         "legacy_task_compatibility": sorted(compatibility.values(), key=lambda item: item["task_path"]),
         "legacy_failure_policy_attempt_sha256": r5.get("legacy_failure_policy_attempt_sha256"),
@@ -4934,13 +4946,13 @@ def create_r9_protocol_capture(root: Path = ROOT) -> dict[str, Any]:
 
 
 def _validate_r9_formal_capture(root: Path = ROOT) -> dict[str, Any]:
-    path = root / "evaluation" / "style-regression" / "environment" / R_PROTOCOL_REVISION_R9_CAPTURE_PATH
+    path = root / "archive/实验/evaluation" / "style-regression" / "environment" / R_PROTOCOL_REVISION_R9_CAPTURE_PATH
     if not path.is_file(): return _validate_r8_formal_capture(root)
     capture = _load_json(path)
     if capture.get("revision") != "r9": raise ExperimentError("The current formal capture is not r9.")
     parent = capture.get("parent_capture") or {}; parent_path = _repo_path(str(parent.get("path", "")), root=root)
     if not parent_path.is_file() or sha256_file(parent_path) != parent.get("sha256"): raise ExperimentError("The r8 parent changed.")
-    if capture.get("hashes") != _runtime_hashes(root, _load_yaml(root / "evaluation" / "style-regression" / "cases.yaml")): raise ExperimentError("The r9 capture is stale.")
+    if capture.get("hashes") != _runtime_hashes(root, _load_yaml(root / "archive/实验/evaluation" / "style-regression" / "cases.yaml")): raise ExperimentError("The r9 capture is stale.")
     for key, pin in (capture.get("protocol_revisions") or {}).items():
         revision = _formal_protocol_revision(str(key), root=root)
         if revision is None or sha256_file(revision["path"]) != pin.get("sha256"): raise ExperimentError(f"The r9 protocol changed: {key}.")
@@ -4966,19 +4978,19 @@ def _validate_r9_formal_capture(root: Path = ROOT) -> dict[str, Any]:
 
 
 def create_r10_formal_capture(root: Path = ROOT) -> dict[str, Any]:
-    path = root / "evaluation" / "style-regression" / "environment" / R_FORMAL_CONTINUATION_R10_CAPTURE_PATH
-    parent_path = root / "evaluation" / "style-regression" / "environment" / R_PROTOCOL_REVISION_R9_CAPTURE_PATH
+    path = root / "archive/实验/evaluation" / "style-regression" / "environment" / R_FORMAL_CONTINUATION_R10_CAPTURE_PATH
+    parent_path = root / "archive/实验/evaluation" / "style-regression" / "environment" / R_PROTOCOL_REVISION_R9_CAPTURE_PATH
     if path.exists(): raise ExperimentError("The r10 formal capture already exists; refusing replacement.")
     rows = _load_jsonl(_formal_manifest_path(root)); compatibility = _retry_fix_compatibility(rows, root=root)
     counts = _compliant_formal_sample_counts(rows, root=root, legacy_runner_hash_allowlist=compatibility)
     if counts != {"A": 11, "B": 11, "C": 11} or any(row.get("status") != "succeeded" for row in rows):
         raise ExperimentError("The r10 capture requires the exact 33/36 succeeded checkpoint.")
-    r5 = _load_json(root / "evaluation" / "style-regression" / "environment" / R_RETRY_FIX_FINAL_CAPTURE_PATH)
+    r5 = _load_json(root / "archive/实验/evaluation" / "style-regression" / "environment" / R_RETRY_FIX_FINAL_CAPTURE_PATH)
     capture = {
         "schema_version": 1, "record_kind": "batch-4b3t-formal-continuation-capture", "revision": "r10",
         "captured_at_utc": datetime.now(timezone.utc).isoformat(),
         "parent_capture": {"path": _relative_path(parent_path, root=root), "sha256": sha256_file(parent_path)},
-        "hashes": _runtime_hashes(root, _load_yaml(root / "evaluation" / "style-regression" / "cases.yaml")),
+        "hashes": _runtime_hashes(root, _load_yaml(root / "archive/实验/evaluation" / "style-regression" / "cases.yaml")),
         "baseline_manifest_rows": rows, "baseline_manifest_rows_sha256": sha256_json(rows),
         "legacy_task_compatibility": sorted(compatibility.values(), key=lambda item: item["task_path"]),
         "legacy_failure_policy_attempt_sha256": r5.get("legacy_failure_policy_attempt_sha256"),
@@ -4991,13 +5003,13 @@ def create_r10_formal_capture(root: Path = ROOT) -> dict[str, Any]:
 
 
 def _validate_r10_formal_capture(root: Path = ROOT) -> dict[str, Any]:
-    path = root / "evaluation" / "style-regression" / "environment" / R_FORMAL_CONTINUATION_R10_CAPTURE_PATH
+    path = root / "archive/实验/evaluation" / "style-regression" / "environment" / R_FORMAL_CONTINUATION_R10_CAPTURE_PATH
     if not path.is_file(): return _validate_r9_formal_capture(root)
     capture = _load_json(path)
     if capture.get("revision") != "r10": raise ExperimentError("The current formal capture is not r10.")
     parent = capture.get("parent_capture") or {}; parent_path = _repo_path(str(parent.get("path", "")), root=root)
     if not parent_path.is_file() or sha256_file(parent_path) != parent.get("sha256"): raise ExperimentError("The r9 parent changed.")
-    if capture.get("hashes") != _runtime_hashes(root, _load_yaml(root / "evaluation" / "style-regression" / "cases.yaml")): raise ExperimentError("The r10 capture is stale.")
+    if capture.get("hashes") != _runtime_hashes(root, _load_yaml(root / "archive/实验/evaluation" / "style-regression" / "cases.yaml")): raise ExperimentError("The r10 capture is stale.")
     baseline = capture.get("baseline_manifest_rows") or []
     if sha256_json(baseline) != capture.get("baseline_manifest_rows_sha256"): raise ExperimentError("The r10 baseline pins are invalid.")
     rows = _load_jsonl(_formal_manifest_path(root)); current = _manifest_index(rows)
@@ -5014,13 +5026,13 @@ def _validate_r10_formal_capture(root: Path = ROOT) -> dict[str, Any]:
 
 
 def create_r14_formal_capture(root: Path = ROOT) -> dict[str, Any]:
-    path = root / "evaluation" / "style-regression" / "environment" / R_FORMAL_CONTINUATION_R14_CAPTURE_PATH
-    parent_path = root / "evaluation" / "style-regression" / "environment" / R_FORMAL_CONTINUATION_R10_CAPTURE_PATH
+    path = root / "archive/实验/evaluation" / "style-regression" / "environment" / R_FORMAL_CONTINUATION_R14_CAPTURE_PATH
+    parent_path = root / "archive/实验/evaluation" / "style-regression" / "environment" / R_FORMAL_CONTINUATION_R10_CAPTURE_PATH
     if path.exists(): raise ExperimentError("The r14 capture already exists; refusing replacement.")
     rows = _load_jsonl(_formal_manifest_path(root)); indexed = _manifest_index(rows)
     if indexed.get("case-04:A:r3", {}).get("status") != "failed": raise ExperimentError("r14 requires terminal A-r3 attempt 1.")
     compatibility = _retry_fix_compatibility(rows, root=root)
-    r5 = _load_json(root / "evaluation" / "style-regression" / "environment" / R_RETRY_FIX_FINAL_CAPTURE_PATH)
+    r5 = _load_json(root / "archive/实验/evaluation" / "style-regression" / "environment" / R_RETRY_FIX_FINAL_CAPTURE_PATH)
     revisions = {}
     for key in R_PROTOCOL_REVISION_PATHS:
         revision = _formal_protocol_revision(key, root=root)
@@ -5031,7 +5043,7 @@ def create_r14_formal_capture(root: Path = ROOT) -> dict[str, Any]:
         "captured_at_utc":datetime.now(timezone.utc).isoformat(),
         "parent_capture":{"path":_relative_path(parent_path,root=root),"sha256":sha256_file(parent_path)},
         "protocol_revisions":revisions,
-        "hashes":_runtime_hashes(root,_load_yaml(root/"evaluation"/"style-regression"/"cases.yaml")),
+        "hashes":_runtime_hashes(root,_load_yaml(root/"archive/实验/evaluation"/"style-regression"/"cases.yaml")),
         "baseline_manifest_rows":rows,"baseline_manifest_rows_sha256":sha256_json(rows),
         "legacy_task_compatibility":sorted(compatibility.values(),key=lambda item:item["task_path"]),
         "legacy_failure_policy_attempt_sha256":r5.get("legacy_failure_policy_attempt_sha256"),
@@ -5044,13 +5056,13 @@ def create_r14_formal_capture(root: Path = ROOT) -> dict[str, Any]:
 
 
 def _validate_formal_capture(root: Path = ROOT) -> dict[str, Any]:
-    path=root/"evaluation"/"style-regression"/"environment"/R_FORMAL_CONTINUATION_R14_CAPTURE_PATH
+    path=root/"archive/实验/evaluation"/"style-regression"/"environment"/R_FORMAL_CONTINUATION_R14_CAPTURE_PATH
     if not path.is_file(): return _validate_r10_formal_capture(root)
     capture=_load_json(path)
     if capture.get("revision")!="r14": raise ExperimentError("The current formal capture is not r14.")
     parent=capture.get("parent_capture") or {};parent_path=_repo_path(str(parent.get("path","")),root=root)
     if not parent_path.is_file() or sha256_file(parent_path)!=parent.get("sha256"): raise ExperimentError("The r10 parent changed.")
-    if capture.get("hashes")!=_runtime_hashes(root,_load_yaml(root/"evaluation"/"style-regression"/"cases.yaml")): raise ExperimentError("The r14 capture is stale.")
+    if capture.get("hashes")!=_runtime_hashes(root,_load_yaml(root/"archive/实验/evaluation"/"style-regression"/"cases.yaml")): raise ExperimentError("The r14 capture is stale.")
     for key,pin in (capture.get("protocol_revisions") or {}).items():
         revision=_formal_protocol_revision(str(key),root=root)
         if revision is None or sha256_file(revision["path"])!=pin.get("sha256"): raise ExperimentError(f"The r14 protocol changed: {key}.")
@@ -5460,14 +5472,14 @@ def _create_formal_task(
     selector_snapshot_path = _selection_path(case_id, root=root)
     output_path = _formal_task_output_path(case_id, group, replicate, attempt_number, root=root)
     task_path = _formal_task_path(case_id, group, replicate, attempt_number, root=root)
-    capture_path = root / "evaluation" / "style-regression" / "environment" / R_FINAL_PREFLIGHT_ENVIRONMENT_PATH
+    capture_path = root / "archive/实验/evaluation" / "style-regression" / "environment" / R_FINAL_PREFLIGHT_ENVIRONMENT_PATH
     policy_hash = sha256_file(root / "runtime" / "style-policy.yaml")
     corrected_legacy = preflight.get("corrected_legacy") or _control_runtime_metadata(root)
     frozen_candidates = [
         prompt_file,
         base_file,
         selector_snapshot_path,
-        root / "evaluation" / "style-regression" / "cases.yaml",
+        root / "archive/实验/evaluation" / "style-regression" / "cases.yaml",
         _input_freeze_path(root),
         root / "scripts" / "run_style_regression.py",
         root / "scripts" / "reference_runtime.py",
@@ -5932,7 +5944,7 @@ def accept_codex_formal_output(
 
 
 def prepare_blind_review(root: Path = ROOT) -> int:
-    evaluation_dir = root / "evaluation" / "style-regression"
+    evaluation_dir = root / "archive/实验/evaluation" / "style-regression"
     blind_map_path = evaluation_dir / "blind-map.private.json"
     records = _load_jsonl(evaluation_dir / "manifest.jsonl")
     indexed = _manifest_index(records)
@@ -6037,40 +6049,40 @@ def _runtime_hashes(root: Path, cases_document: Mapping[str, Any]) -> dict[str, 
         "character/assets.yaml",
         "variants/index.yaml",
         "variants/casual-outfit/variant.yaml",
-        "evaluation/style-regression/cases.yaml",
-        "evaluation/style-regression/prompts/base-scene.txt",
-        "evaluation/style-regression/inputs-freeze.json",
-        "evaluation/style-regression/reference-selection/selector-diff.json",
-        "evaluation/style-regression/reference-selection/pre-selector-fix-evidence.json",
-        "evaluation/style-regression/reference-selection/managed-selector-comparison.json",
-        "evaluation/style-regression/control-runtime/corrected-legacy.json",
-        "evaluation/style-regression/private-assets/historical/H/manifest.jsonl",
-        "evaluation/style-regression/host-smoke/result.json",
-        "evaluation/style-regression/host-smoke/codex-task.json",
-        "evaluation/style-regression/pilot/runs/batch-4b3f/manifest.jsonl",
-        "evaluation/style-regression/pilot/runs/batch-4b3f/tasks/case-01-A-r1.json",
-        "evaluation/style-regression/pilot/runs/batch-4b3f/tasks/case-01-B-r1.json",
-        "evaluation/style-regression/pilot/runs/batch-4b3f/tasks/case-01-C-r1.json",
-        "evaluation/style-regression/pilot/runs/batch-4b3t/manifest.jsonl",
-        "evaluation/style-regression/pilot/runs/batch-4b3t/tasks/case-01-A-r1.json",
-        "evaluation/style-regression/pilot/runs/batch-4b3t/tasks/case-01-B-r1.json",
-        "evaluation/style-regression/pilot/runs/batch-4b3t/tasks/case-01-C-r1.json",
-        "evaluation/style-regression/pilot/runs/batch-4b3t/receipts/case-01-A-r1.json",
-        "evaluation/style-regression/pilot/runs/batch-4b3t/receipts/case-01-B-r1.json",
-        "evaluation/style-regression/pilot/runs/batch-4b3t/receipts/case-01-C-r1.json",
-        "evaluation/style-regression/pilot/outputs/batch-4b3t/case-01/A-r1.png",
-        "evaluation/style-regression/pilot/outputs/batch-4b3t/case-01/B-r1.png",
-        "evaluation/style-regression/pilot/outputs/batch-4b3t/case-01/C-r1.png",
-        "evaluation/style-regression/pilot/runs/batch-4b3t-r2/manifest.jsonl",
-        "evaluation/style-regression/pilot/runs/batch-4b3t-r2/tasks/case-01-A-r1.json",
-        "evaluation/style-regression/pilot/runs/batch-4b3t-r2/tasks/case-01-B-r1.json",
-        "evaluation/style-regression/pilot/runs/batch-4b3t-r2/tasks/case-01-C-r1.json",
-        "evaluation/style-regression/pilot/runs/batch-4b3t-r2/receipts/case-01-A-r1.json",
-        "evaluation/style-regression/pilot/runs/batch-4b3t-r2/receipts/case-01-B-r1.json",
-        "evaluation/style-regression/pilot/runs/batch-4b3t-r2/receipts/case-01-C-r1.json",
-        "evaluation/style-regression/pilot/outputs/batch-4b3t-r2/case-01/A-r1.png",
-        "evaluation/style-regression/pilot/outputs/batch-4b3t-r2/case-01/B-r1.png",
-        "evaluation/style-regression/pilot/outputs/batch-4b3t-r2/case-01/C-r1.png",
+        "archive/实验/evaluation/style-regression/cases.yaml",
+        "archive/实验/evaluation/style-regression/prompts/base-scene.txt",
+        "archive/实验/evaluation/style-regression/inputs-freeze.json",
+        "archive/实验/evaluation/style-regression/reference-selection/selector-diff.json",
+        "archive/实验/evaluation/style-regression/reference-selection/pre-selector-fix-evidence.json",
+        "archive/实验/evaluation/style-regression/reference-selection/managed-selector-comparison.json",
+        "archive/实验/evaluation/style-regression/control-runtime/corrected-legacy.json",
+        "archive/实验/evaluation/style-regression/private-assets/historical/H/manifest.jsonl",
+        "archive/实验/evaluation/style-regression/host-smoke/result.json",
+        "archive/实验/evaluation/style-regression/host-smoke/codex-task.json",
+        "archive/实验/evaluation/style-regression/pilot/runs/batch-4b3f/manifest.jsonl",
+        "archive/实验/evaluation/style-regression/pilot/runs/batch-4b3f/tasks/case-01-A-r1.json",
+        "archive/实验/evaluation/style-regression/pilot/runs/batch-4b3f/tasks/case-01-B-r1.json",
+        "archive/实验/evaluation/style-regression/pilot/runs/batch-4b3f/tasks/case-01-C-r1.json",
+        "archive/实验/evaluation/style-regression/pilot/runs/batch-4b3t/manifest.jsonl",
+        "archive/实验/evaluation/style-regression/pilot/runs/batch-4b3t/tasks/case-01-A-r1.json",
+        "archive/实验/evaluation/style-regression/pilot/runs/batch-4b3t/tasks/case-01-B-r1.json",
+        "archive/实验/evaluation/style-regression/pilot/runs/batch-4b3t/tasks/case-01-C-r1.json",
+        "archive/实验/evaluation/style-regression/pilot/runs/batch-4b3t/receipts/case-01-A-r1.json",
+        "archive/实验/evaluation/style-regression/pilot/runs/batch-4b3t/receipts/case-01-B-r1.json",
+        "archive/实验/evaluation/style-regression/pilot/runs/batch-4b3t/receipts/case-01-C-r1.json",
+        "archive/实验/evaluation/style-regression/pilot/outputs/batch-4b3t/case-01/A-r1.png",
+        "archive/实验/evaluation/style-regression/pilot/outputs/batch-4b3t/case-01/B-r1.png",
+        "archive/实验/evaluation/style-regression/pilot/outputs/batch-4b3t/case-01/C-r1.png",
+        "archive/实验/evaluation/style-regression/pilot/runs/batch-4b3t-r2/manifest.jsonl",
+        "archive/实验/evaluation/style-regression/pilot/runs/batch-4b3t-r2/tasks/case-01-A-r1.json",
+        "archive/实验/evaluation/style-regression/pilot/runs/batch-4b3t-r2/tasks/case-01-B-r1.json",
+        "archive/实验/evaluation/style-regression/pilot/runs/batch-4b3t-r2/tasks/case-01-C-r1.json",
+        "archive/实验/evaluation/style-regression/pilot/runs/batch-4b3t-r2/receipts/case-01-A-r1.json",
+        "archive/实验/evaluation/style-regression/pilot/runs/batch-4b3t-r2/receipts/case-01-B-r1.json",
+        "archive/实验/evaluation/style-regression/pilot/runs/batch-4b3t-r2/receipts/case-01-C-r1.json",
+        "archive/实验/evaluation/style-regression/pilot/outputs/batch-4b3t-r2/case-01/A-r1.png",
+        "archive/实验/evaluation/style-regression/pilot/outputs/batch-4b3t-r2/case-01/B-r1.png",
+        "archive/实验/evaluation/style-regression/pilot/outputs/batch-4b3t-r2/case-01/C-r1.png",
     ]
     hashes: dict[str, Any] = {
         value: sha256_file(root / value) if (root / value).is_file() else None
@@ -6101,9 +6113,9 @@ def _runtime_hashes(root: Path, cases_document: Mapping[str, Any]) -> dict[str, 
             if _selection_path(case_id, root=root).is_file()
             else None,
             "current_managed_only": sha256_file(
-                root / "evaluation" / "style-regression" / "reference-selection" / f"{case_id}.current-managed.json"
+                root / "archive/实验/evaluation" / "style-regression" / "reference-selection" / f"{case_id}.current-managed.json"
             )
-            if (root / "evaluation" / "style-regression" / "reference-selection" / f"{case_id}.current-managed.json").is_file()
+            if (root / "archive/实验/evaluation" / "style-regression" / "reference-selection" / f"{case_id}.current-managed.json").is_file()
             else None,
         }
         for case_id in CASE_IDS
@@ -6273,7 +6285,7 @@ def write_completion_report(
         "",
         "## Reference, context, and parity",
         "",
-        f"Style Reference manifest: {('evaluation/style-regression/reference-selection/style-reference-manifest.json, SHA-256 ' + sha256_file(evaluation_dir / 'reference-selection' / 'style-reference-manifest.json')) if (evaluation_dir / 'reference-selection' / 'style-reference-manifest.json').is_file() else 'not frozen'}.",
+        f"Style Reference manifest: {('archive/实验/evaluation/style-regression/reference-selection/style-reference-manifest.json, SHA-256 ' + sha256_file(evaluation_dir / 'reference-selection' / 'style-reference-manifest.json')) if (evaluation_dir / 'reference-selection' / 'style-reference-manifest.json').is_file() else 'not frozen'}.",
         "",
         "| Case | Reference SHA-256 | Provenance | Duties | Axes | Priority | Brief SHA-256 | Context SHA-256 | Selector parity | Scene parity | B/C Context parity | B/C Hygiene diff | Historical confound |",
         "|---|---|---|---|---|---|---|---|---|---|---|---|---|",
@@ -6410,7 +6422,7 @@ def write_completion_report(
         ]
     )
     report_path = (
-        root / "evaluation" / "style-regression" / R_COMPLETION_REPORT_PATH
+        root / "archive/实验/evaluation" / "style-regression" / R_COMPLETION_REPORT_PATH
         if codex_managed
         else root / COMPLETION_REPORT_PATH.relative_to(ROOT)
     )
@@ -6555,11 +6567,11 @@ def freeze_environment(
     if compile_result.returncode != 0:
         raise ExperimentError("py_compile baseline failed:\n" + compile_result.stdout + compile_result.stderr)
 
-    cases_document = _load_yaml(root / "evaluation" / "style-regression" / "cases.yaml")
+    cases_document = _load_yaml(root / "archive/实验/evaluation" / "style-regression" / "cases.yaml")
     cases = cases_document.get("cases") or []
     if cases:
         _write_frozen_text(
-            root / "evaluation" / "style-regression" / "prompts" / "base-scene.txt",
+            root / "archive/实验/evaluation" / "style-regression" / "prompts" / "base-scene.txt",
             compose_scene_prompt(cases[0]),
         )
     preflight = collect_preflight(
@@ -6627,14 +6639,14 @@ def freeze_environment(
         "hashes": hashes,
         "selector_confounds": selector_confounds,
         "preflight_report": {
-            "path": f"evaluation/style-regression/{R_PREFLIGHT_JSON_PATH}",
+            "path": f"archive/实验/evaluation/style-regression/{R_PREFLIGHT_JSON_PATH}",
             "sha256": sha256_file(_preflight_report_paths(root)[0]),
             "status": preflight_report["status"],
         },
         "initial_post_selector_fix_environment": {
-            "path": "evaluation/style-regression/environment/initial-post-selector-fix.json",
+            "path": "archive/实验/evaluation/style-regression/environment/initial-post-selector-fix.json",
             "sha256": sha256_file(initial_archive),
-            "source_path": "evaluation/style-regression/environment.json",
+            "source_path": "archive/实验/evaluation/style-regression/environment.json",
         },
         "preflight_runtime_fix": {
             "issue": "The reference selector included published assets whose excluded_for listed the requested exposure profile.",

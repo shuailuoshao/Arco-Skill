@@ -1,0 +1,2001 @@
+schema_version: 1
+calibration_id: cal-20260930T010244Z-d3c8df
+user_confirmed: true
+knowledge_change: false
+reason: User-approved split generation reference permissions; no Identity, Expression
+  or Variant fact changes.
+evidence_ids:
+- arco-expr-oblique-001
+- arco-expr-oblique-002
+- arco-expr-oblique-003
+- arco-expr-oblique-004
+- arco-expr-oblique-005
+- arco-expr-oblique-006
+- arco-expr-oblique-007
+- arco-expr-oblique-008
+- arco-expr-oblique-009
+- arco-expr-oblique-010
+- arco-expr-oblique-011
+- arco-expr-oblique-012
+- arco-expr-oblique-013
+- arco-expr-oblique-014
+- arco-expr-oblique-015
+- arco-expr-oblique-016
+- arco-expr-oblique-017
+- arco-expr-oblique-018
+- arco-expr-oblique-019
+- arco-expr-oblique-020
+- arco-expr-oblique-021
+- arco-expr-frontal-001
+- arco-expr-frontal-002
+- arco-expr-frontal-003
+- arco-expr-frontal-004
+- arco-expr-frontal-005
+- arco-expr-frontal-006
+- arco-expr-frontal-007
+- arco-expr-frontal-008
+- arco-expr-frontal-009
+- arco-expr-frontal-010
+- arco-expr-frontal-011
+- arco-expr-frontal-012
+- arco-expr-frontal-013
+- arco-expr-frontal-014
+- arco-expr-frontal-015
+- arco-expr-frontal-016
+- arco-expr-frontal-017
+- arco-expr-frontal-018
+- arco-expr-frontal-019
+- arco-expr-frontal-020
+- arco-expr-frontal-021
+- arco-expr-frontal-022
+- identity-p01-crop
+- casual-outfit-primary
+- casual-outfit-open-arms-no-horns-evidence
+- casual-outfit-crossed-arms-evidence
+- casual-outfit-raised-fists-evidence
+- identity-body-c07
+- identity-body-c13
+- identity-body-c14
+observations: []
+validation_result:
+  structure: PASS
+contract_changes:
+  arco-expr-oblique-001:
+    before:
+      can_be_generation_reference: null
+      generation_reference: null
+      purpose_note_zh: null
+    after:
+      can_be_generation_reference: true
+      generation_reference:
+        priority: primary
+        supported_roles:
+        - face_reference
+        preferred_for: &id001
+        - portrait
+        - upper_body
+        - full_body
+        excluded_for:
+        - back_view
+        coverage:
+          profiles: *id001
+          visible_fields:
+          - eyes
+          - face
+          view_angles:
+          - front_three_quarter
+          occluded_fields: []
+        inheritance:
+          face: inherit
+          eyes: inherit
+          hair: do_not_inherit
+          body_proportions: do_not_inherit
+          outfit: do_not_inherit
+          pose: do_not_inherit
+          lighting: do_not_inherit
+          scene: do_not_inherit
+          style: do_not_inherit
+          expression: do_not_inherit
+      purpose_note_zh: 获准作为分离生成参考；仅继承合同指定职责，不继承原图姿势、表情或渲染。
+  arco-expr-oblique-002:
+    before:
+      can_be_generation_reference: null
+      generation_reference: null
+      purpose_note_zh: null
+    after:
+      can_be_generation_reference: true
+      generation_reference:
+        priority: primary
+        supported_roles:
+        - face_reference
+        preferred_for: &id002
+        - portrait
+        - upper_body
+        - full_body
+        excluded_for:
+        - back_view
+        coverage:
+          profiles: *id002
+          visible_fields:
+          - eyes
+          - face
+          view_angles:
+          - front_three_quarter
+          occluded_fields: []
+        inheritance:
+          face: inherit
+          eyes: inherit
+          hair: do_not_inherit
+          body_proportions: do_not_inherit
+          outfit: do_not_inherit
+          pose: do_not_inherit
+          lighting: do_not_inherit
+          scene: do_not_inherit
+          style: do_not_inherit
+          expression: do_not_inherit
+      purpose_note_zh: 获准作为分离生成参考；仅继承合同指定职责，不继承原图姿势、表情或渲染。
+  arco-expr-oblique-003:
+    before:
+      can_be_generation_reference: null
+      generation_reference: null
+      purpose_note_zh: null
+    after:
+      can_be_generation_reference: true
+      generation_reference:
+        priority: primary
+        supported_roles:
+        - face_reference
+        preferred_for: &id003
+        - portrait
+        - upper_body
+        - full_body
+        excluded_for:
+        - back_view
+        coverage:
+          profiles: *id003
+          visible_fields:
+          - eyes
+          - face
+          view_angles:
+          - front_three_quarter
+          occluded_fields: []
+        inheritance:
+          face: inherit
+          eyes: inherit
+          hair: do_not_inherit
+          body_proportions: do_not_inherit
+          outfit: do_not_inherit
+          pose: do_not_inherit
+          lighting: do_not_inherit
+          scene: do_not_inherit
+          style: do_not_inherit
+          expression: do_not_inherit
+      purpose_note_zh: 获准作为分离生成参考；仅继承合同指定职责，不继承原图姿势、表情或渲染。
+  arco-expr-oblique-004:
+    before:
+      can_be_generation_reference: null
+      generation_reference: null
+      purpose_note_zh: null
+    after:
+      can_be_generation_reference: true
+      generation_reference:
+        priority: primary
+        supported_roles:
+        - face_reference
+        preferred_for: &id004
+        - portrait
+        - upper_body
+        - full_body
+        excluded_for:
+        - back_view
+        coverage:
+          profiles: *id004
+          visible_fields:
+          - eyes
+          - face
+          view_angles:
+          - front_three_quarter
+          occluded_fields: []
+        inheritance:
+          face: inherit
+          eyes: inherit
+          hair: do_not_inherit
+          body_proportions: do_not_inherit
+          outfit: do_not_inherit
+          pose: do_not_inherit
+          lighting: do_not_inherit
+          scene: do_not_inherit
+          style: do_not_inherit
+          expression: do_not_inherit
+      purpose_note_zh: 获准作为分离生成参考；仅继承合同指定职责，不继承原图姿势、表情或渲染。
+  arco-expr-oblique-005:
+    before:
+      can_be_generation_reference: null
+      generation_reference: null
+      purpose_note_zh: null
+    after:
+      can_be_generation_reference: true
+      generation_reference:
+        priority: primary
+        supported_roles:
+        - face_reference
+        preferred_for: &id005
+        - portrait
+        - upper_body
+        - full_body
+        excluded_for:
+        - back_view
+        coverage:
+          profiles: *id005
+          visible_fields:
+          - eyes
+          - face
+          view_angles:
+          - front_three_quarter
+          occluded_fields: []
+        inheritance:
+          face: inherit
+          eyes: inherit
+          hair: do_not_inherit
+          body_proportions: do_not_inherit
+          outfit: do_not_inherit
+          pose: do_not_inherit
+          lighting: do_not_inherit
+          scene: do_not_inherit
+          style: do_not_inherit
+          expression: do_not_inherit
+      purpose_note_zh: 获准作为分离生成参考；仅继承合同指定职责，不继承原图姿势、表情或渲染。
+  arco-expr-oblique-006:
+    before:
+      can_be_generation_reference: null
+      generation_reference: null
+      purpose_note_zh: null
+    after:
+      can_be_generation_reference: true
+      generation_reference:
+        priority: primary
+        supported_roles:
+        - face_reference
+        preferred_for: &id006
+        - portrait
+        - upper_body
+        - full_body
+        excluded_for:
+        - back_view
+        coverage:
+          profiles: *id006
+          visible_fields:
+          - eyes
+          - face
+          view_angles:
+          - front_three_quarter
+          occluded_fields: []
+        inheritance:
+          face: inherit
+          eyes: inherit
+          hair: do_not_inherit
+          body_proportions: do_not_inherit
+          outfit: do_not_inherit
+          pose: do_not_inherit
+          lighting: do_not_inherit
+          scene: do_not_inherit
+          style: do_not_inherit
+          expression: do_not_inherit
+      purpose_note_zh: 获准作为分离生成参考；仅继承合同指定职责，不继承原图姿势、表情或渲染。
+  arco-expr-oblique-007:
+    before:
+      can_be_generation_reference: null
+      generation_reference: null
+      purpose_note_zh: null
+    after:
+      can_be_generation_reference: true
+      generation_reference:
+        priority: primary
+        supported_roles:
+        - face_reference
+        preferred_for: &id007
+        - portrait
+        - upper_body
+        - full_body
+        excluded_for:
+        - back_view
+        coverage:
+          profiles: *id007
+          visible_fields:
+          - eyes
+          - face
+          view_angles:
+          - front_three_quarter
+          occluded_fields: []
+        inheritance:
+          face: inherit
+          eyes: inherit
+          hair: do_not_inherit
+          body_proportions: do_not_inherit
+          outfit: do_not_inherit
+          pose: do_not_inherit
+          lighting: do_not_inherit
+          scene: do_not_inherit
+          style: do_not_inherit
+          expression: do_not_inherit
+      purpose_note_zh: 获准作为分离生成参考；仅继承合同指定职责，不继承原图姿势、表情或渲染。
+  arco-expr-oblique-008:
+    before:
+      can_be_generation_reference: null
+      generation_reference: null
+      purpose_note_zh: null
+    after:
+      can_be_generation_reference: true
+      generation_reference:
+        priority: primary
+        supported_roles:
+        - face_reference
+        preferred_for: &id008
+        - portrait
+        - upper_body
+        - full_body
+        excluded_for:
+        - back_view
+        coverage:
+          profiles: *id008
+          visible_fields:
+          - eyes
+          - face
+          view_angles:
+          - front_three_quarter
+          occluded_fields: []
+        inheritance:
+          face: inherit
+          eyes: inherit
+          hair: do_not_inherit
+          body_proportions: do_not_inherit
+          outfit: do_not_inherit
+          pose: do_not_inherit
+          lighting: do_not_inherit
+          scene: do_not_inherit
+          style: do_not_inherit
+          expression: do_not_inherit
+      purpose_note_zh: 获准作为分离生成参考；仅继承合同指定职责，不继承原图姿势、表情或渲染。
+  arco-expr-oblique-009:
+    before:
+      can_be_generation_reference: null
+      generation_reference: null
+      purpose_note_zh: null
+    after:
+      can_be_generation_reference: true
+      generation_reference:
+        priority: primary
+        supported_roles:
+        - face_reference
+        preferred_for: &id009
+        - portrait
+        - upper_body
+        - full_body
+        excluded_for:
+        - back_view
+        coverage:
+          profiles: *id009
+          visible_fields:
+          - eyes
+          - face
+          view_angles:
+          - front_three_quarter
+          occluded_fields: []
+        inheritance:
+          face: inherit
+          eyes: inherit
+          hair: do_not_inherit
+          body_proportions: do_not_inherit
+          outfit: do_not_inherit
+          pose: do_not_inherit
+          lighting: do_not_inherit
+          scene: do_not_inherit
+          style: do_not_inherit
+          expression: do_not_inherit
+      purpose_note_zh: 获准作为分离生成参考；仅继承合同指定职责，不继承原图姿势、表情或渲染。
+  arco-expr-oblique-010:
+    before:
+      can_be_generation_reference: null
+      generation_reference: null
+      purpose_note_zh: null
+    after:
+      can_be_generation_reference: true
+      generation_reference:
+        priority: primary
+        supported_roles:
+        - face_reference
+        preferred_for: &id010
+        - portrait
+        - upper_body
+        - full_body
+        excluded_for:
+        - back_view
+        coverage:
+          profiles: *id010
+          visible_fields:
+          - eyes
+          - face
+          view_angles:
+          - front_three_quarter
+          occluded_fields: []
+        inheritance:
+          face: inherit
+          eyes: inherit
+          hair: do_not_inherit
+          body_proportions: do_not_inherit
+          outfit: do_not_inherit
+          pose: do_not_inherit
+          lighting: do_not_inherit
+          scene: do_not_inherit
+          style: do_not_inherit
+          expression: do_not_inherit
+      purpose_note_zh: 获准作为分离生成参考；仅继承合同指定职责，不继承原图姿势、表情或渲染。
+  arco-expr-oblique-011:
+    before:
+      can_be_generation_reference: null
+      generation_reference: null
+      purpose_note_zh: null
+    after:
+      can_be_generation_reference: true
+      generation_reference:
+        priority: primary
+        supported_roles:
+        - face_reference
+        preferred_for: &id011
+        - portrait
+        - upper_body
+        - full_body
+        excluded_for:
+        - back_view
+        coverage:
+          profiles: *id011
+          visible_fields:
+          - eyes
+          - face
+          view_angles:
+          - front_three_quarter
+          occluded_fields: []
+        inheritance:
+          face: inherit
+          eyes: inherit
+          hair: do_not_inherit
+          body_proportions: do_not_inherit
+          outfit: do_not_inherit
+          pose: do_not_inherit
+          lighting: do_not_inherit
+          scene: do_not_inherit
+          style: do_not_inherit
+          expression: do_not_inherit
+      purpose_note_zh: 获准作为分离生成参考；仅继承合同指定职责，不继承原图姿势、表情或渲染。
+  arco-expr-oblique-012:
+    before:
+      can_be_generation_reference: null
+      generation_reference: null
+      purpose_note_zh: null
+    after:
+      can_be_generation_reference: true
+      generation_reference:
+        priority: primary
+        supported_roles:
+        - face_reference
+        preferred_for: &id012
+        - portrait
+        - upper_body
+        - full_body
+        excluded_for:
+        - back_view
+        coverage:
+          profiles: *id012
+          visible_fields:
+          - eyes
+          - face
+          view_angles:
+          - front_three_quarter
+          occluded_fields: []
+        inheritance:
+          face: inherit
+          eyes: inherit
+          hair: do_not_inherit
+          body_proportions: do_not_inherit
+          outfit: do_not_inherit
+          pose: do_not_inherit
+          lighting: do_not_inherit
+          scene: do_not_inherit
+          style: do_not_inherit
+          expression: do_not_inherit
+      purpose_note_zh: 获准作为分离生成参考；仅继承合同指定职责，不继承原图姿势、表情或渲染。
+  arco-expr-oblique-013:
+    before:
+      can_be_generation_reference: null
+      generation_reference: null
+      purpose_note_zh: null
+    after:
+      can_be_generation_reference: true
+      generation_reference:
+        priority: primary
+        supported_roles:
+        - face_reference
+        preferred_for: &id013
+        - portrait
+        - upper_body
+        - full_body
+        excluded_for:
+        - back_view
+        coverage:
+          profiles: *id013
+          visible_fields:
+          - eyes
+          - face
+          view_angles:
+          - front_three_quarter
+          occluded_fields: []
+        inheritance:
+          face: inherit
+          eyes: inherit
+          hair: do_not_inherit
+          body_proportions: do_not_inherit
+          outfit: do_not_inherit
+          pose: do_not_inherit
+          lighting: do_not_inherit
+          scene: do_not_inherit
+          style: do_not_inherit
+          expression: do_not_inherit
+      purpose_note_zh: 获准作为分离生成参考；仅继承合同指定职责，不继承原图姿势、表情或渲染。
+  arco-expr-oblique-014:
+    before:
+      can_be_generation_reference: null
+      generation_reference: null
+      purpose_note_zh: null
+    after:
+      can_be_generation_reference: true
+      generation_reference:
+        priority: primary
+        supported_roles:
+        - face_reference
+        preferred_for: &id014
+        - portrait
+        - upper_body
+        - full_body
+        excluded_for:
+        - back_view
+        coverage:
+          profiles: *id014
+          visible_fields:
+          - eyes
+          - face
+          view_angles:
+          - front_three_quarter
+          occluded_fields: []
+        inheritance:
+          face: inherit
+          eyes: inherit
+          hair: do_not_inherit
+          body_proportions: do_not_inherit
+          outfit: do_not_inherit
+          pose: do_not_inherit
+          lighting: do_not_inherit
+          scene: do_not_inherit
+          style: do_not_inherit
+          expression: do_not_inherit
+      purpose_note_zh: 获准作为分离生成参考；仅继承合同指定职责，不继承原图姿势、表情或渲染。
+  arco-expr-oblique-015:
+    before:
+      can_be_generation_reference: null
+      generation_reference: null
+      purpose_note_zh: null
+    after:
+      can_be_generation_reference: true
+      generation_reference:
+        priority: primary
+        supported_roles:
+        - face_reference
+        preferred_for: &id015
+        - portrait
+        - upper_body
+        - full_body
+        excluded_for:
+        - back_view
+        coverage:
+          profiles: *id015
+          visible_fields:
+          - eyes
+          - face
+          view_angles:
+          - front_three_quarter
+          occluded_fields: []
+        inheritance:
+          face: inherit
+          eyes: inherit
+          hair: do_not_inherit
+          body_proportions: do_not_inherit
+          outfit: do_not_inherit
+          pose: do_not_inherit
+          lighting: do_not_inherit
+          scene: do_not_inherit
+          style: do_not_inherit
+          expression: do_not_inherit
+      purpose_note_zh: 获准作为分离生成参考；仅继承合同指定职责，不继承原图姿势、表情或渲染。
+  arco-expr-oblique-016:
+    before:
+      can_be_generation_reference: null
+      generation_reference: null
+      purpose_note_zh: null
+    after:
+      can_be_generation_reference: true
+      generation_reference:
+        priority: primary
+        supported_roles:
+        - face_reference
+        preferred_for: &id016
+        - portrait
+        - upper_body
+        - full_body
+        excluded_for:
+        - back_view
+        coverage:
+          profiles: *id016
+          visible_fields:
+          - eyes
+          - face
+          view_angles:
+          - front_three_quarter
+          occluded_fields: []
+        inheritance:
+          face: inherit
+          eyes: inherit
+          hair: do_not_inherit
+          body_proportions: do_not_inherit
+          outfit: do_not_inherit
+          pose: do_not_inherit
+          lighting: do_not_inherit
+          scene: do_not_inherit
+          style: do_not_inherit
+          expression: do_not_inherit
+      purpose_note_zh: 获准作为分离生成参考；仅继承合同指定职责，不继承原图姿势、表情或渲染。
+  arco-expr-oblique-017:
+    before:
+      can_be_generation_reference: null
+      generation_reference: null
+      purpose_note_zh: null
+    after:
+      can_be_generation_reference: true
+      generation_reference:
+        priority: primary
+        supported_roles:
+        - face_reference
+        preferred_for: &id017
+        - portrait
+        - upper_body
+        - full_body
+        excluded_for:
+        - back_view
+        coverage:
+          profiles: *id017
+          visible_fields:
+          - eyes
+          - face
+          view_angles:
+          - front_three_quarter
+          occluded_fields: []
+        inheritance:
+          face: inherit
+          eyes: inherit
+          hair: do_not_inherit
+          body_proportions: do_not_inherit
+          outfit: do_not_inherit
+          pose: do_not_inherit
+          lighting: do_not_inherit
+          scene: do_not_inherit
+          style: do_not_inherit
+          expression: do_not_inherit
+      purpose_note_zh: 获准作为分离生成参考；仅继承合同指定职责，不继承原图姿势、表情或渲染。
+  arco-expr-oblique-018:
+    before:
+      can_be_generation_reference: null
+      generation_reference: null
+      purpose_note_zh: null
+    after:
+      can_be_generation_reference: true
+      generation_reference:
+        priority: primary
+        supported_roles:
+        - face_reference
+        preferred_for: &id018
+        - portrait
+        - upper_body
+        - full_body
+        excluded_for:
+        - back_view
+        coverage:
+          profiles: *id018
+          visible_fields:
+          - eyes
+          - face
+          view_angles:
+          - front_three_quarter
+          occluded_fields: []
+        inheritance:
+          face: inherit
+          eyes: inherit
+          hair: do_not_inherit
+          body_proportions: do_not_inherit
+          outfit: do_not_inherit
+          pose: do_not_inherit
+          lighting: do_not_inherit
+          scene: do_not_inherit
+          style: do_not_inherit
+          expression: do_not_inherit
+      purpose_note_zh: 获准作为分离生成参考；仅继承合同指定职责，不继承原图姿势、表情或渲染。
+  arco-expr-oblique-019:
+    before:
+      can_be_generation_reference: null
+      generation_reference: null
+      purpose_note_zh: null
+    after:
+      can_be_generation_reference: true
+      generation_reference:
+        priority: primary
+        supported_roles:
+        - face_reference
+        preferred_for: &id019
+        - portrait
+        - upper_body
+        - full_body
+        excluded_for:
+        - back_view
+        coverage:
+          profiles: *id019
+          visible_fields:
+          - eyes
+          - face
+          view_angles:
+          - front_three_quarter
+          occluded_fields: []
+        inheritance:
+          face: inherit
+          eyes: inherit
+          hair: do_not_inherit
+          body_proportions: do_not_inherit
+          outfit: do_not_inherit
+          pose: do_not_inherit
+          lighting: do_not_inherit
+          scene: do_not_inherit
+          style: do_not_inherit
+          expression: do_not_inherit
+      purpose_note_zh: 获准作为分离生成参考；仅继承合同指定职责，不继承原图姿势、表情或渲染。
+  arco-expr-oblique-020:
+    before:
+      can_be_generation_reference: null
+      generation_reference: null
+      purpose_note_zh: null
+    after:
+      can_be_generation_reference: true
+      generation_reference:
+        priority: primary
+        supported_roles:
+        - face_reference
+        preferred_for: &id020
+        - portrait
+        - upper_body
+        - full_body
+        excluded_for:
+        - back_view
+        coverage:
+          profiles: *id020
+          visible_fields:
+          - eyes
+          - face
+          view_angles:
+          - front_three_quarter
+          occluded_fields: []
+        inheritance:
+          face: inherit
+          eyes: inherit
+          hair: do_not_inherit
+          body_proportions: do_not_inherit
+          outfit: do_not_inherit
+          pose: do_not_inherit
+          lighting: do_not_inherit
+          scene: do_not_inherit
+          style: do_not_inherit
+          expression: do_not_inherit
+      purpose_note_zh: 获准作为分离生成参考；仅继承合同指定职责，不继承原图姿势、表情或渲染。
+  arco-expr-oblique-021:
+    before:
+      can_be_generation_reference: null
+      generation_reference: null
+      purpose_note_zh: null
+    after:
+      can_be_generation_reference: true
+      generation_reference:
+        priority: primary
+        supported_roles:
+        - face_reference
+        preferred_for: &id021
+        - portrait
+        - upper_body
+        - full_body
+        excluded_for:
+        - back_view
+        coverage:
+          profiles: *id021
+          visible_fields:
+          - eyes
+          - face
+          view_angles:
+          - front_three_quarter
+          occluded_fields: []
+        inheritance:
+          face: inherit
+          eyes: inherit
+          hair: do_not_inherit
+          body_proportions: do_not_inherit
+          outfit: do_not_inherit
+          pose: do_not_inherit
+          lighting: do_not_inherit
+          scene: do_not_inherit
+          style: do_not_inherit
+          expression: do_not_inherit
+      purpose_note_zh: 获准作为分离生成参考；仅继承合同指定职责，不继承原图姿势、表情或渲染。
+  arco-expr-frontal-001:
+    before:
+      can_be_generation_reference: null
+      generation_reference: null
+      purpose_note_zh: null
+    after:
+      can_be_generation_reference: true
+      generation_reference:
+        priority: primary
+        supported_roles:
+        - face_reference
+        preferred_for: &id022
+        - portrait
+        - upper_body
+        - full_body
+        excluded_for:
+        - back_view
+        coverage:
+          profiles: *id022
+          visible_fields:
+          - eyes
+          - face
+          view_angles:
+          - front
+          occluded_fields: []
+        inheritance:
+          face: inherit
+          eyes: inherit
+          hair: do_not_inherit
+          body_proportions: do_not_inherit
+          outfit: do_not_inherit
+          pose: do_not_inherit
+          lighting: do_not_inherit
+          scene: do_not_inherit
+          style: do_not_inherit
+          expression: do_not_inherit
+      purpose_note_zh: 获准作为分离生成参考；仅继承合同指定职责，不继承原图姿势、表情或渲染。
+  arco-expr-frontal-002:
+    before:
+      can_be_generation_reference: null
+      generation_reference: null
+      purpose_note_zh: null
+    after:
+      can_be_generation_reference: true
+      generation_reference:
+        priority: primary
+        supported_roles:
+        - face_reference
+        preferred_for: &id023
+        - portrait
+        - upper_body
+        - full_body
+        excluded_for:
+        - back_view
+        coverage:
+          profiles: *id023
+          visible_fields:
+          - eyes
+          - face
+          view_angles:
+          - front
+          occluded_fields: []
+        inheritance:
+          face: inherit
+          eyes: inherit
+          hair: do_not_inherit
+          body_proportions: do_not_inherit
+          outfit: do_not_inherit
+          pose: do_not_inherit
+          lighting: do_not_inherit
+          scene: do_not_inherit
+          style: do_not_inherit
+          expression: do_not_inherit
+      purpose_note_zh: 获准作为分离生成参考；仅继承合同指定职责，不继承原图姿势、表情或渲染。
+  arco-expr-frontal-003:
+    before:
+      can_be_generation_reference: null
+      generation_reference: null
+      purpose_note_zh: null
+    after:
+      can_be_generation_reference: true
+      generation_reference:
+        priority: primary
+        supported_roles:
+        - face_reference
+        preferred_for: &id024
+        - portrait
+        - upper_body
+        - full_body
+        excluded_for:
+        - back_view
+        coverage:
+          profiles: *id024
+          visible_fields:
+          - eyes
+          - face
+          view_angles:
+          - front
+          occluded_fields: []
+        inheritance:
+          face: inherit
+          eyes: inherit
+          hair: do_not_inherit
+          body_proportions: do_not_inherit
+          outfit: do_not_inherit
+          pose: do_not_inherit
+          lighting: do_not_inherit
+          scene: do_not_inherit
+          style: do_not_inherit
+          expression: do_not_inherit
+      purpose_note_zh: 获准作为分离生成参考；仅继承合同指定职责，不继承原图姿势、表情或渲染。
+  arco-expr-frontal-004:
+    before:
+      can_be_generation_reference: null
+      generation_reference: null
+      purpose_note_zh: null
+    after:
+      can_be_generation_reference: true
+      generation_reference:
+        priority: primary
+        supported_roles:
+        - face_reference
+        preferred_for: &id025
+        - portrait
+        - upper_body
+        - full_body
+        excluded_for:
+        - back_view
+        coverage:
+          profiles: *id025
+          visible_fields:
+          - eyes
+          - face
+          view_angles:
+          - front
+          occluded_fields: []
+        inheritance:
+          face: inherit
+          eyes: inherit
+          hair: do_not_inherit
+          body_proportions: do_not_inherit
+          outfit: do_not_inherit
+          pose: do_not_inherit
+          lighting: do_not_inherit
+          scene: do_not_inherit
+          style: do_not_inherit
+          expression: do_not_inherit
+      purpose_note_zh: 获准作为分离生成参考；仅继承合同指定职责，不继承原图姿势、表情或渲染。
+  arco-expr-frontal-005:
+    before:
+      can_be_generation_reference: null
+      generation_reference: null
+      purpose_note_zh: null
+    after:
+      can_be_generation_reference: true
+      generation_reference:
+        priority: primary
+        supported_roles:
+        - face_reference
+        preferred_for: &id026
+        - portrait
+        - upper_body
+        - full_body
+        excluded_for:
+        - back_view
+        coverage:
+          profiles: *id026
+          visible_fields:
+          - eyes
+          - face
+          view_angles:
+          - front
+          occluded_fields: []
+        inheritance:
+          face: inherit
+          eyes: inherit
+          hair: do_not_inherit
+          body_proportions: do_not_inherit
+          outfit: do_not_inherit
+          pose: do_not_inherit
+          lighting: do_not_inherit
+          scene: do_not_inherit
+          style: do_not_inherit
+          expression: do_not_inherit
+      purpose_note_zh: 获准作为分离生成参考；仅继承合同指定职责，不继承原图姿势、表情或渲染。
+  arco-expr-frontal-006:
+    before:
+      can_be_generation_reference: null
+      generation_reference: null
+      purpose_note_zh: null
+    after:
+      can_be_generation_reference: true
+      generation_reference:
+        priority: primary
+        supported_roles:
+        - face_reference
+        preferred_for: &id027
+        - portrait
+        - upper_body
+        - full_body
+        excluded_for:
+        - back_view
+        coverage:
+          profiles: *id027
+          visible_fields:
+          - eyes
+          - face
+          view_angles:
+          - front
+          occluded_fields: []
+        inheritance:
+          face: inherit
+          eyes: inherit
+          hair: do_not_inherit
+          body_proportions: do_not_inherit
+          outfit: do_not_inherit
+          pose: do_not_inherit
+          lighting: do_not_inherit
+          scene: do_not_inherit
+          style: do_not_inherit
+          expression: do_not_inherit
+      purpose_note_zh: 获准作为分离生成参考；仅继承合同指定职责，不继承原图姿势、表情或渲染。
+  arco-expr-frontal-007:
+    before:
+      can_be_generation_reference: null
+      generation_reference: null
+      purpose_note_zh: null
+    after:
+      can_be_generation_reference: true
+      generation_reference:
+        priority: primary
+        supported_roles:
+        - face_reference
+        preferred_for: &id028
+        - portrait
+        - upper_body
+        - full_body
+        excluded_for:
+        - back_view
+        coverage:
+          profiles: *id028
+          visible_fields:
+          - eyes
+          - face
+          view_angles:
+          - front
+          occluded_fields: []
+        inheritance:
+          face: inherit
+          eyes: inherit
+          hair: do_not_inherit
+          body_proportions: do_not_inherit
+          outfit: do_not_inherit
+          pose: do_not_inherit
+          lighting: do_not_inherit
+          scene: do_not_inherit
+          style: do_not_inherit
+          expression: do_not_inherit
+      purpose_note_zh: 获准作为分离生成参考；仅继承合同指定职责，不继承原图姿势、表情或渲染。
+  arco-expr-frontal-008:
+    before:
+      can_be_generation_reference: null
+      generation_reference: null
+      purpose_note_zh: null
+    after:
+      can_be_generation_reference: true
+      generation_reference:
+        priority: primary
+        supported_roles:
+        - face_reference
+        preferred_for: &id029
+        - portrait
+        - upper_body
+        - full_body
+        excluded_for:
+        - back_view
+        coverage:
+          profiles: *id029
+          visible_fields:
+          - eyes
+          - face
+          view_angles:
+          - front
+          occluded_fields: []
+        inheritance:
+          face: inherit
+          eyes: inherit
+          hair: do_not_inherit
+          body_proportions: do_not_inherit
+          outfit: do_not_inherit
+          pose: do_not_inherit
+          lighting: do_not_inherit
+          scene: do_not_inherit
+          style: do_not_inherit
+          expression: do_not_inherit
+      purpose_note_zh: 获准作为分离生成参考；仅继承合同指定职责，不继承原图姿势、表情或渲染。
+  arco-expr-frontal-009:
+    before:
+      can_be_generation_reference: null
+      generation_reference: null
+      purpose_note_zh: null
+    after:
+      can_be_generation_reference: true
+      generation_reference:
+        priority: primary
+        supported_roles:
+        - face_reference
+        preferred_for: &id030
+        - portrait
+        - upper_body
+        - full_body
+        excluded_for:
+        - back_view
+        coverage:
+          profiles: *id030
+          visible_fields:
+          - eyes
+          - face
+          view_angles:
+          - front
+          occluded_fields: []
+        inheritance:
+          face: inherit
+          eyes: inherit
+          hair: do_not_inherit
+          body_proportions: do_not_inherit
+          outfit: do_not_inherit
+          pose: do_not_inherit
+          lighting: do_not_inherit
+          scene: do_not_inherit
+          style: do_not_inherit
+          expression: do_not_inherit
+      purpose_note_zh: 获准作为分离生成参考；仅继承合同指定职责，不继承原图姿势、表情或渲染。
+  arco-expr-frontal-010:
+    before:
+      can_be_generation_reference: null
+      generation_reference: null
+      purpose_note_zh: null
+    after:
+      can_be_generation_reference: true
+      generation_reference:
+        priority: primary
+        supported_roles:
+        - face_reference
+        preferred_for: &id031
+        - portrait
+        - upper_body
+        - full_body
+        excluded_for:
+        - back_view
+        coverage:
+          profiles: *id031
+          visible_fields:
+          - eyes
+          - face
+          view_angles:
+          - front
+          occluded_fields: []
+        inheritance:
+          face: inherit
+          eyes: inherit
+          hair: do_not_inherit
+          body_proportions: do_not_inherit
+          outfit: do_not_inherit
+          pose: do_not_inherit
+          lighting: do_not_inherit
+          scene: do_not_inherit
+          style: do_not_inherit
+          expression: do_not_inherit
+      purpose_note_zh: 获准作为分离生成参考；仅继承合同指定职责，不继承原图姿势、表情或渲染。
+  arco-expr-frontal-011:
+    before:
+      can_be_generation_reference: null
+      generation_reference: null
+      purpose_note_zh: null
+    after:
+      can_be_generation_reference: true
+      generation_reference:
+        priority: primary
+        supported_roles:
+        - face_reference
+        preferred_for: &id032
+        - portrait
+        - upper_body
+        - full_body
+        excluded_for:
+        - back_view
+        coverage:
+          profiles: *id032
+          visible_fields:
+          - eyes
+          - face
+          view_angles:
+          - front
+          occluded_fields: []
+        inheritance:
+          face: inherit
+          eyes: inherit
+          hair: do_not_inherit
+          body_proportions: do_not_inherit
+          outfit: do_not_inherit
+          pose: do_not_inherit
+          lighting: do_not_inherit
+          scene: do_not_inherit
+          style: do_not_inherit
+          expression: do_not_inherit
+      purpose_note_zh: 获准作为分离生成参考；仅继承合同指定职责，不继承原图姿势、表情或渲染。
+  arco-expr-frontal-012:
+    before:
+      can_be_generation_reference: null
+      generation_reference: null
+      purpose_note_zh: null
+    after:
+      can_be_generation_reference: true
+      generation_reference:
+        priority: primary
+        supported_roles:
+        - face_reference
+        preferred_for: &id033
+        - portrait
+        - upper_body
+        - full_body
+        excluded_for:
+        - back_view
+        coverage:
+          profiles: *id033
+          visible_fields:
+          - eyes
+          - face
+          view_angles:
+          - front
+          occluded_fields: []
+        inheritance:
+          face: inherit
+          eyes: inherit
+          hair: do_not_inherit
+          body_proportions: do_not_inherit
+          outfit: do_not_inherit
+          pose: do_not_inherit
+          lighting: do_not_inherit
+          scene: do_not_inherit
+          style: do_not_inherit
+          expression: do_not_inherit
+      purpose_note_zh: 获准作为分离生成参考；仅继承合同指定职责，不继承原图姿势、表情或渲染。
+  arco-expr-frontal-013:
+    before:
+      can_be_generation_reference: null
+      generation_reference: null
+      purpose_note_zh: null
+    after:
+      can_be_generation_reference: true
+      generation_reference:
+        priority: primary
+        supported_roles:
+        - face_reference
+        preferred_for: &id034
+        - portrait
+        - upper_body
+        - full_body
+        excluded_for:
+        - back_view
+        coverage:
+          profiles: *id034
+          visible_fields:
+          - eyes
+          - face
+          view_angles:
+          - front
+          occluded_fields: []
+        inheritance:
+          face: inherit
+          eyes: inherit
+          hair: do_not_inherit
+          body_proportions: do_not_inherit
+          outfit: do_not_inherit
+          pose: do_not_inherit
+          lighting: do_not_inherit
+          scene: do_not_inherit
+          style: do_not_inherit
+          expression: do_not_inherit
+      purpose_note_zh: 获准作为分离生成参考；仅继承合同指定职责，不继承原图姿势、表情或渲染。
+  arco-expr-frontal-014:
+    before:
+      can_be_generation_reference: null
+      generation_reference: null
+      purpose_note_zh: null
+    after:
+      can_be_generation_reference: true
+      generation_reference:
+        priority: primary
+        supported_roles:
+        - face_reference
+        preferred_for: &id035
+        - portrait
+        - upper_body
+        - full_body
+        excluded_for:
+        - back_view
+        coverage:
+          profiles: *id035
+          visible_fields:
+          - eyes
+          - face
+          view_angles:
+          - front
+          occluded_fields: []
+        inheritance:
+          face: inherit
+          eyes: inherit
+          hair: do_not_inherit
+          body_proportions: do_not_inherit
+          outfit: do_not_inherit
+          pose: do_not_inherit
+          lighting: do_not_inherit
+          scene: do_not_inherit
+          style: do_not_inherit
+          expression: do_not_inherit
+      purpose_note_zh: 获准作为分离生成参考；仅继承合同指定职责，不继承原图姿势、表情或渲染。
+  arco-expr-frontal-015:
+    before:
+      can_be_generation_reference: null
+      generation_reference: null
+      purpose_note_zh: null
+    after:
+      can_be_generation_reference: true
+      generation_reference:
+        priority: primary
+        supported_roles:
+        - face_reference
+        preferred_for: &id036
+        - portrait
+        - upper_body
+        - full_body
+        excluded_for:
+        - back_view
+        coverage:
+          profiles: *id036
+          visible_fields:
+          - eyes
+          - face
+          view_angles:
+          - front
+          occluded_fields: []
+        inheritance:
+          face: inherit
+          eyes: inherit
+          hair: do_not_inherit
+          body_proportions: do_not_inherit
+          outfit: do_not_inherit
+          pose: do_not_inherit
+          lighting: do_not_inherit
+          scene: do_not_inherit
+          style: do_not_inherit
+          expression: do_not_inherit
+      purpose_note_zh: 获准作为分离生成参考；仅继承合同指定职责，不继承原图姿势、表情或渲染。
+  arco-expr-frontal-016:
+    before:
+      can_be_generation_reference: null
+      generation_reference: null
+      purpose_note_zh: null
+    after:
+      can_be_generation_reference: true
+      generation_reference:
+        priority: primary
+        supported_roles:
+        - face_reference
+        preferred_for: &id037
+        - portrait
+        - upper_body
+        - full_body
+        excluded_for:
+        - back_view
+        coverage:
+          profiles: *id037
+          visible_fields:
+          - eyes
+          - face
+          view_angles:
+          - front
+          occluded_fields: []
+        inheritance:
+          face: inherit
+          eyes: inherit
+          hair: do_not_inherit
+          body_proportions: do_not_inherit
+          outfit: do_not_inherit
+          pose: do_not_inherit
+          lighting: do_not_inherit
+          scene: do_not_inherit
+          style: do_not_inherit
+          expression: do_not_inherit
+      purpose_note_zh: 获准作为分离生成参考；仅继承合同指定职责，不继承原图姿势、表情或渲染。
+  arco-expr-frontal-017:
+    before:
+      can_be_generation_reference: null
+      generation_reference: null
+      purpose_note_zh: null
+    after:
+      can_be_generation_reference: true
+      generation_reference:
+        priority: primary
+        supported_roles:
+        - face_reference
+        preferred_for: &id038
+        - portrait
+        - upper_body
+        - full_body
+        excluded_for:
+        - back_view
+        coverage:
+          profiles: *id038
+          visible_fields:
+          - eyes
+          - face
+          view_angles:
+          - front
+          occluded_fields: []
+        inheritance:
+          face: inherit
+          eyes: inherit
+          hair: do_not_inherit
+          body_proportions: do_not_inherit
+          outfit: do_not_inherit
+          pose: do_not_inherit
+          lighting: do_not_inherit
+          scene: do_not_inherit
+          style: do_not_inherit
+          expression: do_not_inherit
+      purpose_note_zh: 获准作为分离生成参考；仅继承合同指定职责，不继承原图姿势、表情或渲染。
+  arco-expr-frontal-018:
+    before:
+      can_be_generation_reference: null
+      generation_reference: null
+      purpose_note_zh: null
+    after:
+      can_be_generation_reference: true
+      generation_reference:
+        priority: primary
+        supported_roles:
+        - face_reference
+        preferred_for: &id039
+        - portrait
+        - upper_body
+        - full_body
+        excluded_for:
+        - back_view
+        coverage:
+          profiles: *id039
+          visible_fields:
+          - eyes
+          - face
+          view_angles:
+          - front
+          occluded_fields: []
+        inheritance:
+          face: inherit
+          eyes: inherit
+          hair: do_not_inherit
+          body_proportions: do_not_inherit
+          outfit: do_not_inherit
+          pose: do_not_inherit
+          lighting: do_not_inherit
+          scene: do_not_inherit
+          style: do_not_inherit
+          expression: do_not_inherit
+      purpose_note_zh: 获准作为分离生成参考；仅继承合同指定职责，不继承原图姿势、表情或渲染。
+  arco-expr-frontal-019:
+    before:
+      can_be_generation_reference: null
+      generation_reference: null
+      purpose_note_zh: null
+    after:
+      can_be_generation_reference: true
+      generation_reference:
+        priority: primary
+        supported_roles:
+        - face_reference
+        preferred_for: &id040
+        - portrait
+        - upper_body
+        - full_body
+        excluded_for:
+        - back_view
+        coverage:
+          profiles: *id040
+          visible_fields:
+          - eyes
+          - face
+          view_angles:
+          - front
+          occluded_fields: []
+        inheritance:
+          face: inherit
+          eyes: inherit
+          hair: do_not_inherit
+          body_proportions: do_not_inherit
+          outfit: do_not_inherit
+          pose: do_not_inherit
+          lighting: do_not_inherit
+          scene: do_not_inherit
+          style: do_not_inherit
+          expression: do_not_inherit
+      purpose_note_zh: 获准作为分离生成参考；仅继承合同指定职责，不继承原图姿势、表情或渲染。
+  arco-expr-frontal-020:
+    before:
+      can_be_generation_reference: null
+      generation_reference: null
+      purpose_note_zh: null
+    after:
+      can_be_generation_reference: true
+      generation_reference:
+        priority: primary
+        supported_roles:
+        - face_reference
+        preferred_for: &id041
+        - portrait
+        - upper_body
+        - full_body
+        excluded_for:
+        - back_view
+        coverage:
+          profiles: *id041
+          visible_fields:
+          - eyes
+          - face
+          view_angles:
+          - front
+          occluded_fields: []
+        inheritance:
+          face: inherit
+          eyes: inherit
+          hair: do_not_inherit
+          body_proportions: do_not_inherit
+          outfit: do_not_inherit
+          pose: do_not_inherit
+          lighting: do_not_inherit
+          scene: do_not_inherit
+          style: do_not_inherit
+          expression: do_not_inherit
+      purpose_note_zh: 获准作为分离生成参考；仅继承合同指定职责，不继承原图姿势、表情或渲染。
+  arco-expr-frontal-021:
+    before:
+      can_be_generation_reference: null
+      generation_reference: null
+      purpose_note_zh: null
+    after:
+      can_be_generation_reference: true
+      generation_reference:
+        priority: primary
+        supported_roles:
+        - face_reference
+        preferred_for: &id042
+        - portrait
+        - upper_body
+        - full_body
+        excluded_for:
+        - back_view
+        coverage:
+          profiles: *id042
+          visible_fields:
+          - eyes
+          - face
+          view_angles:
+          - front
+          occluded_fields: []
+        inheritance:
+          face: inherit
+          eyes: inherit
+          hair: do_not_inherit
+          body_proportions: do_not_inherit
+          outfit: do_not_inherit
+          pose: do_not_inherit
+          lighting: do_not_inherit
+          scene: do_not_inherit
+          style: do_not_inherit
+          expression: do_not_inherit
+      purpose_note_zh: 获准作为分离生成参考；仅继承合同指定职责，不继承原图姿势、表情或渲染。
+  arco-expr-frontal-022:
+    before:
+      can_be_generation_reference: null
+      generation_reference: null
+      purpose_note_zh: null
+    after:
+      can_be_generation_reference: true
+      generation_reference:
+        priority: primary
+        supported_roles:
+        - face_reference
+        preferred_for: &id043
+        - portrait
+        - upper_body
+        - full_body
+        excluded_for:
+        - back_view
+        coverage:
+          profiles: *id043
+          visible_fields:
+          - eyes
+          - face
+          view_angles:
+          - front
+          occluded_fields: []
+        inheritance:
+          face: inherit
+          eyes: inherit
+          hair: do_not_inherit
+          body_proportions: do_not_inherit
+          outfit: do_not_inherit
+          pose: do_not_inherit
+          lighting: do_not_inherit
+          scene: do_not_inherit
+          style: do_not_inherit
+          expression: do_not_inherit
+      purpose_note_zh: 获准作为分离生成参考；仅继承合同指定职责，不继承原图姿势、表情或渲染。
+  identity-p01-crop:
+    before:
+      can_be_generation_reference: true
+      generation_reference:
+        priority: primary
+        supported_roles:
+        - identity_reference
+        preferred_for:
+        - portrait
+        excluded_for:
+        - upper_body
+        - full_body
+        - back_view
+        coverage:
+          visible_fields:
+          - identity
+          - hair
+          - eyes
+          - face
+          view_angles:
+          - three_quarter_right
+          profiles:
+          - portrait
+        inheritance:
+          identity: inherit
+          face: inherit
+          hair: inherit
+          eyes: inherit
+          outfit: do_not_inherit
+          pose: do_not_inherit
+          expression: do_not_inherit
+      purpose_note_zh: Identity Calibration candidate
+    after:
+      can_be_generation_reference: false
+      generation_reference: null
+      purpose_note_zh: 保留官方完整立绘证据；默认生成改用已批准的分离图层。
+  casual-outfit-primary:
+    before:
+      can_be_generation_reference: true
+      generation_reference:
+        priority: primary
+        supported_roles:
+        - outfit_reference
+        preferred_for:
+        - portrait
+        - upper_body
+        - full_body
+        excluded_for:
+        - back_view
+        coverage:
+          profiles:
+          - portrait
+          - upper_body
+          - full_body
+          visible_fields:
+          - variant.visible_headwear_accessories
+          - variant.upper_body_outfit
+          - variant.full_outfit
+          - variant.footwear
+          view_angles:
+          - three_quarter_right
+          occluded_fields:
+          - variant.back_outfit
+        inheritance:
+          outfit: inherit
+          identity: do_not_inherit
+          face: do_not_inherit
+          hair: do_not_inherit
+          eyes: do_not_inherit
+          body_proportions: do_not_inherit
+          pose: do_not_inherit
+          expression: do_not_inherit
+      purpose_note_zh: 常服全身结构与生成用 OUTFIT Primary；与 identity-p01 内容相同但合同独立。
+    after:
+      can_be_generation_reference: false
+      generation_reference: null
+      purpose_note_zh: 保留官方完整立绘证据；默认生成改用已批准的分离图层。
+  casual-outfit-open-arms-no-horns-evidence:
+    before:
+      can_be_generation_reference: false
+      generation_reference: null
+      purpose_note_zh: 无角 open-arms 常服结构证据；禁止生成输入。
+    after:
+      can_be_generation_reference: true
+      generation_reference:
+        priority: primary
+        supported_roles:
+        - identity_reference
+        - outfit_reference
+        preferred_for: &id044
+        - portrait
+        - upper_body
+        - full_body
+        excluded_for:
+        - back_view
+        coverage:
+          profiles: *id044
+          visible_fields:
+          - identity
+          - hair
+          - face
+          - body.upper
+          - body.full
+          - variant.visible_headwear_accessories
+          - variant.upper_body_outfit
+          - variant.full_outfit
+          - variant.footwear
+          view_angles:
+          - front_three_quarter
+          occluded_fields: []
+        inheritance:
+          identity: inherit
+          hair: inherit
+          face: inherit
+          outfit: inherit
+          eyes: do_not_inherit
+          expression: do_not_inherit
+          pose: do_not_inherit
+          scene: do_not_inherit
+          lighting: do_not_inherit
+          style: do_not_inherit
+      purpose_note_zh: 获准作为分离生成参考；仅继承合同指定职责，不继承原图姿势、表情或渲染。
+  casual-outfit-crossed-arms-evidence:
+    before:
+      can_be_generation_reference: false
+      generation_reference: null
+      purpose_note_zh: crossed-arms 跨姿势常服证据；禁止生成输入。
+    after:
+      can_be_generation_reference: true
+      generation_reference:
+        priority: secondary
+        supported_roles:
+        - identity_reference
+        - outfit_reference
+        preferred_for: &id045
+        - portrait
+        - upper_body
+        - full_body
+        excluded_for:
+        - back_view
+        coverage:
+          profiles: *id045
+          visible_fields:
+          - identity
+          - hair
+          - face
+          - body.upper
+          - body.full
+          - variant.visible_headwear_accessories
+          - variant.upper_body_outfit
+          - variant.full_outfit
+          - variant.footwear
+          view_angles:
+          - front
+          occluded_fields: []
+        inheritance:
+          identity: inherit
+          hair: inherit
+          face: inherit
+          outfit: inherit
+          eyes: do_not_inherit
+          expression: do_not_inherit
+          pose: do_not_inherit
+          scene: do_not_inherit
+          lighting: do_not_inherit
+          style: do_not_inherit
+      purpose_note_zh: 获准作为分离生成参考；仅继承合同指定职责，不继承原图姿势、表情或渲染。
+  casual-outfit-raised-fists-evidence:
+    before:
+      can_be_generation_reference: false
+      generation_reference: null
+      purpose_note_zh: raised-fists frontal 常服结构证据；禁止生成输入。
+    after:
+      can_be_generation_reference: true
+      generation_reference:
+        priority: secondary
+        supported_roles:
+        - identity_reference
+        - outfit_reference
+        preferred_for: &id046
+        - portrait
+        - upper_body
+        - full_body
+        excluded_for:
+        - back_view
+        coverage:
+          profiles: *id046
+          visible_fields:
+          - identity
+          - hair
+          - face
+          - body.upper
+          - body.full
+          - variant.visible_headwear_accessories
+          - variant.upper_body_outfit
+          - variant.full_outfit
+          - variant.footwear
+          view_angles:
+          - front
+          occluded_fields: []
+        inheritance:
+          identity: inherit
+          hair: inherit
+          face: inherit
+          outfit: inherit
+          eyes: do_not_inherit
+          expression: do_not_inherit
+          pose: do_not_inherit
+          scene: do_not_inherit
+          lighting: do_not_inherit
+          style: do_not_inherit
+      purpose_note_zh: 获准作为分离生成参考；仅继承合同指定职责，不继承原图姿势、表情或渲染。
+  identity-body-c07:
+    before:
+      can_be_generation_reference: false
+      generation_reference: null
+      purpose_note_zh: 官方 Body Base 身体比例证据；禁止生成输入。
+    after:
+      can_be_generation_reference: true
+      generation_reference:
+        priority: secondary
+        supported_roles:
+        - identity_reference
+        preferred_for: &id047
+        - upper_body
+        - full_body
+        excluded_for:
+        - portrait
+        - back_view
+        coverage:
+          profiles: *id047
+          visible_fields:
+          - identity
+          - hair
+          - face
+          - body.upper
+          - body.full
+          view_angles:
+          - front_three_quarter
+          occluded_fields: []
+        inheritance:
+          identity: inherit
+          hair: inherit
+          body_proportions: inherit
+          eyes: do_not_inherit
+          outfit: do_not_inherit
+          expression: do_not_inherit
+          pose: do_not_inherit
+          scene: do_not_inherit
+          lighting: do_not_inherit
+          style: do_not_inherit
+      purpose_note_zh: 获准作为分离生成参考；仅继承合同指定职责，不继承原图姿势、表情或渲染。
+  identity-body-c13:
+    before:
+      can_be_generation_reference: false
+      generation_reference: null
+      purpose_note_zh: 官方 Body Base 身体比例证据；禁止生成输入。
+    after:
+      can_be_generation_reference: true
+      generation_reference:
+        priority: secondary
+        supported_roles:
+        - identity_reference
+        preferred_for: &id048
+        - upper_body
+        - full_body
+        excluded_for:
+        - portrait
+        - back_view
+        coverage:
+          profiles: *id048
+          visible_fields:
+          - identity
+          - hair
+          - face
+          - body.upper
+          - body.full
+          view_angles:
+          - front
+          occluded_fields: []
+        inheritance:
+          identity: inherit
+          hair: inherit
+          body_proportions: inherit
+          eyes: do_not_inherit
+          outfit: do_not_inherit
+          expression: do_not_inherit
+          pose: do_not_inherit
+          scene: do_not_inherit
+          lighting: do_not_inherit
+          style: do_not_inherit
+      purpose_note_zh: 获准作为分离生成参考；仅继承合同指定职责，不继承原图姿势、表情或渲染。
+  identity-body-c14:
+    before:
+      can_be_generation_reference: false
+      generation_reference: null
+      purpose_note_zh: 官方 Body Base 身体比例证据；禁止生成输入。
+    after:
+      can_be_generation_reference: true
+      generation_reference:
+        priority: secondary
+        supported_roles:
+        - identity_reference
+        preferred_for: &id049
+        - upper_body
+        - full_body
+        excluded_for:
+        - portrait
+        - back_view
+        coverage:
+          profiles: *id049
+          visible_fields:
+          - identity
+          - hair
+          - face
+          - body.upper
+          - body.full
+          view_angles:
+          - front
+          occluded_fields: []
+        inheritance:
+          identity: inherit
+          hair: inherit
+          body_proportions: inherit
+          eyes: do_not_inherit
+          outfit: do_not_inherit
+          expression: do_not_inherit
+          pose: do_not_inherit
+          scene: do_not_inherit
+          lighting: do_not_inherit
+          style: do_not_inherit
+      purpose_note_zh: 获准作为分离生成参考；仅继承合同指定职责，不继承原图姿势、表情或渲染。
+targets:
+- entity_ref: character.assets
+  target_type: asset_generation_contract
+  target_id: split-reference-policy
+  revision_before: 5
+  revision_after: 6
+  changed_fields:
+  - revision
+  - last_calibration_id
+  - assets.generation_permissions
+  before:
+    revision: 5
+    last_calibration_id: cal-20260914T100205Z-77878a
+  after:
+    revision: 6
+    last_calibration_id: cal-20260930T010244Z-d3c8df

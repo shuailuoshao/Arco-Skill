@@ -1,0 +1,68 @@
+schema_version: 1
+calibration_id: cal-20261004T160958Z-b23d33
+timestamp: '2026-10-04T16:09:58.234866+00:00'
+operation: update
+user_confirmed: true
+reason: Approved back Identity Change
+evidence_ids:
+- arco-identity-back-b23d33
+observations: []
+targets:
+- entity_ref: character.identity
+  target_type: identity_design
+  target_id: back
+  revision_before: 2
+  revision_after: 3
+  changed_fields:
+  - revision
+  - last_calibration_id
+  - approved_view_designs
+  before:
+    revision: 2
+    last_calibration_id: cal-20260914T100205Z-77878a
+  after:
+    revision: 3
+    last_calibration_id: cal-20261004T160958Z-b23d33
+    approved_view_designs:
+      back:
+        definition:
+          schema_version: 1
+          fixed_constraints:
+          - 延续正式阿尔可正面和右斜侧参考的冰银浅蓝长发、粉色发梢、纤细修长体型和既有相对比例。
+          - 后方长发自然披散，保持前后相容的发量、发长和发梢层次；头饰和其他服装饰物由各套装单独决定。
+          - 此标定只建立全局复用的后脑发束与背面身体轮廓，衣服使用正式常服作遮蔽，不登记新的常服背面设计。
+          completion_decisions:
+          - 后脑到后背的未见发束连接采用自然散发的连续层次，不新增编发、扎发或改变发长；按两张正式图中发梢相对腰臀的位置补齐后方发尾。
+        approval_context:
+          user_confirmed: true
+          user_message: 确认
+          design_sha256: 70ff0c6d9d31eec2b47fc15cfaa28fee058792d388e0f0fcb17dc8238a02ae5b
+          preparation_id: identity-20261004T160958Z-b23d33
+          reference_pack_sha256: 81f336b22760ff7a3d8e8d74da3ba8209b57d08458382836f0b60355e6509cb3
+          design_preview_sha256: 7daf7a2f6a1db8322988b395b041cfeceb930f097c17ad17319d80b9d3358952
+        reference_asset_ids:
+        - arco-identity-back-b23d33
+  status_before: null
+  status_after: null
+- entity_ref: character.assets
+  target_type: asset_registry
+  target_id: character.assets
+  revision_before: 8
+  revision_after: 9
+  changed_fields:
+  - revision
+  - last_calibration_id
+  before:
+    revision: 8
+    last_calibration_id: cal-20261001T033925Z-71cba8
+  after:
+    revision: 9
+    last_calibration_id: cal-20261004T160958Z-b23d33
+  status_before: null
+  status_after: null
+preparation_id: identity-20261004T160958Z-b23d33
+reference_pack_sha256: 81f336b22760ff7a3d8e8d74da3ba8209b57d08458382836f0b60355e6509cb3
+validation_result:
+  structure: PASS
+  visual_acceptance: human-approved publication required
+  evidence_statuses_changed: false

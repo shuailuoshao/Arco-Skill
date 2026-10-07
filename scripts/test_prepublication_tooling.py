@@ -17,7 +17,7 @@ from validate_identity_staging import validate as validate_identity
 from historical_test_fixtures import make_historical_identity_fixture
 
 ROOT=Path(__file__).resolve().parents[1]
-STAGING=ROOT/'calibration/staging/cal-20260911T031117Z-849ec7'
+STAGING=ROOT/'scripts/fixtures/calibration/cal-20260911T031117Z-849ec7'
 CONFIG=yaml.safe_load((ROOT/'runtime/generation.yaml').read_text(encoding='utf-8'))
 
 class ToolingTests(unittest.TestCase):
@@ -65,11 +65,12 @@ class ToolingTests(unittest.TestCase):
         for field in ('outfit','pose','expression','body_proportions','hair_length'):
             self.assertIn(field,instructions)
 
-    def test_forbidden_layers_and_legacy_permission_default(self):
+    def test_explicit_layer_permission_and_legacy_permission_default(self):
         self.assertFalse(generation_allowed({'roles':['identity_evidence']}))
         self.assertFalse(generation_allowed({'roles':['expression_evidence'],'can_be_generation_reference':True,'generation_reference':{'supported_roles':['identity_reference']}}))
         self.assertFalse(generation_allowed({'asset_type':'body_base','roles':['body_evidence'],'can_be_generation_reference':True,'generation_reference':{'supported_roles':['identity_reference']}}))
-        self.assertFalse(generation_allowed({'asset_type':'faceless_composite','roles':['identity_evidence'],'can_be_generation_reference':True,'generation_reference':{'supported_roles':['identity_reference']}}))
+        self.assertTrue(generation_allowed({'asset_type':'faceless_composite','roles':['identity_evidence'],'can_be_generation_reference':True,'generation_reference':{'supported_roles':['identity_reference']}}))
+        self.assertFalse(generation_allowed({'asset_type':'body_base','can_be_generation_reference':True,'generation_reference':{'supported_roles':['face_reference']}}))
 
     def test_prompt_only_exact_args(self):
         plan=build_invocation_plan(mode='prompt_only',prompt='Arco',selected_references=[])

@@ -25,7 +25,7 @@ class IdentityStagingTests(unittest.TestCase):
     def test_staging_validator_passes(self):
         holder, formal_root = make_historical_identity_fixture()
         self.addCleanup(holder.cleanup)
-        staging = Path(__file__).resolve().parents[1] / "calibration/staging/cal-20260911T031117Z-849ec7"
+        staging = Path(__file__).resolve().parents[1] / "scripts/fixtures/calibration/cal-20260911T031117Z-849ec7"
         import yaml
         manifest=yaml.safe_load((staging/'publish-manifest.yaml').read_text(encoding='utf-8'))
         result = validate(formal_root, staging, 'published' if manifest.get('publication_state') in {'COMPLETE','AFTER_HASH_VALIDATED'} else 'staging')
@@ -36,7 +36,7 @@ class IdentityStagingTests(unittest.TestCase):
     def test_formal_identity_is_not_modified_by_staging(self):
         p = Path(__file__).resolve().parents[1] / "character/identity.yaml"
         before = hashlib.sha256(p.read_bytes()).hexdigest()
-        staging = Path(__file__).resolve().parents[1] / "calibration/staging/cal-20260911T031117Z-849ec7"
+        staging = Path(__file__).resolve().parents[1] / "scripts/fixtures/calibration/cal-20260911T031117Z-849ec7"
         self.assertTrue(staging.is_dir())
         self.assertEqual(before, hashlib.sha256(p.read_bytes()).hexdigest())
 

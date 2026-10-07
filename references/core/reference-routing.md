@@ -56,3 +56,5 @@ Style Reference 经过 `resolve_style_references()` 后，Runtime 可以在本�
 ## 运行时 Reference Contract
 
 真正进入 image input 的图片必须先经过 [Reference Selector](reference-selector.md)。本轮临时阿尔可图片使用 `request_scoped_arco`，不得获得 asset_id 或提升 `GLOBAL_REFERENCE_READINESS`；其 `REQUEST_REFERENCE_READINESS` 由 portrait、upper_body、full_body、back_view 的实际 coverage 决定。
+
+正常生成与修订必须遵循 [分离参考、确认与视觉验收](reference-analysis.md)。先规划、展示具体预览、等待本轮用户确认，再调用；图片、提示词或目标变化使旧确认失效。

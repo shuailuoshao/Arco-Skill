@@ -1,11 +1,26 @@
 schema_version: 1
 entity_type: variant_index
 entity_ref: variants.index
-revision: 1
-last_calibration_id: cal-20260914T070842Z-68b810
+revision: 4
+last_calibration_id: cal-20261004T165937Z-a1f765
 variants:
 - variant_id: casual-outfit
   path: variants/casual-outfit/variant.yaml
   display_name_zh: 常服
   display_name_en: Casual Outfit
+  lifecycle_status: published
+- variant_id: school-uniform
+  path: variants/school-uniform/variant.yaml
+  display_name_zh: 校服
+  display_name_en: School Uniform
+  lifecycle_status: published
+- variant_id: swimsuit
+  path: variants/swimsuit/variant.yaml
+  display_name_zh: 泳装
+  display_name_en: Swimsuit
+  lifecycle_status: published
+- variant_id: maid-outfit
+  path: variants/maid-outfit/variant.yaml
+  display_name_zh: 长裙女仆装
+  display_name_en: maid-outfit
   lifecycle_status: published

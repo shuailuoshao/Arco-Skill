@@ -440,11 +440,14 @@ class RuntimeTests(unittest.TestCase):
         forced = resolve_mode(explicit_mode="reference_conditioned", wants_generation=True, request_reference_readiness="INCOMPLETE")
         self.assertEqual((forced["mode"], forced["decision"]), ("reference_conditioned", "REVIEWER"))
 
-    def test_permission_missing_is_false_and_layers_are_denied(self):
+    def test_split_layers_require_explicit_permission_and_supported_roles(self):
         self.assertFalse(generation_allowed({"roles": ["identity_evidence"]}))
-        self.assertFalse(generation_allowed({"roles": ["expression_evidence"], "can_be_generation_reference": True, "generation_reference": {"supported_roles": ["identity_reference"]}}))
-        self.assertFalse(generation_allowed({"asset_type": "body_base", "roles": ["body_evidence"], "can_be_generation_reference": True, "generation_reference": {"supported_roles": ["identity_reference"]}}))
-        self.assertFalse(generation_allowed({"asset_type": "faceless_composite", "roles": ["identity_evidence"], "can_be_generation_reference": True, "generation_reference": {"supported_roles": ["identity_reference"]}}))
+        for kind, role in (("expression_layer", "face_reference"), ("body_base", "identity_reference"), ("faceless_composite", "outfit_reference")):
+            with self.subTest(kind=kind):
+                asset = {"asset_type": kind, "can_be_generation_reference": True, "generation_reference": {"supported_roles": [role]}}
+                self.assertEqual(generation_allowed(asset), kind != "body_base")
+                asset["can_be_generation_reference"] = False
+                self.assertFalse(generation_allowed(asset))
 
     def test_request_scope_and_external_who_rules(self):
         invalid = request_ref()
@@ -1025,7 +1028,7 @@ class RuntimeTests(unittest.TestCase):
 
     def test_hygiene_case01_axis_activation_omits_lighting_material_and_texture(self):
         context = json.loads(
-            (SCRIPT_DIR.parent / "evaluation" / "style-regression" / "style-context" / "case-01" / "resolved-style-context.json")
+            (SCRIPT_DIR.parent / "archive/实验/evaluation" / "style-regression" / "style-context" / "case-01" / "resolved-style-context.json")
             .read_text(encoding="utf-8")
         )
         hygiene = compile_rendering_hygiene(context, policy=STYLE_POLICY)
@@ -1039,7 +1042,7 @@ class RuntimeTests(unittest.TestCase):
 
     def test_hygiene_case04_axis_activation_preserves_watercolor_and_grain(self):
         context = json.loads(
-            (SCRIPT_DIR.parent / "evaluation" / "style-regression" / "style-context" / "case-04" / "resolved-style-context.json")
+            (SCRIPT_DIR.parent / "archive/实验/evaluation" / "style-regression" / "style-context" / "case-04" / "resolved-style-context.json")
             .read_text(encoding="utf-8")
         )
         hygiene = compile_rendering_hygiene(context, policy=STYLE_POLICY)

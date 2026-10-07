@@ -9,9 +9,11 @@ generation:
   fallback_to_prompt_only: true
   max_local_arco_references: 3
   max_external_references: 2
-  max_total_image_inputs: 4
+  max_total_image_inputs: 5
   require_published_assets: true
   require_generation_reference_permission: true
-  expression_asset_auto_upload: false
+  expression_asset_auto_upload: true
   body_base_auto_upload: false
-  faceless_composite_auto_upload: false
+  faceless_composite_auto_upload: true
+  split_reference_selection: true
+  reference_analysis_required: true
